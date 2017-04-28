@@ -8,12 +8,18 @@
 
 import UIKit
 
+@objc protocol MenuViewDelegate {
+    
+    @objc optional func passActiveViewController(activeViewController: UIViewController)
+}
+
 class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllers: [(title: String, viewController: UIViewController)]!
+    weak var delegate: MenuViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -61,7 +67,7 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        delegate?.passActiveViewController(activeViewController: viewControllers[indexPath.row].viewController)
     }
     
 

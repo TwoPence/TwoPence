@@ -8,10 +8,18 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, MenuViewDelegate {
     
     @IBOutlet weak var contentView: ContentView!
     @IBOutlet weak var menuView: MenuView!
+    
+    weak var delegate: MenuViewDelegate?
+    
+    private var activeViewController: UIViewController? {
+        didSet {
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +42,17 @@ class MenuViewController: UIViewController {
             ("FAQ", faqViewController)
         ]
         menuView.tableView.reloadData()
+        
+        activeViewController = dashboardViewController
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func passActiveViewController(activeViewController: UIViewController) {
+        activeViewController = activeViewController
     }
     
 
