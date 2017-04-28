@@ -13,19 +13,18 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     @IBOutlet weak var contentView: ContentView!
     @IBOutlet weak var menuView: MenuView!
     
-    weak var delegate: MenuViewDelegate?
-    
     private var activeViewController: UIViewController? {
         didSet {
-            print("I was called!")
-            // Call setup and remove methods here.
+            removeInactiveViewController(inactiveViewController: oldValue)
+            updateActiveViewController()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuView.delegate = self
 
-        // Do any additional setup after loading the view.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let dashboardViewController = storyboard.instantiateViewController(withIdentifier: "DashboardViewController")
         let debtMilestoneViewController = storyboard.instantiateViewController(withIdentifier: "DebtMilestoneViewController")
@@ -56,7 +55,27 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         activeViewController = viewController
     }
     
-
+    private func updateActiveViewController() {
+        if isViewLoaded {
+            if let activeVC = activeViewController {
+                addChildViewController(activeVC)
+                activeVC.view.frame = contentView.bounds
+                contentView.addSubview(activeVC.view)
+                activeVC.didMove(toParentViewController: self)
+            }
+        }
+    }
+    
+    private func removeInactiveViewController(inactiveViewController: UIViewController?) {
+        if isViewLoaded {
+            if let inactiveVC = inactiveViewController {
+                inactiveVC.willMove(toParentViewController: nil)
+                inactiveVC.view.removeFromSuperview()
+                inactiveVC.removeFromParentViewController()
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -68,10 +68,11 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("\(viewControllers[indexPath.row].title)")
-        delegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
+        if indexPath.row != 0 {
+            print("Clicked on \(viewControllers[indexPath.row - 1].title)")
+            delegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
+        }
     }
-    
 
     /*
     // Only override draw() if you perform custom drawing.
