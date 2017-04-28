@@ -8,7 +8,6 @@ A lifetime of saving discipline is reduced to a one-step decision!
 
 # User Stories
 
-t
 ## Required
 1. User can sign in/sign out using TwoPence API
 The current signed in user will be persisted across restarts
