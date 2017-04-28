@@ -23,6 +23,14 @@
 		BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */; };
 		BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */; };
 		BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B6421EB1378C00F41663 /* MenuViewController.swift */; };
+		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
+		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
+		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
+		BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD41EB3A8160096DD5B /* AggTransactions.swift */; };
+		BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD61EB3A8320096DD5B /* Institution.swift */; };
+		BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD81EB3A83D0096DD5B /* Account.swift */; };
+		BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDA1EB3A8550096DD5B /* Transaction.swift */; };
+		BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */; };
 		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
 		BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC2559E1EA5EA6A004FA1A8 /* Main.storyboard */; };
 		BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */; };
@@ -60,6 +68,14 @@
 		BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
 		BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BEA1B6421EB1378C00F41663 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
+		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
+		BF134BD41EB3A8160096DD5B /* AggTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggTransactions.swift; sourceTree = "<group>"; };
+		BF134BD61EB3A8320096DD5B /* Institution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
+		BF134BD81EB3A83D0096DD5B /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		BF134BDA1EB3A8550096DD5B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputationMetrics.swift; sourceTree = "<group>"; };
 		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC2559F1EA5EA6A004FA1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +159,14 @@
 		BEA1B6401EB1376300F41663 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF134BCE1EB3A7DA0096DD5B /* User.swift */,
+				BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */,
+				BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */,
+				BF134BD41EB3A8160096DD5B /* AggTransactions.swift */,
+				BF134BD61EB3A8320096DD5B /* Institution.swift */,
+				BF134BD81EB3A83D0096DD5B /* Account.swift */,
+				BF134BDA1EB3A8550096DD5B /* Transaction.swift */,
+				BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -405,17 +429,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */,
+				BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */,
 				BE8D3E171EB1864800BE92C9 /* TransactionsViewController.swift in Sources */,
+				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
 				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,
+				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
+				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
+				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
+				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BE8D3E461EB2A94A00BE92C9 /* MenuCell.swift in Sources */,
 				BE8D3E491EB2AA2600BE92C9 /* MenuView.swift in Sources */,
 				BE8D3E1B1EB186F400BE92C9 /* FAQViewController.swift in Sources */,
 				BE8D3E191EB1868200BE92C9 /* AccountsViewController.swift in Sources */,
+				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

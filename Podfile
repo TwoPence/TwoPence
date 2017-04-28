@@ -6,6 +6,7 @@ target 'TwoPence' do
   use_frameworks!
 
   # Pods for TwoPence
+  pod 'Money', '2.0.1'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
