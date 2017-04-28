@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11B828FE3F8065EA1143B368 /* Pods_TwoPenceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */; };
+		433E021548F1500E56357705 /* Pods_TwoPence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */; };
+		BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */; };
+		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
+		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
+		BE8D3E171EB1864800BE92C9 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */; };
+		BE8D3E191EB1868200BE92C9 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */; };
+		BE8D3E1B1EB186F400BE92C9 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E1A1EB186F400BE92C9 /* FAQViewController.swift */; };
+		BE8D3E461EB2A94A00BE92C9 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E441EB2A94A00BE92C9 /* MenuCell.swift */; };
+		BE8D3E471EB2A94A00BE92C9 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E451EB2A94A00BE92C9 /* MenuCell.xib */; };
+		BE8D3E491EB2AA2600BE92C9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */; };
+		BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */; };
+		BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */; };
+		BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */; };
+		BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */; };
+		BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B6421EB1378C00F41663 /* MenuViewController.swift */; };
+		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
+		BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC2559E1EA5EA6A004FA1A8 /* Main.storyboard */; };
+		BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */; };
+		BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A31EA5EA6A004FA1A8 /* LaunchScreen.storyboard */; };
+		BFC255B01EA5EA6B004FA1A8 /* TwoPenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFC255AC1EA5EA6B004FA1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC2558F1EA5EA6A004FA1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFC255961EA5EA6A004FA1A8;
+			remoteInfo = TwoPence;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4066D5473361E9B03F5FC345 /* Pods-TwoPence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPence/Pods-TwoPence.debug.xcconfig"; sourceTree = "<group>"; };
+		433E66D3F2D4DF9422F90668 /* Pods-TwoPenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPenceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.release.xcconfig"; sourceTree = "<group>"; };
+		AFF19F0EAE0D429842E3D9E7 /* Pods-TwoPence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPence.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPence/Pods-TwoPence.release.xcconfig"; sourceTree = "<group>"; };
+		B95380FACD16431EF605C997 /* Pods-TwoPenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPenceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneViewController.swift; sourceTree = "<group>"; };
+		BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		BE8D3E1A1EB186F400BE92C9 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		BE8D3E441EB2A94A00BE92C9 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		BE8D3E451EB2A94A00BE92C9 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
+		BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BEA1B6421EB1378C00F41663 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFC2559F1EA5EA6A004FA1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFC255A41EA5EA6A004FA1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFC255A61EA5EA6A004FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC255AB1EA5EA6B004FA1A8 /* TwoPenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoPenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPenceTests.swift; sourceTree = "<group>"; };
+		BFC255B11EA5EA6B004FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFC255941EA5EA6A004FA1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433E021548F1500E56357705 /* Pods_TwoPence.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC255A81EA5EA6B004FA1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B828FE3F8065EA1143B368 /* Pods_TwoPenceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3301D195DD7E3C0A7A5BE756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */,
+				BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D37FBD4D7EFBED817268B67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4066D5473361E9B03F5FC345 /* Pods-TwoPence.debug.xcconfig */,
+				AFF19F0EAE0D429842E3D9E7 /* Pods-TwoPence.release.xcconfig */,
+				B95380FACD16431EF605C997 /* Pods-TwoPenceTests.debug.xcconfig */,
+				433E66D3F2D4DF9422F90668 /* Pods-TwoPenceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEA1B63E1EB1375300F41663 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */,
+				BEA1B6421EB1378C00F41663 /* MenuViewController.swift */,
+				BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */,
+				BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */,
+				BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */,
+				BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */,
+				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
+				BE8D3E1A1EB186F400BE92C9 /* FAQViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BEA1B63F1EB1375E00F41663 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE8D3E441EB2A94A00BE92C9 /* MenuCell.swift */,
+				BE8D3E451EB2A94A00BE92C9 /* MenuCell.xib */,
+				BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */,
+				BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */,
+				BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */,
+				BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BEA1B6401EB1376300F41663 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BEA1B6411EB1376700F41663 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		BFC2558E1EA5EA6A004FA1A8 = {
+			isa = PBXGroup;
+			children = (
+				BFC255991EA5EA6A004FA1A8 /* TwoPence */,
+				BFC255AE1EA5EA6B004FA1A8 /* TwoPenceTests */,
+				BFC255981EA5EA6A004FA1A8 /* Products */,
+				6D37FBD4D7EFBED817268B67 /* Pods */,
+				3301D195DD7E3C0A7A5BE756 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFC255981EA5EA6A004FA1A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFC255971EA5EA6A004FA1A8 /* TwoPence.app */,
+				BFC255AB1EA5EA6B004FA1A8 /* TwoPenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFC255991EA5EA6A004FA1A8 /* TwoPence */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1B6411EB1376700F41663 /* API */,
+				BEA1B6401EB1376300F41663 /* Models */,
+				BEA1B63F1EB1375E00F41663 /* Views */,
+				BEA1B63E1EB1375300F41663 /* View Controllers */,
+				BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */,
+				BFC2559E1EA5EA6A004FA1A8 /* Main.storyboard */,
+				BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */,
+				BFC255A31EA5EA6A004FA1A8 /* LaunchScreen.storyboard */,
+				BFC255A61EA5EA6A004FA1A8 /* Info.plist */,
+			);
+			path = TwoPence;
+			sourceTree = "<group>";
+		};
+		BFC255AE1EA5EA6B004FA1A8 /* TwoPenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */,
+				BFC255B11EA5EA6B004FA1A8 /* Info.plist */,
+			);
+			path = TwoPenceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFC255961EA5EA6A004FA1A8 /* TwoPence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC255B41EA5EA6B004FA1A8 /* Build configuration list for PBXNativeTarget "TwoPence" */;
+			buildPhases = (
+				2C1E0DF42C2CC97164023C83 /* [CP] Check Pods Manifest.lock */,
+				BFC255931EA5EA6A004FA1A8 /* Sources */,
+				BFC255941EA5EA6A004FA1A8 /* Frameworks */,
+				BFC255951EA5EA6A004FA1A8 /* Resources */,
+				5D48941D6961324757597646 /* [CP] Embed Pods Frameworks */,
+				4648AA7EF16E7B717DE7058C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwoPence;
+			productName = TwoPence;
+			productReference = BFC255971EA5EA6A004FA1A8 /* TwoPence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFC255AA1EA5EA6B004FA1A8 /* TwoPenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC255B71EA5EA6B004FA1A8 /* Build configuration list for PBXNativeTarget "TwoPenceTests" */;
+			buildPhases = (
+				28B3DD5A520C0A739020F2A9 /* [CP] Check Pods Manifest.lock */,
+				BFC255A71EA5EA6B004FA1A8 /* Sources */,
+				BFC255A81EA5EA6B004FA1A8 /* Frameworks */,
+				BFC255A91EA5EA6B004FA1A8 /* Resources */,
+				DC9E9FFA73CD0503A9606A1A /* [CP] Embed Pods Frameworks */,
+				494D237E7A51C572371B7298 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFC255AD1EA5EA6B004FA1A8 /* PBXTargetDependency */,
+			);
+			name = TwoPenceTests;
+			productName = TwoPenceTests;
+			productReference = BFC255AB1EA5EA6B004FA1A8 /* TwoPenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFC2558F1EA5EA6A004FA1A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Samadhi Tech";
+				TargetAttributes = {
+					BFC255961EA5EA6A004FA1A8 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					BFC255AA1EA5EA6B004FA1A8 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = R6RP45B3D5;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFC255961EA5EA6A004FA1A8;
+					};
+				};
+			};
+			buildConfigurationList = BFC255921EA5EA6A004FA1A8 /* Build configuration list for PBXProject "TwoPence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFC2558E1EA5EA6A004FA1A8;
+			productRefGroup = BFC255981EA5EA6A004FA1A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFC255961EA5EA6A004FA1A8 /* TwoPence */,
+				BFC255AA1EA5EA6B004FA1A8 /* TwoPenceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFC255951EA5EA6A004FA1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */,
+				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
+				BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */,
+				BE8D3E471EB2A94A00BE92C9 /* MenuCell.xib in Resources */,
+				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
+				BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC255A91EA5EA6B004FA1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28B3DD5A520C0A739020F2A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2C1E0DF42C2CC97164023C83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4648AA7EF16E7B717DE7058C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwoPence/Pods-TwoPence-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		494D237E7A51C572371B7298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D48941D6961324757597646 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwoPence/Pods-TwoPence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC9E9FFA73CD0503A9606A1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFC255931EA5EA6A004FA1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE8D3E171EB1864800BE92C9 /* TransactionsViewController.swift in Sources */,
+				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
+				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,
+				BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */,
+				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
+				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
+				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
+				BE8D3E461EB2A94A00BE92C9 /* MenuCell.swift in Sources */,
+				BE8D3E491EB2AA2600BE92C9 /* MenuView.swift in Sources */,
+				BE8D3E1B1EB186F400BE92C9 /* FAQViewController.swift in Sources */,
+				BE8D3E191EB1868200BE92C9 /* AccountsViewController.swift in Sources */,
+				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC255A71EA5EA6B004FA1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC255B01EA5EA6B004FA1A8 /* TwoPenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFC255AD1EA5EA6B004FA1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFC255961EA5EA6A004FA1A8 /* TwoPence */;
+			targetProxy = BFC255AC1EA5EA6B004FA1A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFC2559E1EA5EA6A004FA1A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC2559F1EA5EA6A004FA1A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFC255A31EA5EA6A004FA1A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC255A41EA5EA6A004FA1A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFC255B21EA5EA6B004FA1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFC255B31EA5EA6B004FA1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFC255B51EA5EA6B004FA1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4066D5473361E9B03F5FC345 /* Pods-TwoPence.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TwoPence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFC255B61EA5EA6B004FA1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF19F0EAE0D429842E3D9E7 /* Pods-TwoPence.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TwoPence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BFC255B81EA5EA6B004FA1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95380FACD16431EF605C997 /* Pods-TwoPenceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R6RP45B3D5;
+				INFOPLIST_FILE = TwoPenceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPenceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwoPence.app/TwoPence";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		BFC255B91EA5EA6B004FA1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433E66D3F2D4DF9422F90668 /* Pods-TwoPenceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R6RP45B3D5;
+				INFOPLIST_FILE = TwoPenceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPenceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwoPence.app/TwoPence";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFC255921EA5EA6A004FA1A8 /* Build configuration list for PBXProject "TwoPence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC255B21EA5EA6B004FA1A8 /* Debug */,
+				BFC255B31EA5EA6B004FA1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC255B41EA5EA6B004FA1A8 /* Build configuration list for PBXNativeTarget "TwoPence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC255B51EA5EA6B004FA1A8 /* Debug */,
+				BFC255B61EA5EA6B004FA1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC255B71EA5EA6B004FA1A8 /* Build configuration list for PBXNativeTarget "TwoPenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFC255B81EA5EA6B004FA1A8 /* Debug */,
+				BFC255B91EA5EA6B004FA1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFC2558F1EA5EA6A004FA1A8 /* Project object */;
+}

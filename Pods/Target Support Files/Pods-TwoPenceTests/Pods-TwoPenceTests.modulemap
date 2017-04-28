@@ -1,0 +1,6 @@
+framework module Pods_TwoPenceTests {
+  umbrella header "Pods-TwoPenceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
