@@ -5,12 +5,13 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentView" customModule="TwoPence" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="pdf-Bl-S8N" id="ZSA-bV-Nma"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="aoI-u0-Hoi"/>
             </connections>
         </placeholder>
@@ -18,8 +19,20 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-Bl-S8N" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pdf-Bl-S8N" secondAttribute="bottom" id="DaL-uv-XGr"/>
+                <constraint firstItem="pdf-Bl-S8N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WyF-sc-OVH"/>
+                <constraint firstAttribute="trailing" secondItem="pdf-Bl-S8N" secondAttribute="trailing" id="bhX-wt-fdQ"/>
+                <constraint firstItem="pdf-Bl-S8N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fu9-cg-Kuo"/>
+            </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
     </objects>

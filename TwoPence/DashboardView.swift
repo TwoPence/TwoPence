@@ -25,7 +25,7 @@ class DashboardView: UIView, UIScrollViewDelegate {
     }
     
     func initSubviews() {
-        let nib = UINib(nibName: "Dashboard", bundle: nil)
+        let nib = UINib(nibName: "DashboardView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)

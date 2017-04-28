@@ -11,6 +11,7 @@ import UIKit
 class ContentView: UIView, MenuViewDelegate {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var containerView: UIView!
     
     var contentViewPanStartPoint: CGPoint!
     

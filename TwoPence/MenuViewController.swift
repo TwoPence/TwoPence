@@ -22,8 +22,6 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        menuView.delegate = self
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let dashboardViewController = storyboard.instantiateViewController(withIdentifier: "DashboardViewController")
@@ -32,14 +30,18 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         let accountsNavigationController = storyboard.instantiateViewController(withIdentifier: "AccountsNavigationController")
         let settingsNavigationController = storyboard.instantiateViewController(withIdentifier: "SettingsNavigationController")
         let faqViewController = storyboard.instantiateViewController(withIdentifier: "FAQViewController")
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         
+        
+        menuView.delegate = self
         menuView.viewControllers = [
             ("Dashboard", dashboardViewController),
             ("Debt Milestones", debtMilestoneViewController),
             ("Transactions", transactionsNavigationController),
             ("Accounts", accountsNavigationController),
             ("Settings", settingsNavigationController),
-            ("FAQ", faqViewController)
+            ("FAQ", faqViewController),
+            ("Logout", loginViewController)
         ]
         menuView.tableView.reloadData()
         
@@ -59,8 +61,8 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         if isViewLoaded {
             if let activeVC = activeViewController {
                 addChildViewController(activeVC)
-                activeVC.view.frame = contentView.bounds
-                contentView.addSubview(activeVC.view)
+                activeVC.view.frame = contentView.containerView.bounds
+                contentView.containerView.addSubview(activeVC.view)
                 activeVC.didMove(toParentViewController: self)
             }
         }
