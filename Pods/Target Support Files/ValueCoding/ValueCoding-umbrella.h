@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_TwoPenceVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_TwoPenceVersionString[];
+FOUNDATION_EXPORT double ValueCodingVersionNumber;
+FOUNDATION_EXPORT const unsigned char ValueCodingVersionString[];
 
