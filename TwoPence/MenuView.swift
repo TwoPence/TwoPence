@@ -33,10 +33,14 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func awakeFromNib() {
-        let menuCell = UINib(nibName: "MenuCell", bundle: nil)
-        tableView.register(menuCell, forCellReuseIdentifier: "MenuCell")
+        let menuItemCell = UINib(nibName: "MenuItemCell", bundle: nil)
+        tableView.register(menuItemCell, forCellReuseIdentifier: "MenuItemCell")
+        let menuUserCell = UINib(nibName: "MenuUserCell", bundle: nil)
+        tableView.register(menuUserCell, forCellReuseIdentifier: "MenuUserCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 60.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,10 +48,15 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
-        cell.menuItemLabel.text = viewControllers[indexPath.row].title
-        print("\(viewControllers[indexPath.row].title)")
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MenuUserCell", for: indexPath) as! MenuUserCell
+            // cell.userGravatarImageView.image =
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell", for: indexPath) as! MenuItemCell
+            cell.menuItemLabel.text = viewControllers[indexPath.row].title
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

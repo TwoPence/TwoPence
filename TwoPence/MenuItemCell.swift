@@ -1,14 +1,14 @@
 //
-//  MenuCell.swift
+//  MenuItemCell.swift
 //  TwoPence
 //
-//  Created by Will Gilman on 4/27/17.
+//  Created by Will Gilman on 4/28/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-class MenuCell: UITableViewCell {
+class MenuItemCell: UITableViewCell {
 
     @IBOutlet weak var menuItemLabel: UILabel!
     
