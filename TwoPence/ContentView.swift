@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContentView: UIView {
+class ContentView: UIView, MenuViewDelegate {
 
     @IBOutlet var contentView: UIView!
     
@@ -77,6 +77,12 @@ class ContentView: UIView {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
             self.contentView.frame.origin.x = 0
         })
+    }
+    
+    func didSelectMenuItem(didSelect: Bool) {
+        if didSelect {
+            hideMenu()
+        }
     }
     
     /*

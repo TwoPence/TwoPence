@@ -13,9 +13,6 @@
 		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
 		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
 		BE8D3E171EB1864800BE92C9 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */; };
-		BE8D3E191EB1868200BE92C9 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */; };
-		BE8D3E1B1EB186F400BE92C9 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E1A1EB186F400BE92C9 /* FAQViewController.swift */; };
-		BE8D3E491EB2AA2600BE92C9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */; };
 		BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */; };
 		BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */; };
 		BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */; };
@@ -25,6 +22,9 @@
 		BE8D3E571EB396F900BE92C9 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E551EB396F900BE92C9 /* MenuItemCell.xib */; };
 		BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */; };
 		BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B6421EB1378C00F41663 /* MenuViewController.swift */; };
+		BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */; };
+		BEEF57C21EB3CDCB001EE950 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E1A1EB186F400BE92C9 /* FAQViewController.swift */; };
+		BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -283,7 +283,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Samadhi Tech";
 				TargetAttributes = {
 					BFC255961EA5EA6A004FA1A8 = {
@@ -454,15 +454,11 @@
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */,
-				BE8D3E491EB2AA2600BE92C9 /* MenuView.swift in Sources */,
-				BE8D3E1B1EB186F400BE92C9 /* FAQViewController.swift in Sources */,
-				BE8D3E191EB1868200BE92C9 /* AccountsViewController.swift in Sources */,
+				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
+				BEEF57C21EB3CDCB001EE950 /* FAQViewController.swift in Sources */,
+				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
 				BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */,
-				BE8D3E461EB2A94A00BE92C9 /* MenuCell.swift in Sources */,
 				BF6CC9511EB3AE4B0029D734 /* TwoPenceClient.swift in Sources */,
-				BE8D3E491EB2AA2600BE92C9 /* MenuView.swift in Sources */,
-				BE8D3E1B1EB186F400BE92C9 /* FAQViewController.swift in Sources */,
-				BE8D3E191EB1868200BE92C9 /* AccountsViewController.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);
@@ -547,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -592,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

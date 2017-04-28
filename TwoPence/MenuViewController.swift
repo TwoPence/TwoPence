@@ -17,7 +17,8 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     
     private var activeViewController: UIViewController? {
         didSet {
-            
+            print("I was called!")
+            // Call setup and remove methods here.
         }
     }
     
@@ -51,8 +52,8 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func passActiveViewController(activeViewController: UIViewController) {
-        activeViewController = activeViewController
+    func passActiveViewController(viewController: UIViewController) {
+        activeViewController = viewController
     }
     
 

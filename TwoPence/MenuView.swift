@@ -10,7 +10,8 @@ import UIKit
 
 @objc protocol MenuViewDelegate {
     
-    @objc optional func passActiveViewController(activeViewController: UIViewController)
+    @objc optional func passActiveViewController(viewController: UIViewController)
+    @objc optional func didSelectMenuItem(didSelect: Bool)
 }
 
 class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
@@ -50,7 +51,7 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewControllers.count
+        return viewControllers.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,14 +61,15 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell", for: indexPath) as! MenuItemCell
-            cell.menuItemLabel.text = viewControllers[indexPath.row].title
+            cell.menuItemLabel.text = viewControllers[indexPath.row - 1].title
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate?.passActiveViewController(activeViewController: viewControllers[indexPath.row].viewController)
+        print("\(viewControllers[indexPath.row].title)")
+        delegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
     }
     
 
