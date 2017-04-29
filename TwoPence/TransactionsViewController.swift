@@ -10,6 +10,8 @@ import UIKit
 
 class TransactionsViewController: UIViewController {
 
+    @IBOutlet weak var contentView: AggTransactionsView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -8,8 +8,40 @@
 
 import UIKit
 
-class TransactionsView: UIView {
+class TransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var transactions: [Transaction] = []
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        initSubviews()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initSubviews()
+    }
+    
+    func initSubviews() {
+        let nib = UINib(nibName: "TransactionsView", bundle: nil)
+        nib.instantiate(withOwner: self, options: nil)
+        contentView.frame = bounds
+        addSubview(contentView)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return transactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+        cell.transaction = transactions[indexPath.row]
+        return cell
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

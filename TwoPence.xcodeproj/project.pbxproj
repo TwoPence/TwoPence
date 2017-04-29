@@ -35,8 +35,14 @@
 		BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57D61EB3FB27001EE950 /* AssetView.xib */; };
 		BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */; };
 		BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */; };
-		BEEF57DD1EB538A3001EE950 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57DC1EB538A3001EE950 /* TransactionsView.swift */; };
-		BEEF57DF1EB538AE001EE950 /* TransactionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57DE1EB538AE001EE950 /* TransactionsView.xib */; };
+		BEEF57DD1EB538A3001EE950 /* AggTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57DC1EB538A3001EE950 /* AggTransactionsView.swift */; };
+		BEEF57DF1EB538AE001EE950 /* AggTransactionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57DE1EB538AE001EE950 /* AggTransactionsView.xib */; };
+		BEEF57E61EB54942001EE950 /* AggTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57E41EB54942001EE950 /* AggTransactionsCell.swift */; };
+		BEEF57E71EB54942001EE950 /* AggTransactionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57E51EB54942001EE950 /* AggTransactionsCell.xib */; };
+		BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */; };
+		BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */; };
+		BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57EC1EB55019001EE950 /* TransactionCell.swift */; };
+		BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57ED1EB55019001EE950 /* TransactionCell.xib */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -95,8 +101,14 @@
 		BEEF57D61EB3FB27001EE950 /* AssetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetView.xib; sourceTree = "<group>"; };
 		BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneView.swift; sourceTree = "<group>"; };
 		BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebtMilestoneView.xib; sourceTree = "<group>"; };
-		BEEF57DC1EB538A3001EE950 /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
-		BEEF57DE1EB538AE001EE950 /* TransactionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsView.xib; sourceTree = "<group>"; };
+		BEEF57DC1EB538A3001EE950 /* AggTransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggTransactionsView.swift; sourceTree = "<group>"; };
+		BEEF57DE1EB538AE001EE950 /* AggTransactionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AggTransactionsView.xib; sourceTree = "<group>"; };
+		BEEF57E41EB54942001EE950 /* AggTransactionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggTransactionsCell.swift; sourceTree = "<group>"; };
+		BEEF57E51EB54942001EE950 /* AggTransactionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AggTransactionsCell.xib; sourceTree = "<group>"; };
+		BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsView.xib; sourceTree = "<group>"; };
+		BEEF57EC1EB55019001EE950 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		BEEF57ED1EB55019001EE950 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -176,7 +188,15 @@
 		BEA1B63F1EB1375E00F41663 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF57E21EB53E4C001EE950 /* Home Screens */,
+				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
+				BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */,
+				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
+				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
+				BEEF57DC1EB538A3001EE950 /* AggTransactionsView.swift */,
+				BEEF57DE1EB538AE001EE950 /* AggTransactionsView.xib */,
+				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
+				BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */,
+				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF57E11EB53E25001EE950 /* Menu Views */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
 			);
@@ -213,6 +233,10 @@
 				BE8D3E511EB3932800BE92C9 /* MenuUserCell.xib */,
 				BE8D3E541EB396F900BE92C9 /* MenuItemCell.swift */,
 				BE8D3E551EB396F900BE92C9 /* MenuItemCell.xib */,
+				BEEF57E41EB54942001EE950 /* AggTransactionsCell.swift */,
+				BEEF57E51EB54942001EE950 /* AggTransactionsCell.xib */,
+				BEEF57EC1EB55019001EE950 /* TransactionCell.swift */,
+				BEEF57ED1EB55019001EE950 /* TransactionCell.xib */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -226,20 +250,6 @@
 				BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */,
 			);
 			name = "Menu Views";
-			sourceTree = "<group>";
-		};
-		BEEF57E21EB53E4C001EE950 /* Home Screens */ = {
-			isa = PBXGroup;
-			children = (
-				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
-				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
-				BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */,
-				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
-				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
-				BEEF57DC1EB538A3001EE950 /* TransactionsView.swift */,
-				BEEF57DE1EB538AE001EE950 /* TransactionsView.xib */,
-			);
-			name = "Home Screens";
 			sourceTree = "<group>";
 		};
 		BEEF57E31EB53E69001EE950 /* Dashboard Views */ = {
@@ -397,11 +407,14 @@
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
-				BEEF57DF1EB538AE001EE950 /* TransactionsView.xib in Resources */,
+				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
+				BEEF57DF1EB538AE001EE950 /* AggTransactionsView.xib in Resources */,
 				BE8D3E531EB3932800BE92C9 /* MenuUserCell.xib in Resources */,
+				BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */,
 				BEEF57C71EB3D3F7001EE950 /* DashboardView.xib in Resources */,
 				BEEF57CF1EB3E252001EE950 /* SavingsView.xib in Resources */,
 				BE8D3E571EB396F900BE92C9 /* MenuItemCell.xib in Resources */,
+				BEEF57E71EB54942001EE950 /* AggTransactionsCell.xib in Resources */,
 				BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +531,7 @@
 				BE8D3E171EB1864800BE92C9 /* TransactionsViewController.swift in Sources */,
 				BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */,
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
+				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
 				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,
@@ -526,15 +540,17 @@
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
 				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
 				BEEF57CD1EB3E249001EE950 /* SavingsView.swift in Sources */,
-				BEEF57DD1EB538A3001EE950 /* TransactionsView.swift in Sources */,
+				BEEF57DD1EB538A3001EE950 /* AggTransactionsView.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
 				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
+				BEEF57E61EB54942001EE950 /* AggTransactionsCell.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */,
 				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
+				BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */,
 				BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */,
 				BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */,
 				BF6CC9511EB3AE4B0029D734 /* TwoPenceClient.swift in Sources */,

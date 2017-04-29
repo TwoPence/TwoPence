@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, MenuViewDelegate {
+class MenuViewController: UIViewController, MenuViewDelegate, ContentViewDelegate {
     
     @IBOutlet weak var contentView: ContentView!
     @IBOutlet weak var menuView: MenuView!
@@ -32,7 +32,7 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         let faqViewController = storyboard.instantiateViewController(withIdentifier: "FAQViewController")
         let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         
-        
+        contentView.delegate = self
         menuView.menuViewControllerDelegate = self
         menuView.contentViewDelegate = contentView
         menuView.viewControllers = [
@@ -56,6 +56,14 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     
     func passActiveViewController(viewController: UIViewController) {
         activeViewController = viewController
+    }
+    
+    func changeContentViewCenter(newContentViewCenter: CGPoint) {
+        self.contentView.center = newContentViewCenter
+    }
+    
+    func changeContentViewOriginX(newX: CGFloat) {
+        self.contentView.frame.origin.x = newX
     }
     
     private func updateActiveViewController() {

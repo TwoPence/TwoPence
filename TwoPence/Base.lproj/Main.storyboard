@@ -58,7 +58,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQW-T6-zNm" userLabel="Content View" customClass="ContentView" customModule="TwoPence" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.72250911750000002" blue="0.1680159302" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                             </view>
                         </subviews>
@@ -94,13 +94,46 @@
                     <view key="view" contentMode="scaleToFill" id="9gW-Lx-JeR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-zp-rJn" userLabel="Content View" customClass="AggTransactionsView" customModule="TwoPence" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cy5-zp-rJn" secondAttribute="trailing" id="OoN-tG-jmE"/>
+                            <constraint firstItem="Cy5-zp-rJn" firstAttribute="top" secondItem="9gW-Lx-JeR" secondAttribute="top" id="hFW-je-2SQ"/>
+                            <constraint firstItem="Aab-H1-Lzv" firstAttribute="top" secondItem="Cy5-zp-rJn" secondAttribute="bottom" id="qYH-vX-IKJ"/>
+                            <constraint firstItem="Cy5-zp-rJn" firstAttribute="leading" secondItem="9gW-Lx-JeR" secondAttribute="leading" id="uHz-0g-UGc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TJ6-Lm-l4d"/>
+                    <connections>
+                        <outlet property="contentView" destination="Cy5-zp-rJn" id="L5I-Lh-BO9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shV-x1-hJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810" y="92"/>
+            <point key="canvasLocation" x="2808.8000000000002" y="91.304347826086968"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JUr-pM-nzl">
+            <objects>
+                <viewController id="Q8D-aS-4ef" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sp6-qZ-34x"/>
+                        <viewControllerLayoutGuide type="bottom" id="fda-W8-AJw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7eI-Rk-BxC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NED-2u-I1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3646" y="92"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7bk-Ps-vNg">
