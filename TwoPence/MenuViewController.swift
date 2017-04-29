@@ -46,7 +46,7 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         ]
         menuView.tableView.reloadData()
         
-        activeViewController = dashboardViewController
+        activeViewController = debtMilestoneViewController
     }
 
     override func didReceiveMemoryWarning() {

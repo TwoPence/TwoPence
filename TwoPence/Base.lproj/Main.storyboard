@@ -165,12 +165,27 @@
                     <view key="view" contentMode="scaleToFill" id="6Rs-Sd-3be">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnE-Uq-Fwh" userLabel="Content View" customClass="DebtMilestoneView" customModule="TwoPence" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XnE-Uq-Fwh" secondAttribute="trailing" id="cyh-aB-f9G"/>
+                            <constraint firstItem="Psz-T2-1dd" firstAttribute="top" secondItem="XnE-Uq-Fwh" secondAttribute="bottom" id="u5X-wH-17S"/>
+                            <constraint firstItem="XnE-Uq-Fwh" firstAttribute="top" secondItem="6Rs-Sd-3be" secondAttribute="top" id="uPG-fb-IcY"/>
+                            <constraint firstItem="XnE-Uq-Fwh" firstAttribute="leading" secondItem="6Rs-Sd-3be" secondAttribute="leading" id="wrc-1z-gAq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="XnE-Uq-Fwh" id="INc-eS-I78"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDX-X1-sa4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="-587"/>
+            <point key="canvasLocation" x="1872.8" y="-587.85607196401804"/>
         </scene>
         <!--Accounts View Controller-->
         <scene sceneID="PiF-xW-OKA">

@@ -90,6 +90,7 @@ class ContentView: UIView, MenuViewDelegate {
     
     func didSelectMenuItem(didSelect: Bool) {
         if didSelect {
+            print("Close Menu called")
             hideMenu()
         }
     }

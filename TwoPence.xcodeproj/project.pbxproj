@@ -33,6 +33,8 @@
 		BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57D21EB3FAF3001EE950 /* DebtView.xib */; };
 		BEEF57D51EB3FB1C001EE950 /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57D41EB3FB1C001EE950 /* AssetView.swift */; };
 		BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57D61EB3FB27001EE950 /* AssetView.xib */; };
+		BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */; };
+		BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -89,6 +91,8 @@
 		BEEF57D21EB3FAF3001EE950 /* DebtView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebtView.xib; sourceTree = "<group>"; };
 		BEEF57D41EB3FB1C001EE950 /* AssetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
 		BEEF57D61EB3FB27001EE950 /* AssetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetView.xib; sourceTree = "<group>"; };
+		BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneView.swift; sourceTree = "<group>"; };
+		BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebtMilestoneView.xib; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				BEEF57D21EB3FAF3001EE950 /* DebtView.xib */,
 				BEEF57D41EB3FB1C001EE950 /* AssetView.swift */,
 				BEEF57D61EB3FB27001EE950 /* AssetView.xib */,
+				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
+				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */,
 				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
 				BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */,
+				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
 				BE8D3E531EB3932800BE92C9 /* MenuUserCell.xib in Resources */,
@@ -470,6 +477,7 @@
 				BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */,
 				BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */,
 				BE8D3E171EB1864800BE92C9 /* TransactionsViewController.swift in Sources */,
+				BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */,
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
 				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,

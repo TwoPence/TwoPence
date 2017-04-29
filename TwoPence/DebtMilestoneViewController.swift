@@ -9,7 +9,9 @@
 import UIKit
 
 class DebtMilestoneViewController: UIViewController {
-
+    
+    @IBOutlet weak var contentView: DebtMilestoneView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
