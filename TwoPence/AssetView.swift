@@ -9,6 +9,25 @@
 import UIKit
 
 class AssetView: UIView {
+    
+    @IBOutlet var contentView: UIView!
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        initSubviews()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initSubviews()
+    }
+    
+    func initSubviews() {
+        let nib = UINib(nibName: "AssetView", bundle: nil)
+        nib.instantiate(withOwner: self, options: nil)
+        contentView.frame = bounds
+        addSubview(contentView)
+    }
 
     /*
     // Only override draw() if you perform custom drawing.
