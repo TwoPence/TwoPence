@@ -20,7 +20,8 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllers: [(title: String, viewController: UIViewController)]!
-    weak var delegate: MenuViewDelegate?
+    weak var menuViewControllerDelegate: MenuViewDelegate?
+    weak var contentViewDelegate: MenuViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -70,7 +71,8 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row != 0 {
             print("Clicked on \(viewControllers[indexPath.row - 1].title)")
-            delegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
+            menuViewControllerDelegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
+            contentViewDelegate?.didSelectMenuItem?(didSelect: true)
         }
     }
 

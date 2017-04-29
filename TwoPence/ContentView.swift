@@ -38,11 +38,19 @@ class ContentView: UIView, MenuViewDelegate {
         contentView.isUserInteractionEnabled = true
     }
     
+    @IBAction func onMenuButton(_ sender: UIButton) {
+        if self.contentView.frame.origin.x == 0 {
+            showMenu()
+        } else {
+            hideMenu()
+        }
+    }
+    
     @IBAction func onPanContentView(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self)
         let velocity = sender.velocity(in: self)
         let minXOffset = self.bounds.width / 2
-        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 40
+        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 100
         switch sender.state {
         case .began:
             contentViewPanStartPoint = contentView.center
@@ -68,7 +76,7 @@ class ContentView: UIView, MenuViewDelegate {
     }
     
     func showMenu(){
-        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 40
+        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 100
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
             self.contentView.center.x = maxXOffset
         })

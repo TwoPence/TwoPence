@@ -33,7 +33,8 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         
         
-        menuView.delegate = self
+        menuView.menuViewControllerDelegate = self
+        menuView.contentViewDelegate = contentView
         menuView.viewControllers = [
             ("Dashboard", dashboardViewController),
             ("Debt Milestones", debtMilestoneViewController),

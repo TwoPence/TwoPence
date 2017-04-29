@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,6 +24,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPT-05-bdY">
+                    <rect key="frame" x="8" y="20" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="J9N-u0-zWz"/>
+                        <constraint firstAttribute="width" constant="46" id="Y4S-3v-c4J"/>
+                    </constraints>
+                    <state key="normal" title="Menu"/>
+                    <connections>
+                        <action selector="onMenuButton:" destination="-1" eventType="touchUpInside" id="IJy-Op-R3I"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -32,6 +43,8 @@
                 <constraint firstItem="pdf-Bl-S8N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WyF-sc-OVH"/>
                 <constraint firstAttribute="trailing" secondItem="pdf-Bl-S8N" secondAttribute="trailing" id="bhX-wt-fdQ"/>
                 <constraint firstItem="pdf-Bl-S8N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fu9-cg-Kuo"/>
+                <constraint firstItem="sPT-05-bdY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="q9k-EZ-Ift"/>
+                <constraint firstItem="sPT-05-bdY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="tls-uh-izX"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>

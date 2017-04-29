@@ -40,11 +40,12 @@ class DashboardView: UIView, UIScrollViewDelegate {
         scrollView.delegate = self
         pageControl.numberOfPages = 3
         
-        let savingsView = UIView(frame: CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight).insetBy(dx: 10, dy: 0))
+        // Replace these with xibs.
+        let savingsView = UIView(frame: CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight))
         savingsView.backgroundColor = UIColor.blue
-        let debtView = UIView(frame: CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight).insetBy(dx: 10, dy: 0))
+        let debtView = UIView(frame: CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight))
         debtView.backgroundColor = UIColor.red
-        let assetView = UIView(frame: CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight).insetBy(dx: 10, dy: 0))
+        let assetView = UIView(frame: CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight))
         assetView.backgroundColor = UIColor.green
         
         scrollView.addSubview(savingsView)
