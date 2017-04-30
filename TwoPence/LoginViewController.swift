@@ -12,8 +12,17 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        TwoPenceAPI.sharedClient.getAggTransactions(success: { (aggTransaction) in
+            print(aggTransaction.count)
+        }) { (error) in
+            print((error.localizedDescription))
+        }
+        
+        TwoPenceAPI.sharedClient.getAccounts(success: { (accounts) in
+            print(accounts.count)
+        }) { (error) in
+            print((error.localizedDescription))
+        }
     }
 
     override func didReceiveMemoryWarning() {

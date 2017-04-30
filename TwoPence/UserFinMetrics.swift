@@ -12,7 +12,7 @@ import Money
 class UserFinMetrics: NSObject {
 
     var totalSaved: Money?
-    var monthlyTotalSaved: [Money]?
+    var monthlyTotalSaved: [Date : Money]?
     var loanRepaid: Money?
     var interestAvoided: Money?
     var daysOffLoanTerm: Int?

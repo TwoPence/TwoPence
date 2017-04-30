@@ -33,12 +33,13 @@
 		BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD81EB3A83D0096DD5B /* Account.swift */; };
 		BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDA1EB3A8550096DD5B /* Transaction.swift */; };
 		BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */; };
-		BF6CC9511EB3AE4B0029D734 /* TwoPenceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceClient.swift */; };
+		BF6CC9511EB3AE4B0029D734 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
 		BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC2559E1EA5EA6A004FA1A8 /* Main.storyboard */; };
 		BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */; };
 		BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A31EA5EA6A004FA1A8 /* LaunchScreen.storyboard */; };
 		BFC255B01EA5EA6B004FA1A8 /* TwoPenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */; };
+		BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8EC981EB684BC00A362F8 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +82,7 @@
 		BF134BD81EB3A83D0096DD5B /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BF134BDA1EB3A8550096DD5B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputationMetrics.swift; sourceTree = "<group>"; };
-		BF6CC9501EB3AE4B0029D734 /* TwoPenceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceClient.swift; sourceTree = "<group>"; };
+		BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceAPI.swift; sourceTree = "<group>"; };
 		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC2559F1EA5EA6A004FA1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		BFC255AB1EA5EA6B004FA1A8 /* TwoPenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoPenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPenceTests.swift; sourceTree = "<group>"; };
 		BFC255B11EA5EA6B004FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD8EC981EB684BC00A362F8 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,13 +170,14 @@
 			isa = PBXGroup;
 			children = (
 				BF134BCE1EB3A7DA0096DD5B /* User.swift */,
+				BFD8EC981EB684BC00A362F8 /* UserProfile.swift */,
 				BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */,
+				BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */,
 				BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */,
 				BF134BD41EB3A8160096DD5B /* AggTransactions.swift */,
+				BF134BDA1EB3A8550096DD5B /* Transaction.swift */,
 				BF134BD61EB3A8320096DD5B /* Institution.swift */,
 				BF134BD81EB3A83D0096DD5B /* Account.swift */,
-				BF134BDA1EB3A8550096DD5B /* Transaction.swift */,
-				BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 		BEA1B6411EB1376700F41663 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				BF6CC9501EB3AE4B0029D734 /* TwoPenceClient.swift */,
+				BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
 				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,
+				BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
@@ -458,7 +462,7 @@
 				BEEF57C21EB3CDCB001EE950 /* FAQViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
 				BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */,
-				BF6CC9511EB3AE4B0029D734 /* TwoPenceClient.swift in Sources */,
+				BF6CC9511EB3AE4B0029D734 /* TwoPenceAPI.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);

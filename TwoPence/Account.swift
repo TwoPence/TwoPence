@@ -7,9 +7,27 @@
 //
 
 import UIKit
+import Unbox
 
-class Account: NSObject {
-    var accountName: String?
+class Account: Unboxable {
+    var name: String?
     var value: String?
-    var type: String? //Should be enum
+    var type: String? //Should be enum?
+    
+    required init(unboxer: Unboxer) throws {
+        self.name = unboxer.unbox(key: "name")
+        self.value = unboxer.unbox(key: "value")
+        self.type = unboxer.unbox(key: "type")
+    }
+    
+    class func  withArray(dictionaries: [Dictionary<String, Any>]) throws -> [Account] {
+        var accounts = [Account]()
+        
+        for dict in dictionaries {
+            let account: Account = try unbox(dictionary: dict)
+            accounts.append(account)
+        }
+        
+        return accounts
+    }
 }
