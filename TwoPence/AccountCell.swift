@@ -15,7 +15,7 @@ class AccountCell: UITableViewCell {
     
     var account: Account! {
         didSet {
-            accountLabel.text = account.accountName
+            accountLabel.text = account.name
             amountLabel.text = "\(account.value)"
         }
     }

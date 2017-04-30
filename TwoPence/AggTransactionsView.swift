@@ -8,9 +8,9 @@
 
 import UIKit
 
-@objc protocol AggTransactionsViewDelegate {
+protocol AggTransactionsViewDelegate {
     
-    @objc optional func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction])
+    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction])
 }
 
 class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
@@ -19,7 +19,7 @@ class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var aggTransactions: [AggTransactions] = []
-    weak var delegate: AggTransactionsViewDelegate?
+    var delegate: AggTransactionsViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -59,7 +59,7 @@ class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate?.navigateToTransactionsDetailViewController?(selectedTransactions: aggTransactions[indexPath.row].transactions!)
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: aggTransactions[indexPath.row].transactions!)
     }
     
     /*

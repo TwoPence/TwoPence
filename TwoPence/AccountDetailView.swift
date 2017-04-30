@@ -18,7 +18,7 @@ class AccountDetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     var institution: Institution! {
         didSet {
             // logoImageView.image = setImage(institution.institutionLogoUrl)
-            institutionLabel.text = institution.institutionName
+            institutionLabel.text = institution.name
         }
     }
 

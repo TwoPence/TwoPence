@@ -14,7 +14,7 @@ class InstitutionCell: UITableViewCell {
     
     var institution: Institution! {
         didSet {
-            institutionLabel.text = institution.institutionName
+            institutionLabel.text = institution.name
         }
     }
     
