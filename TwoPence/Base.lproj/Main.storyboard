@@ -111,16 +111,17 @@
                     <navigationItem key="navigationItem" id="TJ6-Lm-l4d"/>
                     <connections>
                         <outlet property="contentView" destination="Cy5-zp-rJn" id="L5I-Lh-BO9"/>
+                        <segue destination="Q8D-aS-4ef" kind="show" identifier="TransactionsDetailSegue" id="ped-sY-jqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shV-x1-hJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2808.8000000000002" y="91.304347826086968"/>
         </scene>
-        <!--View Controller-->
+        <!--Transactions Detail View Controller-->
         <scene sceneID="JUr-pM-nzl">
             <objects>
-                <viewController id="Q8D-aS-4ef" sceneMemberID="viewController">
+                <viewController id="Q8D-aS-4ef" customClass="TransactionsDetailViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sp6-qZ-34x"/>
                         <viewControllerLayoutGuide type="bottom" id="fda-W8-AJw"/>
@@ -128,12 +129,27 @@
                     <view key="view" contentMode="scaleToFill" id="7eI-Rk-BxC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-gT-Xxu" userLabel="Content View" customClass="TransactionsView" customModule="TwoPence" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hWj-gT-Xxu" firstAttribute="top" secondItem="7eI-Rk-BxC" secondAttribute="top" id="Niz-h2-7ol"/>
+                            <constraint firstAttribute="trailing" secondItem="hWj-gT-Xxu" secondAttribute="trailing" id="meH-nG-Nkm"/>
+                            <constraint firstItem="hWj-gT-Xxu" firstAttribute="leading" secondItem="7eI-Rk-BxC" secondAttribute="leading" id="ogB-S9-Mdl"/>
+                            <constraint firstItem="fda-W8-AJw" firstAttribute="top" secondItem="hWj-gT-Xxu" secondAttribute="bottom" id="q61-dk-pgV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="hWj-gT-Xxu" id="4S7-jK-3do"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NED-2u-I1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3646" y="92"/>
+            <point key="canvasLocation" x="3714" y="92"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7bk-Ps-vNg">

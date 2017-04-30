@@ -43,6 +43,7 @@
 		BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */; };
 		BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57EC1EB55019001EE950 /* TransactionCell.swift */; };
 		BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57ED1EB55019001EE950 /* TransactionCell.xib */; };
+		BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -109,6 +110,7 @@
 		BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsView.xib; sourceTree = "<group>"; };
 		BEEF57EC1EB55019001EE950 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BEEF57ED1EB55019001EE950 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsDetailViewController.swift; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */,
 				BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */,
 				BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */,
+				BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */,
 				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
 				BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */,
 			);
@@ -538,6 +541,7 @@
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
+				BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */,
 				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
 				BEEF57CD1EB3E249001EE950 /* SavingsView.swift in Sources */,
 				BEEF57DD1EB538A3001EE950 /* AggTransactionsView.swift in Sources */,

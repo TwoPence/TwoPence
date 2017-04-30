@@ -12,10 +12,19 @@ class AggTransactionsCell: UITableViewCell {
 
     @IBOutlet weak var aggTransactionsLabel: UILabel!
     
+    var aggTransactions: AggTransactions! {
+        didSet {
+            aggTransactionsLabel.text = "\(aggTransactions.amount) transfered on \(aggTransactions.date)"
+        }
+    }
+    
+    override func prepareForReuse() {
+        aggTransactionsLabel.text = nil
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        print("I'm awake!")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

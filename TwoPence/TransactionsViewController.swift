@@ -8,14 +8,17 @@
 
 import UIKit
 
-class TransactionsViewController: UIViewController {
+class TransactionsViewController: UIViewController, AggTransactionsViewDelegate {
 
     @IBOutlet weak var contentView: AggTransactionsView!
+    
+    var transactions: [Transaction]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        contentView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +26,17 @@ class TransactionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction]) {
+        transactions = selectedTransactions
+        self.performSegue(withIdentifier: "TransactionDetailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is TransactionsDetailViewController && transactions != nil {
+            let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
+            transactionsDetailViewController.contentView.transactions = transactions!
+        }
+    }
 
     /*
     // MARK: - Navigation

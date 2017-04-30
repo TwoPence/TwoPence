@@ -8,13 +8,18 @@
 
 import UIKit
 
+@objc protocol AggTransactionsViewDelegate {
+    
+    @objc optional func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction])
+}
+
 class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    // var aggTransactions: [AggTransactions] = []
-    var fakeTransactions: [String] = ["$25.76 transfered on 7/4", "$51.34 transfered on 8/6"]
+    var aggTransactions: [AggTransactions] = []
+    weak var delegate: AggTransactionsViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -34,8 +39,8 @@ class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func awakeFromNib() {
-        let menuItemCell = UINib(nibName: "AggTransactionsCell", bundle: nil)
-        tableView.register(menuItemCell, forCellReuseIdentifier: "AggTransactionsCell")
+        let cell = UINib(nibName: "AggTransactionsCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "AggTransactionsCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -43,16 +48,18 @@ class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fakeTransactions.count
+        return aggTransactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AggTransactionsCell", for: indexPath) as! AggTransactionsCell
-//        let amount = aggTransactions[indexPath.row].amount
-//        let date = aggTransactions[indexPath.row].date
-//        cell.aggTransactionsLabel.text = "\(amount) transfer one \(date)"
-        cell.aggTransactionsLabel.text = fakeTransactions[indexPath.row]
+        cell.aggTransactions = aggTransactions[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate?.navigateToTransactionsDetailViewController?(selectedTransactions: aggTransactions[indexPath.row].transactions!)
     }
     
     /*

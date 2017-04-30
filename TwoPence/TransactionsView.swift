@@ -32,6 +32,15 @@ class TransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
         addSubview(contentView)
     }
     
+    override func awakeFromNib() {
+        let cell = UINib(nibName: "TransactionsCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "TransactionsCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 60.0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
     }
