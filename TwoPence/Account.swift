@@ -9,7 +9,7 @@
 import UIKit
 
 class Account: NSObject {
-    var accountName: String?
+    var name: String?
     var value: String?
     var type: String? //Should be enum
 }

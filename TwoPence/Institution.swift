@@ -9,7 +9,7 @@
 import UIKit
 
 class Institution: NSObject {
-    var institutionName: String?
-    var institutionLogoUrl: String?
+    var name: String?
+    var logoUrl: String?
     var accounts: [Account]?
 }

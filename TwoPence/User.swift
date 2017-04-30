@@ -8,24 +8,43 @@
 
 import UIKit
 import Cely
+import Unbox
 
-class User: CelyUser {
+class User: CelyUser, Unboxable {
+    var firstName: String?
+    var lastName: String?
+    
+    var email: String?
+    var profileUrl: String?
+    var phone: String?
+    var savingRates: [Date : Double]?
+    
+    // Addr
+    var streetAddr: String?
+    var cityAddr: String?
+    var stateAddr: String?
+    var zipAddr: String?
+    var countryAddr: String?
+    
+    required init(unboxer: Unboxer) throws {
+        self.firstName = unboxer.unbox(key: "firstName")
+        self.lastName = unboxer.unbox(key: "lastName")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let savingRatesString: [String : Double] = try unboxer.unbox(key: "savingRates")
+        for (date, rate) in savingRatesString {
+            savingRates?[dateFormatter.date(from: date)!] = rate
+        }
+        
+        self.streetAddr = unboxer.unbox(key: "streetAddr")
+        self.cityAddr = unboxer.unbox(key: "cityAddr")
+        self.stateAddr = unboxer.unbox(key: "stateAddr")
+        self.zipAddr = unboxer.unbox(key: "zipAddr")
+        self.countryAddr = unboxer.unbox(key: "countryAddr")
+    }
     
     enum Property: CelyProperty {
-        case firstName = "firstName"
-        case lastName = "lastName"
-        case email = "email"
-        case profileUrl = "profileUrl"
-        case phone = "phone"
-        case savingRates = "savingRates"
-        
-        // Addr
-        case streetAddr = "streetAddr"
-        case cityAddr = "cityAddr"
-        case stateAddr = "stateAddr"
-        case zipAddr = "zipAddr"
-        case countryAddr = "countryAddr"
-        
         case token = "token"
         
         func securely() -> Bool {
@@ -37,17 +56,8 @@ class User: CelyUser {
             }
         }
         
-        func persisted() -> Bool {
-            switch self {
-            case .email:
-                return true
-            default:
-                return false
-            }
-        }
-        
         func save(_ value: Any) {
-            Cely.save(value, forKey: rawValue, securely: securely(), persisted: persisted())
+            Cely.save(value, forKey: rawValue, securely: true)
         }
         
         func get() -> Any? {
@@ -74,3 +84,5 @@ extension User {
         return property.get()
     }
 }
+
+
