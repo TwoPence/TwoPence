@@ -369,12 +369,27 @@
                     <view key="view" contentMode="scaleToFill" id="aoH-sd-JXa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyU-WC-IZd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cyU-WC-IZd" firstAttribute="leading" secondItem="aoH-sd-JXa" secondAttribute="leading" id="BqH-wl-JTx"/>
+                            <constraint firstAttribute="trailing" secondItem="cyU-WC-IZd" secondAttribute="trailing" id="EGp-Hb-OpN"/>
+                            <constraint firstItem="TwS-Wk-KNU" firstAttribute="top" secondItem="cyU-WC-IZd" secondAttribute="bottom" id="oac-0l-D6N"/>
+                            <constraint firstItem="cyU-WC-IZd" firstAttribute="top" secondItem="aoH-sd-JXa" secondAttribute="top" id="tDU-Yp-fS5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faqWebView" destination="cyU-WC-IZd" id="6lF-Ug-09L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgY-JK-RWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="2158"/>
+            <point key="canvasLocation" x="1872.8" y="2157.5712143928035"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tic-yF-Gcw">

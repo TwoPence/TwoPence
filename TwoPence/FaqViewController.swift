@@ -10,10 +10,17 @@ import UIKit
 
 class FaqViewController: UIViewController {
 
+    @IBOutlet weak var faqWebView: UIWebView!
+    
+    let url = "https://www.dropbox.com/terms?mobile=1"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let requestUrl = URL(string: url)
+        let request = URLRequest(url: requestUrl!)
+        faqWebView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
