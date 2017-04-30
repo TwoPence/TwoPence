@@ -12,10 +12,15 @@ class TransactionsDetailViewController: UIViewController {
 
     @IBOutlet weak var contentView: TransactionsView!
     
+    var transactions: [Transaction]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if transactions != nil {
+            contentView.transactions = transactions!
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -284,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-1A-kdW" userLabel="Content View" customClass="AccountDetailView" customModule="TwoPence" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -293,9 +293,11 @@
                             <constraint firstItem="If8-oZ-lG3" firstAttribute="top" secondItem="6cV-1A-kdW" secondAttribute="bottom" id="LhN-Fu-v26"/>
                             <constraint firstAttribute="trailing" secondItem="6cV-1A-kdW" secondAttribute="trailing" id="QDH-Kh-1Dj"/>
                             <constraint firstItem="6cV-1A-kdW" firstAttribute="leading" secondItem="eCH-h9-Nad" secondAttribute="leading" id="axU-8Q-GGq"/>
-                            <constraint firstItem="6cV-1A-kdW" firstAttribute="top" secondItem="eCH-h9-Nad" secondAttribute="top" id="jFf-Os-PVS"/>
+                            <constraint firstItem="6cV-1A-kdW" firstAttribute="top" secondItem="Isa-uA-xGu" secondAttribute="bottom" id="k3K-Ih-6mS"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contentView" destination="6cV-1A-kdW" id="LSM-ez-FSt"/>
                     </connections>

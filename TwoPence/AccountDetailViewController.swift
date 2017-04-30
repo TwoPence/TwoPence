@@ -12,10 +12,17 @@ class AccountDetailViewController: UIViewController {
 
     @IBOutlet weak var contentView: AccountDetailView!
     
+    var institution: Institution?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if institution != nil {
+            contentView.institution = institution!
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
     }
 
     override func didReceiveMemoryWarning() {

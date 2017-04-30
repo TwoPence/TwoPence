@@ -39,6 +39,7 @@ class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func awakeFromNib() {
+        initFakeAggTransactions() // REMOVE: Testing only
         let cell = UINib(nibName: "AggTransactionsCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "AggTransactionsCell")
         tableView.delegate = self
@@ -69,5 +70,26 @@ class AggTransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
         // Drawing code
     }
     */
+    
+    // REMOVE: --------- Testing only ---------
+    private func initFakeAggTransactions() {
+        let pendingTransactions = [
+            Transaction(amount: 81.45, amountSaved: 8.15, date: Date(), merchant: "Footlocker", status: "Queued", pending: true)
+        ]
+        let transferredTransactions = [
+            Transaction(amount: 51.67, amountSaved: 5.17, date: Date(), merchant: "Macy's", status: "Queued", pending: false),
+            Transaction(amount: 32.11, amountSaved: 3.21, date: Date(), merchant: "Black Bear Diner", status: "Queued", pending: false),
+            Transaction(amount: 125.29, amountSaved: 12.53, date: Date(), merchant: "K&L Wines", status: "Processed", pending: false),
+            Transaction(amount: 2.95, amountSaved: 0.30, date: Date(), merchant: "Starbucks", status: "Processed", pending: false)
+        ]
+        let unassignedTransactions = [
+            Transaction(amount: 2500.0, amountSaved: 0, date: Date(), merchant: "Auto-Deposit", status: "Skipped", pending: false)
+        ]
+        
+        aggTransactions.append(AggTransactions(amount: 0, date: Date(), transactions: pendingTransactions, aggType: "Pending"))
+        aggTransactions.append(AggTransactions(amount: 21.21, date: Date(), transactions: transferredTransactions, aggType: "Transferred"))
+        aggTransactions.append(AggTransactions(amount: 0, date: Date(), transactions: unassignedTransactions, aggType: "Unassigned"))
+    }
+    // ------------------------------------
 
 }

@@ -28,13 +28,13 @@ class TransactionsViewController: UIViewController, AggTransactionsViewDelegate 
     
     func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction]) {
         transactions = selectedTransactions
-        self.performSegue(withIdentifier: "TransactionDetailSegue", sender: nil)
+        self.performSegue(withIdentifier: "TransactionsDetailSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TransactionsDetailViewController && transactions != nil {
             let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
-            transactionsDetailViewController.contentView.transactions = transactions!
+            transactionsDetailViewController.transactions = transactions!
         }
     }
 

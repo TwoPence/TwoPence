@@ -17,10 +17,10 @@ class TransactionCell: UITableViewCell {
     
     var transaction: Transaction! {
         didSet {
-            dateLabel.text = "\(transaction.date)"
+            dateLabel.text = "\(transaction.date!)"
             merchantLabel.text = transaction.merchant
-            amountLabel.text = "\(transaction.amount)"
-            amountSavedLabel.text = "\(transaction.amountSaved)"
+            amountLabel.text = "\(transaction.amount!)"
+            amountSavedLabel.text = "\(transaction.amountSaved!)"
         }
     }
     

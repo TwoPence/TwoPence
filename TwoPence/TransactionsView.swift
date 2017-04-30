@@ -33,8 +33,8 @@ class TransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func awakeFromNib() {
-        let cell = UINib(nibName: "TransactionsCell", bundle: nil)
-        tableView.register(cell, forCellReuseIdentifier: "TransactionsCell")
+        let cell = UINib(nibName: "TransactionCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "TransactionCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension

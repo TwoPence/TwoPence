@@ -28,13 +28,13 @@ class AccountsViewController: UIViewController, AccountsViewDelegate {
     
     func navigateToAccountsDetailViewController(selectedInstitution: Institution) {
         institution = selectedInstitution
-        self.performSegue(withIdentifier: "AccountsDetailSegue", sender: nil)
+        self.performSegue(withIdentifier: "AccountDetailSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is AccountDetailViewController && institution != nil {
             let accountDetailViewController = segue.destination as! AccountDetailViewController
-            accountDetailViewController.contentView.institution = institution
+            accountDetailViewController.institution = institution!
         }
     }
 

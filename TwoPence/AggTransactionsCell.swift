@@ -14,7 +14,7 @@ class AggTransactionsCell: UITableViewCell {
     
     var aggTransactions: AggTransactions! {
         didSet {
-            aggTransactionsLabel.text = "\(aggTransactions.amount) transfered on \(aggTransactions.date)"
+            aggTransactionsLabel.text = "\(aggTransactions.amount!) transfered on \(aggTransactions.date!)"
         }
     }
     

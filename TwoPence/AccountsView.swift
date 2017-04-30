@@ -39,6 +39,7 @@ class AccountsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func awakeFromNib() {
+        initFakeAccounts() // REMOVE: Testing only
         let cell = UINib(nibName: "InstitutionCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "InstitutionCell")
         tableView.delegate = self
@@ -69,5 +70,24 @@ class AccountsView: UIView, UITableViewDelegate, UITableViewDataSource {
         // Drawing code
     }
     */
+    
+    // REMOVE: --------- Testing only ---------
+    private func initFakeAccounts() {
+        let bankAccounts = [
+            Account(name: "Checking", value: 1238.11, type: "Depository"),
+            Account(name: "Savings", value: 3745.85, type: "Depository")
+        ]
+        let creditAccounts = [
+            Account(name: "Venture", value: 832.31, type: "Credit")
+        ]
+        let loanAccounts = [
+            Account(name: "Consolidated 01", value: 30831.42, type: "Student Loan")
+        ]
+        
+        institutions.append(Institution(name: "Bank of America", logoUrl: nil, accounts: bankAccounts))
+        institutions.append(Institution(name: "Capital One", logoUrl: nil, accounts: creditAccounts))
+        institutions.append(Institution(name: "Nelnet", logoUrl: nil, accounts: loanAccounts))
+    }
+    // ------------------------------------
 
 }
