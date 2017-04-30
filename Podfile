@@ -7,6 +7,7 @@ target 'TwoPence' do
 
   # Pods for TwoPence
   pod 'Money', '2.0.1'
+  pod 'Cely', '~> 2.0.0'
 
   target 'TwoPenceTests' do
     inherit! :search_paths

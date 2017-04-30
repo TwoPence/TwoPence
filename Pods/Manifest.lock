@@ -1,15 +1,20 @@
 PODS:
+  - Cely (2.0.0):
+    - Cely/Core (= 2.0.0)
+  - Cely/Core (2.0.0)
   - Money (2.0.1):
     - ValueCoding (~> 2)
   - ValueCoding (2.1.0)
 
 DEPENDENCIES:
-  - Money
+  - Cely (~> 2.0.0)
+  - Money (= 2.0.1)
 
 SPEC CHECKSUMS:
+  Cely: 10e51eadc776f132982446165b4f35c11b8970bd
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
 
-PODFILE CHECKSUM: 26d5882d6b9a68ee6c90fc93ac13a3d92e28210b
+PODFILE CHECKSUM: 9ea9d7258e822bb379d8cc110a2a3d3a6e6dbe47
 
 COCOAPODS: 1.2.0

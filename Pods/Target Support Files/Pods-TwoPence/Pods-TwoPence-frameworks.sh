@@ -89,10 +89,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Cely/Cely.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Money/Money.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ValueCoding/ValueCoding.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Cely/Cely.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Money/Money.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ValueCoding/ValueCoding.framework"
 fi
