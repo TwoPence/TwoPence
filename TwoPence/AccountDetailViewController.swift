@@ -1,21 +1,28 @@
 //
-//  DebtMilestoneViewController.swift
+//  AccountDetailViewController.swift
 //  TwoPence
 //
-//  Created by Will Gilman on 4/26/17.
+//  Created by Will Gilman on 4/30/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-class DebtMilestoneViewController: UIViewController {
+class AccountDetailViewController: UIViewController {
+
+    @IBOutlet weak var contentView: AccountDetailView!
     
-    @IBOutlet weak var contentView: DebtMilestoneView!
+    var institution: Institution?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if institution != nil {
+            contentView.institution = institution!
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
     }
 
     override func didReceiveMemoryWarning() {

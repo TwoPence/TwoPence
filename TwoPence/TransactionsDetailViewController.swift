@@ -1,21 +1,26 @@
 //
-//  DebtMilestoneViewController.swift
+//  TransactionsDetailViewController.swift
 //  TwoPence
 //
-//  Created by Will Gilman on 4/26/17.
+//  Created by Will Gilman on 4/29/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-class DebtMilestoneViewController: UIViewController {
+class TransactionsDetailViewController: UIViewController {
+
+    @IBOutlet weak var contentView: TransactionsView!
     
-    @IBOutlet weak var contentView: DebtMilestoneView!
+    var transactions: [Transaction]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if transactions != nil {
+            contentView.transactions = transactions!
+        }
     }
 
     override func didReceiveMemoryWarning() {

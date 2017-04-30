@@ -39,16 +39,15 @@ extension User {
     static func save(_ value: Any, as property: Property) {
         property.save(value: value)
     }
-    
+
     static func save(_ data: [Property : Any]) {
         data.forEach { property, value in
             property.save(value)
         }
     }
-    
+
     static func get(_ property: Property) -> Any? {
         return property.get()
     }
 }
-
 

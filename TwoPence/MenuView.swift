@@ -20,7 +20,8 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllers: [(title: String, viewController: UIViewController)]!
-    weak var delegate: MenuViewDelegate?
+    weak var menuViewControllerDelegate: MenuViewDelegate?
+    weak var contentViewDelegate: MenuViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -68,10 +69,12 @@ class MenuView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("\(viewControllers[indexPath.row].title)")
-        delegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
+        if indexPath.row != 0 {
+            print("Clicked on \(viewControllers[indexPath.row - 1].title)")
+            menuViewControllerDelegate?.passActiveViewController?(viewController: viewControllers[indexPath.row - 1].viewController)
+            contentViewDelegate?.didSelectMenuItem?(didSelect: true)
+        }
     }
-    
 
     /*
     // Only override draw() if you perform custom drawing.

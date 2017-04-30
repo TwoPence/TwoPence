@@ -8,11 +8,20 @@
 
 import UIKit
 
+@objc protocol ContentViewDelegate {
+    
+    @objc optional func changeContentViewCenter(newContentViewCenter: CGPoint)
+    @objc optional func changeContentViewOriginX(newX: CGFloat)
+}
+
 class ContentView: UIView, MenuViewDelegate {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var containerView: UIView!
     
     var contentViewPanStartPoint: CGPoint!
+    var contentViewOriginX: CGFloat! = 0
+    weak var delegate: ContentViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -37,20 +46,29 @@ class ContentView: UIView, MenuViewDelegate {
         contentView.isUserInteractionEnabled = true
     }
     
+    @IBAction func onMenuButton(_ sender: UIButton) {
+        if contentViewOriginX == 0 {
+            showMenu()
+        } else {
+            hideMenu()
+        }
+    }
+    
     @IBAction func onPanContentView(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self)
         let velocity = sender.velocity(in: self)
         let minXOffset = self.bounds.width / 2
-        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 40
+        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 100
         switch sender.state {
         case .began:
             contentViewPanStartPoint = contentView.center
             break
         case .changed:
             let start = contentViewPanStartPoint!
-            contentView.center = CGPoint(
+            let newCenter = CGPoint(
                 x: min(max(minXOffset, start.x + translation.x), maxXOffset),
                 y: start.y)
+            delegate?.changeContentViewCenter?(newContentViewCenter: newCenter)
             break
         case .ended:
             if (velocity.x > 0) {
@@ -67,15 +85,18 @@ class ContentView: UIView, MenuViewDelegate {
     }
     
     func showMenu(){
-        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 40
+        let maxXOffset = self.bounds.width + (contentView.bounds.width / 2) - 100
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-            self.contentView.center.x = maxXOffset
+            self.contentViewOriginX = maxXOffset
+            let newCenter = CGPoint(x: maxXOffset, y: self.contentView.center.y)
+            self.delegate?.changeContentViewCenter?(newContentViewCenter: newCenter)
         })
     }
     
     func hideMenu(){
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-            self.contentView.frame.origin.x = 0
+            self.contentViewOriginX = 0
+            self.delegate?.changeContentViewOriginX?(newX: 0)
         })
     }
     

@@ -8,24 +8,21 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, MenuViewDelegate {
+class MenuViewController: UIViewController, MenuViewDelegate, ContentViewDelegate {
     
     @IBOutlet weak var contentView: ContentView!
     @IBOutlet weak var menuView: MenuView!
     
-    weak var delegate: MenuViewDelegate?
-    
     private var activeViewController: UIViewController? {
         didSet {
-            print("I was called!")
-            // Call setup and remove methods here.
+            removeInactiveViewController(inactiveViewController: oldValue)
+            updateActiveViewController()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let dashboardViewController = storyboard.instantiateViewController(withIdentifier: "DashboardViewController")
         let debtMilestoneViewController = storyboard.instantiateViewController(withIdentifier: "DebtMilestoneViewController")
@@ -33,18 +30,23 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         let accountsNavigationController = storyboard.instantiateViewController(withIdentifier: "AccountsNavigationController")
         let settingsNavigationController = storyboard.instantiateViewController(withIdentifier: "SettingsNavigationController")
         let faqViewController = storyboard.instantiateViewController(withIdentifier: "FAQViewController")
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         
+        contentView.delegate = self
+        menuView.menuViewControllerDelegate = self
+        menuView.contentViewDelegate = contentView
         menuView.viewControllers = [
             ("Dashboard", dashboardViewController),
             ("Debt Milestones", debtMilestoneViewController),
             ("Transactions", transactionsNavigationController),
             ("Accounts", accountsNavigationController),
             ("Settings", settingsNavigationController),
-            ("FAQ", faqViewController)
+            ("FAQ", faqViewController),
+            ("Logout", loginViewController)
         ]
         menuView.tableView.reloadData()
         
-        activeViewController = dashboardViewController
+        activeViewController = debtMilestoneViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +58,35 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         activeViewController = viewController
     }
     
-
+    func changeContentViewCenter(newContentViewCenter: CGPoint) {
+        self.contentView.center = newContentViewCenter
+    }
+    
+    func changeContentViewOriginX(newX: CGFloat) {
+        self.contentView.frame.origin.x = newX
+    }
+    
+    private func updateActiveViewController() {
+        if isViewLoaded {
+            if let activeVC = activeViewController {
+                addChildViewController(activeVC)
+                activeVC.view.frame = contentView.containerView.bounds
+                contentView.containerView.addSubview(activeVC.view)
+                activeVC.didMove(toParentViewController: self)
+            }
+        }
+    }
+    
+    private func removeInactiveViewController(inactiveViewController: UIViewController?) {
+        if isViewLoaded {
+            if let inactiveVC = inactiveViewController {
+                inactiveVC.willMove(toParentViewController: nil)
+                inactiveVC.view.removeFromSuperview()
+                inactiveVC.removeFromParentViewController()
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -8,12 +8,17 @@
 
 import UIKit
 
-class AccountsViewController: UIViewController {
+class AccountsViewController: UIViewController, AccountsViewDelegate {
 
+    @IBOutlet weak var contentView: AccountsView!
+    
+    var institution: Institution?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        contentView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +26,17 @@ class AccountsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func navigateToAccountsDetailViewController(selectedInstitution: Institution) {
+        institution = selectedInstitution
+        self.performSegue(withIdentifier: "AccountDetailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AccountDetailViewController && institution != nil {
+            let accountDetailViewController = segue.destination as! AccountDetailViewController
+            accountDetailViewController.institution = institution!
+        }
+    }
 
     /*
     // MARK: - Navigation

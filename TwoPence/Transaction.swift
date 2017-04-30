@@ -33,4 +33,13 @@ class Transaction: Unboxable {
         self.status = unboxer.unbox(key: "status")
         self.pending = unboxer.unbox(key: "pending")
     }
+    
+    init(amount: Money?, amountSaved: Money?, date: Date?, merchant: String?, status: String?, pending: Bool?) {
+        self.amount = amount
+        self.amountSaved = amountSaved
+        self.date = date
+        self.merchant = merchant
+        self.status = status
+        self.pending = pending
+    }
 }

@@ -8,12 +8,15 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, DashboardViewDelegate {
 
+    @IBOutlet weak var contentView: DashboardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        contentView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +24,11 @@ class DashboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func didTapJoltButton(didTap: Bool) {
+        if didTap {
+            self.performSegue(withIdentifier: "JoltSegue", sender: nil)
+        }
+    }
 
     /*
     // MARK: - Navigation
