@@ -44,6 +44,15 @@
 		BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57EC1EB55019001EE950 /* TransactionCell.swift */; };
 		BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57ED1EB55019001EE950 /* TransactionCell.xib */; };
 		BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */; };
+		BEEF57F31EB64303001EE950 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57F21EB64303001EE950 /* AccountsView.swift */; };
+		BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57F41EB64324001EE950 /* AccountsView.xib */; };
+		BEEF57FB1EB648AB001EE950 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */; };
+		BEEF57FD1EB6496F001EE950 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */; };
+		BEEF57FF1EB6497F001EE950 /* AccountDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */; };
+		BEEF58021EB64C68001EE950 /* InstitutionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF58001EB64C68001EE950 /* InstitutionCell.swift */; };
+		BEEF58031EB64C68001EE950 /* InstitutionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58011EB64C68001EE950 /* InstitutionCell.xib */; };
+		BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF58041EB65C83001EE950 /* AccountCell.swift */; };
+		BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58051EB65C83001EE950 /* AccountCell.xib */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -111,6 +120,15 @@
 		BEEF57EC1EB55019001EE950 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		BEEF57ED1EB55019001EE950 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsDetailViewController.swift; sourceTree = "<group>"; };
+		BEEF57F21EB64303001EE950 /* AccountsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		BEEF57F41EB64324001EE950 /* AccountsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountsView.xib; sourceTree = "<group>"; };
+		BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
+		BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountDetailView.xib; sourceTree = "<group>"; };
+		BEEF58001EB64C68001EE950 /* InstitutionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstitutionCell.swift; sourceTree = "<group>"; };
+		BEEF58011EB64C68001EE950 /* InstitutionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstitutionCell.xib; sourceTree = "<group>"; };
+		BEEF58041EB65C83001EE950 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		BEEF58051EB65C83001EE950 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -183,6 +201,7 @@
 				BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */,
 				BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */,
 				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
+				BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */,
 				BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */,
 			);
 			name = "View Controllers";
@@ -199,6 +218,10 @@
 				BEEF57DE1EB538AE001EE950 /* AggTransactionsView.xib */,
 				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
 				BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */,
+				BEEF57F21EB64303001EE950 /* AccountsView.swift */,
+				BEEF57F41EB64324001EE950 /* AccountsView.xib */,
+				BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */,
+				BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF57E11EB53E25001EE950 /* Menu Views */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
@@ -240,6 +263,10 @@
 				BEEF57E51EB54942001EE950 /* AggTransactionsCell.xib */,
 				BEEF57EC1EB55019001EE950 /* TransactionCell.swift */,
 				BEEF57ED1EB55019001EE950 /* TransactionCell.xib */,
+				BEEF58001EB64C68001EE950 /* InstitutionCell.swift */,
+				BEEF58011EB64C68001EE950 /* InstitutionCell.xib */,
+				BEEF58041EB65C83001EE950 /* AccountCell.swift */,
+				BEEF58051EB65C83001EE950 /* AccountCell.xib */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -404,9 +431,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */,
+				BEEF58031EB64C68001EE950 /* InstitutionCell.xib in Resources */,
+				BEEF57FF1EB6497F001EE950 /* AccountDetailView.xib in Resources */,
 				BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */,
 				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
+				BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */,
 				BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */,
+				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
@@ -543,12 +574,15 @@
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
 				BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */,
 				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
+				BEEF58021EB64C68001EE950 /* InstitutionCell.swift in Sources */,
 				BEEF57CD1EB3E249001EE950 /* SavingsView.swift in Sources */,
 				BEEF57DD1EB538A3001EE950 /* AggTransactionsView.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
 				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
+				BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */,
 				BEEF57E61EB54942001EE950 /* AggTransactionsCell.swift in Sources */,
+				BEEF57FB1EB648AB001EE950 /* AccountDetailViewController.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */,
 				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
@@ -558,7 +592,9 @@
 				BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */,
 				BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */,
 				BF6CC9511EB3AE4B0029D734 /* TwoPenceClient.swift in Sources */,
+				BEEF57F31EB64303001EE950 /* AccountsView.swift in Sources */,
 				BEEF57D51EB3FB1C001EE950 /* AssetView.swift in Sources */,
+				BEEF57FD1EB6496F001EE950 /* AccountDetailView.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);

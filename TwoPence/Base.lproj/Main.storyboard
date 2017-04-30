@@ -247,13 +247,62 @@
                     <view key="view" contentMode="scaleToFill" id="fwq-kl-Ikk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1MC-PZ-TLU" userLabel="Content View" customClass="AccountsView" customModule="TwoPence" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1MC-PZ-TLU" secondAttribute="trailing" id="2bu-1D-uGV"/>
+                            <constraint firstItem="1MC-PZ-TLU" firstAttribute="top" secondItem="fwq-kl-Ikk" secondAttribute="top" id="KjB-gA-lX3"/>
+                            <constraint firstItem="kgP-YH-nIF" firstAttribute="top" secondItem="1MC-PZ-TLU" secondAttribute="bottom" id="bSC-KU-Mdg"/>
+                            <constraint firstItem="1MC-PZ-TLU" firstAttribute="leading" secondItem="fwq-kl-Ikk" secondAttribute="leading" id="l2v-FL-jqo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6WY-Ss-YxJ"/>
+                    <connections>
+                        <outlet property="contentView" destination="1MC-PZ-TLU" id="qLp-im-KFh"/>
+                        <segue destination="XQZ-fM-xm1" kind="show" identifier="AccountDetailSegue" id="JCJ-xq-h66"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZH-yd-fH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2810.4000000000001" y="768.66566716641682"/>
+        </scene>
+        <!--Account Detail View Controller-->
+        <scene sceneID="mMD-jw-58G">
+            <objects>
+                <viewController id="XQZ-fM-xm1" customClass="AccountDetailViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Isa-uA-xGu"/>
+                        <viewControllerLayoutGuide type="bottom" id="If8-oZ-lG3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eCH-h9-Nad">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-1A-kdW" userLabel="Content View" customClass="AccountDetailView" customModule="TwoPence" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="If8-oZ-lG3" firstAttribute="top" secondItem="6cV-1A-kdW" secondAttribute="bottom" id="LhN-Fu-v26"/>
+                            <constraint firstAttribute="trailing" secondItem="6cV-1A-kdW" secondAttribute="trailing" id="QDH-Kh-1Dj"/>
+                            <constraint firstItem="6cV-1A-kdW" firstAttribute="leading" secondItem="eCH-h9-Nad" secondAttribute="leading" id="axU-8Q-GGq"/>
+                            <constraint firstItem="6cV-1A-kdW" firstAttribute="top" secondItem="eCH-h9-Nad" secondAttribute="top" id="jFf-Os-PVS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="6cV-1A-kdW" id="LSM-ez-FSt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yH0-V5-2Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712.8000000000002" y="768.66566716641682"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XaY-of-NcJ">
