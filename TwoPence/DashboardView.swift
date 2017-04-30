@@ -8,7 +8,12 @@
 
 import UIKit
 
-class DashboardView: UIView, UIScrollViewDelegate {
+@objc protocol DashboardViewDelegate {
+    
+    @objc optional func didTapJoltButton(didTap: Bool)
+}
+
+class DashboardView: UIView, UIScrollViewDelegate, SavingsViewDelegate {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -17,6 +22,8 @@ class DashboardView: UIView, UIScrollViewDelegate {
     var savingsView: SavingsView!
     var debtView: DebtView!
     var assetView: AssetView!
+    
+    weak var delegate: DashboardViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -51,6 +58,8 @@ class DashboardView: UIView, UIScrollViewDelegate {
         scrollView.addSubview(savingsView)
         scrollView.addSubview(debtView)
         scrollView.addSubview(assetView)
+        
+        savingsView.delegate = self
     }
     
     @IBAction func pageControlDidPage(_ sender: Any) {
@@ -61,6 +70,10 @@ class DashboardView: UIView, UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
         pageControl.currentPage = page
+    }
+    
+    func didTapJoltButton(didTap: Bool) {
+        delegate?.didTapJoltButton?(didTap: didTap)
     }
     
     

@@ -53,6 +53,9 @@
 		BEEF58031EB64C68001EE950 /* InstitutionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58011EB64C68001EE950 /* InstitutionCell.xib */; };
 		BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF58041EB65C83001EE950 /* AccountCell.swift */; };
 		BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58051EB65C83001EE950 /* AccountCell.xib */; };
+		BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF580C1EB69031001EE950 /* JoltViewController.swift */; };
+		BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF580E1EB6910B001EE950 /* JoltView.swift */; };
+		BEEF58111EB69116001EE950 /* JoltView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58101EB69116001EE950 /* JoltView.xib */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -129,6 +132,9 @@
 		BEEF58011EB64C68001EE950 /* InstitutionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstitutionCell.xib; sourceTree = "<group>"; };
 		BEEF58041EB65C83001EE950 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		BEEF58051EB65C83001EE950 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
+		BEEF580C1EB69031001EE950 /* JoltViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltViewController.swift; sourceTree = "<group>"; };
+		BEEF580E1EB6910B001EE950 /* JoltView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltView.swift; sourceTree = "<group>"; };
+		BEEF58101EB69116001EE950 /* JoltView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltView.xib; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
 				BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */,
 				BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */,
+				BEEF580C1EB69031001EE950 /* JoltViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -222,6 +229,8 @@
 				BEEF57F41EB64324001EE950 /* AccountsView.xib */,
 				BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */,
 				BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */,
+				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
+				BEEF58101EB69116001EE950 /* JoltView.xib */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF57E11EB53E25001EE950 /* Menu Views */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
@@ -440,6 +449,7 @@
 				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
+				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
 				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
 				BEEF57DF1EB538AE001EE950 /* AggTransactionsView.xib in Resources */,
@@ -577,6 +587,7 @@
 				BEEF58021EB64C68001EE950 /* InstitutionCell.swift in Sources */,
 				BEEF57CD1EB3E249001EE950 /* SavingsView.swift in Sources */,
 				BEEF57DD1EB538A3001EE950 /* AggTransactionsView.swift in Sources */,
+				BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
 				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
@@ -588,6 +599,7 @@
 				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
+				BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */,
 				BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */,
 				BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */,
 				BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */,

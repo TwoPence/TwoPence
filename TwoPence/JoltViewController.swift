@@ -1,16 +1,16 @@
 //
-//  DashboardViewController.swift
+//  JoltViewController.swift
 //  TwoPence
 //
-//  Created by Will Gilman on 4/26/17.
+//  Created by Will Gilman on 4/30/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-class DashboardViewController: UIViewController, DashboardViewDelegate {
+class JoltViewController: UIViewController, JoltViewDelegate {
 
-    @IBOutlet weak var contentView: DashboardView!
+    @IBOutlet weak var contentView: JoltView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,12 @@ class DashboardViewController: UIViewController, DashboardViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func didTapJoltButton(didTap: Bool) {
+    func didTapCloseButton(didTap: Bool) {
         if didTap {
-            self.performSegue(withIdentifier: "JoltSegue", sender: nil)
+            dismiss(animated: true, completion: nil)
         }
     }
-
+    
     /*
     // MARK: - Navigation
 

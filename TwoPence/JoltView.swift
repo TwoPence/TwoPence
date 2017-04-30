@@ -1,23 +1,24 @@
 //
-//  SavingsView.swift
+//  JoltView.swift
 //  TwoPence
 //
-//  Created by Will Gilman on 4/28/17.
+//  Created by Will Gilman on 4/30/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-@objc protocol SavingsViewDelegate {
+@objc protocol JoltViewDelegate {
     
-    @objc optional func didTapJoltButton(didTap: Bool)
+    @objc optional func didTapCloseButton(didTap: Bool)
 }
 
-class SavingsView: UIView {
+class JoltView: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var amountLabel: UILabel!
     
-    weak var delegate: SavingsViewDelegate?
+    weak var delegate: JoltViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -30,15 +31,26 @@ class SavingsView: UIView {
     }
     
     func initSubviews() {
-        let nib = UINib(nibName: "SavingsView", bundle: nil)
+        let nib = UINib(nibName: "JoltView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
     }
     
-    @IBAction func onJoltTap(_ sender: UIButton) {
-        delegate?.didTapJoltButton?(didTap: true)
+    @IBAction func onDecreaseTap(_ sender: UIButton) {
     }
+    
+    @IBAction func onIncreaseTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func onJoltTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func onCloseTap(_ sender: UIButton) {
+        delegate?.didTapCloseButton?(didTap: true)
+    }
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
