@@ -12,6 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavingsView" customModule="TwoPence" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="rIb-61-KRw"/>
+                <outlet property="headerHeightConstraint" destination="cqP-JS-zTe" id="2JA-kD-tkb"/>
+                <outlet property="headerView" destination="90a-Js-dxG" id="8cX-N4-Sdb"/>
+                <outlet property="tableView" destination="2hx-yA-OVY" id="RQV-K0-eAn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,27 +22,28 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlv-4C-vbX">
-                    <rect key="frame" x="157.5" y="323" width="60" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwf-Ca-lAj">
-                    <rect key="frame" x="172" y="394" width="30" height="30"/>
-                    <state key="normal" title="Jolt"/>
-                    <connections>
-                        <action selector="onJoltTap:" destination="-1" eventType="touchUpInside" id="Ljb-dh-Xko"/>
-                    </connections>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90a-Js-dxG" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                    <color key="backgroundColor" red="1" green="0.72250911750000002" blue="0.1680159302" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="cqP-JS-zTe"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hx-yA-OVY">
+                    <rect key="frame" x="0.0" y="350" width="375" height="317"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.72250911750000002" blue="0.1680159302" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Nlv-4C-vbX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1Nc-Pj-i9n"/>
-                <constraint firstItem="Lwf-Ca-lAj" firstAttribute="top" secondItem="Nlv-4C-vbX" secondAttribute="bottom" constant="50" id="6Ig-L7-MNk"/>
-                <constraint firstItem="Nlv-4C-vbX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bay-At-kEg"/>
-                <constraint firstItem="Lwf-Ca-lAj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eUt-TI-MF2"/>
+                <constraint firstItem="90a-Js-dxG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7T0-Zj-ngO"/>
+                <constraint firstAttribute="trailing" secondItem="90a-Js-dxG" secondAttribute="trailing" id="BUC-wC-F0G"/>
+                <constraint firstAttribute="trailing" secondItem="2hx-yA-OVY" secondAttribute="trailing" id="Kb1-4b-ewZ"/>
+                <constraint firstItem="2hx-yA-OVY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vh3-Ls-3PH"/>
+                <constraint firstItem="2hx-yA-OVY" firstAttribute="top" secondItem="90a-Js-dxG" secondAttribute="bottom" id="n2d-jv-uLB"/>
+                <constraint firstItem="90a-Js-dxG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nWG-Wa-iUv"/>
+                <constraint firstAttribute="bottom" secondItem="2hx-yA-OVY" secondAttribute="bottom" id="w9l-JW-rrq"/>
             </constraints>
+            <point key="canvasLocation" x="34.5" y="28.5"/>
         </view>
     </objects>
 </document>
