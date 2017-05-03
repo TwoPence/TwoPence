@@ -40,26 +40,33 @@ class DashboardView: UIView, UIScrollViewDelegate, SavingsViewDelegate {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        
+        savingsView = SavingsView()
+        debtView = DebtView()
+        assetView = AssetView()
+                
+        scrollView.addSubview(savingsView)
+        scrollView.addSubview(debtView)
+        scrollView.addSubview(assetView)
+        
+        savingsView.delegate = self
     }
     
-    override func awakeFromNib() {
-        let pageWidth = scrollView.bounds.width
-        let pageHeight = scrollView.bounds.height
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let pageWidth = contentView.bounds.width
+        let pageHeight = contentView.bounds.height
+        
         scrollView.contentSize = CGSize(width: pageWidth * 3, height: pageHeight)
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
         pageControl.numberOfPages = 3
         
-        savingsView = SavingsView(frame: CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight))
-        debtView = DebtView(frame: CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight))
-        assetView = AssetView(frame: CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight))
-        
-        scrollView.addSubview(savingsView)
-        scrollView.addSubview(debtView)
-        scrollView.addSubview(assetView)
-        
-        savingsView.delegate = self
+        savingsView.frame = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        debtView.frame = CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight)
+        assetView.frame = CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight)
     }
     
     @IBAction func pageControlDidPage(_ sender: Any) {

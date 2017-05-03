@@ -21,16 +21,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8H2-0a-POT">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8H2-0a-POT">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-eJ-9dW">
                     <rect key="frame" x="168" y="605" width="39" height="37"/>
                 </pageControl>
             </subviews>
             <constraints>
+                <constraint firstItem="8H2-0a-POT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HDo-jC-a9c"/>
+                <constraint firstAttribute="bottom" secondItem="8H2-0a-POT" secondAttribute="bottom" id="PPR-g1-fps"/>
                 <constraint firstItem="nI5-eJ-9dW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wkp-Uu-xJZ"/>
+                <constraint firstAttribute="trailing" secondItem="8H2-0a-POT" secondAttribute="trailing" id="gDq-5K-lem"/>
+                <constraint firstItem="8H2-0a-POT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iMt-Qs-ayd"/>
                 <constraint firstAttribute="bottom" secondItem="nI5-eJ-9dW" secondAttribute="bottom" constant="25" id="qAf-oa-8oO"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
