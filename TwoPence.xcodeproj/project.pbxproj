@@ -221,10 +221,13 @@
 		BEA1B63F1EB1375E00F41663 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
+				BFBD3B061EBAA50800A7F767 /* Milestone Views */,
+				BFBD3B031EBAA4C500A7F767 /* Jolt Views */,
+				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
+				BEEF57E11EB53E25001EE950 /* Menu Views */,
+				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
 				BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */,
-				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
-				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
+				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
 				BEEF57DC1EB538A3001EE950 /* AggTransactionsView.swift */,
 				BEEF57DE1EB538AE001EE950 /* AggTransactionsView.xib */,
 				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
@@ -233,12 +236,6 @@
 				BEEF57F41EB64324001EE950 /* AccountsView.xib */,
 				BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */,
 				BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */,
-				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
-				BEEF58101EB69116001EE950 /* JoltView.xib */,
-				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
-				BEEF57E11EB53E25001EE950 /* Menu Views */,
-				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
-				BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -308,6 +305,25 @@
 				BEEF57D61EB3FB27001EE950 /* AssetView.xib */,
 			);
 			name = "Dashboard Views";
+			sourceTree = "<group>";
+		};
+		BFBD3B031EBAA4C500A7F767 /* Jolt Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
+				BEEF58101EB69116001EE950 /* JoltView.xib */,
+			);
+			name = "Jolt Views";
+			sourceTree = "<group>";
+		};
+		BFBD3B061EBAA50800A7F767 /* Milestone Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
+				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
+				BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */,
+			);
+			name = "Milestone Views";
 			sourceTree = "<group>";
 		};
 		BFC2558E1EA5EA6A004FA1A8 = {
