@@ -56,6 +56,8 @@
 		BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF580C1EB69031001EE950 /* JoltViewController.swift */; };
 		BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF580E1EB6910B001EE950 /* JoltView.swift */; };
 		BEEF58111EB69116001EE950 /* JoltView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58101EB69116001EE950 /* JoltView.xib */; };
+		BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */; };
+		BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58201EBBB4F2001EE950 /* MonthCell.xib */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -136,6 +138,8 @@
 		BEEF580C1EB69031001EE950 /* JoltViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltViewController.swift; sourceTree = "<group>"; };
 		BEEF580E1EB6910B001EE950 /* JoltView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltView.swift; sourceTree = "<group>"; };
 		BEEF58101EB69116001EE950 /* JoltView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltView.xib; sourceTree = "<group>"; };
+		BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		BEEF58201EBBB4F2001EE950 /* MonthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				BEEF58101EB69116001EE950 /* JoltView.xib */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF57E11EB53E25001EE950 /* Menu Views */,
+				BEEF581E1EBBB4CE001EE950 /* Collection View Cells */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
 			);
 			name = Views;
@@ -305,6 +310,15 @@
 				BEEF57D61EB3FB27001EE950 /* AssetView.xib */,
 			);
 			name = "Dashboard Views";
+			sourceTree = "<group>";
+		};
+		BEEF581E1EBBB4CE001EE950 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */,
+				BEEF58201EBBB4F2001EE950 /* MonthCell.xib */,
+			);
+			name = "Collection View Cells";
 			sourceTree = "<group>";
 		};
 		BFC2558E1EA5EA6A004FA1A8 = {
@@ -450,6 +464,7 @@
 				BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */,
 				BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */,
 				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
+				BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
@@ -488,7 +503,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2C1E0DF42C2CC97164023C83 /* [CP] Check Pods Manifest.lock */ = {
@@ -503,7 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4648AA7EF16E7B717DE7058C /* [CP] Copy Pods Resources */ = {
@@ -600,6 +615,7 @@
 				BEEF57FB1EB648AB001EE950 /* AccountDetailViewController.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */,
+				BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */,
 				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,

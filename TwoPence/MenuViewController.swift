@@ -12,7 +12,7 @@ class MenuViewController: UIViewController, MenuViewDelegate, ContentViewDelegat
     
     @IBOutlet weak var contentView: ContentView!
     @IBOutlet weak var menuView: MenuView!
-    
+
     private var activeViewController: UIViewController? {
         didSet {
             removeInactiveViewController(inactiveViewController: oldValue)
