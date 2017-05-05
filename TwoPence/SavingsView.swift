@@ -39,8 +39,8 @@ class SavingsView: UIView {
     weak var delegate: SavingsViewDelegate?
     var previousScrollOffset: CGFloat = 0
     
-    let headerMaxHeight: CGFloat = 350
-    let headerMinHeight: CGFloat = 200
+    let headerMaxHeight: CGFloat = 300
+    let headerMinHeight: CGFloat = 150
     
     let totalSavedLabelMaxSpace: CGFloat = 50
     let totalSavedLabelMinSpace: CGFloat = 5
