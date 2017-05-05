@@ -19,6 +19,9 @@ class JoltView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var amountLabel: UILabel!
     
+    @IBOutlet weak var computedTotalSaved: UILabel!
+    @IBOutlet weak var computedDaysSaved: UILabel!
+    
     weak var delegate: JoltViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
@@ -39,19 +42,50 @@ class JoltView: UIView {
     }
     
     @IBAction func onDecreaseTap(_ sender: UIButton) {
+        if let amount = amountLabel.text?.trimmingCharacters(in: CharacterSet.symbols) {
+            let newAmount = Int(amount)! - 5
+            if newAmount >= 0 {
+                amountLabel.text = "$" + String(newAmount)
+                // Compute here
+                computedTotalSaved.text = "+$" + String(newAmount) + " saved"
+                computedDaysSaved.text = "+" + String(1) + " days off"
+            }
+        }
     }
     
     @IBAction func onIncreaseTap(_ sender: UIButton) {
+        if let amount = amountLabel.text?.trimmingCharacters(in: CharacterSet.symbols) {
+            let newAmount = Int(amount)! + 5
+            amountLabel.text = "$" + String(newAmount)
+            // Compute here
+            computedTotalSaved.text = "+$" + String(newAmount) + " saved"
+            computedDaysSaved.text = "+" + String(1) + " days off"
+        }
     }
     
     @IBAction func onJoltTap(_ sender: UIButton) {
+        if let amount = amountLabel.text?.trimmingCharacters(in: CharacterSet.symbols) {
+            let newAmount = Int(amount)!
+            if newAmount <= 0 {
+                // Show error
+                return
+            }
+        }
+        
         let alertController = UIAlertController(title: "\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
         let margin:CGFloat = 10.0
         let rect = CGRect(x: margin, y: margin, width: alertController.view.bounds.size.width - margin * 4.0, height: 120)
         let customView = UIView(frame: rect)
         
-        customView.backgroundColor = .green
+        let label = UILabel(frame: CGRect(x: customView.center.x, y: customView.center.y, width: customView.frame.width, height: customView.frame.height/3))
+        label.text = "TwoPence will debit \(amountLabel.text ?? "$0") from your bank account."
+        label.center = customView.center
+        label.center.x = customView.center.x
+        label.center.y = customView.center.y
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        customView.addSubview(label)
         alertController.view.addSubview(customView)
         
         let somethingAction = UIAlertAction(title: "Confirm", style: .default, handler: {(alert: UIAlertAction!) in self.showSuccessView()})
@@ -73,22 +107,18 @@ class JoltView: UIView {
     }
     
     func showSuccessView(){
+        
         let title = "Congratulations!"
-        let message = "You have successfully added $100 extra!"
+        let message = "You have successfully added \(amountLabel.text ?? "$0")!"
         let image = #imageLiteral(resourceName: "images") //Some nice GIF here
         
-        // Create the dialog
-        let popup = PopupDialog(title: title, message: message, image: image)
+        let popup = PopupDialog(title: title, message: message, image: image, gestureDismissal: false)
         
-        // Create buttons
         let buttonOne = DefaultButton(title: "Done") {
-            self.delegate?.didTapCloseButton?(didTap: true)
+            self.delegate?.didTapCloseButton?(didTap: true) // Replace this with image like X?
         }
-        
-        // Add buttons to dialog
-        // Alternatively, you can use popup.addButton(buttonOne)
-        // to add a single button
-        popup.addButtons([buttonOne])
+
+        popup.addButton(buttonOne)
         
         var topVC = UIApplication.shared.keyWindow?.rootViewController
         while((topVC!.presentedViewController) != nil) {

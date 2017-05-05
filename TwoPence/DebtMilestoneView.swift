@@ -12,7 +12,6 @@ class DebtMilestoneView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var subView: UIView!
     
     var timeline: TimelineView!
     
@@ -55,6 +54,7 @@ class DebtMilestoneView: UIView {
             
             NSLayoutConstraint(item: timeline, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1.0, constant: 0)
             ])
+        
         scrollView.addSubview(timeline)
     }
     /*

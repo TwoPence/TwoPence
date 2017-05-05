@@ -13,7 +13,7 @@ import UIKit
     @objc optional func didTapJoltButton(didTap: Bool)
 }
 
-class SavingsView: UIView {
+class SavingsView: UIView, JoltViewDelegate {
 
     @IBOutlet var contentView: UIView!
     
