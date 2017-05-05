@@ -5,6 +5,7 @@ PODS:
   - Cely/Core (2.0.0)
   - Money (2.0.1):
     - ValueCoding (~> 2)
+  - PopupDialog (0.5.4)
   - Unbox (2.4.0)
   - ValueCoding (2.1.0)
 
@@ -12,15 +13,17 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Cely (~> 2.0.0)
   - Money (= 2.0.1)
+  - PopupDialog (~> 0.5)
   - Unbox (~> 2.4.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Cely: 10e51eadc776f132982446165b4f35c11b8970bd
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
+  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
 
-PODFILE CHECKSUM: 88ae223b9873af39d57dc1ad7cfb7072acc42202
+PODFILE CHECKSUM: 1e66bbdaf0e8b9c3a2e4910a9c0f9d16f53324a3
 
 COCOAPODS: 1.2.0
