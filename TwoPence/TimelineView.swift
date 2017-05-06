@@ -62,6 +62,8 @@ public enum BulletType{
  */
 open class TimelineView: UIView {
     
+    var onTap:  UITapGestureRecognizer?
+    
     //MARK: Public Properties
     
     /**
@@ -139,11 +141,12 @@ open class TimelineView: UIView {
      
      @param timeFrames The events shown in the Timeline
      */
-    public init(bulletType: BulletType, timeFrames: [TimeFrame]){
+    public init(bulletType: BulletType, timeFrames: [TimeFrame], onTap: UITapGestureRecognizer){
         self.timeFrames = timeFrames
         self.bulletType = bulletType
+        self.onTap = onTap
         super.init(frame: CGRect.zero)
-        
+
         translatesAutoresizingMaskIntoConstraints = false
         
         setupContent()
@@ -157,6 +160,7 @@ open class TimelineView: UIView {
         }
         
         let guideView = UIView()
+        guideView.isUserInteractionEnabled = true
         guideView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(guideView)
         addConstraints([
@@ -172,7 +176,10 @@ open class TimelineView: UIView {
         
         for element in timeFrames{
             let v = blockForTimeFrame(element, imageTag: i)
+            v.isUserInteractionEnabled = true
+            v.addGestureRecognizer(self.onTap!)
             addSubview(v)
+            
             addConstraints([
                 NSLayoutConstraint(item: v, attribute: .top, relatedBy: .equal, toItem: viewFromAbove, attribute: .bottom, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: viewFromAbove, attribute: .width, multiplier: 1.0, constant: 0),
@@ -183,6 +190,7 @@ open class TimelineView: UIView {
                 addConstraint(NSLayoutConstraint(item: v, attribute: .left, relatedBy: .equal, toItem: viewFromAbove, attribute: .left, multiplier: 1.0, constant: 0))
             }
             viewFromAbove = v
+            
             i += 1
         }
         

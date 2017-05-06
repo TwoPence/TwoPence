@@ -30,6 +30,7 @@ class DebtMilestoneView: UIView {
         let nib = UINib(nibName: "DebtMilestoneView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
+        contentView.isUserInteractionEnabled = true
         addSubview(contentView)
         
         addTimeline()
@@ -37,16 +38,13 @@ class DebtMilestoneView: UIView {
 
     func addTimeline(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        timeline = TimelineView(bulletType: .circle, timeFrames: [
-            TimeFrame(text: "New Year's Day", date: "January 1", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images")),
-            ])
+        let timeframe = TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images"))
+        let gest = UITapGestureRecognizer(target: self, action: #selector(self.onTapMilestoneItem(_:)))
+        timeline = TimelineView(bulletType: .circle, timeFrames: [timeframe, timeframe, timeframe, timeframe, timeframe, timeframe], onTap: gest)
+        timeline.isUserInteractionEnabled = true
+        scrollView.addSubview(timeline)
+        scrollView.isUserInteractionEnabled = true
+        
         scrollView.addConstraints([
             NSLayoutConstraint(item: timeline, attribute: .left, relatedBy: .equal, toItem: scrollView, attribute: .left, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: timeline, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: scrollView, attribute: .bottom, multiplier: 1.0, constant: 0),
@@ -55,14 +53,9 @@ class DebtMilestoneView: UIView {
             
             NSLayoutConstraint(item: timeline, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1.0, constant: 0)
             ])
-        scrollView.addSubview(timeline)
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    func onTapMilestoneItem(_ sender: UITapGestureRecognizer) {
+        print("Hello")
     }
-    */
-
 }

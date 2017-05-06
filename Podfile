@@ -10,6 +10,7 @@ target 'TwoPence' do
   pod 'Cely', '~> 2.0.0'
   pod 'Alamofire', '~> 4.4'
   pod 'Unbox', '~> 2.4.0'
+  pod 'BubbleTransition', '~> 2.0.2'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
