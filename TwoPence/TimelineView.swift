@@ -62,7 +62,7 @@ public enum BulletType{
  */
 open class TimelineView: UIView {
     
-    var onTap:  UITapGestureRecognizer?
+    open var onTap:  ((AnyObject) -> ())?
     
     //MARK: Public Properties
     
@@ -141,7 +141,7 @@ open class TimelineView: UIView {
      
      @param timeFrames The events shown in the Timeline
      */
-    public init(bulletType: BulletType, timeFrames: [TimeFrame], onTap: UITapGestureRecognizer){
+    public init(bulletType: BulletType, timeFrames: [TimeFrame], onTap: @escaping (AnyObject) -> ()){
         self.timeFrames = timeFrames
         self.bulletType = bulletType
         self.onTap = onTap
@@ -176,8 +176,6 @@ open class TimelineView: UIView {
         
         for element in timeFrames{
             let v = blockForTimeFrame(element, imageTag: i)
-            v.isUserInteractionEnabled = true
-            v.addGestureRecognizer(self.onTap!)
             addSubview(v)
             
             addConstraints([
@@ -334,10 +332,12 @@ open class TimelineView: UIView {
             button.translatesAutoresizingMaskIntoConstraints = false
             button.backgroundColor = UIColor.clear
             button.tag = imageTag
+            button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
+            
             v.addSubview(button)
             v.addConstraints([
                 NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: v, attribute: .width, multiplier: 1.0, constant: -60),
-                NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 130),
+                NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 170),
                 NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: v, attribute: .top, multiplier: 1.0, constant: 0)
                 ])
             if showBulletOnRight{
@@ -367,6 +367,11 @@ open class TimelineView: UIView {
         }
         
         return v
+    }
+    
+    
+    @objc fileprivate func handleRegister(sender: UIButton){
+        onTap!(sender)
     }
 }
 

@@ -39,8 +39,7 @@ class DebtMilestoneView: UIView {
     func addTimeline(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         let timeframe = TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images"))
-        let gest = UITapGestureRecognizer(target: self, action: #selector(self.onTapMilestoneItem(_:)))
-        timeline = TimelineView(bulletType: .circle, timeFrames: [timeframe, timeframe, timeframe, timeframe, timeframe, timeframe], onTap: gest)
+        timeline = TimelineView(bulletType: .circle, timeFrames: [timeframe, timeframe, timeframe, timeframe, timeframe, timeframe], onTap: onTapMilestoneItem)
         timeline.isUserInteractionEnabled = true
         scrollView.addSubview(timeline)
         scrollView.isUserInteractionEnabled = true
@@ -55,7 +54,7 @@ class DebtMilestoneView: UIView {
             ])
     }
     
-    func onTapMilestoneItem(_ sender: UITapGestureRecognizer) {
+    func onTapMilestoneItem(_ sender: AnyObject) {
         print("Hello")
     }
 }
