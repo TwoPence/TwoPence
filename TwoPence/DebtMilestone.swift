@@ -34,9 +34,10 @@ class DebtMilestone: Unboxable {
         return milestones
     }
     
-    init() {
+    // For testing only
+    init(type: String) {
         self.value = "$100"
-        self.type = "completed"
+        self.type = type
         self.imageName = "completed"
         self.description = "Testing my description"
     }

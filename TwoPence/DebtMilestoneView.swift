@@ -38,7 +38,13 @@ class DebtMilestoneView: UIView {
         contentView.frame = bounds
         contentView.isUserInteractionEnabled = true
         addSubview(contentView)
-        self.milestones = [DebtMilestone]() //TODO Replace with API call
+        self.milestones = [DebtMilestone]()
+        self.milestones?.append(DebtMilestone(type: "completed"))
+        self.milestones?.append(DebtMilestone(type: "completed"))
+        self.milestones?.append(DebtMilestone(type: "completed"))
+        self.milestones?.append(DebtMilestone(type: "current"))
+        self.milestones?.append(DebtMilestone(type: "future"))
+        
         addTimeline()
     }
 
@@ -46,13 +52,10 @@ class DebtMilestoneView: UIView {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         var timeframes = [TimeFrame]()
-        for milestone in milestones! {
-            timeframes.append(TimeFrame(text: milestone.description!, date: milestone.value!, image: #imageLiteral(resourceName: "images")))
+        for (index, milestone) in milestones!.enumerated() {
+            timeframes.append(TimeFrame(text: "", date: "", debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "images")))
         }
         
-        // Test - remove when API call is added
-        timeframes.append(TimeFrame(text: "Text!!!", date: "Feb 14th!", image: #imageLiteral(resourceName: "images")))
-
         timeline = TimelineView(bulletType: .circle, timeFrames: timeframes, onTap: onTapMilestoneItem)
         timeline.isUserInteractionEnabled = true
         scrollView.addSubview(timeline)
@@ -69,7 +72,7 @@ class DebtMilestoneView: UIView {
     }
     
     func onTapMilestoneItem(_ sender: AnyObject, event: UIEvent) {
-        // Get debt milestone
-        delegate?.navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone())
+        let debtMilestone = self.milestones?[sender.tag]
+        delegate?.navigateToDebtMilestoneDetailViewController(selectedMiletone: debtMilestone!)
     }
 }

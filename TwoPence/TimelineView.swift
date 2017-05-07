@@ -21,6 +21,10 @@ public struct TimeFrame{
      The date that the event occured.
      */
     let date: String
+    
+    let debtMilestone: DebtMilestone
+    
+    let debtMilestonePosition: Int
     /**
      An optional image to show with the text and the date in the timeline.
      */
@@ -212,7 +216,7 @@ open class TimelineView: UIView {
         addConstraint(NSLayoutConstraint(item: viewFromAbove, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0))
     }
     
-    fileprivate func bulletView(_ size: CGSize, bulletType: BulletType) -> UIView {
+    fileprivate func bulletView(_ size: CGSize, bulletType: BulletType, color: UIColor, stColor: UIColor) -> UIView {
         var path: UIBezierPath
         switch bulletType {
         case .circle:
@@ -230,8 +234,10 @@ open class TimelineView: UIView {
         }
         
         let shapeLayer = CAShapeLayer()
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = lineColor.cgColor
+        shapeLayer.fillColor = color.cgColor
+        shapeLayer.strokeColor = stColor.cgColor
+        //shapeLayer.fillColor = UIColor.clear.cgColor
+        //shapeLayer.strokeColor = lineColor.cgColor
         shapeLayer.path = path.cgPath
         
         let v = UIView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.width))
@@ -246,7 +252,18 @@ open class TimelineView: UIView {
         
         //bullet
         let s = CGSize(width: 14, height: 14)
-        let bullet: UIView = bulletView(s, bulletType: bulletType)
+        var bullet: UIView = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
+        if(element.debtMilestone.type == "completed"){
+            // All green
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
+        } else if(element.debtMilestone.type == "current"){
+            // outside green, inside clear
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: UIColor.green)
+        } else {
+            // outside grey, inside clear
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: lineColor)
+        }
+        
         v.addSubview(bullet)
         v.addConstraint(NSLayoutConstraint(item: bullet, attribute: .top, relatedBy: .equal, toItem: v, attribute: .top, multiplier: 1.0, constant: 0))
         if showBulletOnRight{
@@ -329,6 +346,7 @@ open class TimelineView: UIView {
                 ])
             
             let button = UIButton(type: .custom)
+            button.tag = element.debtMilestonePosition
             button.translatesAutoresizingMaskIntoConstraints = false
             button.backgroundColor = UIColor.clear
             button.tag = imageTag
@@ -352,7 +370,12 @@ open class TimelineView: UIView {
         //draw the line between the bullets
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
-        line.backgroundColor = lineColor
+        if (element.debtMilestone.type == "completed"){
+            line.backgroundColor = UIColor.green
+        } else {
+            line.backgroundColor = lineColor
+        }
+        
         v.addSubview(line)
         sendSubview(toBack: line)
         v.addConstraints([
