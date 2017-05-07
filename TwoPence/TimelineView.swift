@@ -62,6 +62,8 @@ public enum BulletType{
  */
 open class TimelineView: UIView {
     
+    open var onTap:  ((AnyObject, UIEvent) -> ())?
+    
     //MARK: Public Properties
     
     /**
@@ -139,11 +141,12 @@ open class TimelineView: UIView {
      
      @param timeFrames The events shown in the Timeline
      */
-    public init(bulletType: BulletType, timeFrames: [TimeFrame]){
+    public init(bulletType: BulletType, timeFrames: [TimeFrame], onTap: @escaping (AnyObject, UIEvent) -> ()){
         self.timeFrames = timeFrames
         self.bulletType = bulletType
+        self.onTap = onTap
         super.init(frame: CGRect.zero)
-        
+
         translatesAutoresizingMaskIntoConstraints = false
         
         setupContent()
@@ -157,6 +160,7 @@ open class TimelineView: UIView {
         }
         
         let guideView = UIView()
+        guideView.isUserInteractionEnabled = true
         guideView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(guideView)
         addConstraints([
@@ -173,6 +177,7 @@ open class TimelineView: UIView {
         for element in timeFrames{
             let v = blockForTimeFrame(element, imageTag: i)
             addSubview(v)
+            
             addConstraints([
                 NSLayoutConstraint(item: v, attribute: .top, relatedBy: .equal, toItem: viewFromAbove, attribute: .bottom, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: viewFromAbove, attribute: .width, multiplier: 1.0, constant: 0),
@@ -183,6 +188,7 @@ open class TimelineView: UIView {
                 addConstraint(NSLayoutConstraint(item: v, attribute: .left, relatedBy: .equal, toItem: viewFromAbove, attribute: .left, multiplier: 1.0, constant: 0))
             }
             viewFromAbove = v
+            
             i += 1
         }
         
@@ -326,10 +332,12 @@ open class TimelineView: UIView {
             button.translatesAutoresizingMaskIntoConstraints = false
             button.backgroundColor = UIColor.clear
             button.tag = imageTag
+            button.addTarget(self, action:#selector(handleRegister(button:forEvent:)), for: .touchUpInside)
+            
             v.addSubview(button)
             v.addConstraints([
                 NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: v, attribute: .width, multiplier: 1.0, constant: -60),
-                NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 130),
+                NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 170),
                 NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: v, attribute: .top, multiplier: 1.0, constant: 0)
                 ])
             if showBulletOnRight{
@@ -359,6 +367,11 @@ open class TimelineView: UIView {
         }
         
         return v
+    }
+    
+    
+    @objc fileprivate func handleRegister(button: UIButton, forEvent event: UIEvent){
+        onTap!(button, event)
     }
 }
 

@@ -207,7 +207,7 @@
         <!--Jolt View Controller-->
         <scene sceneID="8J0-Tf-ASf">
             <objects>
-                <viewController id="nlw-lw-AOM" customClass="JoltViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoltViewController" id="nlw-lw-AOM" customClass="JoltViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pqR-CV-TCd"/>
                         <viewControllerLayoutGuide type="bottom" id="hJL-lj-7nQ"/>
@@ -250,7 +250,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnE-Uq-Fwh" userLabel="Content View" customClass="DebtMilestoneView" customModule="TwoPence" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -258,17 +258,53 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="XnE-Uq-Fwh" secondAttribute="trailing" id="cyh-aB-f9G"/>
                             <constraint firstItem="Psz-T2-1dd" firstAttribute="top" secondItem="XnE-Uq-Fwh" secondAttribute="bottom" id="u5X-wH-17S"/>
-                            <constraint firstItem="XnE-Uq-Fwh" firstAttribute="top" secondItem="6Rs-Sd-3be" secondAttribute="top" id="uPG-fb-IcY"/>
+                            <constraint firstItem="XnE-Uq-Fwh" firstAttribute="top" secondItem="6Rs-Sd-3be" secondAttribute="top" constant="64" id="uPG-fb-IcY"/>
                             <constraint firstItem="XnE-Uq-Fwh" firstAttribute="leading" secondItem="6Rs-Sd-3be" secondAttribute="leading" id="wrc-1z-gAq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XLc-dx-fZT"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="contentView" destination="XnE-Uq-Fwh" id="INc-eS-I78"/>
+                        <segue destination="4DA-jE-hab" kind="presentation" identifier="DebtMilestoneDetailSegue" id="JfK-S0-F2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDX-X1-sa4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872.8" y="-587.85607196401804"/>
+            <point key="canvasLocation" x="2812" y="-587.85607196401804"/>
+        </scene>
+        <!--Debt Milestone Detail View Controller-->
+        <scene sceneID="tu2-eV-4Xc">
+            <objects>
+                <viewController storyboardIdentifier="DebtMilestoneDetailViewController" id="4DA-jE-hab" customClass="DebtMilestoneDetailViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtJ-pT-MZi"/>
+                        <viewControllerLayoutGuide type="bottom" id="FQX-PF-ZYv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UCd-4T-cWz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGt-fn-jAV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="contentView" destination="KGt-fn-jAV" id="SDT-Ta-dAF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kk6-3D-GAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712.8000000000002" y="-588.75562218890559"/>
         </scene>
         <!--Accounts View Controller-->
         <scene sceneID="PiF-xW-OKA">
@@ -426,6 +462,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJl-a3-mEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1871.2" y="768.66566716641682"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AQj-z1-4zw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qga-2a-V9n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9D-Kh-2eh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BIH-8g-3fG" kind="relationship" relationship="rootViewController" id="ao3-Q7-j5a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qq4-wY-QTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="-587.85607196401804"/>
         </scene>
     </scenes>
 </document>

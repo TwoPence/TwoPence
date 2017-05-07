@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import Hero
 
-class DebtMilestoneViewController: UIViewController {
+
+class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     @IBOutlet weak var contentView: DebtMilestoneView!
+    var selectedMiletone: DebtMilestone?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentView.delegate = self
+        contentView.heroModifiers = [.fade, .translate(x:0, y:-250)]
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +26,13 @@ class DebtMilestoneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let controller = segue.destination as! DebtMilestoneDetailViewController
+        controller.debtMilestone = selectedMiletone
     }
-    */
-
+    
+    func navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone) {
+        self.selectedMiletone = selectedMiletone
+        self.performSegue(withIdentifier: "DebtMilestoneDetailSegue", sender: nil)
+    }
 }

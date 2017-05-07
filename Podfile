@@ -10,6 +10,7 @@ target 'TwoPence' do
   pod 'Cely', '~> 2.0.0'
   pod 'Alamofire', '~> 4.4'
   pod 'Unbox', '~> 2.4.0'
+  pod 'Hero'
   pod 'PopupDialog', '~> 0.5'
 
   target 'TwoPenceTests' do
