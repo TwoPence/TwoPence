@@ -9,9 +9,15 @@
 import UIKit
 import Unbox
 
+enum MilestoneType: Int, UnboxableEnum {
+    case Complete
+    case Current
+    case Future
+}
+
 class DebtMilestone: Unboxable {
     var value: String?
-    var type: String? //Should be enum?
+    var type: MilestoneType?
     var imageName: String? //Shold be enum mapped to images?
     var description: String?
     
@@ -35,7 +41,7 @@ class DebtMilestone: Unboxable {
     }
     
     // For testing only
-    init(type: String) {
+    init(type: MilestoneType) {
         self.value = "$100"
         self.type = type
         self.imageName = "completed"

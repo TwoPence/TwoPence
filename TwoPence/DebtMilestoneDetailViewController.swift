@@ -18,11 +18,11 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
         super.viewDidLoad()
         
         if debtMilestone != nil {
-            if (debtMilestone?.type == "completed"){
+            if (debtMilestone?.type == MilestoneType.Complete){
                 let view = MilestoneCompleteView(frame: self.view.frame)
                 view.delegate = self
                 self.contentView.addSubview(view)
-            } else if(debtMilestone?.type == "future"){
+            } else if(debtMilestone?.type == MilestoneType.Current){
                 let view = MilestoneFutureView(frame: self.view.frame)
                 view.delegate = self
                 self.contentView.addSubview(view)

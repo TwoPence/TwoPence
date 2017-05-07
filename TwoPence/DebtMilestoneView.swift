@@ -39,11 +39,11 @@ class DebtMilestoneView: UIView {
         contentView.isUserInteractionEnabled = true
         addSubview(contentView)
         self.milestones = [DebtMilestone]()
-        self.milestones?.append(DebtMilestone(type: "completed"))
-        self.milestones?.append(DebtMilestone(type: "completed"))
-        self.milestones?.append(DebtMilestone(type: "completed"))
-        self.milestones?.append(DebtMilestone(type: "current"))
-        self.milestones?.append(DebtMilestone(type: "future"))
+        self.milestones?.append(DebtMilestone(type: MilestoneType.Complete))
+        self.milestones?.append(DebtMilestone(type: MilestoneType.Complete))
+        self.milestones?.append(DebtMilestone(type: MilestoneType.Complete))
+        self.milestones?.append(DebtMilestone(type: MilestoneType.Current))
+        self.milestones?.append(DebtMilestone(type: MilestoneType.Future))
         
         addTimeline()
     }

@@ -253,10 +253,10 @@ open class TimelineView: UIView {
         //bullet
         let s = CGSize(width: 14, height: 14)
         var bullet: UIView = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
-        if(element.debtMilestone.type == "completed"){
+        if(element.debtMilestone.type == MilestoneType.Complete){
             // All green
             bullet = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
-        } else if(element.debtMilestone.type == "current"){
+        } else if(element.debtMilestone.type == MilestoneType.Current){
             // outside green, inside clear
             bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: UIColor.green)
         } else {
@@ -370,7 +370,7 @@ open class TimelineView: UIView {
         //draw the line between the bullets
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
-        if (element.debtMilestone.type == "completed"){
+        if (element.debtMilestone.type == MilestoneType.Complete){
             line.backgroundColor = UIColor.green
         } else {
             line.backgroundColor = lineColor
