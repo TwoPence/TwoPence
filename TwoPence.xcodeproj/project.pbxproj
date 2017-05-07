@@ -68,6 +68,7 @@
 		BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */; };
 		BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */; };
 		BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */; };
+		BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */; };
 		BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */; };
 		BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */; };
@@ -154,6 +155,7 @@
 		BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneFutureView.xib; sourceTree = "<group>"; };
 		BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneCompleteView.swift; sourceTree = "<group>"; };
 		BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneFutureView.swift; sourceTree = "<group>"; };
+		BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAConfettiView.swift; sourceTree = "<group>"; };
 		BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceAPI.swift; sourceTree = "<group>"; };
 		BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneDetailViewController.swift; sourceTree = "<group>"; };
 		BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */,
 				BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */,
 				BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */,
+				BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */,
 			);
 			name = "Milestone Views";
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				BEEF57FB1EB648AB001EE950 /* AccountDetailViewController.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */,
+				BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */,
 				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,

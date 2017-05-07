@@ -12,16 +12,22 @@ import Hero
 class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDelegate, MilestoneCompleteViewDelegate {
 
     @IBOutlet weak var contentView: UIView!
+    
+    var confettiView: SAConfettiView?
     var debtMilestone: DebtMilestone?
-     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if debtMilestone != nil {
             if (debtMilestone?.type == MilestoneType.Complete){
+                confettiView = SAConfettiView(frame: self.view.bounds)
+                confettiView?.isUserInteractionEnabled = false
                 let view = MilestoneCompleteView(frame: self.view.frame)
                 view.delegate = self
                 self.contentView.addSubview(view)
+                self.contentView.addSubview(confettiView!)
+                confettiView?.startConfetti()
             } else if(debtMilestone?.type == MilestoneType.Current){
                 let view = MilestoneFutureView(frame: self.view.frame)
                 view.delegate = self
@@ -51,6 +57,7 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
     */
     
     func didTapCloseButton() {
+        self.confettiView?.stopConfetti()
         dismiss(animated: true, completion: nil)
     }
     
