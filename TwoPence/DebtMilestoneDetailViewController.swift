@@ -27,7 +27,7 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
                 view.delegate = self
                 self.contentView.addSubview(view)
             } else {
-                let view = MilestoneCompleteView(frame: self.view.frame)
+                let view = MilestoneFutureView(frame: self.view.frame)
                 view.delegate = self
                 self.contentView.addSubview(view)
             }

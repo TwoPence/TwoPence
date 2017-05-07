@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MilestoneFutureView" customModule="TwoPence" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Pkm-7a-YnH"/>
+                <outlet property="goalProgress" destination="yKe-3M-NXB" id="KZx-GE-8Bb"/>
                 <outlet property="milestoneFutureImage" destination="1GQ-aw-Qh7" id="mr4-RH-LZh"/>
                 <outlet property="milestoneFutureLabel" destination="g7a-1C-1Rh" id="VIu-k0-xy9"/>
             </connections>
@@ -48,6 +49,10 @@
                         <action selector="onCloseTap:" destination="-1" eventType="touchUpInside" id="CMc-oB-4ir"/>
                     </connections>
                 </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-3M-NXB">
+                    <rect key="frame" x="112" y="405" width="150" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </progressView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </view>
