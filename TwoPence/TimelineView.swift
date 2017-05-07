@@ -62,7 +62,7 @@ public enum BulletType{
  */
 open class TimelineView: UIView {
     
-    open var onTap:  ((AnyObject) -> ())?
+    open var onTap:  ((AnyObject, UIEvent) -> ())?
     
     //MARK: Public Properties
     
@@ -141,7 +141,7 @@ open class TimelineView: UIView {
      
      @param timeFrames The events shown in the Timeline
      */
-    public init(bulletType: BulletType, timeFrames: [TimeFrame], onTap: @escaping (AnyObject) -> ()){
+    public init(bulletType: BulletType, timeFrames: [TimeFrame], onTap: @escaping (AnyObject, UIEvent) -> ()){
         self.timeFrames = timeFrames
         self.bulletType = bulletType
         self.onTap = onTap
@@ -332,7 +332,7 @@ open class TimelineView: UIView {
             button.translatesAutoresizingMaskIntoConstraints = false
             button.backgroundColor = UIColor.clear
             button.tag = imageTag
-            button.addTarget(self, action:#selector(handleRegister(sender:)), for: .touchUpInside)
+            button.addTarget(self, action:#selector(handleRegister(button:forEvent:)), for: .touchUpInside)
             
             v.addSubview(button)
             v.addConstraints([
@@ -370,8 +370,8 @@ open class TimelineView: UIView {
     }
     
     
-    @objc fileprivate func handleRegister(sender: UIButton){
-        onTap!(sender)
+    @objc fileprivate func handleRegister(button: UIButton, forEvent event: UIEvent){
+        onTap!(button, event)
     }
 }
 

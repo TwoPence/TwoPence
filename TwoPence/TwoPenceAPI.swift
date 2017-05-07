@@ -127,5 +127,28 @@ class TwoPenceAPI: NSObject {
                 }
         }
     }
+    
+    func getMilestones(success: @escaping ([DebtMilestone]) -> (), failure: @escaping (Error) -> ()){
+        
+        Alamofire.request(self.baseURL + "v1/debt-milestones", method: .get)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    if let result = response.result.value {
+                        do{
+                            let response = result as! Dictionary<String, Any>
+                            let milestones: [DebtMilestone] = try DebtMilestone.withArray(dictionaries: response["data"] as! Array)
+                            success(milestones)
+                        } catch {
+                            print("An error occured: \(error)")
+                            failure(error)
+                        }
+                    }
+                case .failure(let error):
+                    failure(error)
+                }
+        }
+    }
 }
 

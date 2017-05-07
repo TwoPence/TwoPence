@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import Hero
 
-class DebtMilestoneDetailViewController: UIViewController {
+class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDelegate, MilestoneCompleteViewDelegate {
 
+    @IBOutlet weak var contentView: UIView!
+    var debtMilestone: DebtMilestone?
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if debtMilestone != nil {
+            if (debtMilestone?.type == "completed"){
+                let view = MilestoneCompleteView(frame: self.view.frame)
+                view.delegate = self
+                self.contentView.addSubview(view)
+            } else if(debtMilestone?.type == "future"){
+                let view = MilestoneFutureView(frame: self.view.frame)
+                view.delegate = self
+                self.contentView.addSubview(view)
+            } else {
+                let view = MilestoneCompleteView(frame: self.view.frame)
+                view.delegate = self
+                self.contentView.addSubview(view)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,8 +49,19 @@ class DebtMilestoneDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func closeMilestoneDetail(_ sender: Any) {
-        self.dismiss(animated: true, completion: {});
+    
+    func didTapCloseButton() {
+        dismiss(animated: true, completion: nil)
     }
-
+    
+    func doJolt() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "JoltViewController") as! JoltViewController
+        self.present(secondViewController, animated: true, completion: nil)
+    }
+    
+    func shareMilestone(shareText: String){
+        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+        present(vc, animated: true, completion: nil)
+    }
 }

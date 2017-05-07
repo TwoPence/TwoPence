@@ -64,6 +64,10 @@
 		BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD81EB3A83D0096DD5B /* Account.swift */; };
 		BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDA1EB3A8550096DD5B /* Transaction.swift */; };
 		BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */; };
+		BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */; };
+		BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */; };
+		BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */; };
+		BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */; };
 		BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */; };
 		BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */; };
@@ -146,6 +150,10 @@
 		BF134BD81EB3A83D0096DD5B /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BF134BDA1EB3A8550096DD5B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputationMetrics.swift; sourceTree = "<group>"; };
+		BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneCompleteView.xib; sourceTree = "<group>"; };
+		BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneFutureView.xib; sourceTree = "<group>"; };
+		BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneCompleteView.swift; sourceTree = "<group>"; };
+		BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneFutureView.swift; sourceTree = "<group>"; };
 		BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceAPI.swift; sourceTree = "<group>"; };
 		BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneDetailViewController.swift; sourceTree = "<group>"; };
 		BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -210,13 +218,13 @@
 				BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */,
 				BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */,
 				BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */,
+				BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */,
 				BE8D3E161EB1864800BE92C9 /* TransactionsViewController.swift */,
 				BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */,
 				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
 				BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */,
 				BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */,
 				BEEF580C1EB69031001EE950 /* JoltViewController.swift */,
-				BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -317,6 +325,10 @@
 				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
 				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
 				BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */,
+				BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */,
+				BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */,
+				BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */,
+				BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */,
 			);
 			name = "Milestone Views";
 			sourceTree = "<group>";
@@ -462,12 +474,14 @@
 				BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */,
 				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
 				BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */,
+				BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */,
 				BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */,
 				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
 				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
+				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
 				BEEF57DF1EB538AE001EE950 /* AggTransactionsView.xib in Resources */,
 				BE8D3E531EB3932800BE92C9 /* MenuUserCell.xib in Resources */,
@@ -598,6 +612,7 @@
 				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,
 				BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */,
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,
+				BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
@@ -628,6 +643,7 @@
 				BEEF57FD1EB6496F001EE950 /* AccountDetailView.swift in Sources */,
 				BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
+				BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

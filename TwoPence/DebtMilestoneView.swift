@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol DebtMilestoneViewDelegate {
+    
+    func navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone)
+}
+
 class DebtMilestoneView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var subView: UIView!
     
+    var milestones: [DebtMilestone]?
+    var delegate: DebtMilestoneViewDelegate?
     var timeline: TimelineView!
     
     required init(coder aDecoder: NSCoder) {
@@ -32,14 +39,22 @@ class DebtMilestoneView: UIView {
         contentView.frame = bounds
         contentView.isUserInteractionEnabled = true
         addSubview(contentView)
-        
+        self.milestones = [DebtMilestone]() //TODO Replace with API call
         addTimeline()
     }
 
     func addTimeline(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        let timeframe = TimeFrame(text: "The month of love!", date: "February 14", image: #imageLiteral(resourceName: "images"))
-        timeline = TimelineView(bulletType: .circle, timeFrames: [timeframe, timeframe, timeframe, timeframe, timeframe, timeframe], onTap: onTapMilestoneItem)
+        
+        var timeframes = [TimeFrame]()
+        for milestone in milestones! {
+            timeframes.append(TimeFrame(text: milestone.description!, date: milestone.value!, image: #imageLiteral(resourceName: "images")))
+        }
+        
+        // Test - remove when API call is added
+        timeframes.append(TimeFrame(text: "Text!!!", date: "Feb 14th!", image: #imageLiteral(resourceName: "images")))
+
+        timeline = TimelineView(bulletType: .circle, timeFrames: timeframes, onTap: onTapMilestoneItem)
         timeline.isUserInteractionEnabled = true
         scrollView.addSubview(timeline)
         scrollView.isUserInteractionEnabled = true
@@ -54,7 +69,8 @@ class DebtMilestoneView: UIView {
             ])
     }
     
-    func onTapMilestoneItem(_ sender: AnyObject) {
-        print("Hello")
+    func onTapMilestoneItem(_ sender: AnyObject, event: UIEvent) {
+        // Get debt milestone
+        delegate?.navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone())
     }
 }

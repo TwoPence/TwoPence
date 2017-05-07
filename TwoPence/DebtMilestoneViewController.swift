@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import Hero
 
-class DebtMilestoneViewController: UIViewController {
+
+class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     @IBOutlet weak var contentView: DebtMilestoneView!
+    var selectedMiletone: DebtMilestone?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentView.delegate = self
+        contentView.heroModifiers = [.fade, .translate(x:0, y:-250)]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! DebtMilestoneDetailViewController
+        controller.debtMilestone = selectedMiletone
+    }
+    
+    func navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone) {
+        self.selectedMiletone = selectedMiletone
+        self.performSegue(withIdentifier: "DebtMilestoneDetailSegue", sender: nil)
     }
 }
