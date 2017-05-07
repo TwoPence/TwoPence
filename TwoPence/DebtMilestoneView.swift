@@ -17,7 +17,6 @@ class DebtMilestoneView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var subView: UIView!
     
     var milestones: [DebtMilestone]?
     var delegate: DebtMilestoneViewDelegate?

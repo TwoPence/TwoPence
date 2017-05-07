@@ -1,32 +1,32 @@
 PODS:
   - Alamofire (4.4.0)
-  - BubbleTransition (2.0.2)
   - Cely (2.0.0):
     - Cely/Core (= 2.0.0)
   - Cely/Core (2.0.0)
   - Hero (0.3.6)
   - Money (2.0.1):
     - ValueCoding (~> 2)
+  - PopupDialog (0.5.4)
   - Unbox (2.4.0)
   - ValueCoding (2.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - BubbleTransition (~> 2.0.2)
   - Cely (~> 2.0.0)
   - Hero
   - Money (= 2.0.1)
+  - PopupDialog (~> 0.5)
   - Unbox (~> 2.4.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  BubbleTransition: 7d98ed7d56f0940e83f350a98103ad473491c769
   Cely: 10e51eadc776f132982446165b4f35c11b8970bd
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
+  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
 
-PODFILE CHECKSUM: d16670e6ad55e35166e0c665841b5c7171e6d0ee
+PODFILE CHECKSUM: 560c476cf91e7a482bd3c7f9ef56aafdf73f4920
 
 COCOAPODS: 1.2.0

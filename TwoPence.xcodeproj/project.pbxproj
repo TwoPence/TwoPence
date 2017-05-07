@@ -232,8 +232,13 @@
 		BEA1B63F1EB1375E00F41663 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
+				BFBD3B061EBAA50800A7F767 /* Milestone Views */,
+				BFBD3B031EBAA4C500A7F767 /* Jolt Views */,
+				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
+				BEEF57E11EB53E25001EE950 /* Menu Views */,
+				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
 				BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */,
+				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
 				BEEF57DC1EB538A3001EE950 /* AggTransactionsView.swift */,
 				BEEF57DE1EB538AE001EE950 /* AggTransactionsView.xib */,
 				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
@@ -244,7 +249,6 @@
 				BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */,
 				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
 				BEEF58101EB69116001EE950 /* JoltView.xib */,
-				BF82C79F1EBC494B00F43E27 /* Milestone Views */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF57E11EB53E25001EE950 /* Menu Views */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
@@ -319,7 +323,16 @@
 			name = "Dashboard Views";
 			sourceTree = "<group>";
 		};
-		BF82C79F1EBC494B00F43E27 /* Milestone Views */ = {
+		BFBD3B031EBAA4C500A7F767 /* Jolt Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
+				BEEF58101EB69116001EE950 /* JoltView.xib */,
+			);
+			name = "Jolt Views";
+			sourceTree = "<group>";
+		};
+		BFBD3B061EBAA50800A7F767 /* Milestone Views */ = {
 			isa = PBXGroup;
 			children = (
 				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
