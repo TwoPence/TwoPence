@@ -175,57 +175,62 @@ class SavingsView: UIView, JoltViewDelegate {
 }
 
 extension SavingsView: UITableViewDataSource, UITableViewDelegate {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return filtered.count
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableViewHeaderHeight)
-        let headerView = UIView(frame: frame)
-        headerView.backgroundColor = UIColor.lightGray
-        
-        let monthLabel = UILabel(frame: frame)
-        monthLabel.text = filtered[section].month
-        monthLabel.font = monthLabel.font.withSize(13)
-        monthLabel.textAlignment = .center
-        headerView.addSubview(monthLabel)
-
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableViewHeaderHeight
-    }
+//    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return filtered.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableViewHeaderHeight)
+//        let headerView = UIView(frame: frame)
+//        headerView.backgroundColor = UIColor.lightGray
+//        
+//        let monthLabel = UILabel(frame: frame)
+//        monthLabel.text = filtered[section].month
+//        monthLabel.font = monthLabel.font.withSize(13)
+//        monthLabel.textAlignment = .center
+//        headerView.addSubview(monthLabel)
+//
+//        return headerView
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return tableViewHeaderHeight
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filtered[section].aggTransactions.count
+//        return filtered[section].aggTransactions.count
+        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let trans = filtered[indexPath.section].aggTransactions
-        
-        if trans[indexPath.row].aggType! == "PENDING" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTransferCell", for: indexPath) as! PendingTransferCell
-            cell.pendingTransfer = trans[indexPath.row]
-            return cell
-        } else if trans[indexPath.row].aggType! == "MATCHED" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MatchedCell", for: indexPath) as! MatchedCell
-            cell.match = trans[indexPath.row]
-            cell.selectionStyle = .none
-            cell.isUserInteractionEnabled = false
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransferCell", for: indexPath) as! TransferCell
-            cell.transfer = trans[indexPath.row]
-            return cell
-        }
+//        let trans = filtered[indexPath.section].aggTransactions
+//        
+//        if trans[indexPath.row].aggType! == "PENDING" {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTransferCell", for: indexPath) as! PendingTransferCell
+//            cell.pendingTransfer = trans[indexPath.row]
+//            return cell
+//        } else if trans[indexPath.row].aggType! == "MATCHED" {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "MatchedCell", for: indexPath) as! MatchedCell
+//            cell.match = trans[indexPath.row]
+//            cell.selectionStyle = .none
+//            cell.isUserInteractionEnabled = false
+//            return cell
+//        } else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TransferCell", for: indexPath) as! TransferCell
+//            cell.transfer = trans[indexPath.row]
+//            return cell
+//        }
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let trans = filtered[indexPath.section].aggTransactions[indexPath.row].transactions
-        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: trans!)
+//        let trans = filtered[indexPath.section].aggTransactions[indexPath.row].transactions
+        let trans = [Transaction]()
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: trans)
     }
     
     // -------------------- Begin Methods for Resizing Header --------------------

@@ -51,36 +51,39 @@ class TransactionsView: UIView {
 
 extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return displayTransactions.count
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
-        let sectionView = UIView(frame: frame)
-        sectionView.backgroundColor = UIColor.lightGray
-        
-        let sectionLabel = UILabel(frame: frame)
-        dateFormatter.dateStyle = .long
-        sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
-        sectionLabel.font = sectionLabel.font.withSize(13)
-        sectionLabel.textAlignment = .center
-        sectionView.addSubview(sectionLabel)
-        
-        return sectionView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return sectionHeight
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return displayTransactions.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
+//        let sectionView = UIView(frame: frame)
+//        sectionView.backgroundColor = UIColor.lightGray
+//        
+//        let sectionLabel = UILabel(frame: frame)
+//        dateFormatter.dateStyle = .long
+//        sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
+//        sectionLabel.font = sectionLabel.font.withSize(13)
+//        sectionLabel.textAlignment = .center
+//        sectionView.addSubview(sectionLabel)
+//        
+//        return sectionView
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return sectionHeight
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayTransactions[section].transactions.count
+        // return displayTransactions[section].transactions.count
+        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-        cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+        //cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "\(indexPath.row)"
         return cell
     }
     
@@ -99,6 +102,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        print("canEditRowAt called!")
         return true
     }
     
