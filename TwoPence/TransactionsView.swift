@@ -65,6 +65,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
         sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
         sectionLabel.font = sectionLabel.font.withSize(13)
         sectionLabel.textAlignment = .center
+        sectionView.addSubview(sectionLabel)
         
         return sectionView
     }
@@ -81,6 +82,28 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
         cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        print("called!")
+        let skip = UITableViewRowAction(style: .destructive, title: "Skip") { (action: UITableViewRowAction,
+            indexPath: IndexPath) in
+            print("User tapped skip")
+            // POST call to API to update transaction status to "skipped".
+        }
+        return [skip]
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // Nothing here.
     }
 
 }

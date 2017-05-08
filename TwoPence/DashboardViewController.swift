@@ -47,7 +47,6 @@ class DashboardViewController: UIViewController {
         let uniqueDates = Set<Date>(dates)
         for date in uniqueDates {
             let trans = transactions.filter({$0.date == date})
-            print("\(date), \(trans)")
             displayTransactions.append((date: date, transactions: trans))
         }
         return displayTransactions
