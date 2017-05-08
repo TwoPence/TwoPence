@@ -19,18 +19,58 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3m-ix-tod">
-                    <rect key="frame" x="166" y="323" width="43" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h72-c7-10j">
+                    <rect key="frame" x="110.5" y="75" width="154.5" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Invested" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUH-ja-lny">
+                            <rect key="frame" x="0.0" y="0.0" width="154.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBp-8n-0bf">
+                            <rect key="frame" x="46.5" y="30" width="61.5" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dw3-t9-KiV">
+                    <rect key="frame" x="120.5" y="215" width="133.5" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4E-kA-gRq">
+                            <rect key="frame" x="0.0" y="0.0" width="133.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-sS-foM">
+                            <rect key="frame" x="33" y="30" width="68" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This screen will be unlocked when your debt has been fully repaid." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWr-Xv-oBn">
+                    <rect key="frame" x="20" y="380" width="335" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.31764705879999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="h3m-ix-tod" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ife-fe-Egl"/>
-                <constraint firstItem="h3m-ix-tod" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nig-uH-Quh"/>
+                <constraint firstItem="Dw3-t9-KiV" firstAttribute="top" secondItem="h72-c7-10j" secondAttribute="bottom" constant="50" id="36N-as-x8L"/>
+                <constraint firstAttribute="trailing" secondItem="NWr-Xv-oBn" secondAttribute="trailing" constant="20" id="Jil-8B-GG4"/>
+                <constraint firstItem="NWr-Xv-oBn" firstAttribute="top" secondItem="Dw3-t9-KiV" secondAttribute="bottom" constant="75" id="KVP-4L-CQU"/>
+                <constraint firstItem="h72-c7-10j" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WUE-Hm-us5"/>
+                <constraint firstItem="h72-c7-10j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="75" id="XHe-HW-ivC"/>
+                <constraint firstItem="NWr-Xv-oBn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="c0l-Xh-tu5"/>
+                <constraint firstItem="Dw3-t9-KiV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oL2-0k-BMA"/>
             </constraints>
+            <point key="canvasLocation" x="34.5" y="113.5"/>
         </view>
     </objects>
 </document>

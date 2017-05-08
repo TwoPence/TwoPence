@@ -14,7 +14,7 @@ import Unbox
 //TODO: Fix url concat with Router pattern in Alamofire
 
 class TwoPenceAPI: NSObject {
-    static let sharedClient = TwoPenceAPI(baseURL: "http://127.0.0.1:5000/")
+    static let sharedClient = TwoPenceAPI(baseURL: "http:localhost:4000/")
     let baseURL: String
     var loginSuccess:  (() -> ())?
     var loginFailure:  ((Error) -> ())?
@@ -148,6 +148,27 @@ class TwoPenceAPI: NSObject {
                 case .failure(let error):
                     failure(error)
                 }
+        }
+    }
+    
+    func getFinMetrics(success: @escaping (UserFinMetrics) -> (), failure: @escaping (Error) -> ()){
+        
+        Alamofire.request(self.baseURL + "v1/fin-metrics", method: .get).responseJSON { response in
+            switch response.result {
+            case .success:
+                if let result = response.result.value {
+                    do {
+                        let finMetrics: UserFinMetrics = try unbox(dictionary: result as! Dictionary)
+                        success(finMetrics)
+                    } catch {
+                        print("An error occured: \(error)")
+                        failure(error)
+                    }
+                }
+            case .failure(let error):
+                failure(error)
+            }
+            
         }
     }
 }

@@ -12,7 +12,7 @@ class MenuViewController: UIViewController, MenuViewDelegate, ContentViewDelegat
     
     @IBOutlet weak var contentView: ContentView!
     @IBOutlet weak var menuView: MenuView!
-    
+
     private var activeViewController: UIViewController? {
         didSet {
             removeInactiveViewController(inactiveViewController: oldValue)
@@ -24,9 +24,8 @@ class MenuViewController: UIViewController, MenuViewDelegate, ContentViewDelegat
         super.viewDidLoad()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let dashboardViewController = storyboard.instantiateViewController(withIdentifier: "DashboardViewController")
+        let dashboardNavigationController = storyboard.instantiateViewController(withIdentifier: "DashboardNavigationController")
         let debtMilestoneViewController = storyboard.instantiateViewController(withIdentifier: "DebtMilestoneViewController")
-        let transactionsNavigationController = storyboard.instantiateViewController(withIdentifier: "TransactionsNavigationController")
         let accountsNavigationController = storyboard.instantiateViewController(withIdentifier: "AccountsNavigationController")
         let settingsNavigationController = storyboard.instantiateViewController(withIdentifier: "SettingsNavigationController")
         let faqViewController = storyboard.instantiateViewController(withIdentifier: "FAQViewController")
@@ -36,9 +35,8 @@ class MenuViewController: UIViewController, MenuViewDelegate, ContentViewDelegat
         menuView.menuViewControllerDelegate = self
         menuView.contentViewDelegate = contentView
         menuView.viewControllers = [
-            ("Dashboard", dashboardViewController),
+            ("Home", dashboardNavigationController),
             ("Debt Milestones", debtMilestoneViewController),
-            ("Transactions", transactionsNavigationController),
             ("Accounts", accountsNavigationController),
             ("Settings", settingsNavigationController),
             ("FAQ", faqViewController),

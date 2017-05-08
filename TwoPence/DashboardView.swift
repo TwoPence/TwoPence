@@ -8,12 +8,14 @@
 
 import UIKit
 
-@objc protocol DashboardViewDelegate {
+protocol DashboardViewDelegate {
     
-    @objc optional func didTapJoltButton(didTap: Bool)
+    func didTapJoltButton(didTap: Bool)
+    
+    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction])
 }
 
-class DashboardView: UIView, UIScrollViewDelegate, SavingsViewDelegate {
+class DashboardView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -23,7 +25,9 @@ class DashboardView: UIView, UIScrollViewDelegate, SavingsViewDelegate {
     var debtView: DebtView!
     var assetView: AssetView!
     
-    weak var delegate: DashboardViewDelegate?
+    var delegate: DashboardViewDelegate?
+    
+    var transactions: [Transaction]?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -40,21 +44,11 @@ class DashboardView: UIView, UIScrollViewDelegate, SavingsViewDelegate {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
-    }
-    
-    override func awakeFromNib() {
-        let pageWidth = scrollView.bounds.width
-        let pageHeight = scrollView.bounds.height
-        scrollView.contentSize = CGSize(width: pageWidth * 3, height: pageHeight)
-        scrollView.isPagingEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.delegate = self
-        pageControl.numberOfPages = 3
         
-        savingsView = SavingsView(frame: CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight))
-        debtView = DebtView(frame: CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight))
-        assetView = AssetView(frame: CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight))
-        
+        savingsView = SavingsView()
+        debtView = DebtView()
+        assetView = AssetView()
+                
         scrollView.addSubview(savingsView)
         scrollView.addSubview(debtView)
         scrollView.addSubview(assetView)
@@ -62,27 +56,46 @@ class DashboardView: UIView, UIScrollViewDelegate, SavingsViewDelegate {
         savingsView.delegate = self
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let pageWidth = contentView.bounds.width
+        let pageHeight = contentView.bounds.height
+        
+        scrollView.contentSize = CGSize(width: pageWidth * 3, height: pageHeight)
+        scrollView.isPagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.delegate = self
+        pageControl.numberOfPages = 3
+        
+        savingsView.frame = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        debtView.frame = CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight)
+        assetView.frame = CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight)
+    }
+    
     @IBAction func pageControlDidPage(_ sender: Any) {
         let xOffset = scrollView.bounds.width * CGFloat(pageControl.currentPage)
         scrollView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: true)
     }
+}
+
+extension DashboardView: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
         pageControl.currentPage = page
     }
+}
+
+extension DashboardView: SavingsViewDelegate {
     
+    // Propagates received events to parent VC by calling its delegate methods.
     func didTapJoltButton(didTap: Bool) {
-        delegate?.didTapJoltButton?(didTap: didTap)
+        delegate?.didTapJoltButton(didTap: didTap)
     }
     
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction]) {
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: selectedTransactions)
     }
-    */
 
 }

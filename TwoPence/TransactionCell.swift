@@ -10,14 +10,12 @@ import UIKit
 
 class TransactionCell: UITableViewCell {
     
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var merchantLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var amountSavedLabel: UILabel!
     
     var transaction: Transaction! {
         didSet {
-            dateLabel.text = "\(transaction.date!)"
             merchantLabel.text = transaction.merchant
             amountLabel.text = "\(transaction.amount!)"
             amountSavedLabel.text = "\(transaction.amountSaved!)"
@@ -25,7 +23,6 @@ class TransactionCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        dateLabel.text = nil
         merchantLabel.text = nil
         amountLabel.text = nil
         amountSavedLabel.text = nil

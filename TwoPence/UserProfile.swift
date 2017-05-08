@@ -16,30 +16,21 @@ class UserProfile: Unboxable {
     var email: String?
     var profileUrl: String?
     var phone: String?
-    var savingRates = [Date : Decimal]()
+    var savingsRates: [SavingsRate]?
     
     // Addr
     var streetAddr: String?
     var cityAddr: String?
     var stateAddr: String?
     var zipAddr: String?
-    var countryAddr: String?
     
     required init(unboxer: Unboxer) throws {
-        self.firstName = unboxer.unbox(key: "firstName")
-        self.lastName = unboxer.unbox(key: "lastName")
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let savingRatesString: [String : Decimal] = try unboxer.unbox(key: "savingRates")
-        for (date, rate) in savingRatesString {
-            self.savingRates[dateFormatter.date(from: date)!] = rate
-        }
-        
-        self.streetAddr = unboxer.unbox(key: "streetAddr")
-        self.cityAddr = unboxer.unbox(key: "cityAddr")
-        self.stateAddr = unboxer.unbox(key: "stateAddr")
-        self.zipAddr = unboxer.unbox(key: "zipAddr")
-        self.countryAddr = unboxer.unbox(key: "countryAddr")
+        self.firstName = unboxer.unbox(key: "first_name")
+        self.lastName = unboxer.unbox(key: "last_name")
+        self.savingsRates = unboxer.unbox(key: "saving_rates")
+        self.streetAddr = unboxer.unbox(key: "address")
+        self.cityAddr = unboxer.unbox(key: "city")
+        self.stateAddr = unboxer.unbox(key: "state")
+        self.zipAddr = unboxer.unbox(key: "postal_code")
     }
 }

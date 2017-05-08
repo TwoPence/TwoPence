@@ -1,36 +1,37 @@
 //
-//  AggTransactionsCell.swift
+//  PendingTransferCell.swift
 //  TwoPence
 //
-//  Created by Will Gilman on 4/29/17.
+//  Created by Will Gilman on 5/5/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-class AggTransactionsCell: UITableViewCell {
-
-    @IBOutlet weak var aggTransactionsLabel: UILabel!
+class PendingTransferCell: UITableViewCell {
     
-    var aggTransactions: AggTransactions! {
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    var pendingTransfer: AggTransactions! {
         didSet {
-            aggTransactionsLabel.text = "\(aggTransactions.amount!) transfered on \(aggTransactions.date!)"
+            amountLabel.text = "\(pendingTransfer.amount!)"
         }
     }
-    
-    override func prepareForReuse() {
-        aggTransactionsLabel.text = nil
-    }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.accessoryType = .disclosureIndicator
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        amountLabel.text = nil
     }
     
 }

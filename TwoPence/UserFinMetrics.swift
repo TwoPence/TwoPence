@@ -8,8 +8,9 @@
 
 import UIKit
 import Money
+import Unbox
 
-class UserFinMetrics: NSObject {
+class UserFinMetrics: Unboxable {
 
     var totalSaved: Money?
     var monthlyTotalSaved: [Date : Money]?
@@ -18,7 +19,30 @@ class UserFinMetrics: NSObject {
     var daysOffLoanTerm: Int?
     var loanTermInDaysWithTp: Int?
     var loanTermInDaysWithoutTp: Int?
+    var loanTermInDaysAtEnrollment: Int?
     var amountInvested: Money?
-    var totalReturn: Money?
+    var totalReturn: Decimal?
     
+    required init(unboxer: Unboxer) throws {
+        let totalSavedDouble: Double = try unboxer.unbox(key: "total_saved")
+        self.totalSaved = Money(totalSavedDouble)
+        self.monthlyTotalSaved = unboxer.unbox(key: "monthly_total_saved")
+        
+        let loanRepaidDouble: Double = try unboxer.unbox(key: "loan_repaid")
+        self.loanRepaid = Money(loanRepaidDouble)
+        
+        let interestAvoidedDouble: Double = try unboxer.unbox(key: "interest_avoided")
+        self.interestAvoided = Money(interestAvoidedDouble)
+        
+        self.daysOffLoanTerm = unboxer.unbox(key: "days_off_loan_term")
+        self.loanTermInDaysWithTp = unboxer.unbox(key: "loan_term_in_days_with_tp")
+        self.loanTermInDaysWithoutTp = unboxer.unbox(key: "loan_term_in_days_without_tp")
+        self.loanTermInDaysAtEnrollment = unboxer.unbox(key: "loan_term_in_days_at_enrollment")
+        
+        let amountInvestedDouble: Double = try unboxer.unbox(key: "amount_invested")
+        self.amountInvested = Money(amountInvestedDouble)
+        
+        let totalReturnDouble: Double = try unboxer.unbox(key: "total_return")
+        self.totalReturn = Decimal(totalReturnDouble)
+    }
 }

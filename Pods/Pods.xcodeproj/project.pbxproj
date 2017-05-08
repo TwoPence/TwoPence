@@ -10,41 +10,39 @@
 		0054224BA8A23E8413AE5452B7C7D9C4 /* HeroIndependentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383A78834CD60B4542E2E0815FF0009 /* HeroIndependentController.swift */; };
 		00CF7D513DF064760BF24C6A88E3E855 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42214DAE5D7D8CE622EC52FB708576 /* Lexer.swift */; };
 		05F0808ED771EDC8628F839F16CB7EC8 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F613D993CE1CD501CC6933853A2DFFB /* HeroDefaultAnimator.swift */; };
-		077BF062D14EAD4573DD51CBD34AD55B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
 		09FE03AEFE6082196D151037EB86CA66 /* ValueCoding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 902A074FE867848A5ADFBAFFD611B2A1 /* ValueCoding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A41EC6FE425AAA397096805B5F5883A /* CelyWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2294FA14B8D437DE550AC6E428061DC /* CelyWindowManager.swift */; };
 		0A7C94203EB0D2A4A5BE3C355B93A1B2 /* CelyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BD8106B91D44B72C7AFDBDA95FC28B /* CelyProtocols.swift */; };
 		0B4D5DFE8335C5C00B20BC4D096327B4 /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8C392A359B344D1FA30526E26B99E /* TZStackView.swift */; };
+		0BB9C296977FF2A19EA6EC8A2CE9A3F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		0DA21E732596100C88761DA40C290796 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AED21B1519CE1F2F9271B821111667 /* Nodes.swift */; };
-		103BFA0A5F5F22ED9F333E225314E5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD38169DFFF1E3151624ED6AACE9A1CA /* Assets.xcassets */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0ED48B52EF7697A843C3BFD520253 /* Timeline.swift */; };
-		1290F95D90FE61B4DA7DBCF39E02F251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
 		176AEFBD9653E177DED184F68F5DD6C5 /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5A7617E65FDEF613CB0827A802AF0 /* Bitcoin.swift */; };
 		19D7F6683A3763F805A81E610ECBCD04 /* Pods-TwoPenceTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCA3BA2EB0D0799C8D3E5E52D5A1DA /* Pods-TwoPenceTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A067DDD90A7BE2046F9577A158C654 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D030FD35221838E1BC264DBD51B3A93 /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19026169A94D972B437B047F352EDC0C /* HeroStringConvertible.swift */; };
 		1D7206B46881AF90B039C9D01A52D0DD /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84316DA2E00EF3EC873C4DBAF17A2F24 /* PopupDialogDefaultView.swift */; };
-		1DCE306822B19F2AB68EE93694641823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
 		1EFCE8E2E39D6FF98A82A412DCDA22F4 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4533C6FD00C986F8321B1E31B1A4F85F /* CAMediaTimingFunction+Hero.swift */; };
 		247E3BEDF93D39FE674AA880B3F77BE0 /* CelyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5018F819E82B9D3C10085F824C66E0 /* CelyStorage.swift */; };
 		2808DEA4E83D337D6A0F0D3EE9AFC8CB /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2EF37D01442C1C1BB209BDDD5B688 /* UIView+Hero.swift */; };
+		284758295827A89AC1F40FC716C5B0C3 /* Cely.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C0EC8F05135EFE64C4A1D95345C7A0 /* Cely.storyboard */; };
 		29E1C79CB521E7299EFF904E327451A8 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9149691B51019B39FE8EE294712E2AF7 /* IgnoreSubviewModifiersPreprocessor.swift */; };
 		2C5B1BD4503BFB477E304E76D90F1D8F /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A230A3724C03570BAE7BAA45D265CC /* TransitionAnimations.swift */; };
 		2F44F37D2F6170E3B3186555CF82F575 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2862B292961FF1A28671C2AFFB0D098 /* HeroDebugPlugin.swift */; };
 		301DCA491110B9CF7EF793E61D39E76D /* CelyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1C18EC6AEA71BA1C25CC73CCD84 /* CelyLoginViewController.swift */; };
 		30E0982814D1F0971FA52AAE141325B8 /* HeroBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C334FF593F3F3743EDBE6245423826 /* HeroBaseController.swift */; };
+		35325F8FAB63FA28B837D62726379E68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6025449B56849993D9BED85954B595 /* CoreGraphics.framework */; };
 		355839E3459355665718D6358BA078A6 /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAB0187BA412EC064BC8DDF2103F032 /* HeroViewPropertyViewContext.swift */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66598375207EFE9D136FAE9CC6FB241 /* TaskDelegate.swift */; };
-		38854EFF864F029945AFA880C35B560A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
 		38F8003D990071BCE962EFF1D558D04B /* Cely-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1B816312AB89EA07F23EF3474F570 /* Cely-dummy.m */; };
 		398917958AEE73A2ABA9DE141F4468CE /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20AF3AE935040A9E9B979181A5A8014 /* DefaultAnimationPreprocessor.swift */; };
-		3C0B9DC04147147D1EC866C8B6ED1017 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
+		39AF3BF1D1CE7BC06696E37439AEB450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5E4D78764C12AB6D6A0738540AD6AD /* Assets.xcassets */; };
+		3E0B09C7FAF8ADCA54A8283668B2F8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		42AD87A0A69A794BC77D16523379C56C /* TZSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7833778018F4EFF32D8109E4DC0FAF8 /* TZSpacerView.swift */; };
 		444B353B0B928A811D0E8005B37F98A1 /* ValueCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570AC95D23D57889872A6AF90C74C30 /* ValueCoding.swift */; };
 		4871AB82D1BA4619362CECE2C157E239 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C948E5A7A46505A813EB1F829E2250 /* Array+HeroModifier.swift */; };
 		4FAF7838EFC703254B74489FC00EECFF /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC57F6994388F9FEF1B6D43A7CDA088 /* PresentationController.swift */; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72266F586C01C0A035A089B6BC15FA6A /* Request.swift */; };
-		561AA29B3843A08CF0C3BA0A6C400D33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
 		56A420DFAB7C564CF0D6CF06C76FBFAA /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160EDF55E12698D62706D44D176BAC9 /* PopupDialogButton.swift */; };
 		59ADCBE770C8791D92E48E0486B082FE /* ValueCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7CDE8D7D6559509648A0B92F74EAAA /* ValueCoding.framework */; };
 		6095DBFEB1AF8CE765FA645A05459C2B /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED39B0EC6B2017B72AF884A97956EB /* CascadePreprocessor.swift */; };
@@ -58,9 +56,12 @@
 		6F5BFE0D37C5F15DECFE685FB81E4D05 /* Pods-TwoPence-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB20CB5519AD5CCF63EB65F98CE1B77 /* Pods-TwoPence-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F977B467C1C4EBDE66733417643F1DD /* Hero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C47AA90EB2F57E1C64476176549A4BFB /* Hero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		731BDB378A5E0759C89BACA382B6412B /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71ABD3DEAF8C95E0A0A73D1C0E8FA2D /* Regex.swift */; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		74A6D4BD5863519DD120A20E81EF3831 /* Money-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 655469BE89746FE4CCA15CA54A81AE8F /* Money-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78BA38F617EFFABFD9BC83E3724A08AA /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAD32CAB0B65D6DDDD49CFB8037D20 /* TransitionAnimator.swift */; };
+		7A63E21284C53335B6D422EE359143BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A997BA5047E4AF5B07C7A03CF871DB2 /* SessionDelegate.swift */; };
+		7D07EBEB01BE47EBC998857557F608BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9DDC22D78D6861F9B15FA07E2A043 /* Result.swift */; };
 		7DDE6E306CAB5E388629F6C6A561ECBA /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B12EC73CF6FF1418B67017FFE3DA448 /* MatchPreprocessor.swift */; };
 		7E898409C301FAF04CCF8BCD67F6791B /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6588955322034C17E4BB5399AD768 /* UIView+Animations.swift */; };
@@ -75,12 +76,10 @@
 		931C94857D75EB66055483EE7D9FF04A /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2FD624B65C4DF9F52E5D7690FC224 /* InteractiveTransition.swift */; };
 		94C9BB38529698660E8BF577EC828824 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB875D50FA278C510893B11BE8CBA7C /* Locksmith.swift */; };
 		95BF5D58CD077D04454A88C430CAB420 /* DecimalNumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC39AAAC81854CE36041F2CC9E12424 /* DecimalNumberType.swift */; };
-		9A0743A6AA29D7DFC1D906A6E697CBE6 /* Cely.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852530B93F2F16423FAEDC9F5579B8F1 /* Cely.storyboard */; };
 		9A81302BF68CBFF750366EAC7FDF7600 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C719CE34158EA59EBB2B1C993DC08 /* PopupDialogDefaultViewController.swift */; };
 		9BC6465A3E7954E701F8333DB1D9AF8B /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70D855F8E1B45D5C78FEFC39EC5998 /* PopupDialogOverlayView.swift */; };
 		9BC6E4545983B5075A00DE22AE3A3D38 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5FE1D3303222F0BA1CE5CCBFE75CD7 /* Decimal.swift */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E01A5FFC1C393CF39838F6B7CFC6186 /* AFError.swift */; };
-		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
 		A05FC4EFB01C54ACCDA4350D095E0BBE /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E52085F8371A00445403DDA184618C /* Money.swift */; };
 		A0ED2C501167E09DCE716A620F884B68 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40283FBB58C92E3A9CF915C5EF5526 /* LocksmithError.swift */; };
 		A271792E9BD1BF7C0F7FC526D33C68C3 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDBDB066583B27A061740B6D4DD962 /* Parser.swift */; };
@@ -93,7 +92,7 @@
 		ABE0F6116DF5C33A310E215DE9AEE769 /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194D2C7B7C56B8A282C778BD7334853 /* HeroContext.swift */; };
 		AC78190959872C81167ACC8F0B02BED9 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A70BDD37AD6A7E6BF342AFC9BFAE9F /* Hero-dummy.m */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB38F522EDC366095E988962D25A68 /* SessionManager.swift */; };
-		AE82726B85F9488997339A759DDDE999 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
+		AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		B62A16E73ADAFD9229C560E7C46ADB8E /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47D4930C8A329D12B58A6944E00E /* HeroModifier.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F323A431F56287ADA068BFC0242AD /* MultipartFormData.swift */; };
 		BB7E6CA50EF56EF89CECA4DE5FEF66B9 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1CE67276726A6F77F88C5D12779EEB /* HeroCoreAnimationViewContext.swift */; };
@@ -102,14 +101,15 @@
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7DAA8387912CA6FC1CD2D0FB140C64 /* ParameterEncoding.swift */; };
 		BEB47A3CAB4F7D3C8EDA608599417596 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB4061E121A403CAA579621F1C215C /* HeroDebugView.swift */; };
 		BEC82302721516EFB35E89AD7AB355FF /* NSDecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F6D37299EF1E662D0E3713031A37AF /* NSDecimalExtensions.swift */; };
-		BEEC37DE72D6BE4CF2DE214C1C53F8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637089C939ABC99AA8536AC989722D3A /* UIKit.framework */; };
 		C02250937FC298AC2E171F763B98FAEF /* PopupDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A7C3D94DC261F1A7CCA9F1B82FB08 /* PopupDialog-dummy.m */; };
+		C1D7C318F2418A5FE5F341B4806DE422 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB14E42744D8E397DFCC6BC8BF7B253A /* UIKit.framework */; };
 		C2949153D604E4E9AE187B2681D534A6 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77207CC738BF99CEA56A78C80C241A91 /* UIViewController+Visibility.swift */; };
 		C341F95C64B756CE26C42823AFCC63EF /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08379179B1C2B466DB84003A51CD365A /* UIImageView+Calculations.swift */; };
 		C7078E9B24A2CFAC9EF4D48E768B7398 /* Cely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF19A62E800E06F2413D85F43739EA /* Cely.swift */; };
 		C9F788579495A3E174821E54AB81639D /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12591F012FD31384551661471A05FA /* PresentationManager.swift */; };
 		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6E68BA5F4346EBB1250DE62AE380E2 /* Response.swift */; };
 		CCACA9026494E6D39D374A4BD303F69C /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF966FBCA861EC9A69387F614DBB63B5 /* CALayer+Hero.swift */; };
+		CD32D8E989D00B1197E750F001868C50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		CE43A36214F38B4DF5937B9A519796E6 /* CelyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128BAE5DC2BD1A7DD13BBDF3A291935A /* CelyConstants.swift */; };
 		CE4501723EC8667ADB9698705CC0AA04 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF71F7D19209EAC4BECA55CE4594E6C /* HeroTypes.swift */; };
 		D1087377090643A3CF4BFB0079F5249E /* Cely-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F233831679B52C5F0C4BCBA7E2AE68 /* Cely-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,12 +117,12 @@
 		D6AAEA79EE2C84975BECCD279A8F7766 /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B41C1B8FACA73277FEEF0379DFB2F9 /* LocksmithAccessibleOption.swift */; };
 		D7C916572AD46B9E9938FB03C7C0CB0B /* Money-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A705D640E691F62760BD354D5D916 /* Money-dummy.m */; };
 		DC882F2A680188A2303A6BA8922A9C00 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435ECA3D7462F8CC759BFA8F58A87F /* TZStackViewAlignment.swift */; };
+		DC9B37CDD48DD71C09C59C7B3179A857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		DE4FD12FD11924E71640A08AF3AFA2E4 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F842DABB023684E0BA38EBF83CA40D /* SourcePreprocessor.swift */; };
 		DE7E529EF406ECBC3185D907151CDE78 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABAF293D6ADDC328DA5C5A748C82E4 /* Hero.swift */; };
 		DEE1DC63C428F7813B2E5C528D53DAB2 /* Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D1B13F9949C4E7F0C81546F272CEE1 /* Unbox.swift */; };
 		E019F20EB73AC966B03BE1F5D0AFCCBB /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F9344606031D0A09BB1EE73573C7 /* TZStackViewDistribution.swift */; };
-		E2B3196EDE1D03AF9C71385CE006F684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */; };
-		E3698E72ADACDF3F7D095A49E63A37AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318421D84EC9B525EE04726FF3DF3CD /* CoreGraphics.framework */; };
+		E14EED3E9D018CC6EF3D6F2F30CAA26E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */; };
 		E57BB5C5A234EE3344BB5AAECFC7CC7A /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E326C5C74D2C73016698B34F8D094F /* HeroModifier+HeroStringConvertible.swift */; };
 		E91E80F3AA36C095A59C59A446271BF0 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182325BA26D7551FAC8C002D432FDF46 /* CG+Hero.swift */; };
 		ECF0D0F222FD659EE49B02128C18009B /* Autogenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8D3ED4DE07C8BA1B1EA34C451E2DFD /* Autogenerated.swift */; };
@@ -261,7 +261,6 @@
 		60BAD32CAB0B65D6DDDD49CFB8037D20 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = PopupDialog/Classes/TransitionAnimator.swift; sourceTree = "<group>"; };
 		60BF702FDEC48DAB3C4188719AD0BFED /* Hero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-prefix.pch"; sourceTree = "<group>"; };
 		61E588E40390891A7B6393D553855A82 /* Unbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Unbox.modulemap; sourceTree = "<group>"; };
-		637089C939ABC99AA8536AC989722D3A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		64E326C5C74D2C73016698B34F8D094F /* HeroModifier+HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+HeroStringConvertible.swift"; path = "Sources/HeroModifier+HeroStringConvertible.swift"; sourceTree = "<group>"; };
 		655469BE89746FE4CCA15CA54A81AE8F /* Money-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Money-umbrella.h"; sourceTree = "<group>"; };
 		6584DB95AB7BB5450F43573C8CFE4B5A /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopupDialog.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,12 +286,10 @@
 		83B5B8A22B5093CA08464B4EF0E16FEF /* Unbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-umbrella.h"; sourceTree = "<group>"; };
 		84316DA2E00EF3EC873C4DBAF17A2F24 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultView.swift; path = PopupDialog/Classes/PopupDialogDefaultView.swift; sourceTree = "<group>"; };
 		84DDBDB066583B27A061740B6D4DD962 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser/Parser.swift; sourceTree = "<group>"; };
-		852530B93F2F16423FAEDC9F5579B8F1 /* Cely.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = Cely.storyboard; path = "Sources/Supporting Files/Cely.storyboard"; sourceTree = "<group>"; };
 		86A230A3724C03570BAE7BAA45D265CC /* TransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimations.swift; path = PopupDialog/Classes/TransitionAnimations.swift; sourceTree = "<group>"; };
 		87DF3B97F8B8BF467687860BE2174552 /* ValueCoding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ValueCoding.xcconfig; sourceTree = "<group>"; };
 		8A79A3C4650725E31988C91ED3328953 /* Pods_TwoPence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TwoPence.framework; path = "Pods-TwoPence.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDA47D4930C8A329D12B58A6944E00E /* HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroModifier.swift; path = Sources/HeroModifier.swift; sourceTree = "<group>"; };
-		8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8DA04F1250269FB9962AC6CA1E1716B3 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		8EE8C392A359B344D1FA30526E26B99E /* TZStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackView.swift; path = PopupDialog/Classes/TZStackView/TZStackView.swift; sourceTree = "<group>"; };
 		90266C5FC1BABB76496F73CFD8F0BF55 /* Money.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Money.xcconfig; sourceTree = "<group>"; };
@@ -304,6 +301,7 @@
 		94ED39B0EC6B2017B72AF884A97956EB /* CascadePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CascadePreprocessor.swift; path = Sources/Preprocessors/CascadePreprocessor.swift; sourceTree = "<group>"; };
 		958D908D539636A678C09885B241BFC3 /* Pods-TwoPence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoPence.debug.xcconfig"; sourceTree = "<group>"; };
 		97AB3CF8D129AD37F06C832D402A1AAC /* DurationPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DurationPreprocessor.swift; path = Sources/Preprocessors/DurationPreprocessor.swift; sourceTree = "<group>"; };
+		9C5E4D78764C12AB6D6A0738540AD6AD /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Sources/Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
 		9D58FE90ED6499934F21C5F7FB24CE17 /* ValueCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ValueCoding.framework; path = ValueCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8C654AAF8FA44DE65B69DFE5F82347 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultButtons.swift; path = PopupDialog/Classes/PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
 		9DE20282F029F7FE443AE6FEB737DA3B /* PopupDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = PopupDialog/Classes/PopupDialog.swift; sourceTree = "<group>"; };
@@ -319,6 +317,8 @@
 		A9BD8106B91D44B72C7AFDBDA95FC28B /* CelyProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CelyProtocols.swift; path = Sources/CelyProtocols.swift; sourceTree = "<group>"; };
 		AD062B6003F2BC683E69968F40CDA2AA /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		AF12404B77CF8DEA777CFF9A53F3635A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6025449B56849993D9BED85954B595 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B1A70BDD37AD6A7E6BF342AFC9BFAE9F /* Hero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hero-dummy.m"; sourceTree = "<group>"; };
 		B33AB5E24ACD3095A2EFFC4036FD9A52 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = PopupDialog/Classes/FXBlurView.m; sourceTree = "<group>"; };
 		B3D7A877C264EC55E06ADE703A6FF08E /* PopupDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-umbrella.h"; sourceTree = "<group>"; };
@@ -328,12 +328,12 @@
 		B9435ECA3D7462F8CC759BFA8F58A87F /* TZStackViewAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackViewAlignment.swift; path = PopupDialog/Classes/TZStackView/TZStackViewAlignment.swift; sourceTree = "<group>"; };
 		B9F43489C584531F52618C1C06E11738 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		BCD869498554EB53A0872CCCA91D46B9 /* Pods-TwoPenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoPenceTests.release.xcconfig"; sourceTree = "<group>"; };
-		BD38169DFFF1E3151624ED6AACE9A1CA /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Sources/Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
 		BEAB0187BA412EC064BC8DDF2103F032 /* HeroViewPropertyViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewPropertyViewContext.swift; path = Sources/Animator/HeroViewPropertyViewContext.swift; sourceTree = "<group>"; };
 		BF12591F012FD31384551661471A05FA /* PresentationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationManager.swift; path = PopupDialog/Classes/PresentationManager.swift; sourceTree = "<group>"; };
 		C1741923B429640E4506A9B749CE8D7F /* Pods-TwoPence-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TwoPence-acknowledgements.plist"; sourceTree = "<group>"; };
 		C17C7349FB068274FD5937790F036FB0 /* ValueCoding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ValueCoding.modulemap; sourceTree = "<group>"; };
 		C47AA90EB2F57E1C64476176549A4BFB /* Hero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-umbrella.h"; sourceTree = "<group>"; };
+		C5C0EC8F05135EFE64C4A1D95345C7A0 /* Cely.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Cely.storyboard; path = "Sources/Supporting Files/Cely.storyboard"; sourceTree = "<group>"; };
 		C92ABD645D64EEB3D145E8A2E77BD456 /* ApplePay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApplePay.swift; path = Sources/ApplePay.swift; sourceTree = "<group>"; };
 		CF5FE1D3303222F0BA1CE5CCBFE75CD7 /* Decimal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decimal.swift; path = Sources/Decimal.swift; sourceTree = "<group>"; };
 		D0D9E52DB2D032522325E453919A97B1 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
@@ -348,6 +348,7 @@
 		D9619D976FE143AB57A161FC1BF4CCF4 /* Pods-TwoPenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoPenceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA6AC5F9BEC6E08E56232C28C1F6BF65 /* Pods-TwoPence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoPence.release.xcconfig"; sourceTree = "<group>"; };
 		DAFB38F522EDC366095E988962D25A68 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		DB14E42744D8E397DFCC6BC8BF7B253A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DCBB42AD20FEE651E0F4AEA74A238A4E /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopupDialog+Keyboard.swift"; path = "PopupDialog/Classes/PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
 		DCFF39569397C39765EF96CA3FFB38F3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2862B292961FF1A28671C2AFFB0D098 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugPlugin.swift; path = "Sources/Debug Plugin/HeroDebugPlugin.swift"; sourceTree = "<group>"; };
@@ -359,7 +360,6 @@
 		EDE0ED48B52EF7697A843C3BFD520253 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		EE7CDE8D7D6559509648A0B92F74EAAA /* ValueCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ValueCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF959F9FAA0F53AA6779EDE29EFFA5B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F318421D84EC9B525EE04726FF3DF3CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		F470EF08589F712CCB52D9415ED15E5E /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		F4AED21B1519CE1F2F9271B821111667 /* Nodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Nodes.swift; path = Sources/Parser/Nodes.swift; sourceTree = "<group>"; };
 		F5F388197B3E5ABD3995903162C05ECF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -378,8 +378,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE82726B85F9488997339A759DDDE999 /* Foundation.framework in Frameworks */,
-				BEEC37DE72D6BE4CF2DE214C1C53F8AC /* UIKit.framework in Frameworks */,
+				AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */,
+				C1D7C318F2418A5FE5F341B4806DE422 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1290F95D90FE61B4DA7DBCF39E02F251 /* Foundation.framework in Frameworks */,
+				3E0B09C7FAF8ADCA54A8283668B2F8DB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +395,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCE306822B19F2AB68EE93694641823 /* Foundation.framework in Frameworks */,
+				7D07EBEB01BE47EBC998857557F608BD /* Foundation.framework in Frameworks */,
 				59ADCBE770C8791D92E48E0486B082FE /* ValueCoding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +404,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561AA29B3843A08CF0C3BA0A6C400D33 /* Foundation.framework in Frameworks */,
+				DC9B37CDD48DD71C09C59C7B3179A857 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +412,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38854EFF864F029945AFA880C35B560A /* Foundation.framework in Frameworks */,
+				E14EED3E9D018CC6EF3D6F2F30CAA26E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +420,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B3196EDE1D03AF9C71385CE006F684 /* Foundation.framework in Frameworks */,
+				7A63E21284C53335B6D422EE359143BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +428,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +436,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0B9DC04147147D1EC866C8B6ED1017 /* Foundation.framework in Frameworks */,
+				0BB9C296977FF2A19EA6EC8A2CE9A3F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,14 +444,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3698E72ADACDF3F7D095A49E63A37AF /* CoreGraphics.framework in Frameworks */,
-				077BF062D14EAD4573DD51CBD34AD55B /* Foundation.framework in Frameworks */,
+				35325F8FAB63FA28B837D62726379E68 /* CoreGraphics.framework in Frameworks */,
+				CD32D8E989D00B1197E750F001868C50 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025C53C4FC71914499BC1CD371AC742C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AF6025449B56849993D9BED85954B595 /* CoreGraphics.framework */,
+				B0736D2B40DE9E228DF5DAB2F592292B /* Foundation.framework */,
+				DB14E42744D8E397DFCC6BC8BF7B253A /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		0346AF1A90A678FFE0F32B51DA3D86A9 /* PopupDialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,7 +555,7 @@
 				F6B41C1B8FACA73277FEEF0379DFB2F9 /* LocksmithAccessibleOption.swift */,
 				3B40283FBB58C92E3A9CF915C5EF5526 /* LocksmithError.swift */,
 				79F7485DBF60373AA186BD9B8FA1E633 /* LocksmithSecurityClass.swift */,
-				8CB306E281EE64FB4B872B22F036374A /* Resources */,
+				6301290D041051835D5D41FF99FC9860 /* Resources */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -614,6 +624,15 @@
 			path = "../Target Support Files/PopupDialog";
 			sourceTree = "<group>";
 		};
+		6301290D041051835D5D41FF99FC9860 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C5E4D78764C12AB6D6A0738540AD6AD /* Assets.xcassets */,
+				C5C0EC8F05135EFE64C4A1D95345C7A0 /* Cely.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		6F2D6ED3559A7B608FFC7E95835D6ACD /* Cely */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,15 +694,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Unbox";
-			sourceTree = "<group>";
-		};
-		8CB306E281EE64FB4B872B22F036374A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BD38169DFFF1E3151624ED6AACE9A1CA /* Assets.xcassets */,
-				852530B93F2F16423FAEDC9F5579B8F1 /* Cely.storyboard */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		91DBEA27554C17A6D2AE26E9E8BB1D71 /* Support Files */ = {
@@ -763,19 +773,9 @@
 			isa = PBXGroup;
 			children = (
 				EE7CDE8D7D6559509648A0B92F74EAAA /* ValueCoding.framework */,
-				C64DA7F36F0BE0DFF176EBD6AC71E0CF /* iOS */,
+				025C53C4FC71914499BC1CD371AC742C /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C64DA7F36F0BE0DFF176EBD6AC71E0CF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F318421D84EC9B525EE04726FF3DF3CD /* CoreGraphics.framework */,
-				8CED01D66147641113B7D66DDE37CE65 /* Foundation.framework */,
-				637089C939ABC99AA8536AC989722D3A /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		D47D1B0BA75DF63712135BE2FCC81746 /* Unbox */ = {
@@ -975,7 +975,7 @@
 			buildPhases = (
 				5B6B454969CF1855670CBA177A6AFD6B /* Sources */,
 				2FA642FD574A7E7E46DF1B81388C3EAB /* Frameworks */,
-				6C6D079A29F91691B849C94FBBA9A549 /* Resources */,
+				7F6BFA37E456A341496DB5BBA48CF739 /* Resources */,
 				250C7D9008204EF48F6BC6F0333A5DB9 /* Headers */,
 			);
 			buildRules = (
@@ -1079,7 +1079,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -1108,12 +1108,12 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6C6D079A29F91691B849C94FBBA9A549 /* Resources */ = {
+		7F6BFA37E456A341496DB5BBA48CF739 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				103BFA0A5F5F22ED9F333E225314E5C3 /* Assets.xcassets in Resources */,
-				9A0743A6AA29D7DFC1D906A6E697CBE6 /* Cely.storyboard in Resources */,
+				39AF3BF1D1CE7BC06696E37439AEB450 /* Assets.xcassets in Resources */,
+				284758295827A89AC1F40FC716C5B0C3 /* Cely.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1341,210 +1341,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FC5307105B8D564CF1C9E3180113EAA /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		19947C94BAABB27A26B3A2591FBFAD39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9619D976FE143AB57A161FC1BF4CCF4 /* Pods-TwoPenceTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPenceTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		234211E37F7805B8BE8846E8B20E53CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87DF3B97F8B8BF467687860BE2174552 /* ValueCoding.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ValueCoding/ValueCoding-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ValueCoding/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ValueCoding/ValueCoding.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ValueCoding;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		368BB7A9077449820DB44C76BAFE9F50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA6AC5F9BEC6E08E56232C28C1F6BF65 /* Pods-TwoPence.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPence;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3C50EDE73D782BA8EFD9F63B5FD02B3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6554145C5EAC02F20553A73DED9DE76 /* Unbox.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Unbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5791D9176EFA68D4EC4D1D49D7C9AB36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6554145C5EAC02F20553A73DED9DE76 /* Unbox.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Unbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+		166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1552,349 +1354,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		70C8855F60B6E2CDB93EA8A8DA9A093C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD869498554EB53A0872CCCA91D46B9 /* Pods-TwoPenceTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPenceTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7107A153AEB50D76F585F6C4D8EBB9F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE440EC097FAA81D1AB556A273EB7E1A /* PopupDialog.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PopupDialog;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		97FA2C5CA8C1E4426759C69C9B0B0C81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 911F14A0DC72D96048849011602F6F1F /* Cely.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Cely;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		986196D8366196F30A3BCB3F98F8493B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78B133E5A0C4487E93405B9DCFE6CCF9 /* Hero.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Hero/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Hero;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A7C1E38491113B97CAC52404A0F9DA99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 958D908D539636A678C09885B241BFC3 /* Pods-TwoPence.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPence;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A8AE83B5598BF867E8ED7CD29B114A8B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 911F14A0DC72D96048849011602F6F1F /* Cely.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Cely;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D497C2658AE35104A40474BAC9351165 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90266C5FC1BABB76496F73CFD8F0BF55 /* Money.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Money/Money-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Money/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Money/Money.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Money;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D81A2901448D2904419174722F3BBCBE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE440EC097FAA81D1AB556A273EB7E1A /* PopupDialog.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PopupDialog;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DEC09096FFDAEDCE55B78755ADE9C1A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90266C5FC1BABB76496F73CFD8F0BF55 /* Money.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Money/Money-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Money/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Money/Money.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Money;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -1923,48 +1389,16 @@
 			};
 			name = Debug;
 		};
-		E92E28BE1CFFE74D4D11954A37933EA9 /* Debug */ = {
+		1A8E2C890A9F1DF5C35388C7AFE67855 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87DF3B97F8B8BF467687860BE2174552 /* ValueCoding.xcconfig */;
+			baseConfigurationReference = 78B133E5A0C4487E93405B9DCFE6CCF9 /* Hero.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ValueCoding/ValueCoding-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ValueCoding/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ValueCoding/ValueCoding.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ValueCoding;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EF83A67AAB503FB6DFD8122376F5DF2C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78B133E5A0C4487E93405B9DCFE6CCF9 /* Hero.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1977,10 +1411,85 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Hero;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35CC3791DA3358CC6432BD700E0B4B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 958D908D539636A678C09885B241BFC3 /* Pods-TwoPence.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPence;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3AA8DDD9C6583F5D4B12AF45C2483CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE440EC097FAA81D1AB556A273EB7E1A /* PopupDialog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PopupDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1988,10 +1497,372 @@
 			};
 			name = Release;
 		};
-		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
+		4E1ADA76BE5AFABC370E4E3D4B3212F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90266C5FC1BABB76496F73CFD8F0BF55 /* Money.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Money/Money-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Money/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Money/Money.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Money;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A3FC9121783A8DA4A549D7085CC5803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6554145C5EAC02F20553A73DED9DE76 /* Unbox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Unbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D072D0D174F12EAACC1862DA756E67A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FC5307105B8D564CF1C9E3180113EAA /* Alamofire.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9050BCD95747042B47008A8AFB82A2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9619D976FE143AB57A161FC1BF4CCF4 /* Pods-TwoPenceTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPenceTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		947C8F4EBD7D2DBBA52B72AAB550A9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6AC5F9BEC6E08E56232C28C1F6BF65 /* Pods-TwoPence.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPence;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9948D305E40701D8EA8F99C0F68D3B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90266C5FC1BABB76496F73CFD8F0BF55 /* Money.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Money/Money-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Money/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Money/Money.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Money;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C125555387E6C864008D5592CB02F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD869498554EB53A0872CCCA91D46B9 /* Pods-TwoPenceTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPenceTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A04B0082E194E9CAE9A26070060ADBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911F14A0DC72D96048849011602F6F1F /* Cely.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cely;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA6B5CD8499FED64EA045ABE88AA8D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6554145C5EAC02F20553A73DED9DE76 /* Unbox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Unbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9660A42FEDD040185578ADA021EC8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC5307105B8D564CF1C9E3180113EAA /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2013,6 +1884,179 @@
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CFD60ADF690E7301C593342CA2BDD44F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911F14A0DC72D96048849011602F6F1F /* Cely.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cely;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D1608A3046BD6F1F245C42EB837A5EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE440EC097FAA81D1AB556A273EB7E1A /* PopupDialog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PopupDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D49A5B494CC96A7F9B22105565EFFBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B133E5A0C4487E93405B9DCFE6CCF9 /* Hero.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D5A0D6BBDD5495FCEB114151DFCCAEEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87DF3B97F8B8BF467687860BE2174552 /* ValueCoding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ValueCoding/ValueCoding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ValueCoding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ValueCoding/ValueCoding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ValueCoding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9A0B8FC39A64F2E4D080C1D40701892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87DF3B97F8B8BF467687860BE2174552 /* ValueCoding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ValueCoding/ValueCoding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ValueCoding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ValueCoding/ValueCoding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ValueCoding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2027,8 +2071,8 @@
 		0FCBE14C886CB682F51C034EAFB986DF /* Build configuration list for PBXNativeTarget "Cely" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8AE83B5598BF867E8ED7CD29B114A8B /* Debug */,
-				97FA2C5CA8C1E4426759C69C9B0B0C81 /* Release */,
+				A04B0082E194E9CAE9A26070060ADBDC /* Debug */,
+				CFD60ADF690E7301C593342CA2BDD44F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2036,8 +2080,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
-				673254EEAF0B5BF4596080C749645884 /* Release */,
+				166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */,
+				AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2045,8 +2089,8 @@
 		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F383079BFBF927813EA3613CFB679FDE /* Debug */,
-				0A29B6F510198AF64EFD762EF6FA97A5 /* Release */,
+				C9660A42FEDD040185578ADA021EC8E0 /* Debug */,
+				7D072D0D174F12EAACC1862DA756E67A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2054,8 +2098,8 @@
 		53B48D4780C0BE59BBA9E9AF4E986C12 /* Build configuration list for PBXNativeTarget "Unbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C50EDE73D782BA8EFD9F63B5FD02B3C /* Debug */,
-				5791D9176EFA68D4EC4D1D49D7C9AB36 /* Release */,
+				AA6B5CD8499FED64EA045ABE88AA8D68 /* Debug */,
+				6A3FC9121783A8DA4A549D7085CC5803 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2063,8 +2107,8 @@
 		663FF6F2C978EC2980613A8F096FF5A8 /* Build configuration list for PBXNativeTarget "Pods-TwoPence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7C1E38491113B97CAC52404A0F9DA99 /* Debug */,
-				368BB7A9077449820DB44C76BAFE9F50 /* Release */,
+				35CC3791DA3358CC6432BD700E0B4B8C /* Debug */,
+				947C8F4EBD7D2DBBA52B72AAB550A9C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2072,8 +2116,8 @@
 		6AC3CD56D6FDCC551BC682763BA40CA4 /* Build configuration list for PBXNativeTarget "Money" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D497C2658AE35104A40474BAC9351165 /* Debug */,
-				DEC09096FFDAEDCE55B78755ADE9C1A6 /* Release */,
+				9948D305E40701D8EA8F99C0F68D3B6C /* Debug */,
+				4E1ADA76BE5AFABC370E4E3D4B3212F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2081,8 +2125,8 @@
 		959610A101B8D3734BDDBDA7083F7EC6 /* Build configuration list for PBXNativeTarget "PopupDialog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7107A153AEB50D76F585F6C4D8EBB9F5 /* Debug */,
-				D81A2901448D2904419174722F3BBCBE /* Release */,
+				D1608A3046BD6F1F245C42EB837A5EFE /* Debug */,
+				3AA8DDD9C6583F5D4B12AF45C2483CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2090,8 +2134,8 @@
 		B04F332D89CE8EDB704E17F3E0348361 /* Build configuration list for PBXNativeTarget "Pods-TwoPenceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19947C94BAABB27A26B3A2591FBFAD39 /* Debug */,
-				70C8855F60B6E2CDB93EA8A8DA9A093C /* Release */,
+				9050BCD95747042B47008A8AFB82A2F1 /* Debug */,
+				9C125555387E6C864008D5592CB02F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2099,8 +2143,8 @@
 		C766A91C126EF3E068E2EC028823D8B9 /* Build configuration list for PBXNativeTarget "ValueCoding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E92E28BE1CFFE74D4D11954A37933EA9 /* Debug */,
-				234211E37F7805B8BE8846E8B20E53CC /* Release */,
+				F9A0B8FC39A64F2E4D080C1D40701892 /* Debug */,
+				D5A0D6BBDD5495FCEB114151DFCCAEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2108,8 +2152,8 @@
 		D6DED4535F841BD78B49E046B4C3A36B /* Build configuration list for PBXNativeTarget "Hero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				986196D8366196F30A3BCB3F98F8493B /* Debug */,
-				EF83A67AAB503FB6DFD8122376F5DF2C /* Release */,
+				1A8E2C890A9F1DF5C35388C7AFE67855 /* Debug */,
+				D49A5B494CC96A7F9B22105565EFFBD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

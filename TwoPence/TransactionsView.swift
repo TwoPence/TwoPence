@@ -8,12 +8,16 @@
 
 import UIKit
 
-class TransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
+class TransactionsView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var transactions: [Transaction] = []
+    let sectionHeight: CGFloat = 30
+    let dateFormatter = DateFormatter()
+    
+    var displayTransactions = [(date: Date, transactions: [Transaction])]()
+    var transactions = [Transaction]()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -30,9 +34,13 @@ class TransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        
+        setupTableView()
+        setDisplayTransactions(transactions: transactions)
     }
     
-    override func awakeFromNib() {
+    
+    func setupTableView() {
         let cell = UINib(nibName: "TransactionCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "TransactionCell")
         tableView.delegate = self
@@ -41,22 +49,56 @@ class TransactionsView: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.estimatedRowHeight = 60.0
     }
     
+    // This can be removed and receive the formatted transactions from the API.
+    func setDisplayTransactions(transactions: [Transaction]) {
+        var dates = [Date]()
+        for trans in transactions {
+            dates.append(trans.date!)
+        }
+        let uniqueDates = Set<Date>(dates)
+        for date in uniqueDates {
+            let trans = transactions.filter({$0.date == date})
+            print("\(date), \(trans)")
+            self.displayTransactions.append((date: date, transactions: trans))
+        }
+        tableView.reloadData()
+    }
+}
+
+extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
+    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return displayTransactions.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
+//        let sectionView = UIView(frame: frame)
+//        sectionView.backgroundColor = UIColor.lightGray
+//        
+//        let sectionLabel = UILabel(frame: frame)
+//        dateFormatter.dateStyle = .long
+//        sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
+//        sectionLabel.font = sectionLabel.font.withSize(13)
+//        sectionLabel.textAlignment = .center
+//        
+//        return sectionView
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return sectionHeight
+//    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//         return displayTransactions[section].transactions.count
         return transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+//         cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
         cell.transaction = transactions[indexPath.row]
         return cell
     }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

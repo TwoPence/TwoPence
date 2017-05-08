@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,41 +83,6 @@
             </objects>
             <point key="canvasLocation" x="938" y="91"/>
         </scene>
-        <!--Transactions View Controller-->
-        <scene sceneID="yAH-Yv-abK">
-            <objects>
-                <viewController id="dTQ-fX-bkj" customClass="TransactionsViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lz1-1j-wE1"/>
-                        <viewControllerLayoutGuide type="bottom" id="Aab-H1-Lzv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9gW-Lx-JeR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-zp-rJn" userLabel="Content View" customClass="AggTransactionsView" customModule="TwoPence" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Cy5-zp-rJn" secondAttribute="trailing" id="OoN-tG-jmE"/>
-                            <constraint firstItem="Cy5-zp-rJn" firstAttribute="top" secondItem="9gW-Lx-JeR" secondAttribute="top" id="hFW-je-2SQ"/>
-                            <constraint firstItem="Aab-H1-Lzv" firstAttribute="top" secondItem="Cy5-zp-rJn" secondAttribute="bottom" id="qYH-vX-IKJ"/>
-                            <constraint firstItem="Cy5-zp-rJn" firstAttribute="leading" secondItem="9gW-Lx-JeR" secondAttribute="leading" id="uHz-0g-UGc"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="TJ6-Lm-l4d"/>
-                    <connections>
-                        <outlet property="contentView" destination="Cy5-zp-rJn" id="L5I-Lh-BO9"/>
-                        <segue destination="Q8D-aS-4ef" kind="show" identifier="TransactionsDetailSegue" id="ped-sY-jqn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="shV-x1-hJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2808.8000000000002" y="91.304347826086968"/>
-        </scene>
         <!--Transactions Detail View Controller-->
         <scene sceneID="JUr-pM-nzl">
             <objects>
@@ -149,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NED-2u-I1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="92"/>
+            <point key="canvasLocation" x="4500" y="-1718"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7bk-Ps-vNg">
@@ -183,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tA0-9g-yUr" userLabel="Content View" customClass="DashboardView" customModule="TwoPence" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -192,17 +157,19 @@
                             <constraint firstItem="tA0-9g-yUr" firstAttribute="leading" secondItem="2iA-ZO-vAe" secondAttribute="leading" id="5dx-pW-WVE"/>
                             <constraint firstAttribute="trailing" secondItem="tA0-9g-yUr" secondAttribute="trailing" id="6qp-cp-grl"/>
                             <constraint firstItem="l9j-cb-8en" firstAttribute="top" secondItem="tA0-9g-yUr" secondAttribute="bottom" id="CKw-RE-phG"/>
-                            <constraint firstItem="tA0-9g-yUr" firstAttribute="top" secondItem="2iA-ZO-vAe" secondAttribute="top" id="vNI-v4-zvT"/>
+                            <constraint firstItem="tA0-9g-yUr" firstAttribute="top" secondItem="qNH-Vy-PQJ" secondAttribute="bottom" id="WF7-wZ-G9I"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Dta-1d-0O3"/>
                     <connections>
                         <outlet property="contentView" destination="tA0-9g-yUr" id="GqR-EB-JoP"/>
                         <segue destination="nlw-lw-AOM" kind="presentation" identifier="JoltSegue" id="4av-4V-h7c"/>
+                        <segue destination="Q8D-aS-4ef" kind="show" identifier="TransactionsSegue" id="kuF-wz-ZzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGJ-bg-Fdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5999999999999" y="-1272.4137931034484"/>
+            <point key="canvasLocation" x="2808.8000000000002" y="-1272.4137931034484"/>
         </scene>
         <!--Jolt View Controller-->
         <scene sceneID="8J0-Tf-ASf">
@@ -235,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pN-et-o7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2808.8000000000002" y="-1272.4137931034484"/>
+            <point key="canvasLocation" x="4500" y="-1057"/>
         </scene>
         <!--Debt Milestone View Controller-->
         <scene sceneID="pdU-gf-1ti">
@@ -428,24 +395,6 @@
             <point key="canvasLocation" x="1872.8" y="2157.5712143928035"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tic-yF-Gcw">
-            <objects>
-                <navigationController storyboardIdentifier="TransactionsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="7IN-XR-WmD" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E9F-fV-2XV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dTQ-fX-bkj" kind="relationship" relationship="rootViewController" id="oAt-EF-In7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SuV-Z3-ulZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1873" y="93"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="NdS-XI-xnS">
             <objects>
                 <navigationController storyboardIdentifier="AccountsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="AN2-OZ-6wY" sceneMemberID="viewController">
@@ -462,6 +411,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJl-a3-mEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1871.2" y="768.66566716641682"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rqs-QM-Mkq">
+            <objects>
+                <navigationController storyboardIdentifier="DashboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CcD-VX-5AU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nM-dZ-Iqc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d3g-Va-zBo" kind="relationship" relationship="rootViewController" id="C9x-DK-HFT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMz-R3-MSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5999999999999" y="-1272.4137931034484"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AQj-z1-4zw">

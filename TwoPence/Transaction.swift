@@ -22,8 +22,8 @@ class Transaction: Unboxable {
         let amountDouble: Double = try unboxer.unbox(key: "amount")
         self.amount = Money(amountDouble)
         
-        let amountSavedtDouble: Double = try unboxer.unbox(key: "amountSaved")
-        self.amountSaved = Money(amountSavedtDouble)
+        let amountSavedDouble: Double = try unboxer.unbox(key: "amount_saved")
+        self.amountSaved = Money(amountSavedDouble)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"

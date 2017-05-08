@@ -13,6 +13,7 @@ import Unbox
 class AggTransactions: Unboxable {
     var amount: Money?
     var date: Date?
+    var month: String?
     var transactions: [Transaction]?
     var aggType: String? //Should be enum: Pending, Transfer, Unassigned
     
@@ -23,8 +24,10 @@ class AggTransactions: Unboxable {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         self.date = unboxer.unbox(key: "date", formatter: dateFormatter)
+        dateFormatter.dateFormat = "MMMM"
+        self.month = dateFormatter.string(from: self.date!)
         self.transactions = unboxer.unbox(key: "transactions")
-        self.aggType = unboxer.unbox(key: "aggType")
+        self.aggType = unboxer.unbox(key: "agg_type")
     }
     
     class func  withArray(dictionaries: [Dictionary<String, Any>]) throws -> [AggTransactions] {
