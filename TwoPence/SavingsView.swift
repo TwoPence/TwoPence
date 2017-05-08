@@ -212,6 +212,8 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
         } else if trans[indexPath.row].aggType! == "MATCHED" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MatchedCell", for: indexPath) as! MatchedCell
             cell.match = trans[indexPath.row]
+            cell.selectionStyle = .none
+            cell.isUserInteractionEnabled = false
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TransferCell", for: indexPath) as! TransferCell
