@@ -36,7 +36,6 @@ class TransactionsView: UIView {
         addSubview(contentView)
         
         setupTableView()
-        setDisplayTransactions(transactions: transactions)
     }
     
     
@@ -48,56 +47,39 @@ class TransactionsView: UIView {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 60.0
     }
-    
-    // This can be removed and receive the formatted transactions from the API.
-    func setDisplayTransactions(transactions: [Transaction]) {
-        var dates = [Date]()
-        for trans in transactions {
-            dates.append(trans.date!)
-        }
-        let uniqueDates = Set<Date>(dates)
-        for date in uniqueDates {
-            let trans = transactions.filter({$0.date == date})
-            print("\(date), \(trans)")
-            self.displayTransactions.append((date: date, transactions: trans))
-        }
-        tableView.reloadData()
-    }
 }
 
 extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return displayTransactions.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
-//        let sectionView = UIView(frame: frame)
-//        sectionView.backgroundColor = UIColor.lightGray
-//        
-//        let sectionLabel = UILabel(frame: frame)
-//        dateFormatter.dateStyle = .long
-//        sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
-//        sectionLabel.font = sectionLabel.font.withSize(13)
-//        sectionLabel.textAlignment = .center
-//        
-//        return sectionView
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return sectionHeight
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return displayTransactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
+        let sectionView = UIView(frame: frame)
+        sectionView.backgroundColor = UIColor.lightGray
+        
+        let sectionLabel = UILabel(frame: frame)
+        dateFormatter.dateStyle = .long
+        sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
+        sectionLabel.font = sectionLabel.font.withSize(13)
+        sectionLabel.textAlignment = .center
+        
+        return sectionView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return sectionHeight
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//         return displayTransactions[section].transactions.count
-        return transactions.count
+        return displayTransactions[section].transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-//         cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
-        cell.transaction = transactions[indexPath.row]
+        cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
         return cell
     }
 

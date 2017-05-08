@@ -17,6 +17,8 @@ class DashboardViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         contentView.delegate = self
+        
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +29,28 @@ class DashboardViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TransactionsDetailViewController && sender != nil {
             let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
-            transactionsDetailViewController.transactions = sender as! [Transaction]?
+            
+            // This is a temporary hack to put transactions in the correct format for displayed. This transformation needs to happen elsewhere.
+            let transactions = sender as! [Transaction]
+            let displayTransactions = transformTransactions(transactions: transactions)
+            transactionsDetailViewController.displayTransactions = displayTransactions
         }
+    }
+    
+    // See above comment. This needs to be moved elsewhere.
+    func transformTransactions(transactions: [Transaction]) -> [(date: Date, transactions: [Transaction])] {
+        var displayTransactions = [(date: Date, transactions: [Transaction])]()
+        var dates = [Date]()
+        for trans in transactions {
+            dates.append(trans.date!)
+        }
+        let uniqueDates = Set<Date>(dates)
+        for date in uniqueDates {
+            let trans = transactions.filter({$0.date == date})
+            print("\(date), \(trans)")
+            displayTransactions.append((date: date, transactions: trans))
+        }
+        return displayTransactions
     }
 
 }

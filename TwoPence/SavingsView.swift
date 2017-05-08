@@ -226,6 +226,8 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
         delegate?.navigateToTransactionsDetailViewController(selectedTransactions: trans!)
     }
     
+    // -------------------- Begin Methods for Resizing Header --------------------
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
         let absoluteTop: CGFloat = 0
@@ -331,7 +333,6 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
  
         // Jolt Section: Ghost button and message
         self.joltMessageLabel.alpha = (percentage * percentage)
-        self.joltButton.isEnabled = false
         self.joltButton.alpha = (percentage * percentage)
     }
 
