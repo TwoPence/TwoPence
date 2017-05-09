@@ -33,13 +33,19 @@ class Transaction: Unboxable {
         self.status = unboxer.unbox(key: "status")
         self.pending = unboxer.unbox(key: "pending")
     }
-    
-    init(amount: Money?, amountSaved: Money?, date: Date?, merchant: String?, status: String?, pending: Bool?) {
-        self.amount = amount
-        self.amountSaved = amountSaved
-        self.date = date
-        self.merchant = merchant
-        self.status = status
-        self.pending = pending
+
+    class func groupByDate(transactions: [Transaction]) -> [(date: Date, transactions: [Transaction])] {
+        var groupedTransactions = [(date: Date, transactions: [Transaction])]()
+        var dates = [Date]()
+        for trans in transactions {
+            dates.append(trans.date!)
+        }
+        let uniqueDates = Set<Date>(dates)
+        for date in uniqueDates {
+            let trans = transactions.filter({$0.date == date})
+            groupedTransactions.append((date: date, transactions: trans.sorted(by: { $0.date! > $1.date! })))
+        }
+        return groupedTransactions.sorted(by: { $0.date > $1.date })
     }
+    
 }

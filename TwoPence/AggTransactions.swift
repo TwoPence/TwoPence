@@ -40,13 +40,5 @@ class AggTransactions: Unboxable {
         
         return aggTransactions
     }
-
-    // REMOVE: Testing only
-    init(amount: Money?, date: Date?, transactions: [Transaction]?, aggType: String?) {
-        self.amount = amount
-        self.date = date
-        self.transactions = transactions
-        self.aggType = aggType
-    }
     
 }

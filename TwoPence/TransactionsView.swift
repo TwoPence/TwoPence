@@ -16,8 +16,8 @@ class TransactionsView: UIView {
     let sectionHeight: CGFloat = 30
     let dateFormatter = DateFormatter()
     
-    var displayTransactions = [(date: Date, transactions: [Transaction])]()
-    var transactions = [Transaction]()
+    var groupedTransactions = [(date: Date, transactions: [Transaction])]()
+//    var transactions = [Transaction]()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -52,7 +52,7 @@ class TransactionsView: UIView {
 extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return displayTransactions.count
+        return groupedTransactions.count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -62,7 +62,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
         
         let sectionLabel = UILabel(frame: frame)
         dateFormatter.dateStyle = .long
-        sectionLabel.text = dateFormatter.string(from: displayTransactions[section].date)
+        sectionLabel.text = dateFormatter.string(from: groupedTransactions[section].date)
         sectionLabel.font = sectionLabel.font.withSize(13)
         sectionLabel.textAlignment = .center
         sectionView.addSubview(sectionLabel)
@@ -75,12 +75,12 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayTransactions[section].transactions.count
+        return groupedTransactions[section].transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-        cell.transaction = displayTransactions[indexPath.section].transactions[indexPath.row]
+        cell.transaction = groupedTransactions[indexPath.section].transactions[indexPath.row]
         return cell
     }
     

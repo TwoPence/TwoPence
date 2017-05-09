@@ -13,18 +13,18 @@ class TransactionsDetailViewController: UIViewController {
     @IBOutlet weak var contentView: TransactionsView!
     
     var transactions: [Transaction]?
-    var displayTransactions: [(date: Date, transactions: [Transaction])]?
+    var groupedTransactions: [(date: Date, transactions: [Transaction])]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if transactions != nil {
-            contentView.transactions = transactions!
-        }
+//        if transactions != nil {
+//            contentView.transactions = transactions!
+//        }
         
-        if displayTransactions != nil {
-            contentView.displayTransactions = displayTransactions!
+        if groupedTransactions != nil {
+            contentView.groupedTransactions = groupedTransactions!
         }
     }
 

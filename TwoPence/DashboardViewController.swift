@@ -32,24 +32,9 @@ class DashboardViewController: UIViewController {
             
             // This is a temporary hack to put transactions in the correct format for displayed. This transformation needs to happen elsewhere.
             let transactions = sender as! [Transaction]
-            let displayTransactions = transformTransactions(transactions: transactions)
-            transactionsDetailViewController.displayTransactions = displayTransactions
+            let groupedTransactions = Transaction.groupByDate(transactions: transactions)
+            transactionsDetailViewController.groupedTransactions = groupedTransactions
         }
-    }
-    
-    // See above comment. This needs to be moved elsewhere.
-    func transformTransactions(transactions: [Transaction]) -> [(date: Date, transactions: [Transaction])] {
-        var displayTransactions = [(date: Date, transactions: [Transaction])]()
-        var dates = [Date]()
-        for trans in transactions {
-            dates.append(trans.date!)
-        }
-        let uniqueDates = Set<Date>(dates)
-        for date in uniqueDates {
-            let trans = transactions.filter({$0.date == date})
-            displayTransactions.append((date: date, transactions: trans))
-        }
-        return displayTransactions
     }
 
 }
