@@ -18,16 +18,7 @@
 		BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */; };
 		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
 		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
-		BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */; };
-		BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */; };
-		BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */; };
-		BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E501EB3932800BE92C9 /* MenuUserCell.swift */; };
-		BE8D3E531EB3932800BE92C9 /* MenuUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E511EB3932800BE92C9 /* MenuUserCell.xib */; };
-		BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E541EB396F900BE92C9 /* MenuItemCell.swift */; };
-		BE8D3E571EB396F900BE92C9 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D3E551EB396F900BE92C9 /* MenuItemCell.xib */; };
 		BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */; };
-		BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B6421EB1378C00F41663 /* MenuViewController.swift */; };
-		BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */; };
 		BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */; };
 		BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */; };
 		BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */; };
@@ -75,6 +66,8 @@
 		BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */; };
 		BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */; };
 		BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */; };
+		BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */; };
+		BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C441EC1978300279E5D /* ReferralViewController.swift */; };
 		BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */; };
 		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
@@ -112,16 +105,7 @@
 		BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneViewController.swift; sourceTree = "<group>"; };
 		BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
-		BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
-		BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
-		BE8D3E501EB3932800BE92C9 /* MenuUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuUserCell.swift; sourceTree = "<group>"; };
-		BE8D3E511EB3932800BE92C9 /* MenuUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuUserCell.xib; sourceTree = "<group>"; };
-		BE8D3E541EB396F900BE92C9 /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
-		BE8D3E551EB396F900BE92C9 /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 		BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BEA1B6421EB1378C00F41663 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardView.xib; sourceTree = "<group>"; };
 		BEEF57CC1EB3E249001EE950 /* SavingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsView.swift; sourceTree = "<group>"; };
@@ -168,6 +152,8 @@
 		BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAConfettiView.swift; sourceTree = "<group>"; };
 		BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceAPI.swift; sourceTree = "<group>"; };
 		BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneDetailViewController.swift; sourceTree = "<group>"; };
+		BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
+		BF8F9C441EC1978300279E5D /* ReferralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralViewController.swift; sourceTree = "<group>"; };
 		BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -226,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				BEA1B63C1EB1374C00F41663 /* LoginViewController.swift */,
-				BEA1B6421EB1378C00F41663 /* MenuViewController.swift */,
 				BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */,
 				BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */,
 				BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */,
@@ -234,8 +219,10 @@
 				BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */,
 				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
 				BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */,
+				BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */,
 				BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */,
 				BEEF580C1EB69031001EE950 /* JoltViewController.swift */,
+				BF8F9C441EC1978300279E5D /* ReferralViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -251,14 +238,8 @@
 				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
 				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
 				BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */,
-				BEEF57F21EB64303001EE950 /* AccountsView.swift */,
-				BEEF57F41EB64324001EE950 /* AccountsView.xib */,
-				BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */,
-				BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */,
-				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
-				BEEF58101EB69116001EE950 /* JoltView.xib */,
+				BF8F9C411EC04B8D00279E5D /* Accounts View */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
-				BEEF57E11EB53E25001EE950 /* Menu Views */,
 				BEEF581E1EBBB4CE001EE950 /* Collection View Cells */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
 			);
@@ -294,10 +275,6 @@
 		BEEF57E01EB53E0E001EE950 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BE8D3E501EB3932800BE92C9 /* MenuUserCell.swift */,
-				BE8D3E511EB3932800BE92C9 /* MenuUserCell.xib */,
-				BE8D3E541EB396F900BE92C9 /* MenuItemCell.swift */,
-				BE8D3E551EB396F900BE92C9 /* MenuItemCell.xib */,
 				BEEF57E41EB54942001EE950 /* TransferCell.swift */,
 				BEEF57E51EB54942001EE950 /* TransferCell.xib */,
 				BEEF57EC1EB55019001EE950 /* TransactionCell.swift */,
@@ -312,17 +289,6 @@
 				BE1983581EBD0A230059F716 /* MatchedCell.xib */,
 			);
 			name = "Table View Cells";
-			sourceTree = "<group>";
-		};
-		BEEF57E11EB53E25001EE950 /* Menu Views */ = {
-			isa = PBXGroup;
-			children = (
-				BE8D3E481EB2AA2600BE92C9 /* MenuView.swift */,
-				BE8D3E4A1EB2AA3200BE92C9 /* MenuView.xib */,
-				BE8D3E4C1EB2B13D00BE92C9 /* ContentView.swift */,
-				BE8D3E4E1EB2B15900BE92C9 /* ContentView.xib */,
-			);
-			name = "Menu Views";
 			sourceTree = "<group>";
 		};
 		BEEF57E31EB53E69001EE950 /* Dashboard Views */ = {
@@ -347,9 +313,22 @@
 			name = "Collection View Cells";
 			sourceTree = "<group>";
 		};
+		BF8F9C411EC04B8D00279E5D /* Accounts View */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF57F21EB64303001EE950 /* AccountsView.swift */,
+				BEEF57F41EB64324001EE950 /* AccountsView.xib */,
+				BEEF57FC1EB6496F001EE950 /* AccountDetailView.swift */,
+				BEEF57FE1EB6497F001EE950 /* AccountDetailView.xib */,
+			);
+			name = "Accounts View";
+			sourceTree = "<group>";
+		};
 		BFBD3B031EBAA4C500A7F767 /* Jolt Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
+				BEEF58101EB69116001EE950 /* JoltView.xib */,
 			);
 			name = "Jolt Views";
 			sourceTree = "<group>";
@@ -509,21 +488,17 @@
 				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
 				BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */,
 				BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */,
-				BE8D3E4B1EB2AA3200BE92C9 /* MenuView.xib in Resources */,
 				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
 				BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
-				BE8D3E4F1EB2B15900BE92C9 /* ContentView.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
 				BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */,
-				BE8D3E531EB3932800BE92C9 /* MenuUserCell.xib in Resources */,
 				BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */,
 				BEEF57C71EB3D3F7001EE950 /* DashboardView.xib in Resources */,
 				BEEF57CF1EB3E252001EE950 /* SavingsView.xib in Resources */,
-				BE8D3E571EB396F900BE92C9 /* MenuItemCell.xib in Resources */,
 				BEEF57E71EB54942001EE950 /* TransferCell.xib in Resources */,
 				BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */,
 				BE1983561EBD08C60059F716 /* PendingTransferCell.xib in Resources */,
@@ -552,7 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2C1E0DF42C2CC97164023C83 /* [CP] Check Pods Manifest.lock */ = {
@@ -567,7 +542,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4648AA7EF16E7B717DE7058C /* [CP] Copy Pods Resources */ = {
@@ -644,14 +619,12 @@
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
 				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
-				BE8D3E4D1EB2B13D00BE92C9 /* ContentView.swift in Sources */,
 				BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */,
 				BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */,
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,
 				BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */,
 				BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
-				BEA1B6431EB1378C00F41663 /* MenuViewController.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
 				BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */,
 				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
@@ -661,20 +634,19 @@
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
 				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
+				BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */,
 				BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */,
 				BEEF57E61EB54942001EE950 /* TransferCell.swift in Sources */,
 				BEEF57FB1EB648AB001EE950 /* AccountDetailViewController.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
-				BE8D3E561EB396F900BE92C9 /* MenuItemCell.swift in Sources */,
+				BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */,
 				BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */,
 				BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */,
 				BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */,
-				BEEF57C11EB3CDCB001EE950 /* MenuView.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
 				BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */,
 				BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */,
-				BE8D3E521EB3932800BE92C9 /* MenuUserCell.swift in Sources */,
 				BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */,
 				BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */,
 				BEEF57F31EB64303001EE950 /* AccountsView.swift in Sources */,

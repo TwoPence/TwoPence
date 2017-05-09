@@ -37,7 +37,7 @@ class AccountsViewController: UIViewController, AccountsViewDelegate {
             accountDetailViewController.institution = institution!
         }
     }
-
+    
     /*
     // MARK: - Navigation
 

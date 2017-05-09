@@ -8,13 +8,21 @@
 
 import UIKit
 
+@objc protocol AccountDetailViewDelegate {
+    
+    @objc optional func launchUpdateAccountVC(selectedInstitution: Institution)
+    @objc optional func cofirmDeleteAccount(selectedInstitution: Institution)
+    
+}
+
 class AccountDetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var institutionLabel: UILabel!
-
+    weak var delegate: AccountDetailViewDelegate?
+    
     var institution: Institution! {
         didSet {
             // logoImageView.image = setImage(institution.institutionLogoUrl)
@@ -58,6 +66,14 @@ class AccountDetailView: UIView, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    @IBAction func updateAccount(_ sender: Any) {
+        delegate?.launchUpdateAccountVC!(selectedInstitution: institution)
+    }
+    
+    @IBAction func deleteAccount(_ sender: Any) {
+        delegate?.cofirmDeleteAccount!(selectedInstitution: institution)
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

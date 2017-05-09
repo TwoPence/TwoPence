@@ -7,8 +7,10 @@ PODS:
   - Money (2.0.1):
     - ValueCoding (~> 2)
   - PopupDialog (0.5.4)
+  - RevealingSplashView (0.2.0)
   - Unbox (2.4.0)
   - ValueCoding (2.1.0)
+  - Whisper (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -16,7 +18,9 @@ DEPENDENCIES:
   - Hero
   - Money (= 2.0.1)
   - PopupDialog (~> 0.5)
+  - RevealingSplashView
   - Unbox (~> 2.4.0)
+  - Whisper (~> 5.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -24,9 +28,11 @@ SPEC CHECKSUMS:
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
+  RevealingSplashView: a19962358db66188841c73afd51eb663a29f75cd
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
+  Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 560c476cf91e7a482bd3c7f9ef56aafdf73f4920
+PODFILE CHECKSUM: 70317d64db04f95018a2de022e470dc1cfa59894
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

@@ -12,6 +12,8 @@ target 'TwoPence' do
   pod 'Unbox', '~> 2.4.0'
   pod 'Hero'
   pod 'PopupDialog', '~> 0.5'
+  pod 'Whisper', '~> 5.0.0'
+  pod 'RevealingSplashView'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
