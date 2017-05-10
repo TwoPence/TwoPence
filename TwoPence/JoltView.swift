@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Money
 import PopupDialog
 
 @objc protocol JoltViewDelegate {
@@ -19,10 +20,16 @@ class JoltView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var amountLabel: UILabel!
     
+    @IBOutlet weak var totalSavedLabel: UILabel!
+    @IBOutlet weak var daysOffLabel: UILabel!
+    
     @IBOutlet weak var computedTotalSaved: UILabel!
     @IBOutlet weak var computedDaysSaved: UILabel!
     
     weak var delegate: JoltViewDelegate?
+    var computationMetrics: ComputationMetrics?
+    var userFinMetrics: UserFinMetrics?
+    var joltAmount: Int = 20
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -39,38 +46,79 @@ class JoltView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        
+        loadComputationMetrics()
+        loadUserFinMetrics()
+    }
+    
+    func loadUserFinMetrics() {
+        if userFinMetrics == nil {
+            TwoPenceAPI.sharedClient.getFinMetrics(success: { (userFinMetrics:UserFinMetrics) in
+                self.userFinMetrics = userFinMetrics
+                self.setDisplayValues(userFinMetrics: userFinMetrics)
+            }) { (error: Error) in
+                print(error.localizedDescription)
+            }
+        } else {
+            setDisplayValues(userFinMetrics: userFinMetrics!)
+        }
+    }
+    
+    func setDisplayValues(userFinMetrics: UserFinMetrics) {
+        self.totalSavedLabel.text = "\(userFinMetrics.totalSaved!)"
+        self.daysOffLabel.text = "\(userFinMetrics.daysOffLoanTerm!)"
+        self.amountLabel.text = "\(Money(joltAmount))"
+    }
+    
+    func loadComputationMetrics() {
+        TwoPenceAPI.sharedClient.getComputationMetrics(success: { (computationMetrics: ComputationMetrics) in
+            self.computationMetrics = computationMetrics
+            self.updateDisplayValues(amount: Double(self.joltAmount))
+        }) { (error: Error) in
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func onDecreaseTap(_ sender: UIButton) {
-        if let amount = amountLabel.text?.trimmingCharacters(in: CharacterSet.symbols) {
-            let newAmount = Int(amount)! - 5
-            if newAmount >= 0 {
-                amountLabel.text = "$" + String(newAmount)
-                // Compute here
-                computedTotalSaved.text = "+$" + String(newAmount) + " saved"
-                computedDaysSaved.text = "+" + String(1) + " days off"
-            }
+        if (joltAmount - 5) >= 5 {
+            joltAmount = joltAmount - 5
+            UIView.animate(withDuration: 0.2, animations: {
+                self.updateDisplayValues(amount: Double(self.joltAmount))
+            })
         }
     }
     
     @IBAction func onIncreaseTap(_ sender: UIButton) {
-        if let amount = amountLabel.text?.trimmingCharacters(in: CharacterSet.symbols) {
-            let newAmount = Int(amount)! + 5
-            amountLabel.text = "$" + String(newAmount)
-            // Compute here
-            computedTotalSaved.text = "+$" + String(newAmount) + " saved"
-            computedDaysSaved.text = "+" + String(1) + " days off"
+        joltAmount += 5
+        UIView.animate(withDuration: 0.2, animations: {
+            self.updateDisplayValues(amount: Double(self.joltAmount))
+        })
+    }
+    
+    func updateDisplayValues(amount: Double) {
+        amountLabel.text = "\(Money(amount))"
+        
+        if let computationMetrics = computationMetrics {
+            let interestAvoided = ComputationMetrics.interestAvoided(computationMetrics: computationMetrics, payment: amount)
+            let totalSavedDelta = interestAvoided + Money(amount)
+        
+            if let saved = userFinMetrics?.totalSaved {
+                let totalSaved = saved.adding(totalSavedDelta)
+                computedTotalSaved.text = "\(totalSavedDelta)"
+                totalSavedLabel.text = "\(totalSaved)"
+            }
+        
+            let daysSavedDelta = ComputationMetrics.termReductionInDays(computationMetrics: computationMetrics, payment: amount)
+        
+            if let days = userFinMetrics?.daysOffLoanTerm {
+                let daysSaved = days + daysSavedDelta
+                computedDaysSaved.text = "+" + String(daysSavedDelta) + " days off"
+                daysOffLabel.text = "\(daysSaved)"
+            }
         }
     }
     
     @IBAction func onJoltTap(_ sender: UIButton) {
-        if let amount = amountLabel.text?.trimmingCharacters(in: CharacterSet.symbols) {
-            let newAmount = Int(amount)!
-            if newAmount <= 0 {
-                // Show error
-                return
-            }
-        }
         
         let alertController = UIAlertController(title: "\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         

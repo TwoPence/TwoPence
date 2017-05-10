@@ -171,5 +171,26 @@ class TwoPenceAPI: NSObject {
             
         }
     }
+    
+    func getComputationMetrics(success: @escaping (ComputationMetrics) -> (), failure: @escaping (Error) -> ()){
+        
+        Alamofire.request(self.baseURL + "v1/computation-metrics", method: .get).responseJSON { response in
+            switch response.result {
+            case .success:
+                if let result = response.result.value {
+                    do {
+                        let computationMetrics: ComputationMetrics = try unbox(dictionary: result as! Dictionary)
+                        success(computationMetrics)
+                    } catch {
+                        print("An error occured: \(error)")
+                        failure(error)
+                    }
+                }
+            case .failure(let error):
+                failure(error)
+            }
+            
+        }
+    }
 }
 
