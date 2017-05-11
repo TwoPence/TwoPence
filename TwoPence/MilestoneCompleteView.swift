@@ -15,6 +15,7 @@ import UIKit
 
 class MilestoneCompleteView: UIView {
     
+    var debtMilestone: DebtMilestone?
     @IBOutlet weak var milestoneCompleteImage: UIImageView!
     @IBOutlet weak var milestoneCompleteLable: UILabel!
     @IBOutlet var contentView: UIView!

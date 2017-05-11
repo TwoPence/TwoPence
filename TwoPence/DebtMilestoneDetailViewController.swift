@@ -25,16 +25,16 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
                 confettiView?.isUserInteractionEnabled = false
                 let view = MilestoneCompleteView(frame: self.view.frame)
                 view.delegate = self
+                view.debtMilestone = debtMilestone
+                
                 self.contentView.addSubview(view)
                 self.contentView.addSubview(confettiView!)
                 confettiView?.startConfetti()
             } else if(debtMilestone?.type == MilestoneType.Current){
                 let view = MilestoneFutureView(frame: self.view.frame)
                 view.delegate = self
-                self.contentView.addSubview(view)
-            } else {
-                let view = MilestoneFutureView(frame: self.view.frame)
-                view.delegate = self
+                view.debtMilestone = debtMilestone
+                
                 self.contentView.addSubview(view)
             }
         }
