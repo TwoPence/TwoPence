@@ -23,6 +23,7 @@ class MilestoneFutureView: UIView {
         }
     }
     
+    @IBOutlet weak var topView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var milestoneFutureLabel: UILabel!
     @IBOutlet weak var barContainer: UIView!
@@ -48,6 +49,8 @@ class MilestoneFutureView: UIView {
         contentView.frame = bounds
         joltButton.layer.cornerRadius = 5
         
+        topView.backgroundColor = AppColor.DarkGreen.color
+        joltButton.backgroundColor = AppColor.DarkGreen.color
         setMilestoneProgress()
         addSubview(contentView)
     }

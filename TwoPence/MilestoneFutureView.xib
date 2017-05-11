@@ -17,6 +17,7 @@
                 <outlet property="goalValue" destination="JJp-vy-26M" id="ZE9-Jz-YXF"/>
                 <outlet property="joltButton" destination="cPD-Vu-Dei" id="txq-lg-Uf2"/>
                 <outlet property="milestoneFutureLabel" destination="g7a-1C-1Rh" id="VIu-k0-xy9"/>
+                <outlet property="topView" destination="duZ-Rw-2CI" id="Snd-QT-Pgf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,7 +41,6 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.20392156862745098" green="0.6705882352941176" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpb-cG-HZf">
                     <rect key="frame" x="28" y="408" width="300" height="20"/>
