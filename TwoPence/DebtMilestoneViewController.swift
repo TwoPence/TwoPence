@@ -8,7 +8,6 @@
 
 import UIKit
 import Hero
-import Whisper
 
 class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
@@ -17,13 +16,10 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Remove me
-        let message = Message(title: "This is a test message", backgroundColor: .red)
-        Whisper.show(whisper: message, to: self.navigationController!, action: .show)
-        
+    
         contentView.delegate = self
         contentView.heroModifiers = [.fade, .translate(x:0, y:-250)]
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,8 +28,12 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! DebtMilestoneDetailViewController
-        controller.debtMilestone = selectedMiletone
+        if sender is UIBarButtonItem {
+            let controller = segue.destination as! ReferralViewController
+        } else {
+            let controller = segue.destination as! DebtMilestoneDetailViewController
+            controller.debtMilestone = selectedMiletone
+        }
     }
     
     func navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone) {

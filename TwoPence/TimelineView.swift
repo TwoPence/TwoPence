@@ -255,13 +255,13 @@ open class TimelineView: UIView {
         var bullet: UIView = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
         if(element.debtMilestone.type == MilestoneType.Complete){
             // All green
-            bullet = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
+            bullet = bulletView(s, bulletType: bulletType, color: AppColor.DarkGreen.color, stColor: AppColor.DarkGreen.color)
         } else if(element.debtMilestone.type == MilestoneType.Current){
             // outside green, inside clear
-            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: UIColor.green)
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: AppColor.DarkGreen.color)
         } else {
             // outside grey, inside clear
-            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: lineColor)
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: AppColor.LightGray.color)
         }
         
         v.addSubview(bullet)
@@ -371,7 +371,7 @@ open class TimelineView: UIView {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         if (element.debtMilestone.type == MilestoneType.Complete){
-            line.backgroundColor = UIColor.green
+            line.backgroundColor = AppColor.DarkGreen.color
         } else {
             line.backgroundColor = lineColor
         }

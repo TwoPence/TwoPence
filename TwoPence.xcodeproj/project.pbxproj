@@ -238,15 +238,12 @@
 				BFBD3B031EBAA4C500A7F767 /* Jolt Views */,
 				BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */,
 				BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */,
-				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
-				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
 				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
 				BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */,
 				BF8F9C411EC04B8D00279E5D /* Accounts View */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF581E1EBBB4CE001EE950 /* Collection View Cells */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
-				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -329,6 +326,15 @@
 			name = "Accounts View";
 			sourceTree = "<group>";
 		};
+		BF8F9C4D1EC435FD00279E5D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BF8F9C4A1EC4270600279E5D /* AppColor.swift */,
+				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		BFBD3B031EBAA4C500A7F767 /* Jolt Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +347,8 @@
 		BFBD3B061EBAA50800A7F767 /* Milestone Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
+				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
 				BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */,
 				BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */,
 				BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */,
@@ -378,12 +386,12 @@
 				BEA1B6401EB1376300F41663 /* Models */,
 				BEA1B63F1EB1375E00F41663 /* Views */,
 				BEA1B63E1EB1375300F41663 /* View Controllers */,
-				BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */,
+				BF8F9C4D1EC435FD00279E5D /* Common */,
 				BFC2559E1EA5EA6A004FA1A8 /* Main.storyboard */,
+				BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */,
 				BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */,
 				BFC255A31EA5EA6A004FA1A8 /* LaunchScreen.storyboard */,
 				BFC255A61EA5EA6A004FA1A8 /* Info.plist */,
-				BF8F9C4A1EC4270600279E5D /* AppColor.swift */,
 			);
 			path = TwoPence;
 			sourceTree = "<group>";

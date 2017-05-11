@@ -19,6 +19,7 @@ class MilestoneCompleteView: UIView {
     @IBOutlet weak var milestoneCompleteImage: UIImageView!
     @IBOutlet weak var milestoneCompleteLable: UILabel!
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var topView: UIView!
     
     var delegate: MilestoneCompleteViewDelegate?
     
@@ -36,6 +37,7 @@ class MilestoneCompleteView: UIView {
         let nib = UINib(nibName: "MilestoneCompleteView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
+        topView.backgroundColor = AppColor.DarkGreen.color
         addSubview(contentView)
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import RevealingSplashView
+import Whisper
 
 class LoginViewController: UIViewController {
 
@@ -32,6 +33,9 @@ class LoginViewController: UIViewController {
         TwoPenceAPI.sharedClient.getAccounts(success: { (accounts) in
             print(accounts.count)
         }) { (error) in
+            // Remove me
+            let murmur = Murmur(title: "Network error with login")
+            Whisper.show(whistle: murmur, action: .show(0.5))
             print((error.localizedDescription))
         }
     }

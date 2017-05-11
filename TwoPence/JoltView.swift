@@ -26,6 +26,8 @@ class JoltView: UIView {
     @IBOutlet weak var computedTotalSaved: UILabel!
     @IBOutlet weak var computedDaysSaved: UILabel!
     
+    @IBOutlet weak var topView: UIView!
+    
     weak var delegate: JoltViewDelegate?
     var computationMetrics: ComputationMetrics?
     var userFinMetrics: UserFinMetrics?
@@ -47,6 +49,7 @@ class JoltView: UIView {
         contentView.frame = bounds
         addSubview(contentView)
         
+        topView.backgroundColor = AppColor.DarkGreen.color
         loadComputationMetrics()
         loadUserFinMetrics()
     }

@@ -11,6 +11,7 @@ import UIKit
 enum AppColor: UInt32 {
     
     case DarkGreen = 0x34AB74
+    case LightGray = 0xAAAAAA
     
     var color: UIColor {
         return UIColor(hex: rawValue)
