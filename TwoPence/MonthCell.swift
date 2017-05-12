@@ -35,7 +35,7 @@ class MonthCell: UICollectionViewCell {
         
         self.isUserInteractionEnabled = true
         self.selectedBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-        self.selectedBackgroundView?.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.1)
+        self.selectedBackgroundView?.backgroundColor = UIColor(red: 66/255, green: 181/255, blue: 128/255, alpha: 1.0)
         self.selectedBackgroundView?.isHidden = true
     }
     

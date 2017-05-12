@@ -110,7 +110,10 @@ class SavingsView: UIView, JoltViewDelegate {
             self.filtered = [(self.selectedMonth, aggTransactions.filter({$0.month == self.selectedMonth}))]
             self.tableView.reloadData()
             self.collectionView.reloadData()
-            self.collectionView.scrollToItem(at: IndexPath(row: self.monthlyAggTransactions.count - 1, section: 0), at: .right, animated: false)
+            
+            let indexPath = IndexPath(row: self.monthlyAggTransactions.count - 1, section: 0)
+            self.collectionView.scrollToItem(at: indexPath, at: .right, animated: false)
+            
             self.setupHeaderElements()
         }) { (error: Error) in
             print(error.localizedDescription)
@@ -144,7 +147,7 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableViewHeaderHeight)
         let headerView = UIView(frame: frame)
-        headerView.backgroundColor = UIColor(red: 147/255, green: 159/255, blue: 174/255, alpha: 0.1)
+        headerView.backgroundColor = UIColor(red: 244/255, green: 245/255, blue: 246/255, alpha: 1.0)
         
         let monthLabel = UILabel(frame: frame)
         monthLabel.text = filtered[section].month

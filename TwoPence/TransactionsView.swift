@@ -58,7 +58,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
         let sectionView = UIView(frame: frame)
-        sectionView.backgroundColor = UIColor(red: 147/255, green: 159/255, blue: 174/255, alpha: 0.1)
+        sectionView.backgroundColor = UIColor(red: 244/255, green: 245/255, blue: 246/255, alpha: 1.0)
         
         let sectionLabel = UILabel(frame: frame)
         dateFormatter.dateStyle = .long
