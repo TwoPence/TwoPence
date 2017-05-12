@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DebtHeaderView" customModule="TwoPence" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Meu-L7-R4W"/>
+                <outlet property="daysOffDeltaLabel" destination="ptZ-Fo-ffD" id="UhV-fQ-RUX"/>
+                <outlet property="daysOffLabel" destination="Wxz-xC-sg1" id="9Wa-pf-mbG"/>
+                <outlet property="interestAvoidedDeltaLabel" destination="yHq-UH-czf" id="GD0-uq-HWc"/>
+                <outlet property="interestAvoidedLabel" destination="lSa-AO-dNB" id="WKf-Mj-n9G"/>
+                <outlet property="loanRepaidDeltaLabel" destination="bAK-K6-waq" id="KYr-RZ-PZl"/>
+                <outlet property="loanRepaidLabel" destination="L2H-V9-QfB" id="dqH-W3-dqH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EEL-bb-46d" userLabel="Labels Stack View">
+                    <rect key="frame" x="16" y="24" width="343" height="20.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Repaid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z02-77-I98">
+                            <rect key="frame" x="0.0" y="0.0" width="171.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Avoided" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4X-1T-F6d">
+                            <rect key="frame" x="171.5" y="0.0" width="171.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="833-5p-FKO" userLabel="Amounts Stack View">
+                    <rect key="frame" x="16" y="52" width="343" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2H-V9-QfB">
+                            <rect key="frame" x="0.0" y="0.0" width="171.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSa-AO-dNB">
+                            <rect key="frame" x="171.5" y="0.0" width="171.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dm5-XL-q1C" userLabel="Deltas Stack View">
+                    <rect key="frame" x="16" y="80" width="343" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAK-K6-waq">
+                            <rect key="frame" x="0.0" y="0.0" width="171.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHq-UH-czf">
+                            <rect key="frame" x="171.5" y="0.0" width="171.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Closer to Debt Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prY-DD-ZZJ">
+                    <rect key="frame" x="92" y="111.5" width="191" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxz-xC-sg1">
+                    <rect key="frame" x="181.5" y="140" width="12.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptZ-Fo-ffD">
+                    <rect key="frame" x="180" y="168" width="16.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="833-5p-FKO" firstAttribute="top" secondItem="EEL-bb-46d" secondAttribute="bottom" constant="8" id="2iG-e6-HWS"/>
+                <constraint firstItem="EEL-bb-46d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="BoW-Gi-0Bd"/>
+                <constraint firstItem="Dm5-XL-q1C" firstAttribute="top" secondItem="833-5p-FKO" secondAttribute="bottom" constant="4" id="Dsr-AI-BXc"/>
+                <constraint firstAttribute="trailing" secondItem="Dm5-XL-q1C" secondAttribute="trailing" constant="16" id="Hvg-6Z-O9i"/>
+                <constraint firstItem="prY-DD-ZZJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RJI-4h-NJg"/>
+                <constraint firstItem="EEL-bb-46d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="SBw-If-R9O"/>
+                <constraint firstItem="prY-DD-ZZJ" firstAttribute="top" secondItem="Dm5-XL-q1C" secondAttribute="bottom" constant="16" id="YPO-zX-QEJ"/>
+                <constraint firstItem="Wxz-xC-sg1" firstAttribute="top" secondItem="prY-DD-ZZJ" secondAttribute="bottom" constant="8" id="Yzm-hS-wVL"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ptZ-Fo-ffD" secondAttribute="bottom" constant="16" id="a7O-gV-rU3"/>
+                <constraint firstItem="ptZ-Fo-ffD" firstAttribute="top" secondItem="Wxz-xC-sg1" secondAttribute="bottom" constant="4" id="e6W-ta-zIv"/>
+                <constraint firstAttribute="trailing" secondItem="EEL-bb-46d" secondAttribute="trailing" constant="16" id="mFx-eu-RqN"/>
+                <constraint firstItem="Dm5-XL-q1C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qG9-rS-I3s"/>
+                <constraint firstItem="833-5p-FKO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qXj-Ky-LfA"/>
+                <constraint firstItem="Wxz-xC-sg1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tKJ-ve-O45"/>
+                <constraint firstAttribute="trailing" secondItem="833-5p-FKO" secondAttribute="trailing" constant="16" id="wSC-Wx-fqb"/>
+                <constraint firstItem="ptZ-Fo-ffD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xmZ-xo-Ogj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="25.5" y="-179.5"/>
+        </view>
+    </objects>
+</document>

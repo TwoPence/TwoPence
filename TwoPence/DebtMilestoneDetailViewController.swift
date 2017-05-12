@@ -62,9 +62,7 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
     }
     
     func doJolt() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: "JoltViewController") as! JoltViewController
-        self.present(secondViewController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "JoltSegue", sender: nil)
     }
     
     func shareMilestone(shareText: String){

@@ -11,8 +11,6 @@ import Money
 
 protocol SavingsViewDelegate {
     
-    func didTapJoltButton(didTap: Bool)
-    
     func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction])
 }
 
@@ -24,25 +22,13 @@ class SavingsView: UIView, JoltViewDelegate {
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
-    
+
     @IBOutlet weak var savedAmountLabel: UILabel!
-    @IBOutlet weak var savedAmountLabelTopConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var savedLabel: UILabel!
-    @IBOutlet weak var savedLabelYConstraint: NSLayoutConstraint!
-    @IBOutlet weak var savedLabelXConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var matchedLabel: UILabel!
-    @IBOutlet weak var matchedLabelYConstraint: NSLayoutConstraint!
-    @IBOutlet weak var matchedLabelXConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var matchedAmountLabel: UILabel!
-    @IBOutlet weak var matchedAmountLabelYConstraint: NSLayoutConstraint!
-    @IBOutlet weak var matchedAmountLabelXConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var joltMessageLabel: UILabel!
-    @IBOutlet weak var joltButton: UIButton!
-    @IBOutlet weak var joltDividerView: UIView!
+    @IBOutlet weak var savedAmountLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var totalSavedLabelBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var matchedAmountLabelTopConstraint: NSLayoutConstraint!
     
     var delegate: SavingsViewDelegate?
     
@@ -52,31 +38,19 @@ class SavingsView: UIView, JoltViewDelegate {
     var monthlyAggTransactions = [MonthlyAggTransactions]()
     var selectedMonth: String?
     
-    let headerMaxHeight: CGFloat = 300
-    let headerMinHeight: CGFloat = 165
+    let headerMaxHeight: CGFloat = 340
+    let headerMinHeight: CGFloat = 235
     
-    let savedAmountLabelMaxSpace: CGFloat = 50
-    let savedAmountLabelMinSpace: CGFloat = 5
-    let savedAmountLabelMinScale: CGFloat = 0.7
+    let savedAmountLabelTopConstraintMax: CGFloat = 94
+    let savedAmountLabelTopConstraintMin: CGFloat = 40
+
+    let totalSavedLabelBottomConstraintMax: CGFloat = 8
+    let totalSavedLabelBottomConstraintMin: CGFloat = -8
     
-    // These constants are with respect to the location of the savedAmountLabel.
-    let savedLabelMaxY: CGFloat = 55
-    let savedLabelMinY: CGFloat = 30
-    let savedLabelMaxX: CGFloat = 0
-    let savedLabelMinX: CGFloat = 0
-    let savedLabelMinScale: CGFloat = 0.7
+    let matchedAmountLabelTopConstraintMax: CGFloat = 48
+    let matchedAmountLabelTopConstraintMin: CGFloat = -8
     
-    let matchedLabelsMaxY: CGFloat = 55
-    let matchedLabelsMinY: CGFloat = 30
-    
-    // TODO: Replace X constraints with a relative constraint between matchedLabel and matchedAmountLabel
-    let matchedLabelMaxX: CGFloat = -55
-    let matchedLabelMinX: CGFloat = -35
-    let matchedLabelMinScale: CGFloat = 0.7
-    
-    let matchedAmountLabelMaxX: CGFloat = 50
-    let matchedAmountLabelMinX: CGFloat = 40
-    let matchedAmountLabelMinScale: CGFloat = 0.7
+    let savedAmountLabelMinScale: CGFloat = 0.4
     
     let tableViewHeaderHeight: CGFloat = 25
     
@@ -97,13 +71,11 @@ class SavingsView: UIView, JoltViewDelegate {
         addSubview(contentView)
         
         headerHeightConstraint.constant = headerMaxHeight
-        headerView.backgroundColor = UIColor(red: 21/255, green: 140/255, blue: 81/255, alpha: 1.0)
         
         selectedMonth = currentMonth()
         
         setupTableView()
         setupCollectionView()
-        setupJoltButton()
         loadAggTransactions()
     }
     
@@ -125,18 +97,10 @@ class SavingsView: UIView, JoltViewDelegate {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.allowsSelection = true
-        // collectionView.scrollToItem(at: IndexPath(row: 11, section: 0), at: .right, animated: false)
+        collectionView.showsHorizontalScrollIndicator = false
         collectionViewFlowLayout.scrollDirection = .horizontal
-        collectionViewFlowLayout.minimumLineSpacing = 30
-        collectionViewFlowLayout.itemSize = CGSize(width: 50, height: 50)
-    }
-    
-    func setupJoltButton() {
-        joltButton.backgroundColor = .clear
-        joltButton.layer.cornerRadius = 5
-        joltButton.layer.borderWidth = 1
-        joltButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        joltButton.layer.borderColor = UIColor.white.cgColor
+        collectionViewFlowLayout.minimumLineSpacing = 32
+        collectionViewFlowLayout.itemSize = CGSize(width: 66, height: 45)
     }
     
     func loadAggTransactions() {
@@ -146,6 +110,7 @@ class SavingsView: UIView, JoltViewDelegate {
             self.filtered = [(self.selectedMonth, aggTransactions.filter({$0.month == self.selectedMonth}))]
             self.tableView.reloadData()
             self.collectionView.reloadData()
+            self.collectionView.scrollToItem(at: IndexPath(row: self.monthlyAggTransactions.count - 1, section: 0), at: .right, animated: false)
             self.setupHeaderElements()
         }) { (error: Error) in
             print(error.localizedDescription)
@@ -164,14 +129,10 @@ class SavingsView: UIView, JoltViewDelegate {
         let totalSaved = allSavings.reduce(0, +)
         let allMatched = aggTransactions.filter({$0.aggType == "MATCHED"}).map({$0.amount}) as! [Money]
         let totalMatched = allMatched.reduce(0, +)
+        
         savedAmountLabel.text = "\(totalSaved)"
-        matchedAmountLabel.text = "\(totalMatched)"
+        matchedAmountLabel.text = "\(totalMatched) Matched"
     }
-    
-    @IBAction func didTapJoltButton(_ sender: UIButton) {
-        delegate?.didTapJoltButton(didTap: true)
-    }
-    
 }
 
 extension SavingsView: UITableViewDataSource, UITableViewDelegate {
@@ -183,11 +144,11 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableViewHeaderHeight)
         let headerView = UIView(frame: frame)
-        headerView.backgroundColor = UIColor.lightGray
+        headerView.backgroundColor = UIColor(red: 147/255, green: 159/255, blue: 174/255, alpha: 0.1)
         
         let monthLabel = UILabel(frame: frame)
         monthLabel.text = filtered[section].month
-        monthLabel.font = monthLabel.font.withSize(13)
+        monthLabel.font = UIFont(name: "Lato-Regular", size: 11)
         monthLabel.textAlignment = .center
         headerView.addSubview(monthLabel)
 
@@ -242,8 +203,6 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
             
             if isScrollingDown {
                 newHeight = max(self.headerMinHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
-                // Hide the divider immediately once scrolling down beings, otherwise it looks weird.
-                self.joltDividerView.alpha = 0.0
             } else if isScrollingUp {
                 newHeight = min(self.headerMaxHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
             }
@@ -292,8 +251,6 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
         UIView.animate(withDuration: 0.2) {
             self.headerHeightConstraint.constant = self.headerMaxHeight
             self.updateHeader()
-            // Show the divider once the header has re-expanded.
-            self.joltDividerView.alpha = 0.8
         }
     }
     
@@ -309,35 +266,18 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
         let openAmount = self.headerHeightConstraint.constant - headerMinHeight
         let percentage = openAmount / range
         
-        // savedAmountLabel: Move Up and Shrink
-        let spaceDiff = savedAmountLabelMaxSpace - savedAmountLabelMinSpace
-        self.savedAmountLabelTopConstraint.constant = percentage * spaceDiff + savedAmountLabelMinSpace
+        let amountRange = savedAmountLabelTopConstraintMax - savedAmountLabelTopConstraintMin
+        savedAmountLabelTopConstraint.constant = percentage * amountRange + savedAmountLabelTopConstraintMin
+        
+        let topRange = totalSavedLabelBottomConstraintMax - totalSavedLabelBottomConstraintMin
+        totalSavedLabelBottomConstraint.constant = percentage * topRange + totalSavedLabelBottomConstraintMin
+        
+        let matchedRange = matchedAmountLabelTopConstraintMax - matchedAmountLabelTopConstraintMin
+        matchedAmountLabelTopConstraint.constant = percentage * matchedRange + matchedAmountLabelTopConstraintMin
+        
         let savedAmountScale = percentage * (1 - savedAmountLabelMinScale) + savedAmountLabelMinScale
-        self.savedAmountLabel.transform = CGAffineTransform(scaleX: savedAmountScale, y: savedAmountScale)
-        
-        // savedLabel: Move Up and Shrink
-        self.savedLabelYConstraint.constant = percentage * (savedLabelMaxY - savedLabelMinY) + savedLabelMinY
-        self.savedLabelXConstraint.constant = (1 - percentage) * savedLabelMaxX + savedLabelMinX
-        let savedLabelScale = percentage * (1 - savedLabelMinScale) + savedLabelMinScale
-        self.savedLabel.transform = CGAffineTransform(scaleX: savedLabelScale, y: savedLabelScale)
-        
-        // matchedAmountLabel: Move Up and Right, Shrink
-        self.matchedAmountLabelYConstraint.constant = percentage * (matchedLabelsMaxY - matchedLabelsMinY) + matchedLabelsMinY
-        self.matchedAmountLabelXConstraint.constant = matchedAmountLabelMaxX - (1 - percentage) * (matchedAmountLabelMaxX - matchedAmountLabelMinX)
-        let matchedAmountScale = percentage * (1 - matchedAmountLabelMinScale) + matchedAmountLabelMinScale
-        self.matchedAmountLabel.transform = CGAffineTransform(scaleX: matchedAmountScale, y: matchedAmountScale)
-        
-        // matchedLabel: Move Up and Left, Shrink
-        self.matchedLabelYConstraint.constant = percentage * (matchedLabelsMaxY - matchedLabelsMinY) + matchedLabelsMinY
-        self.matchedLabelXConstraint.constant = matchedLabelMaxX - (1 - percentage) * (matchedLabelMaxX - matchedLabelMinX)
-        let matchedLabelScale = percentage * (1 - matchedLabelMinScale) + matchedLabelMinScale
-        self.matchedLabel.transform = CGAffineTransform(scaleX: matchedLabelScale, y: matchedLabelScale)
- 
-        // Jolt Section: Ghost button and message
-        self.joltMessageLabel.alpha = (percentage * percentage)
-        self.joltButton.alpha = (percentage * percentage)
+        savedAmountLabel.transform = CGAffineTransform(scaleX: savedAmountScale, y: savedAmountScale)
     }
-
 }
 
 extension SavingsView: UICollectionViewDataSource, UICollectionViewDelegate {

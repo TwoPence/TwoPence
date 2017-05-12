@@ -11,10 +11,10 @@ import Money
 
 class MonthlyAggTransactions {
     
-    var month: String?
-    var monthAbbrev: String?
-    var monthInt: Int?
-    var amount: Money?
+    var month: String
+    var monthAbbrev: String
+    var monthInt: Int
+    var amount: Money
     
     let dateFormatter = DateFormatter()
     
@@ -27,7 +27,7 @@ class MonthlyAggTransactions {
         let monthDate = dateFormatter.date(from: month)
         dateFormatter.dateFormat = "M"
         let monthInt = Int(dateFormatter.string(from: monthDate!))
-        self.monthInt = monthInt
+        self.monthInt = monthInt!
         
     }
     
@@ -46,6 +46,6 @@ class MonthlyAggTransactions {
             let total = amounts.reduce(0, +)
             monthlyTotals.append(MonthlyAggTransactions(month: month, amount: total))
         }
-        return monthlyTotals.sorted(by: { $0.monthInt! > $1.monthInt! })
+        return monthlyTotals.sorted(by: { $0.monthInt < $1.monthInt })
     }
 }

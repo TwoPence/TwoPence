@@ -17,20 +17,33 @@ class TransactionsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        if transactions != nil {
-//            contentView.transactions = transactions!
-//        }
         
         if groupedTransactions != nil {
             contentView.groupedTransactions = groupedTransactions!
         }
+        
+        updateNavigationBar(hidePageControl: true, navigationBarTitle: "Transactions", backButtonTitle: "")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        updateNavigationBar(hidePageControl: false, navigationBarTitle: "", backButtonTitle: "Savings")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateNavigationBar(hidePageControl: Bool, navigationBarTitle: String, backButtonTitle: String) {
+        self.navigationItem.title = navigationBarTitle
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+        if let navigationBar = navigationController?.navigationBar {
+            let pageControl = navigationBar.viewWithTag(1)
+            pageControl?.isHidden = hidePageControl
+            navigationBar.topItem?.title = backButtonTitle
+        }
     }
     
 

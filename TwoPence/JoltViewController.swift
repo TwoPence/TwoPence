@@ -8,15 +8,19 @@
 
 import UIKit
 
-class JoltViewController: UIViewController, JoltViewDelegate {
+class JoltViewController: UIViewController {
 
     @IBOutlet weak var contentView: JoltView!
+    
+    var userFinMetrics: UserFinMetrics?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         contentView.delegate = self
+        
+        loadComputationMetrics()
+        maybeLoadUserFinMetrics()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,20 +28,32 @@ class JoltViewController: UIViewController, JoltViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func loadComputationMetrics() {
+        TwoPenceAPI.sharedClient.getComputationMetrics(success: { (computationMetrics: ComputationMetrics) in
+            self.contentView.computationMetrics = computationMetrics
+        }) { (error: Error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func maybeLoadUserFinMetrics() {
+        if userFinMetrics == nil {
+            TwoPenceAPI.sharedClient.getFinMetrics(success: { (userFinMetrics: UserFinMetrics) in
+                self.contentView.userFinMetrics = userFinMetrics
+            }, failure: { (error: Error) in
+                print(error.localizedDescription)
+            })
+        } else {
+            contentView.userFinMetrics = userFinMetrics
+        }
+    }
+}
+    
+extension JoltViewController: JoltViewDelegate {
+ 
     func didTapCloseButton(didTap: Bool) {
         if didTap {
             dismiss(animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -18,20 +18,24 @@ import PopupDialog
 class JoltView: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var amountLabel: UILabel!
     
-    @IBOutlet weak var totalSavedLabel: UILabel!
-    @IBOutlet weak var daysOffLabel: UILabel!
-    
-    @IBOutlet weak var computedTotalSaved: UILabel!
-    @IBOutlet weak var computedDaysSaved: UILabel!
-    
-    @IBOutlet weak var topView: UIView!
-    
     weak var delegate: JoltViewDelegate?
+    
     var computationMetrics: ComputationMetrics?
-    var userFinMetrics: UserFinMetrics?
-    var joltAmount: Int = 20
+    var userFinMetrics: UserFinMetrics? {
+        didSet {
+            debtHeaderView.userFinMetrics = userFinMetrics
+        }
+    }
+    var debtHeaderView: DebtHeaderView!
+    var joltAmount: Int = 20 {
+        didSet {
+            amountLabel.text = "\(Money(joltAmount))"
+            updateDisplay(amount: Double(joltAmount))
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -49,76 +53,38 @@ class JoltView: UIView {
         contentView.frame = bounds
         addSubview(contentView)
         
-        topView.backgroundColor = AppColor.DarkGreen.color
-        loadComputationMetrics()
-        loadUserFinMetrics()
+        debtHeaderView = DebtHeaderView()
+        headerView.addSubview(debtHeaderView)
+        contentView.sendSubview(toBack: headerView)
     }
     
-    func loadUserFinMetrics() {
-        if userFinMetrics == nil {
-            TwoPenceAPI.sharedClient.getFinMetrics(success: { (userFinMetrics:UserFinMetrics) in
-                self.userFinMetrics = userFinMetrics
-                self.setDisplayValues(userFinMetrics: userFinMetrics)
-            }) { (error: Error) in
-                print(error.localizedDescription)
-            }
-        } else {
-            setDisplayValues(userFinMetrics: userFinMetrics!)
-        }
-    }
-    
-    func setDisplayValues(userFinMetrics: UserFinMetrics) {
-        self.totalSavedLabel.text = "\(userFinMetrics.totalSaved!)"
-        self.daysOffLabel.text = "\(userFinMetrics.daysOffLoanTerm!)"
-        self.amountLabel.text = "\(Money(joltAmount))"
-    }
-    
-    func loadComputationMetrics() {
-        TwoPenceAPI.sharedClient.getComputationMetrics(success: { (computationMetrics: ComputationMetrics) in
-            self.computationMetrics = computationMetrics
-            self.updateDisplayValues(amount: Double(self.joltAmount))
-        }) { (error: Error) in
-            print(error.localizedDescription)
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        debtHeaderView.frame = CGRect(x: 0, y: 0, width: contentView.bounds.width, height: headerView.bounds.height)
     }
     
     @IBAction func onDecreaseTap(_ sender: UIButton) {
         if (joltAmount - 5) >= 5 {
             joltAmount = joltAmount - 5
-            UIView.animate(withDuration: 0.2, animations: {
-                self.updateDisplayValues(amount: Double(self.joltAmount))
-            })
         }
     }
     
     @IBAction func onIncreaseTap(_ sender: UIButton) {
         joltAmount += 5
-        UIView.animate(withDuration: 0.2, animations: {
-            self.updateDisplayValues(amount: Double(self.joltAmount))
-        })
     }
     
-    func updateDisplayValues(amount: Double) {
-        amountLabel.text = "\(Money(amount))"
+    func updateDisplay(amount: Double) {
+        UIView.animate(withDuration: 0.15, animations: {
+            if let computationMetrics = self.computationMetrics {
+                self.debtHeaderView.loanRepaidDelta = Money(amount)
+            
+                let interestAvoided = ComputationMetrics.interestAvoided(computationMetrics: computationMetrics, payment: amount)
+                self.debtHeaderView.interestAvoidedDelta = interestAvoided
         
-        if let computationMetrics = computationMetrics {
-            let interestAvoided = ComputationMetrics.interestAvoided(computationMetrics: computationMetrics, payment: amount)
-            let totalSavedDelta = interestAvoided + Money(amount)
-        
-            if let saved = userFinMetrics?.totalSaved {
-                let totalSaved = saved.adding(totalSavedDelta)
-                computedTotalSaved.text = "\(totalSavedDelta)"
-                totalSavedLabel.text = "\(totalSaved)"
+                let daysOffDelta = ComputationMetrics.termReductionInDays(computationMetrics: computationMetrics, payment: amount)
+                self.debtHeaderView.daysOffDelta = daysOffDelta
             }
-        
-            let daysSavedDelta = ComputationMetrics.termReductionInDays(computationMetrics: computationMetrics, payment: amount)
-        
-            if let days = userFinMetrics?.daysOffLoanTerm {
-                let daysSaved = days + daysSavedDelta
-                computedDaysSaved.text = "+" + String(daysSavedDelta) + " days off"
-                daysOffLabel.text = "\(daysSaved)"
-            }
-        }
+        })
     }
     
     @IBAction func onJoltTap(_ sender: UIButton) {

@@ -7,16 +7,26 @@
 //
 
 import UIKit
+import Money
 
 class MonthCell: UICollectionViewCell {
 
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
+    let moneyHandler = NSDecimalNumberHandler(roundingMode: .plain, scale: 0, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+    
     var monthlyAggTransactions: MonthlyAggTransactions! {
         didSet {
-            self.monthLabel.text = monthlyAggTransactions.monthAbbrev!
-            self.amountLabel.text = "\(monthlyAggTransactions.amount!)"
+            monthLabel.text = monthlyAggTransactions.monthAbbrev
+            let amount = monthlyAggTransactions.amount.storage.rounding(accordingToBehavior: moneyHandler)
+            self.amountLabel.text = "$\(amount)"
+        }
+    }
+    
+    override var isSelected: Bool {
+        willSet {
+            selectedBackgroundView?.isHidden = false
         }
     }
     
@@ -24,8 +34,9 @@ class MonthCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.isUserInteractionEnabled = true
-        self.backgroundColor = UIColor(red: 243/255, green: 232/255, blue: 143/255, alpha: 1.0)
-        self.layer.cornerRadius = self.frame.width / 2
+        self.selectedBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
+        self.selectedBackgroundView?.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.1)
+        self.selectedBackgroundView?.isHidden = true
     }
     
     override func prepareForReuse() {

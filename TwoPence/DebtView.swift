@@ -8,18 +8,32 @@
 
 import UIKit
 
+protocol DebtViewDelegate {
+    
+    func didTapJoltButton(didTap: Bool)
+}
+
 class DebtView: UIView {
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var loanRepaidLabel: UILabel!
-    @IBOutlet weak var interestAvoidedLabel: UILabel!
-    @IBOutlet weak var daysOffLoanTermLabel: UILabel!
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var withTPProgress: UIProgressView!
     @IBOutlet weak var withoutTPProgress: UIProgressView!
     @IBOutlet weak var withTPLabel: UILabel!
     @IBOutlet weak var withoutTPLabel: UILabel!
+    @IBOutlet weak var joltButton: UIButton!
     
-    var userFinMetrics: UserFinMetrics!
+    var delegate: DebtViewDelegate?
+    
+    var userFinMetrics: UserFinMetrics? {
+        didSet {
+            debtHeaderView.userFinMetrics = userFinMetrics
+            setupProgress()
+        }
+    }
+    var debtHeaderView: DebtHeaderView!
+    var withTPRatio: Float = 0
+    var withoutTPRatio: Float = 0
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -37,38 +51,46 @@ class DebtView: UIView {
         contentView.frame = bounds
         addSubview(contentView)
         
-        setFinMetrics()
+        debtHeaderView = DebtHeaderView()
+        headerView.addSubview(debtHeaderView)
+        contentView.sendSubview(toBack: headerView)
+        
+        setupJoltButton()
     }
     
-    func setFinMetrics() {
-        TwoPenceAPI.sharedClient.getFinMetrics(success: { (userFinMetrics: UserFinMetrics) in
-            self.userFinMetrics = userFinMetrics
-            self.setupHeaderView()
-            self.setupProgressBars()
-        }) { (error: Error) in
-            print(error.localizedDescription)
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        debtHeaderView.frame = CGRect(x: 0, y: 0, width: contentView.bounds.width, height: headerView.bounds.height)
     }
     
-    func setupHeaderView() {
-        loanRepaidLabel.text = "\(userFinMetrics.loanRepaid!)"
-        interestAvoidedLabel.text = "\(userFinMetrics.interestAvoided!)"
-        daysOffLoanTermLabel.text = "\(userFinMetrics.daysOffLoanTerm!)"
-        withTPLabel.text = "\(userFinMetrics.loanTermInDaysWithTp!)"
-        withoutTPLabel.text = "\(userFinMetrics.loanTermInDaysWithoutTp!)"
+    func setupJoltButton() {
+        joltButton.backgroundColor = .clear
+        joltButton.layer.cornerRadius = 5
+        joltButton.layer.borderWidth = 1
+        joltButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        joltButton.layer.borderColor = UIColor.white.cgColor
     }
 
-    func setupProgressBars() {
-        let daysAtEnrollment = userFinMetrics.loanTermInDaysAtEnrollment!
-        let daysWithTP = userFinMetrics.loanTermInDaysWithTp!
-        let daysWithoutTP = userFinMetrics.loanTermInDaysWithoutTp!
-        let withTPRatio = Float(daysWithTP) / Float(daysAtEnrollment)
-        let withoutTPRatio = Float(daysWithoutTP) / Float(daysAtEnrollment)
+    func setupProgress() {
+        if let daysAtEnrollment = userFinMetrics?.loanTermInDaysAtEnrollment {
+            if let daysWithTP = userFinMetrics?.loanTermInDaysWithTp {
+                withTPLabel.text = "\(daysWithTP)"
+                withTPRatio = Float(daysWithTP) / Float(daysAtEnrollment)
+            }
+            if let daysWithoutTP = userFinMetrics?.loanTermInDaysWithoutTp {
+                withoutTPLabel.text = "\(daysWithoutTP)"
+                withoutTPRatio = Float(daysWithoutTP) / Float(daysAtEnrollment)
+            }
+        }
         
         UIView.animate(withDuration: 2.0, animations: {
-            self.withTPProgress.setProgress(withTPRatio, animated: true)
-            self.withoutTPProgress.setProgress(withoutTPRatio, animated: true)
+            self.withTPProgress.setProgress(self.withTPRatio, animated: true)
+            self.withoutTPProgress.setProgress(self.withoutTPRatio, animated: true)
         })
     }
+    
+    @IBAction func didTapJoltButton(_ sender: UIButton) {
+        delegate?.didTapJoltButton(didTap: true)
 
+    }
 }

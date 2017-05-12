@@ -15,6 +15,9 @@
 		BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1983581EBD0A230059F716 /* MatchedCell.xib */; };
 		BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19835B1EBD119E0059F716 /* SavingsRate.swift */; };
 		BE19835E1EBD89980059F716 /* MonthlyAggTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19835D1EBD89980059F716 /* MonthlyAggTransactions.swift */; };
+		BE3F8D691EC3994900CA6F34 /* DebtHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */; };
+		BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */; };
+		BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */; };
 		BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */; };
 		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
 		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
@@ -102,6 +105,9 @@
 		BE1983581EBD0A230059F716 /* MatchedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchedCell.xib; sourceTree = "<group>"; };
 		BE19835B1EBD119E0059F716 /* SavingsRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsRate.swift; sourceTree = "<group>"; };
 		BE19835D1EBD89980059F716 /* MonthlyAggTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyAggTransactions.swift; sourceTree = "<group>"; };
+		BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtHeaderView.swift; sourceTree = "<group>"; };
+		BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebtHeaderView.xib; sourceTree = "<group>"; };
+		BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +218,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BE3F8D7F1EC5005900CA6F34 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		BEA1B63E1EB1375300F41663 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +316,8 @@
 				BEEF57D21EB3FAF3001EE950 /* DebtView.xib */,
 				BEEF57D41EB3FB1C001EE950 /* AssetView.swift */,
 				BEEF57D61EB3FB27001EE950 /* AssetView.xib */,
+				BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */,
+				BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */,
 			);
 			name = "Dashboard Views";
 			sourceTree = "<group>";
@@ -382,6 +398,7 @@
 		BFC255991EA5EA6A004FA1A8 /* TwoPence */ = {
 			isa = PBXGroup;
 			children = (
+				BE3F8D7F1EC5005900CA6F34 /* Fonts */,
 				BEA1B6411EB1376700F41663 /* API */,
 				BEA1B6401EB1376300F41663 /* Models */,
 				BEA1B63F1EB1375E00F41663 /* Views */,
@@ -504,7 +521,9 @@
 				BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */,
 				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
 				BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */,
+				BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
+				BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
@@ -658,6 +677,7 @@
 				BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */,
 				BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */,
 				BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */,
+				BE3F8D691EC3994900CA6F34 /* DebtHeaderView.swift in Sources */,
 				BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,

@@ -13,7 +13,7 @@ class TransactionsView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    let sectionHeight: CGFloat = 30
+    let sectionHeight: CGFloat = 25
     let dateFormatter = DateFormatter()
     
     var groupedTransactions = [(date: Date, transactions: [Transaction])]()
@@ -45,7 +45,7 @@ class TransactionsView: UIView {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 60.0
+        tableView.estimatedRowHeight = 80.0
     }
 }
 
@@ -58,14 +58,18 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
         let sectionView = UIView(frame: frame)
-        sectionView.backgroundColor = UIColor.lightGray
+        sectionView.backgroundColor = UIColor(red: 147/255, green: 159/255, blue: 174/255, alpha: 0.1)
         
         let sectionLabel = UILabel(frame: frame)
         dateFormatter.dateStyle = .long
-        sectionLabel.text = dateFormatter.string(from: groupedTransactions[section].date)
-        sectionLabel.font = sectionLabel.font.withSize(13)
-        sectionLabel.textAlignment = .center
+        let dateText = dateFormatter.string(from: groupedTransactions[section].date)
+        sectionLabel.text = dateText.uppercased()
+        sectionLabel.font = UIFont(name: "Lato-Regular", size: 11)
+        sectionLabel.textAlignment = .left
         sectionView.addSubview(sectionLabel)
+        
+        let leftConstraint = NSLayoutConstraint(item: sectionLabel, attribute: .left, relatedBy: .equal, toItem: sectionView, attribute: .left, multiplier: 1.0, constant: 16)
+        sectionView.addConstraint(leftConstraint)
         
         return sectionView
     }
