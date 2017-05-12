@@ -30,14 +30,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$112" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9r-OH-cOD">
-                        <rect key="frame" x="13.5" y="21" width="39.5" height="20"/>
+                        <rect key="frame" x="14" y="21" width="39.5" height="20"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="y2x-8c-LzG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2yt-Di-ZIl"/>
                 <constraint firstItem="T9r-OH-cOD" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Tll-ec-UNE"/>

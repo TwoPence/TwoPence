@@ -72,6 +72,8 @@ class SavingsView: UIView, JoltViewDelegate {
         
         headerHeightConstraint.constant = headerMaxHeight
         
+        headerView.backgroundColor = AppColor.DarkGreen.color
+        
         selectedMonth = currentMonth()
         
         setupTableView()

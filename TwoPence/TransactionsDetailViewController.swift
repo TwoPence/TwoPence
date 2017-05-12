@@ -21,40 +21,21 @@ class TransactionsDetailViewController: UIViewController {
         if groupedTransactions != nil {
             contentView.groupedTransactions = groupedTransactions!
         }
-        
-        updateNavigationBar(hidePageControl: true, navigationBarTitle: "Transactions", backButtonTitle: "")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        updateNavigationBar(hidePageControl: false, navigationBarTitle: "", backButtonTitle: "Savings")
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        updateNavigationBar()
     }
     
-    func updateNavigationBar(hidePageControl: Bool, navigationBarTitle: String, backButtonTitle: String) {
-        self.navigationItem.title = navigationBarTitle
-        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+    func updateNavigationBar() {
+        navigationItem.title = "Transactions"
         if let navigationBar = navigationController?.navigationBar {
-            let pageControl = navigationBar.viewWithTag(1)
-            pageControl?.isHidden = hidePageControl
-            navigationBar.topItem?.title = backButtonTitle
+            let pageControl = navigationBar.viewWithTag(1) as! UIPageControl
+            pageControl.isHidden = true
+            navigationBar.barTintColor = UIColor.white
+            navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.black,
+                NSFontAttributeName : UIFont(name: "Lato-Regular", size: 17)!
+            ]
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -20,24 +20,42 @@ class DashboardViewController: UIViewController {
         contentView.delegate = self
         self.automaticallyAdjustsScrollViewInsets = false
         
-        setupPageControl()
+        setupNavigationBar()
         loadUserFinMetrics()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        formatNavigationBar()
     }
     
-    func setupPageControl() {
+    func setupNavigationBar() {
         if let navigationBar = navigationController?.navigationBar {
+            // Add Page Control
             let size = navigationBar.bounds.size
             let origin = CGPoint(x: size.width / 2, y: size.height - 4)
             let pageControl = UIPageControl(frame: CGRect(x: origin.x, y: origin.y, width: 0, height: 0))
             pageControl.numberOfPages = 3
             pageControl.tag = 1
             navigationBar.addSubview(pageControl)
-            navigationBar.topItem?.title = "Savings"
+            navigationItem.title = "Savings"
+            
+            formatNavigationBar()
+        }
+    }
+    
+    func formatNavigationBar() {
+        if let navigationBar = navigationController?.navigationBar {
+            let pageControl = navigationBar.viewWithTag(1)
+            pageControl?.isHidden = false
+            navigationBar.barTintColor = AppColor.DarkGreen.color
+            navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
+                NSFontAttributeName : UIFont(name: "Lato-Regular", size: 17)!
+            ]
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
         }
     }
     
@@ -81,7 +99,7 @@ extension DashboardViewController: DashboardViewDelegate {
         if let navigationBar = navigationController?.navigationBar {
             let pageControl = navigationBar.viewWithTag(1) as! UIPageControl
             pageControl.currentPage = page
-            navigationBar.topItem?.title = getTitleFromPage(page: page)
+            navigationItem.title = getTitleFromPage(page: page)
         }
     }
     
