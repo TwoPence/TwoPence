@@ -25,25 +25,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$0.30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBO-xz-NTM">
-                        <rect key="frame" x="230.5" y="28" width="61.5" height="29"/>
+                        <rect key="frame" x="230" y="28" width="62" height="29"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-f7-JPW">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-f7-JPW">
                         <rect key="frame" x="20" y="19" width="73" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="AhW-fe-5tt"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU9-Dy-qBZ">
-                        <rect key="frame" x="20" y="47" width="33.5" height="16"/>
+                        <rect key="frame" x="20" y="47" width="33" height="16"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udN-zb-rTZ">
-                        <rect key="frame" x="56.5" y="47" width="32" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udN-zb-rTZ">
+                        <rect key="frame" x="56" y="47" width="33" height="16"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -52,7 +55,7 @@
                 <constraints>
                     <constraint firstItem="DU9-Dy-qBZ" firstAttribute="leading" secondItem="Lw1-f7-JPW" secondAttribute="leading" id="7yv-KU-3P7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="dBO-xz-NTM" secondAttribute="trailing" constant="20" id="88M-JV-Nf2"/>
-                    <constraint firstItem="dBO-xz-NTM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lw1-f7-JPW" secondAttribute="trailing" constant="10" id="Gbs-Yd-JZk"/>
+                    <constraint firstItem="dBO-xz-NTM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lw1-f7-JPW" secondAttribute="trailing" constant="16" id="Gbs-Yd-JZk"/>
                     <constraint firstItem="DU9-Dy-qBZ" firstAttribute="top" secondItem="Lw1-f7-JPW" secondAttribute="bottom" constant="8" id="H3I-Yu-UTW"/>
                     <constraint firstItem="udN-zb-rTZ" firstAttribute="leading" secondItem="DU9-Dy-qBZ" secondAttribute="trailing" constant="3" id="Ibp-T1-gsK"/>
                     <constraint firstItem="dBO-xz-NTM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lcs-vo-Xtb"/>
@@ -67,7 +70,7 @@
                 <outlet property="amountSavedLabel" destination="dBO-xz-NTM" id="5ov-Ys-WoA"/>
                 <outlet property="merchantLabel" destination="Lw1-f7-JPW" id="7Tt-7e-ZfS"/>
             </connections>
-            <point key="canvasLocation" x="22" y="87"/>
+            <point key="canvasLocation" x="22" y="86.5"/>
         </tableViewCell>
     </objects>
 </document>
