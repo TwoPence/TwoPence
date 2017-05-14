@@ -23,6 +23,8 @@ class DebtMilestone: Unboxable {
     var type: MilestoneType
     var imageName: String //Shold be enum mapped to images?
     var description: String
+    var milestoneTitle: String
+    var milestoneSubTitle: String
     
     required init(unboxer: Unboxer) throws {
         let currentDouble: Double = try unboxer.unbox(key: "current")
@@ -34,6 +36,8 @@ class DebtMilestone: Unboxable {
         self.type = try unboxer.unbox(key: "type")
         self.imageName = try unboxer.unbox(key: "imageName")
         self.description = try unboxer.unbox(key: "description")
+        self.milestoneTitle = try unboxer.unbox(key: "milestone_title")
+        self.milestoneSubTitle = try unboxer.unbox(key: "milestone_sub_title")
     }
     
     
@@ -55,5 +59,16 @@ class DebtMilestone: Unboxable {
         self.type = type
         self.imageName = "completed"
         self.description = "Testing my description"
+        
+        if type == MilestoneType.Complete {
+            self.milestoneTitle = "Congratulations!"
+            self.milestoneSubTitle = "Milestone completed!"
+        } else if type == MilestoneType.Current {
+            self.milestoneTitle = "Next Milestone!"
+            self.milestoneSubTitle = "Jolt to reach your milestone sooner!"
+        } else {
+            self.milestoneTitle = "Upcoming Milestone!"
+            self.milestoneSubTitle = "View this on completing previous milestone"
+        }
     }
 }

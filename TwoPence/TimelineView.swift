@@ -91,7 +91,7 @@ open class TimelineView: UIView {
     /**
      Color of the larger Date title label in each event.
      */
-    open var titleLabelColor: UIColor = UIColor(red: 0/255, green: 180/255, blue: 160/255, alpha: 1){
+    open var titleLabelColor: UIColor = AppColor.Black.color {
         didSet{
             setupContent()
         }
@@ -100,7 +100,7 @@ open class TimelineView: UIView {
     /**
      Color of the smaller Text detail label in each event.
      */
-    open var detailLabelColor: UIColor = UIColor(red: 110/255, green: 110/255, blue: 110/255, alpha: 1){
+    open var detailLabelColor: UIColor = AppColor.LightGray.color{
         didSet{
             setupContent()
         }
@@ -183,7 +183,7 @@ open class TimelineView: UIView {
             addSubview(v)
             
             addConstraints([
-                NSLayoutConstraint(item: v, attribute: .top, relatedBy: .equal, toItem: viewFromAbove, attribute: .bottom, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: v, attribute: .top, relatedBy: .equal, toItem: viewFromAbove, attribute: .bottom, multiplier: 1.0, constant: 16),
                 NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: viewFromAbove, attribute: .width, multiplier: 1.0, constant: 0),
                 ])
             if showBulletOnRight{
@@ -274,7 +274,7 @@ open class TimelineView: UIView {
         
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.font = UIFont(name: "ArialMT", size: 20)
+        titleLabel.font = UIFont(name: "ArialMT", size: 17)
         titleLabel.textColor = titleLabelColor
         titleLabel.text = element.date
         titleLabel.numberOfLines = 0
@@ -294,7 +294,7 @@ open class TimelineView: UIView {
         
         let textLabel = UILabel()
         textLabel.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.font = UIFont(name: "ArialMT", size: 16)
+        textLabel.font = UIFont(name: "ArialMT", size: 13)
         textLabel.text = element.text
         textLabel.textColor = detailLabelColor
         textLabel.numberOfLines = 0
@@ -302,7 +302,7 @@ open class TimelineView: UIView {
         v.addSubview(textLabel)
         v.addConstraints([
             NSLayoutConstraint(item: textLabel, attribute: .width, relatedBy: .equal, toItem: v, attribute: .width, multiplier: 1.0, constant: -40),
-            NSLayoutConstraint(item: textLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: 5),
+            NSLayoutConstraint(item: textLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: 1),
             ])
         if showBulletOnRight{
             v.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .right, relatedBy: .equal, toItem: v, attribute: .right, multiplier: 1.0, constant: -40))
@@ -317,13 +317,13 @@ open class TimelineView: UIView {
             
             let backgroundViewForImage = UIView()
             backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
-            backgroundViewForImage.backgroundColor = UIColor.black
-            backgroundViewForImage.layer.cornerRadius = 10
+            backgroundViewForImage.backgroundColor = AppColor.ExtraLightGray.color
+            backgroundViewForImage.layer.cornerRadius = 4
             v.addSubview(backgroundViewForImage)
             v.addConstraints([
                 NSLayoutConstraint(item: backgroundViewForImage, attribute: .width, relatedBy: .equal, toItem: v, attribute: .width, multiplier: 1.0, constant: -60),
-                NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 130),
-                NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: textLabel, attribute: .bottom, multiplier: 1.0, constant: 5),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 150),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: textLabel, attribute: .bottom, multiplier: 1.0, constant: 16),
                 NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10)
                 ])
             if showBulletOnRight{
@@ -333,7 +333,7 @@ open class TimelineView: UIView {
             }
             
             let imageView = UIImageView(image: image)
-            imageView.layer.cornerRadius = 10
+            imageView.layer.cornerRadius = 4
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.contentMode = UIViewContentMode.scaleAspectFit
             v.addSubview(imageView)
@@ -373,7 +373,7 @@ open class TimelineView: UIView {
         if (element.debtMilestone.type == MilestoneType.Complete){
             line.backgroundColor = AppColor.DarkGreen.color
         } else {
-            line.backgroundColor = lineColor
+            line.backgroundColor = AppColor.LightGray.color
         }
         
         v.addSubview(line)
@@ -381,7 +381,7 @@ open class TimelineView: UIView {
         v.addConstraints([
             NSLayoutConstraint(item: line, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 1),
             NSLayoutConstraint(item: line, attribute: .top, relatedBy: .equal, toItem: v, attribute: .top, multiplier: 1.0, constant: 14),
-            NSLayoutConstraint(item: line, attribute: .height, relatedBy: .equal, toItem: v, attribute: .height, multiplier: 1.0, constant: -14)
+            NSLayoutConstraint(item: line, attribute: .height, relatedBy: .equal, toItem: v, attribute: .height, multiplier: 1.0, constant: 2)
             ])
         if showBulletOnRight{
             v.addConstraint(NSLayoutConstraint(item: line, attribute: .right, relatedBy: .equal, toItem: v, attribute: .right, multiplier: 1.0, constant: -16.5))

@@ -13,6 +13,8 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
 
     @IBOutlet weak var contentView: UIView!
     
+    var completeView: MilestoneCompleteView?
+    var futureView: MilestoneFutureView?
     var confettiView: SAConfettiView?
     var debtMilestone: DebtMilestone?
 
@@ -23,19 +25,17 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
             if (debtMilestone?.type == MilestoneType.Complete){
                 confettiView = SAConfettiView(frame: self.view.bounds)
                 confettiView?.isUserInteractionEnabled = false
-                let view = MilestoneCompleteView(frame: self.view.frame)
-                view.delegate = self
-                view.debtMilestone = debtMilestone
+                completeView = MilestoneCompleteView(frame: self.view.frame)
+                completeView?.delegate = self
                 
-                self.contentView.addSubview(view)
+                self.contentView.addSubview(completeView!)
                 self.contentView.addSubview(confettiView!)
                 confettiView?.startConfetti()
             } else if(debtMilestone?.type == MilestoneType.Current){
-                let view = MilestoneFutureView(frame: self.view.frame)
-                view.delegate = self
-                view.debtMilestone = debtMilestone
+                futureView = MilestoneFutureView(frame: self.view.frame)
+                futureView?.delegate = self
                 
-                self.contentView.addSubview(view)
+                self.contentView.addSubview(futureView!)
             }
         }
     }
@@ -46,6 +46,15 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
     }
     
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if completeView != nil {
+            completeView?.debtMilestone = debtMilestone
+        } else if futureView != nil {
+            futureView?.debtMilestone = debtMilestone
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

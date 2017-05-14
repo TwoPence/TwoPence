@@ -16,7 +16,7 @@ import PopupDialog
 }
 
 class JoltView: UIView {
-
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var amountLabel: UILabel!
@@ -77,10 +77,10 @@ class JoltView: UIView {
         UIView.animate(withDuration: 0.15, animations: {
             if let computationMetrics = self.computationMetrics {
                 self.debtHeaderView.loanRepaidDelta = Money(amount)
-            
+                
                 let interestAvoided = ComputationMetrics.interestAvoided(computationMetrics: computationMetrics, payment: amount)
                 self.debtHeaderView.interestAvoidedDelta = interestAvoided
-        
+                
                 let daysOffDelta = ComputationMetrics.termReductionInDays(computationMetrics: computationMetrics, payment: amount)
                 self.debtHeaderView.daysOffDelta = daysOffDelta
             }
@@ -134,7 +134,7 @@ class JoltView: UIView {
         let buttonOne = DefaultButton(title: "Done") {
             self.delegate?.didTapCloseButton?(didTap: true) // Replace this with image like X?
         }
-
+        
         popup.addButton(buttonOne)
         
         var topVC = UIApplication.shared.keyWindow?.rootViewController
@@ -146,11 +146,11 @@ class JoltView: UIView {
     }
     
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
 }

@@ -17,8 +17,6 @@ class User: CelyUser {
             switch self {
             case .token:
                 return true
-            default:
-                return false
             }
         }
         

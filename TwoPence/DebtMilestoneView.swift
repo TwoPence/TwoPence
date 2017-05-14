@@ -53,7 +53,7 @@ class DebtMilestoneView: UIView {
         
         var timeframes = [TimeFrame]()
         for (index, milestone) in milestones!.enumerated() {
-            timeframes.append(TimeFrame(text: "", date: "", debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "images")))
+            timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "images")))
         }
         
         timeline = TimelineView(bulletType: .circle, timeFrames: timeframes, onTap: onTapMilestoneItem)
@@ -89,19 +89,27 @@ extension UIScrollView {
             self.scrollRectToVisible(CGRect(x:0, y:childStartPoint.y, width:1, height:self.frame.height), animated: animated)
         }
     }
-    
-    // Bonus: Scroll to top
+
     func scrollToTop(animated: Bool) {
         let topOffset = CGPoint(x: 0, y: -contentInset.top)
         setContentOffset(topOffset, animated: animated)
     }
     
-    // Bonus: Scroll to bottom
     func scrollToBottom() {
         let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.size.height + contentInset.bottom)
         if(bottomOffset.y > 0) {
             setContentOffset(bottomOffset, animated: true)
         }
     }
-    
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        var scaleFactor:CGFloat = 0.0
+        if scrollView.contentOffset.y < 0 {
+            scaleFactor = -scrollView.contentOffset.y
+        } else {
+            scaleFactor = 1.0
+        }
+        
+        //Add animation here for stretchy footer
+    }
 }

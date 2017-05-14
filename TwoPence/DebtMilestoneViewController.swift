@@ -27,6 +27,11 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        contentView.scrollView.scrollToBottom()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if sender is UIBarButtonItem {
             let controller = segue.destination as! ReferralViewController

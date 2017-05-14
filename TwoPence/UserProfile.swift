@@ -10,12 +10,12 @@ import UIKit
 import Unbox
 
 class UserProfile: Unboxable {
-    var firstName: String?
-    var lastName: String?
+    var firstName: String
+    var lastName: String
     
-    var email: String?
+    var email: String
     var profileUrl: String?
-    var phone: String?
+    var phone: String
     var savingsRates: [SavingsRate]?
     
     // Addr
@@ -25,8 +25,11 @@ class UserProfile: Unboxable {
     var zipAddr: String?
     
     required init(unboxer: Unboxer) throws {
-        self.firstName = unboxer.unbox(key: "first_name")
-        self.lastName = unboxer.unbox(key: "last_name")
+        self.firstName = try unboxer.unbox(key: "first_name")
+        self.lastName = try unboxer.unbox(key: "last_name")
+        self.email = try unboxer.unbox(key: "email")
+        self.phone = try unboxer.unbox(key: "phone")
+
         self.savingsRates = unboxer.unbox(key: "saving_rates")
         self.streetAddr = unboxer.unbox(key: "address")
         self.cityAddr = unboxer.unbox(key: "city")

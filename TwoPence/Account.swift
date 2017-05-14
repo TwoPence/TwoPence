@@ -11,15 +11,15 @@ import Unbox
 import Money
 
 class Account: Unboxable {
-    var name: String?
-    var value: Money?
-    var type: String? //Should be enum?
+    var name: String
+    var value: Money
+    var type: String
     
     required init(unboxer: Unboxer) throws {
         let valueDouble: Double = try unboxer.unbox(key: "value")
-        self.name = unboxer.unbox(key: "name")
+        self.name = try unboxer.unbox(key: "name")
         self.value = Money(valueDouble)
-        self.type = unboxer.unbox(key: "type")
+        self.type = try unboxer.unbox(key: "type")
     }
     
     class func  withArray(dictionaries: [Dictionary<String, Any>]) throws -> [Account] {
@@ -34,7 +34,7 @@ class Account: Unboxable {
     }
 
     // REMOVE: Testing only
-    init(name: String?, value: Money?, type: String?) {
+    init(name: String, value: Money, type: String) {
         self.name = name
         self.value = value
         self.type = type

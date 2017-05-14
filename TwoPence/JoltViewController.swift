@@ -9,20 +9,20 @@
 import UIKit
 
 class JoltViewController: UIViewController {
-
+    
     @IBOutlet weak var contentView: JoltView!
     
     var userFinMetrics: UserFinMetrics?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         contentView.delegate = self
         
         loadComputationMetrics()
         maybeLoadUserFinMetrics()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,9 +48,9 @@ class JoltViewController: UIViewController {
         }
     }
 }
-    
+
 extension JoltViewController: JoltViewDelegate {
- 
+    
     func didTapCloseButton(didTap: Bool) {
         if didTap {
             dismiss(animated: true, completion: nil)

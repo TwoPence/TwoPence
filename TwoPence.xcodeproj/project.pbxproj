@@ -73,6 +73,10 @@
 		BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C441EC1978300279E5D /* ReferralViewController.swift */; };
 		BF8F9C491EC3922E00279E5D /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */; };
 		BF8F9C4B1EC4270600279E5D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C4A1EC4270600279E5D /* AppColor.swift */; };
+		BF8F9C511EC43AA000279E5D /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C501EC43AA000279E5D /* SettingsCell.swift */; };
+		BF8F9C531EC43B3900279E5D /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8F9C521EC43B3900279E5D /* SettingsCell.xib */; };
+		BF8F9C551EC4CC6800279E5D /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */; };
+		BF8F9C571EC4CC8000279E5D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */; };
 		BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */; };
 		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
@@ -80,6 +84,8 @@
 		BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A11EA5EA6A004FA1A8 /* Assets.xcassets */; };
 		BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC255A31EA5EA6A004FA1A8 /* LaunchScreen.storyboard */; };
 		BFC255B01EA5EA6B004FA1A8 /* TwoPenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */; };
+		BFD41C091EC7C2A800CA2580 /* MilestoneFutureChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD41C081EC7C2A800CA2580 /* MilestoneFutureChartView.xib */; };
+		BFD41C0B1EC7C2DD00CA2580 /* MilestoneFutureChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD41C0A1EC7C2DD00CA2580 /* MilestoneFutureChartView.swift */; };
 		BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8EC981EB684BC00A362F8 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +170,10 @@
 		BF8F9C441EC1978300279E5D /* ReferralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralViewController.swift; sourceTree = "<group>"; };
 		BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		BF8F9C4A1EC4270600279E5D /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		BF8F9C501EC43AA000279E5D /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		BF8F9C521EC43B3900279E5D /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +184,8 @@
 		BFC255AB1EA5EA6B004FA1A8 /* TwoPenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoPenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC255AF1EA5EA6B004FA1A8 /* TwoPenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPenceTests.swift; sourceTree = "<group>"; };
 		BFC255B11EA5EA6B004FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD41C081EC7C2A800CA2580 /* MilestoneFutureChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneFutureChartView.xib; sourceTree = "<group>"; };
+		BFD41C0A1EC7C2DD00CA2580 /* MilestoneFutureChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneFutureChartView.swift; sourceTree = "<group>"; };
 		BFD8EC981EB684BC00A362F8 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -303,6 +315,10 @@
 				BE1983541EBD08C60059F716 /* PendingTransferCell.xib */,
 				BE1983571EBD0A230059F716 /* MatchedCell.swift */,
 				BE1983581EBD0A230059F716 /* MatchedCell.xib */,
+				BF8F9C501EC43AA000279E5D /* SettingsCell.swift */,
+				BF8F9C521EC43B3900279E5D /* SettingsCell.xib */,
+				BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */,
+				BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -371,6 +387,8 @@
 				BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */,
 				BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */,
 				BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */,
+				BFD41C081EC7C2A800CA2580 /* MilestoneFutureChartView.xib */,
+				BFD41C0A1EC7C2DD00CA2580 /* MilestoneFutureChartView.swift */,
 			);
 			name = "Milestone Views";
 			sourceTree = "<group>";
@@ -527,7 +545,9 @@
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
+				BFD41C091EC7C2A800CA2580 /* MilestoneFutureChartView.xib in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
+				BF8F9C531EC43B3900279E5D /* SettingsCell.xib in Resources */,
 				BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */,
 				BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */,
 				BEEF57C71EB3D3F7001EE950 /* DashboardView.xib in Resources */,
@@ -535,6 +555,7 @@
 				BEEF57E71EB54942001EE950 /* TransferCell.xib in Resources */,
 				BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */,
 				BE1983561EBD08C60059F716 /* PendingTransferCell.xib in Resources */,
+				BF8F9C551EC4CC6800279E5D /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +672,7 @@
 				BF8F9C491EC3922E00279E5D /* CustomProgressBar.swift in Sources */,
 				BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */,
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
+				BF8F9C571EC4CC8000279E5D /* ProfileCell.swift in Sources */,
 				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
 				BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */,
@@ -659,6 +681,7 @@
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,
 				BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */,
 				BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */,
+				BF8F9C511EC43AA000279E5D /* SettingsCell.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
 				BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */,
@@ -691,6 +714,7 @@
 				BE19835E1EBD89980059F716 /* MonthlyAggTransactions.swift in Sources */,
 				BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
+				BFD41C0B1EC7C2DD00CA2580 /* MilestoneFutureChartView.swift in Sources */,
 				BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);
