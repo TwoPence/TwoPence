@@ -18,18 +18,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="343" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-v9-YQy">
-                        <rect key="frame" x="8" y="24" width="72" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tr-4k-ARo">
+                        <rect key="frame" x="20" y="25" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="3vx-dH-djL"/>
+                            <constraint firstAttribute="height" constant="20" id="4KR-Ez-vK1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-v9-YQy">
+                        <rect key="frame" x="52" y="16" width="72" height="37.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tr-4k-ARo">
-                        <rect key="frame" x="299" y="14" width="36" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="lQ0-v9-YQy" firstAttribute="leading" secondItem="0tr-4k-ARo" secondAttribute="trailing" constant="12" id="3iu-k7-ARr"/>
+                    <constraint firstItem="0tr-4k-ARo" firstAttribute="leading" secondItem="FXK-CO-lJc" secondAttribute="leading" constant="20" id="99l-Zi-xeI"/>
+                    <constraint firstItem="lQ0-v9-YQy" firstAttribute="centerY" secondItem="FXK-CO-lJc" secondAttribute="centerY" id="R73-B9-eTN"/>
+                    <constraint firstItem="0tr-4k-ARo" firstAttribute="centerY" secondItem="FXK-CO-lJc" secondAttribute="centerY" id="UzL-Xi-DNr"/>
+                    <constraint firstItem="lQ0-v9-YQy" firstAttribute="top" secondItem="FXK-CO-lJc" secondAttribute="top" constant="16" id="VIa-pe-tH8"/>
+                    <constraint firstAttribute="bottom" secondItem="lQ0-v9-YQy" secondAttribute="bottom" constant="16" id="XO6-oT-KpT"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="settingOptionName" destination="lQ0-v9-YQy" id="WVG-T0-sJl"/>

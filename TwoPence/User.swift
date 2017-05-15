@@ -10,6 +10,8 @@ import UIKit
 import Cely
 
 class User: CelyUser {
+    static let userDidLogoutNotification = "UserDidLogout"
+    
     enum Property: CelyProperty {
         case token = "token"
         

@@ -1,17 +1,17 @@
 //
-//  ProfileCell.swift
+//  SettingsCell.swift
 //  TwoPence
 //
-//  Created by Utkarsh Sengar on 5/11/17.
+//  Created by Utkarsh Sengar on 5/10/17.
 //  Copyright © 2017 Samadhi Tech. All rights reserved.
 //
 
 import UIKit
 
-class ProfileCell: UITableViewCell {
-
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var userFullName: UILabel!
+class SignoutCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var signoutName: UILabel!
     
     override func prepareForReuse() {
         
@@ -19,8 +19,7 @@ class ProfileCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.userFullName.textColor = AppColor.Charcoal.color
-        self.isUserInteractionEnabled = false
+        self.signoutName.textColor = AppColor.PaleRed.color
         self.preservesSuperviewLayoutMargins = false
         self.separatorInset = UIEdgeInsets.zero
         self.layoutMargins = UIEdgeInsets.zero

@@ -18,6 +18,11 @@ class SettingsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.settingOptionName.textColor = AppColor.Charcoal.color
+        self.accessoryType = .disclosureIndicator
+        self.preservesSuperviewLayoutMargins = false
+        self.separatorInset = UIEdgeInsets.zero
+        self.layoutMargins = UIEdgeInsets.zero
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

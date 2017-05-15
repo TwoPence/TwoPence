@@ -10,11 +10,12 @@ import UIKit
 
 enum AppColor: UInt32 {
     
-    case Black = 0x1D2323
+    case Charcoal = 0x1D2323
     case LightGray = 0x939FAE
     case ExtraLightGray = 0xF4F5F6
     case DarkGreen = 0x34AB74
     case ProgressBar = 0x36C19E
+    case PaleRed = 0xd14836
 
     var color: UIColor {
         return UIColor(hex: rawValue)

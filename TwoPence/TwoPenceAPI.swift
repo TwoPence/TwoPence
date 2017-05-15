@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import Cely
 import Unbox
+import Whisper
 
 //TODO: Fix url concat with Router pattern in Alamofire
 
@@ -23,17 +24,18 @@ class TwoPenceAPI: NSObject {
         self.baseURL = baseURL
     }
     
-    func logout(success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+    func logout() {
         Alamofire.request(self.baseURL + "v1/logout", method: .post).responseJSON { response in
             switch response.result {
             case .success:
                 if let result = response.result.value {
                     Cely.changeStatus(to: .loggedOut)
                     print(result)
-                    success()
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: User.userDidLogoutNotification), object: nil)
                 }
             case .failure(let error):
-                failure(error)
+                let murmur = Murmur(title: AppMessage.LogoutError.rawValue)
+                Whisper.show(whistle: murmur, action: .show(1))
             }
         }
     }

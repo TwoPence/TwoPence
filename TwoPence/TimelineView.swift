@@ -91,7 +91,7 @@ open class TimelineView: UIView {
     /**
      Color of the larger Date title label in each event.
      */
-    open var titleLabelColor: UIColor = AppColor.Black.color {
+    open var titleLabelColor: UIColor = AppColor.Charcoal.color {
         didSet{
             setupContent()
         }
