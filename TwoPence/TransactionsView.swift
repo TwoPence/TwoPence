@@ -64,7 +64,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
         dateFormatter.dateStyle = .long
         let dateText = dateFormatter.string(from: groupedTransactions[section].date)
         sectionLabel.text = dateText.uppercased()
-        sectionLabel.font = UIFont(name: "Lato-Regular", size: 11)
+        sectionLabel.font = UIFont(name: AppFontName.regular, size: 11)
         sectionLabel.textAlignment = .left
         sectionView.addSubview(sectionLabel)
         

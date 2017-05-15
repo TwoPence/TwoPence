@@ -69,6 +69,7 @@ open class SAConfettiView: UIView {
     
     func imageForType(_ type: ConfettiType) -> UIImage? {
         
+        /*
         var fileName: String!
         
         switch type {
@@ -83,6 +84,7 @@ open class SAConfettiView: UIView {
         case let .image(customImage):
             return customImage
         }
+         */
         
         return #imageLiteral(resourceName: "confetti.png")
     }

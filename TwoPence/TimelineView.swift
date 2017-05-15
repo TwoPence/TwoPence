@@ -274,7 +274,7 @@ open class TimelineView: UIView {
         
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.font = UIFont(name: "ArialMT", size: 17)
+        titleLabel.font = UIFont(name: AppFontName.regular, size: 17)
         titleLabel.textColor = titleLabelColor
         titleLabel.text = element.date
         titleLabel.numberOfLines = 0
@@ -294,7 +294,7 @@ open class TimelineView: UIView {
         
         let textLabel = UILabel()
         textLabel.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.font = UIFont(name: "ArialMT", size: 13)
+        textLabel.font = UIFont(name: AppFontName.regular, size: 13)
         textLabel.text = element.text
         textLabel.textColor = detailLabelColor
         textLabel.numberOfLines = 0

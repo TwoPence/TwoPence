@@ -103,13 +103,14 @@ extension UIScrollView {
     }
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
+        /*
         var scaleFactor:CGFloat = 0.0
         if scrollView.contentOffset.y < 0 {
             scaleFactor = -scrollView.contentOffset.y
         } else {
             scaleFactor = 1.0
         }
-        
+        */
         //Add animation here for stretchy footer
     }
 }

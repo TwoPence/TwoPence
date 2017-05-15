@@ -34,7 +34,7 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if sender is UIBarButtonItem {
-            let controller = segue.destination as! ReferralViewController
+            //let controller = segue.destination as! ReferralViewController
         } else {
             let controller = segue.destination as! DebtMilestoneDetailViewController
             controller.debtMilestone = selectedMiletone

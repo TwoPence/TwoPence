@@ -71,6 +71,8 @@
 		BF395B751EC98203004E5D64 /* AppMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF395B741EC98203004E5D64 /* AppMessage.swift */; };
 		BF395B781EC98445004E5D64 /* SignoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF395B761EC98445004E5D64 /* SignoutCell.swift */; };
 		BF395B791EC98445004E5D64 /* SignoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF395B771EC98445004E5D64 /* SignoutCell.xib */; };
+		BF395B7B1ECA2C03004E5D64 /* AppFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */; };
+		BF395B7D1ECA3048004E5D64 /* Gravatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF395B7C1ECA3048004E5D64 /* Gravatar.swift */; };
 		BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */; };
 		BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */; };
 		BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C441EC1978300279E5D /* ReferralViewController.swift */; };
@@ -170,6 +172,9 @@
 		BF395B741EC98203004E5D64 /* AppMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMessage.swift; sourceTree = "<group>"; };
 		BF395B761EC98445004E5D64 /* SignoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignoutCell.swift; sourceTree = "<group>"; };
 		BF395B771EC98445004E5D64 /* SignoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignoutCell.xib; sourceTree = "<group>"; };
+		BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFontName.swift; sourceTree = "<group>"; };
+		BF395B7C1ECA3048004E5D64 /* Gravatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gravatar.swift; sourceTree = "<group>"; };
+		BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwoPence-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceAPI.swift; sourceTree = "<group>"; };
 		BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneDetailViewController.swift; sourceTree = "<group>"; };
 		BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */,
+				BF395B7C1ECA3048004E5D64 /* Gravatar.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -372,6 +378,8 @@
 				BF8F9C4A1EC4270600279E5D /* AppColor.swift */,
 				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
 				BF395B741EC98203004E5D64 /* AppMessage.swift */,
+				BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */,
+				BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -505,6 +513,7 @@
 				TargetAttributes = {
 					BFC255961EA5EA6A004FA1A8 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					BFC255AA1EA5EA6B004FA1A8 = {
@@ -708,7 +717,9 @@
 				BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */,
 				BEEF57E61EB54942001EE950 /* TransferCell.swift in Sources */,
 				BEEF57FB1EB648AB001EE950 /* AccountDetailViewController.swift in Sources */,
+				BF395B7D1ECA3048004E5D64 /* Gravatar.swift in Sources */,
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
+				BF395B7B1ECA2C03004E5D64 /* AppFontName.swift in Sources */,
 				BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */,
 				BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */,
 				BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */,
@@ -870,11 +881,14 @@
 			baseConfigurationReference = 4066D5473361E9B03F5FC345 /* Pods-TwoPence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TwoPence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TwoPence/TwoPence-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -884,11 +898,13 @@
 			baseConfigurationReference = AFF19F0EAE0D429842E3D9E7 /* Pods-TwoPence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TwoPence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TwoPence/TwoPence-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

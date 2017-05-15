@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
   - Cely (2.0.0):
     - Cely/Core (= 2.0.0)
   - Cely/Core (2.0.0)
@@ -14,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.1)
   - Cely (~> 2.0.0)
   - Hero
   - Money (= 2.0.1)
@@ -24,6 +27,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   Cely: 10e51eadc776f132982446165b4f35c11b8970bd
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
@@ -33,6 +37,6 @@ SPEC CHECKSUMS:
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 70317d64db04f95018a2de022e470dc1cfa59894
+PODFILE CHECKSUM: 86ca4738c55d8390cf684bbe23819c7807e798be
 
 COCOAPODS: 1.2.0

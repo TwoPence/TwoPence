@@ -52,7 +52,7 @@ class DashboardViewController: UIViewController {
             navigationBar.barTintColor = AppColor.DarkGreen.color
             navigationBar.titleTextAttributes = [
                 NSForegroundColorAttributeName : UIColor.white,
-                NSFontAttributeName : UIFont(name: "Lato-Regular", size: 17)!
+                NSFontAttributeName : UIFont(name: AppFontName.regular, size: 17)!
             ]
             navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationBar.shadowImage = UIImage()

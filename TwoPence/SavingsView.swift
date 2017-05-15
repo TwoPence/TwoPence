@@ -153,7 +153,7 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
         
         let monthLabel = UILabel(frame: frame)
         monthLabel.text = filtered[section].month
-        monthLabel.font = UIFont(name: "Lato-Regular", size: 11)
+        monthLabel.font = UIFont(name: AppFontName.regular, size: 11)
         monthLabel.textAlignment = .center
         headerView.addSubview(monthLabel)
 

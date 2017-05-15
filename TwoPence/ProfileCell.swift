@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProfileCell: UITableViewCell {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userFullName: UILabel!
     
+    var profileImageUrl: URL? {
+        didSet {
+            self.profileImage.af_setImage(withURL: profileImageUrl!,
+                                          filter: CircleFilter(),
+                                          imageTransition: .flipFromBottom(0.5))
+        }
+    }
+    
     override func prepareForReuse() {
-        
+        profileImage.image = nil
     }
     
     override func awakeFromNib() {

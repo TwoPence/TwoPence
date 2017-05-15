@@ -33,7 +33,7 @@ class TransactionsDetailViewController: UIViewController {
             navigationBar.barTintColor = UIColor.white
             navigationBar.titleTextAttributes = [
                 NSForegroundColorAttributeName : UIColor.black,
-                NSFontAttributeName : UIFont(name: "Lato-Regular", size: 17)!
+                NSFontAttributeName : UIFont(name: AppFontName.regular, size: 17)!
             ]
         }
     }

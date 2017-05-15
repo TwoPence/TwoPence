@@ -34,6 +34,7 @@ class TwoPenceAPI: NSObject {
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: User.userDidLogoutNotification), object: nil)
                 }
             case .failure(let error):
+                print(error)
                 let murmur = Murmur(title: AppMessage.LogoutError.rawValue)
                 Whisper.show(whistle: murmur, action: .show(1))
             }
