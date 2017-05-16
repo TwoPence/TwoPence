@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         UIFont.overrideInitialize()
-        UITabBar.appearance().tintColor = AppColor.SplashColor.color
+        UITabBar.appearance().tintColor = AppColor.MediumGreen.color
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

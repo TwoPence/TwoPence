@@ -18,6 +18,9 @@
 		BE3F8D691EC3994900CA6F34 /* DebtHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */; };
 		BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */; };
 		BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */; };
+		BE3F8D831EC8160A00CA6F34 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D821EC8160A00CA6F34 /* Lato-Light.ttf */; };
+		BE3F8D861EC9784900CA6F34 /* JoltCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8D841EC9784800CA6F34 /* JoltCell.swift */; };
+		BE3F8D871EC9784900CA6F34 /* JoltCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D851EC9784800CA6F34 /* JoltCell.xib */; };
 		BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */; };
 		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
 		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
@@ -117,6 +120,9 @@
 		BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtHeaderView.swift; sourceTree = "<group>"; };
 		BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebtHeaderView.xib; sourceTree = "<group>"; };
 		BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		BE3F8D821EC8160A00CA6F34 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		BE3F8D841EC9784800CA6F34 /* JoltCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltCell.swift; sourceTree = "<group>"; };
+		BE3F8D851EC9784800CA6F34 /* JoltCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltCell.xib; sourceTree = "<group>"; };
 		BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */,
+				BE3F8D821EC8160A00CA6F34 /* Lato-Light.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -329,6 +336,8 @@
 				BF395B771EC98445004E5D64 /* SignoutCell.xib */,
 				BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */,
 				BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */,
+				BE3F8D841EC9784800CA6F34 /* JoltCell.swift */,
+				BE3F8D851EC9784800CA6F34 /* JoltCell.xib */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -553,11 +562,14 @@
 				BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */,
 				BF395B791EC98445004E5D64 /* SignoutCell.xib in Resources */,
 				BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */,
+				BE3F8D871EC9784900CA6F34 /* JoltCell.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
+				BE3F8D831EC8160A00CA6F34 /* Lato-Light.ttf in Resources */,
+				BFD41C091EC7C2A800CA2580 /* MilestoneFutureChartView.xib in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
 				BF8F9C531EC43B3900279E5D /* SettingsCell.xib in Resources */,
 				BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */,
@@ -728,6 +740,7 @@
 				BEEF57D51EB3FB1C001EE950 /* AssetView.swift in Sources */,
 				BEEF57FD1EB6496F001EE950 /* AccountDetailView.swift in Sources */,
 				BE19835E1EBD89980059F716 /* MonthlyAggTransactions.swift in Sources */,
+				BE3F8D861EC9784900CA6F34 /* JoltCell.swift in Sources */,
 				BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */,

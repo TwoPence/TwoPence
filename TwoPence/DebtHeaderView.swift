@@ -12,6 +12,8 @@ import Money
 class DebtHeaderView: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var horizontalDividerView: UIView!
+    @IBOutlet weak var verticalDividerView: UIView!
     
     @IBOutlet weak var loanRepaidLabel: UILabel!
     @IBOutlet weak var interestAvoidedLabel: UILabel!
@@ -36,6 +38,9 @@ class DebtHeaderView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        
+        verticalDividerView.backgroundColor = AppColor.DarkSeaGreen.color
+        horizontalDividerView.backgroundColor = AppColor.DarkSeaGreen.color
         
         loanRepaidDeltaLabel.alpha = 0.0
         interestAvoidedDeltaLabel.alpha = 0.0
@@ -84,7 +89,8 @@ class DebtHeaderView: UIView {
         didSet {
             if let days = userFinMetrics?.daysOffLoanTerm {
                 daysOffLabel.text = "\(days + daysOffDelta!)"
-                daysOffDeltaLabel.text = "+\(daysOffDelta!) days"
+                let descriptor = daysOffDelta == 1 ? "day" : "days"
+                daysOffDeltaLabel.text = "+\(daysOffDelta!) \(descriptor)"
                 daysOffDeltaLabel.alpha = 1.0
                 self.layoutIfNeeded()
             }

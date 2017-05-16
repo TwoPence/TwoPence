@@ -17,7 +17,7 @@ class TransactionsView: UIView {
     let dateFormatter = DateFormatter()
     
     var groupedTransactions = [(date: Date, transactions: [Transaction])]()
-//    var transactions = [Transaction]()
+    var editable: Bool = false
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -56,20 +56,18 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: sectionHeight)
+        let frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: sectionHeight)
         let sectionView = UIView(frame: frame)
-        sectionView.backgroundColor = UIColor(red: 244/255, green: 245/255, blue: 246/255, alpha: 1.0)
+        sectionView.backgroundColor = AppColor.PaleGray.color
         
-        let sectionLabel = UILabel(frame: frame)
+        let labelFrame = CGRect(x: 16, y: 0, width: tableView.bounds.width - 16, height: sectionHeight)
+        let sectionLabel = UILabel(frame: labelFrame)
         dateFormatter.dateStyle = .long
         let dateText = dateFormatter.string(from: groupedTransactions[section].date)
         sectionLabel.text = dateText.uppercased()
         sectionLabel.font = UIFont(name: AppFontName.regular, size: 11)
         sectionLabel.textAlignment = .left
         sectionView.addSubview(sectionLabel)
-        
-        let leftConstraint = NSLayoutConstraint(item: sectionLabel, attribute: .left, relatedBy: .equal, toItem: sectionView, attribute: .left, multiplier: 1.0, constant: 16)
-        sectionView.addConstraint(leftConstraint)
         
         return sectionView
     }
@@ -85,6 +83,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
         cell.transaction = groupedTransactions[indexPath.section].transactions[indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -93,13 +92,17 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        print("called!")
-        let skip = UITableViewRowAction(style: .destructive, title: "Skip") { (action: UITableViewRowAction,
-            indexPath: IndexPath) in
-            print("User tapped skip")
-            // POST call to API to update transaction status to "skipped".
+        if editable {
+            let skip = UITableViewRowAction(style: .destructive, title: "Skip") { (action: UITableViewRowAction, indexPath: IndexPath) in
+                print("User tapped skip")
+                // POST call to API to update transaction status to "skipped".
+                self.groupedTransactions[indexPath.section].transactions.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            return [skip]
+        } else {
+            return []
         }
-        return [skip]
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

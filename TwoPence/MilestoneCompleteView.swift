@@ -44,8 +44,8 @@ class MilestoneCompleteView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         shareButton.layer.cornerRadius = 4
-        shareButton.backgroundColor = AppColor.DarkGreen.color
-        topView.backgroundColor = AppColor.DarkGreen.color
+        shareButton.backgroundColor = AppColor.DarkSeaGreen.color
+        topView.backgroundColor = AppColor.DarkSeaGreen.color
         addSubview(contentView)
     }
     

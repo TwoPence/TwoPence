@@ -13,14 +13,17 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var contentView: DashboardView!
     
     var userFinMetrics: UserFinMetrics?
+    var groupedTransactions: [(date: Date, transactions: [Transaction])]?
+    var editable: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         contentView.delegate = self
-        self.automaticallyAdjustsScrollViewInsets = false
+        automaticallyAdjustsScrollViewInsets = false
         
         setupNavigationBar()
+        loadAggTransactions()
         loadUserFinMetrics()
     }
     
@@ -41,6 +44,13 @@ class DashboardViewController: UIViewController {
             navigationBar.addSubview(pageControl)
             navigationItem.title = "Savings"
             
+            navigationBar.backIndicatorImage = UIImage(named: "left_chevron")
+            navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left_chevron")
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+            navigationBar.barTintColor = UIColor.clear
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.isTranslucent = true
             formatNavigationBar()
         }
     }
@@ -49,27 +59,18 @@ class DashboardViewController: UIViewController {
         if let navigationBar = navigationController?.navigationBar {
             let pageControl = navigationBar.viewWithTag(1)
             pageControl?.isHidden = false
-            navigationBar.barTintColor = AppColor.DarkGreen.color
             navigationBar.titleTextAttributes = [
                 NSForegroundColorAttributeName : UIColor.white,
                 NSFontAttributeName : UIFont(name: AppFontName.regular, size: 17)!
             ]
-            navigationBar.setBackgroundImage(UIImage(), for: .default)
-            navigationBar.shadowImage = UIImage()
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is TransactionsDetailViewController && sender != nil {
-            let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
-            // Should this transformation go here?
-            let transactions = sender as! [Transaction]
-            let groupedTransactions = Transaction.groupByDate(transactions: transactions)
-            transactionsDetailViewController.groupedTransactions = groupedTransactions
-            
-        } else if segue.destination is JoltViewController {
-            let joltViewController = segue.destination as! JoltViewController
-            joltViewController.userFinMetrics = userFinMetrics
+
+    func loadAggTransactions() {
+        TwoPenceAPI.sharedClient.getAggTransactions(success: { (aggTransactions: [AggTransactions]) in
+            self.contentView.aggTransactions = aggTransactions
+        }) { (error: Error) in
+            print(error.localizedDescription)
         }
     }
     
@@ -79,6 +80,18 @@ class DashboardViewController: UIViewController {
             self.contentView.userFinMetrics = userFinMetrics
         }) { (error: Error) in
             print(error.localizedDescription)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is TransactionsDetailViewController {
+            let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
+            transactionsDetailViewController.groupedTransactions = groupedTransactions
+            transactionsDetailViewController.editable = editable
+            
+        } else if segue.destination is JoltViewController {
+            let joltViewController = segue.destination as! JoltViewController
+            joltViewController.userFinMetrics = userFinMetrics
         }
     }
 }
@@ -91,8 +104,10 @@ extension DashboardViewController: DashboardViewDelegate {
         }
     }
 
-    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction]) {
-        self.performSegue(withIdentifier: "TransactionsSegue", sender: selectedTransactions)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool) {
+        self.groupedTransactions = selectedTransactions
+        self.editable = editable
+        self.performSegue(withIdentifier: "TransactionsSegue", sender: nil)
     }
     
     func changePage(page: Int) {

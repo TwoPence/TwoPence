@@ -35,7 +35,7 @@ class MonthlyAggTransactions {
         
         var allMonths = [String]()
         for agg in aggTransactions {
-            allMonths.append(agg.month!)
+            allMonths.append(agg.month)
         }
         
         var monthlyTotals = [MonthlyAggTransactions]()
