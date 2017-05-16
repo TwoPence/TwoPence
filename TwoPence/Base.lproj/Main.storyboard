@@ -489,7 +489,7 @@
         <scene sceneID="Rqs-QM-Mkq">
             <objects>
                 <navigationController storyboardIdentifier="DashboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CcD-VX-5AU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="group" id="R4L-Le-G0f"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="inviteAndEarn" id="R4L-Le-G0f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="4nM-dZ-Iqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -529,7 +529,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="group" width="22" height="25"/>
         <image name="inviteAndEarn" width="20" height="18"/>
         <image name="milestoneOption3" width="25" height="24"/>
         <image name="milestoneOption3_selected" width="25" height="24"/>
