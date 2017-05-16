@@ -12,7 +12,7 @@ import PopupDialog
 
 @objc protocol JoltViewDelegate {
     
-    @objc optional func didTapCloseButton(didTap: Bool)
+    @objc optional func didCompleteJolt(completed: Bool)
 }
 
 class JoltView: UIView {
@@ -20,6 +20,9 @@ class JoltView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var increaseButton: UIButton!
+    @IBOutlet weak var decreaseButton: UIButton!
+    @IBOutlet weak var joltButton: UIButton!
     
     weak var delegate: JoltViewDelegate?
     
@@ -32,7 +35,7 @@ class JoltView: UIView {
     var debtHeaderView: DebtHeaderView!
     var joltAmount: Int = 20 {
         didSet {
-            amountLabel.text = "\(Money(joltAmount))"
+            amountLabel.text = "$\(joltAmount)"
             updateDisplay(amount: Double(joltAmount))
         }
     }
@@ -56,11 +59,28 @@ class JoltView: UIView {
         debtHeaderView = DebtHeaderView()
         headerView.addSubview(debtHeaderView)
         contentView.sendSubview(toBack: headerView)
+        
+        setupGradientBackground()
+        amountLabel.textColor = AppColor.DarkSeaGreen.color
+        increaseButton.tintColor = AppColor.DarkSeaGreen.color
+        decreaseButton.tintColor = AppColor.DarkSeaGreen.color
+        joltButton.layer.cornerRadius = 4
+        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         debtHeaderView.frame = CGRect(x: 0, y: 0, width: contentView.bounds.width, height: headerView.bounds.height)
+    }
+    
+    func setupGradientBackground() {
+        let topColor = AppColor.DarkSeaGreen.color.cgColor
+        let bottomColor = AppColor.MediumGreen.color.cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [topColor, bottomColor]
+        gradientLayer.locations = [0.2, 1.0]
+        gradientLayer.frame = headerView.frame
+        headerView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     @IBAction func onDecreaseTap(_ sender: UIButton) {
@@ -119,10 +139,6 @@ class JoltView: UIView {
         topVC?.present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func onCloseTap(_ sender: UIButton) {
-        delegate?.didTapCloseButton?(didTap: true)
-    }
-    
     func showSuccessView(){
         
         let title = "Congratulations!"
@@ -132,7 +148,7 @@ class JoltView: UIView {
         let popup = PopupDialog(title: title, message: message, image: image, gestureDismissal: false)
         
         let buttonOne = DefaultButton(title: "Done") {
-            self.delegate?.didTapCloseButton?(didTap: true) // Replace this with image like X?
+            self.delegate?.didCompleteJolt?(completed: true) // Replace this with image like X?
         }
         
         popup.addButton(buttonOne)

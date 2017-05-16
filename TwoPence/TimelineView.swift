@@ -25,6 +25,7 @@ public struct TimeFrame{
     let debtMilestone: DebtMilestone
     
     let debtMilestonePosition: Int
+    
     /**
      An optional image to show with the text and the date in the timeline.
      */
@@ -66,6 +67,8 @@ public enum BulletType{
  */
 open class TimelineView: UIView {
     
+    var currentMilestoneView: UIView?
+    
     open var onTap:  ((AnyObject, UIEvent) -> ())?
     
     //MARK: Public Properties
@@ -100,7 +103,7 @@ open class TimelineView: UIView {
     /**
      Color of the smaller Text detail label in each event.
      */
-    open var detailLabelColor: UIColor = AppColor.LightGray.color{
+    open var detailLabelColor: UIColor = AppColor.MediumGray.color{
         didSet{
             setupContent()
         }
@@ -255,13 +258,14 @@ open class TimelineView: UIView {
         var bullet: UIView = bulletView(s, bulletType: bulletType, color: UIColor.green, stColor: UIColor.green)
         if(element.debtMilestone.type == MilestoneType.Complete){
             // All green
-            bullet = bulletView(s, bulletType: bulletType, color: AppColor.DarkGreen.color, stColor: AppColor.DarkGreen.color)
+            bullet = bulletView(s, bulletType: bulletType, color: AppColor.DarkSeaGreen.color, stColor: AppColor.DarkSeaGreen.color)
         } else if(element.debtMilestone.type == MilestoneType.Current){
             // outside green, inside clear
-            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: AppColor.DarkGreen.color)
+            currentMilestoneView = v
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: AppColor.DarkSeaGreen.color)
         } else {
             // outside grey, inside clear
-            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: AppColor.LightGray.color)
+            bullet = bulletView(s, bulletType: bulletType, color: UIColor.clear, stColor: AppColor.MediumGray.color)
         }
         
         v.addSubview(bullet)
@@ -317,7 +321,7 @@ open class TimelineView: UIView {
             
             let backgroundViewForImage = UIView()
             backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
-            backgroundViewForImage.backgroundColor = AppColor.ExtraLightGray.color
+            backgroundViewForImage.backgroundColor = AppColor.PaleGray.color
             backgroundViewForImage.layer.cornerRadius = 4
             v.addSubview(backgroundViewForImage)
             v.addConstraints([
@@ -372,9 +376,9 @@ open class TimelineView: UIView {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         if (element.debtMilestone.type == MilestoneType.Complete){
-            line.backgroundColor = AppColor.DarkGreen.color
+            line.backgroundColor = AppColor.DarkSeaGreen.color
         } else {
-            line.backgroundColor = AppColor.LightGray.color
+            line.backgroundColor = AppColor.MediumGray.color
         }
         
         v.addSubview(line)

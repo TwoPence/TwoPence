@@ -10,12 +10,19 @@ import UIKit
 import Money
 import Unbox
 
+enum AggType: String, UnboxableEnum {
+    case Pending
+    case Transfer
+    case Matched
+    case Jolt
+}
+
 class AggTransactions: Unboxable {
-    var amount: Money?
-    var date: Date?
-    var month: String?
-    var transactions: [Transaction]?
-    var aggType: String? //Should be enum: Pending, Transfer, Unassigned
+    var amount: Money
+    var date: Date
+    var month: String
+    var transactions: [Transaction]
+    var aggType: AggType
     
     required init(unboxer: Unboxer) throws {
         let amountDouble: Double = try unboxer.unbox(key: "amount")
@@ -23,11 +30,11 @@ class AggTransactions: Unboxable {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
-        self.date = unboxer.unbox(key: "date", formatter: dateFormatter)
+        self.date = try unboxer.unbox(key: "date", formatter: dateFormatter)
         dateFormatter.dateFormat = "MMMM"
-        self.month = dateFormatter.string(from: self.date!)
-        self.transactions = unboxer.unbox(key: "transactions")
-        self.aggType = unboxer.unbox(key: "agg_type")
+        self.month = dateFormatter.string(from: self.date)
+        self.transactions = try unboxer.unbox(key: "transactions")
+        self.aggType = try unboxer.unbox(key: "agg_type")
     }
     
     class func  withArray(dictionaries: [Dictionary<String, Any>]) throws -> [AggTransactions] {

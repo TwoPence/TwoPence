@@ -48,6 +48,7 @@ class CustomProgressBar: UIView {
         let fromPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 0, height: bounds.height), cornerRadius: viewCornerRadius)
         progressLayer.path = fromPath.cgPath
         progressLayer.fillColor = progressColor
+        
         borderLayer.addSublayer(progressLayer)
     }
     
@@ -57,13 +58,23 @@ class CustomProgressBar: UIView {
             
             let fromPath = progressLayer.path
             progressLayer.path = toPath.cgPath
-            borderLayer.addSublayer(progressLayer)
             
             let animation = CABasicAnimation(keyPath: "path")
             animation.fromValue = fromPath
             animation.toValue = toPath.cgPath
             animation.duration = 0.5
             progressLayer.add(animation, forKey: animation.keyPath)
+            
+            borderLayer.addSublayer(progressLayer)
         }
+    }
+    
+    func setupGradient() -> CAGradientLayer {
+        let topColor = AppColor.PaleGreen.color.cgColor
+        let bottomColor = AppColor.DarkSeaGreen.color.cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [topColor, bottomColor]
+        gradientLayer.locations = [0.2, 1.0]
+        return gradientLayer
     }
 }

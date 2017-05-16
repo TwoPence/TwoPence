@@ -11,6 +11,8 @@ import UIKit
 class AssetView: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var footerView: UIView!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -27,14 +29,20 @@ class AssetView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        
+        headerView.backgroundColor = UIColor.clear
+        
+        setupGradientBackground()
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    func setupGradientBackground() {
+        let topColor = AppColor.MediumGray.color.cgColor
+        let bottomColor = AppColor.PaleGray.color.cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [topColor, bottomColor]
+        gradientLayer.locations = [0.2, 1.0]
+        gradientLayer.frame = headerView.frame
+        headerView.layer.insertSublayer(gradientLayer, at: 0)
     }
-    */
 
 }

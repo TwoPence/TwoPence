@@ -19,7 +19,7 @@ class SignoutCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.signoutName.textColor = AppColor.PaleRed.color
+        self.signoutName.textColor = AppColor.Red.color
         self.preservesSuperviewLayoutMargins = false
         self.separatorInset = UIEdgeInsets.zero
         self.layoutMargins = UIEdgeInsets.zero

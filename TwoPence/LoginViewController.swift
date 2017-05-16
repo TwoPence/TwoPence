@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Initialize a revealing Splash with with the iconImage, the initial size and the background color
-        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "group_selected"),iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: AppColor.SplashColor.color)
+        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "group_selected"),iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: AppColor.MediumGreen.color)
         
         //Adds the revealing splash view as a sub view
         self.view.addSubview(revealingSplashView)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -27,6 +30,7 @@
                 <outlet property="savedAmountLabelTopConstraint" destination="iL5-uV-Mq7" id="SJO-wG-eBZ"/>
                 <outlet property="tableView" destination="2hx-yA-OVY" id="RQV-K0-eAn"/>
                 <outlet property="totalSavedLabelBottomConstraint" destination="R4u-zU-Jsu" id="5aa-G4-Spv"/>
+                <outlet property="transfersLabel" destination="qYd-Yn-ozp" id="JZp-MQ-4dm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,12 +38,61 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXM-YY-lrM" userLabel="Header View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7gI-AN-wCg">
+                            <rect key="frame" x="20" y="96" width="335" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="HBI-wr-YsA"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="ieL-yB-kdb">
+                                <size key="itemSize" width="60" height="45"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-5w-U9t">
+                            <rect key="frame" x="145.5" y="207" width="85" height="20"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$58 Matched" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-Bc-flW">
+                            <rect key="frame" x="137" y="355" width="100" height="20"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$327" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-ih-Eac">
+                            <rect key="frame" x="118.5" y="235" width="139.5" height="72"/>
+                            <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="60"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Wee-ih-Eac" firstAttribute="centerX" secondItem="BXM-YY-lrM" secondAttribute="centerX" id="1hc-fp-4lc"/>
+                        <constraint firstItem="7gI-AN-wCg" firstAttribute="leading" secondItem="BXM-YY-lrM" secondAttribute="leading" constant="20" id="KfQ-Iu-9eU"/>
+                        <constraint firstAttribute="height" constant="400" id="MFW-jR-ywE"/>
+                        <constraint firstItem="7gI-AN-wCg" firstAttribute="top" secondItem="BXM-YY-lrM" secondAttribute="top" constant="96" id="PII-9g-kuo"/>
+                        <constraint firstItem="Wee-ih-Eac" firstAttribute="top" secondItem="Hxc-5w-U9t" secondAttribute="bottom" constant="8" id="R4u-zU-Jsu"/>
+                        <constraint firstItem="DMa-Bc-flW" firstAttribute="top" secondItem="Wee-ih-Eac" secondAttribute="bottom" constant="48" id="cOx-P3-7L9"/>
+                        <constraint firstItem="Wee-ih-Eac" firstAttribute="top" secondItem="7gI-AN-wCg" secondAttribute="bottom" constant="94" id="iL5-uV-Mq7"/>
+                        <constraint firstItem="Hxc-5w-U9t" firstAttribute="centerX" secondItem="BXM-YY-lrM" secondAttribute="centerX" id="iNp-xy-sVi"/>
+                        <constraint firstItem="DMa-Bc-flW" firstAttribute="centerX" secondItem="BXM-YY-lrM" secondAttribute="centerX" id="myx-PB-mFt"/>
+                        <constraint firstAttribute="trailing" secondItem="7gI-AN-wCg" secondAttribute="trailing" constant="20" id="t9I-hE-5NB"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hx-yA-OVY">
-                    <rect key="frame" x="0.0" y="398" width="375" height="269"/>
+                    <rect key="frame" x="0.0" y="448" width="375" height="219"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFc-Io-3em">
-                    <rect key="frame" x="0.0" y="350" width="375" height="48"/>
+                    <rect key="frame" x="0.0" y="400" width="375" height="48"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSFERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYd-Yn-ozp">
                             <rect key="frame" x="20" y="16" width="72" height="16"/>
@@ -53,55 +106,6 @@
                         <constraint firstItem="qYd-Yn-ozp" firstAttribute="centerY" secondItem="aFc-Io-3em" secondAttribute="centerY" id="Wrw-Ez-3d7"/>
                         <constraint firstAttribute="height" constant="48" id="aF2-u2-YMr"/>
                         <constraint firstItem="qYd-Yn-ozp" firstAttribute="leading" secondItem="aFc-Io-3em" secondAttribute="leading" constant="20" id="zfr-vi-ngh"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXM-YY-lrM" userLabel="Header View">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
-                    <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7gI-AN-wCg">
-                            <rect key="frame" x="20" y="35" width="335" height="45"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="HBI-wr-YsA"/>
-                            </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="ieL-yB-kdb">
-                                <size key="itemSize" width="60" height="45"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-5w-U9t">
-                            <rect key="frame" x="145.5" y="146" width="85" height="20"/>
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$58 Matched" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-Bc-flW">
-                            <rect key="frame" x="137" y="294" width="100" height="20"/>
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$327" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-ih-Eac">
-                            <rect key="frame" x="118" y="174" width="140" height="72"/>
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="60"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="Wee-ih-Eac" firstAttribute="centerX" secondItem="BXM-YY-lrM" secondAttribute="centerX" id="1hc-fp-4lc"/>
-                        <constraint firstItem="7gI-AN-wCg" firstAttribute="leading" secondItem="BXM-YY-lrM" secondAttribute="leading" constant="20" id="KfQ-Iu-9eU"/>
-                        <constraint firstAttribute="height" constant="350" id="MFW-jR-ywE"/>
-                        <constraint firstItem="7gI-AN-wCg" firstAttribute="top" secondItem="BXM-YY-lrM" secondAttribute="top" constant="35" id="PII-9g-kuo"/>
-                        <constraint firstItem="Wee-ih-Eac" firstAttribute="top" secondItem="Hxc-5w-U9t" secondAttribute="bottom" constant="8" id="R4u-zU-Jsu"/>
-                        <constraint firstItem="DMa-Bc-flW" firstAttribute="top" secondItem="Wee-ih-Eac" secondAttribute="bottom" constant="48" id="cOx-P3-7L9"/>
-                        <constraint firstItem="Wee-ih-Eac" firstAttribute="top" secondItem="7gI-AN-wCg" secondAttribute="bottom" constant="94" id="iL5-uV-Mq7"/>
-                        <constraint firstItem="Hxc-5w-U9t" firstAttribute="centerX" secondItem="BXM-YY-lrM" secondAttribute="centerX" id="iNp-xy-sVi"/>
-                        <constraint firstItem="DMa-Bc-flW" firstAttribute="centerX" secondItem="BXM-YY-lrM" secondAttribute="centerX" id="myx-PB-mFt"/>
-                        <constraint firstAttribute="trailing" secondItem="7gI-AN-wCg" secondAttribute="trailing" constant="20" id="t9I-hE-5NB"/>
                     </constraints>
                 </view>
             </subviews>

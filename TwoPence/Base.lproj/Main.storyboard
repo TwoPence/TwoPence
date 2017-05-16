@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,7 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hWj-gT-Xxu" firstAttribute="top" secondItem="7eI-Rk-BxC" secondAttribute="top" id="Niz-h2-7ol"/>
+                            <constraint firstItem="hWj-gT-Xxu" firstAttribute="top" secondItem="Sp6-qZ-34x" secondAttribute="bottom" id="HAe-ks-Ibw"/>
                             <constraint firstAttribute="trailing" secondItem="hWj-gT-Xxu" secondAttribute="trailing" id="meH-nG-Nkm"/>
                             <constraint firstItem="hWj-gT-Xxu" firstAttribute="leading" secondItem="7eI-Rk-BxC" secondAttribute="leading" id="ogB-S9-Mdl"/>
                             <constraint firstItem="fda-W8-AJw" firstAttribute="top" secondItem="hWj-gT-Xxu" secondAttribute="bottom" id="q61-dk-pgV"/>
@@ -160,11 +160,11 @@
                             <constraint firstItem="tA0-9g-yUr" firstAttribute="leading" secondItem="2iA-ZO-vAe" secondAttribute="leading" id="5dx-pW-WVE"/>
                             <constraint firstAttribute="trailing" secondItem="tA0-9g-yUr" secondAttribute="trailing" id="6qp-cp-grl"/>
                             <constraint firstItem="l9j-cb-8en" firstAttribute="top" secondItem="tA0-9g-yUr" secondAttribute="bottom" id="CKw-RE-phG"/>
-                            <constraint firstItem="tA0-9g-yUr" firstAttribute="top" secondItem="qNH-Vy-PQJ" secondAttribute="bottom" id="WF7-wZ-G9I"/>
+                            <constraint firstItem="tA0-9g-yUr" firstAttribute="top" secondItem="2iA-ZO-vAe" secondAttribute="top" id="d7M-fX-QFW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Dta-1d-0O3">
-                        <barButtonItem key="rightBarButtonItem" image="inviteAndEarn" id="VYi-EW-Qn6">
+                        <barButtonItem key="rightBarButtonItem" image="heart" id="VYi-EW-Qn6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="zVq-qi-Mtb" kind="presentation" id="2wf-c0-tmG"/>
@@ -173,7 +173,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="tA0-9g-yUr" id="GqR-EB-JoP"/>
-                        <segue destination="nlw-lw-AOM" kind="presentation" identifier="JoltSegue" id="4av-4V-h7c"/>
+                        <segue destination="0Oy-J7-kFb" kind="presentation" identifier="JoltSegue" id="4av-4V-h7c"/>
                         <segue destination="Q8D-aS-4ef" kind="show" identifier="TransactionsSegue" id="kuF-wz-ZzP"/>
                     </connections>
                 </viewController>
@@ -181,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="2810" y="-833"/>
         </scene>
-        <!--Jolt View Controller-->
+        <!--Jolt-->
         <scene sceneID="8J0-Tf-ASf">
             <objects>
                 <viewController storyboardIdentifier="JoltViewController" id="nlw-lw-AOM" customClass="JoltViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,29 +190,30 @@
                         <viewControllerLayoutGuide type="bottom" id="hJL-lj-7nQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TM9-oB-pdR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5y-jO-cQZ" userLabel="Content View" customClass="JoltView" customModule="TwoPence" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h5y-jO-cQZ" firstAttribute="top" secondItem="TM9-oB-pdR" secondAttribute="top" id="3yE-W6-XIl"/>
                             <constraint firstAttribute="trailing" secondItem="h5y-jO-cQZ" secondAttribute="trailing" id="FxV-az-Uw6"/>
                             <constraint firstItem="hJL-lj-7nQ" firstAttribute="top" secondItem="h5y-jO-cQZ" secondAttribute="bottom" id="VnR-5g-o3T"/>
+                            <constraint firstItem="h5y-jO-cQZ" firstAttribute="top" secondItem="TM9-oB-pdR" secondAttribute="top" id="txa-ie-Npr"/>
                             <constraint firstItem="h5y-jO-cQZ" firstAttribute="leading" secondItem="TM9-oB-pdR" secondAttribute="leading" id="xXI-wc-PGo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Jolt" id="J8k-1C-cRH"/>
                     <connections>
                         <outlet property="contentView" destination="h5y-jO-cQZ" id="Z2K-jh-0k1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pN-et-o7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4542" y="-377"/>
+            <point key="canvasLocation" x="5485.6000000000004" y="-199.25037481259372"/>
         </scene>
         <!--Milestones-->
         <scene sceneID="pdU-gf-1ti">
@@ -284,7 +285,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="contentView" destination="KGt-fn-jAV" id="SDT-Ta-dAF"/>
-                        <segue destination="nlw-lw-AOM" kind="presentation" identifier="JoltSegue" id="nYt-xH-5EY"/>
+                        <segue destination="0Oy-J7-kFb" kind="presentation" identifier="JoltSegue" id="nYt-xH-5EY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kk6-3D-GAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,7 +402,7 @@
                 <navigationController storyboardIdentifier="SettingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SaJ-Wt-4Vs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" selectedImage="settings_selected" systemItem="more" id="24w-Yq-dGA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OEY-As-ryI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OEY-As-ryI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -472,7 +473,7 @@
                 <navigationController storyboardIdentifier="AccountsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="AN2-OZ-6wY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="oSQ-Qb-Gc4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JZM-1j-Y6W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZM-1j-Y6W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -514,7 +515,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qga-2a-V9n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Milestones" image="milestoneOption3" selectedImage="milestoneOption3_selected" id="Pr4-Jh-y8B"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="g9D-Kh-2eh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9D-Kh-2eh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -527,15 +528,34 @@
             </objects>
             <point key="canvasLocation" x="1834" y="90"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7GQ-86-bKy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Oy-J7-kFb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tGu-jb-ZtL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nlw-lw-AOM" kind="relationship" relationship="rootViewController" id="sOk-yD-c2f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPX-Im-yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4743" y="-199"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="heart" width="20" height="18"/>
         <image name="inviteAndEarn" width="20" height="18"/>
         <image name="milestoneOption3" width="25" height="24"/>
         <image name="milestoneOption3_selected" width="25" height="24"/>
         <image name="settings_selected" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Jm-Fa-eBa"/>
+        <segue reference="2wf-c0-tmG"/>
         <segue reference="4av-4V-h7c"/>
         <segue reference="pmX-9Q-8BE"/>
         <segue reference="WGS-9C-F6l"/>

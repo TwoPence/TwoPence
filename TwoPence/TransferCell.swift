@@ -17,14 +17,16 @@ class TransferCell: UITableViewCell {
         didSet {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/YYYY"
-            dateLabel.text = dateFormatter.string(from: transfer.date!)
-            amountLabel.text = "\(transfer.amount!)"
+            dateLabel.text = dateFormatter.string(from: transfer.date)
+            amountLabel.text = "\(transfer.amount)"
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.accessoryType = .disclosureIndicator
+        dateLabel.textColor = AppColor.Charcoal.color
+        amountLabel.textColor = AppColor.Charcoal.color
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -12,7 +12,7 @@ protocol DashboardViewDelegate {
     
     func didTapJoltButton(didTap: Bool)
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction])
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool)
     
     func changePage(page: Int)
 }
@@ -29,7 +29,11 @@ class DashboardView: UIView {
     
     var delegate: DashboardViewDelegate?
     
-    var transactions: [Transaction]?
+    var aggTransactions: [AggTransactions]? {
+        didSet {
+            savingsView.aggTransactions = aggTransactions!
+        }
+    }
     var userFinMetrics: UserFinMetrics? {
         didSet {
             debtView.userFinMetrics = userFinMetrics
@@ -80,6 +84,13 @@ class DashboardView: UIView {
         debtView.frame = CGRect(x: pageWidth, y: 0, width: pageWidth, height: pageHeight)
         assetView.frame = CGRect(x: pageWidth * 2, y: 0, width: pageWidth, height: pageHeight)
     }
+    
+    func currentMonth() -> String {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        return dateFormatter.string(from: date)
+    }
 }
 
 extension DashboardView: UIScrollViewDelegate {
@@ -92,8 +103,8 @@ extension DashboardView: UIScrollViewDelegate {
 
 extension DashboardView: SavingsViewDelegate {
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [Transaction]) {
-        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: selectedTransactions)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool) {
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: selectedTransactions, editable: editable)
     }
 
 }

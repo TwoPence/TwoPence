@@ -23,6 +23,7 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
         
         TwoPenceAPI.sharedClient.getMilestones(success: { (milestones) in
             self.contentView.milestones = milestones
+            self.contentView.scrollToCurrentMilestone()
         }) { (error) in
             print(error)
         }

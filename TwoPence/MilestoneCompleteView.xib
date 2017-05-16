@@ -33,29 +33,34 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qho-9V-gBz">
-                            <rect key="frame" x="128" y="141" width="119" height="99.5"/>
+                            <rect key="frame" x="137.5" y="141" width="100" height="99.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="ErB-RN-oeW"/>
+                                <constraint firstAttribute="width" constant="100" id="RZS-DB-y7a"/>
+                            </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-8I-qA6">
+                            <rect key="frame" x="330" y="20" width="25" height="25"/>
+                            <state key="normal" image="close">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeView:" destination="-1" eventType="touchUpInside" id="g85-AR-Ra0"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Qho-9V-gBz" secondAttribute="trailing" constant="128" id="1Hd-kl-v0t"/>
-                        <constraint firstItem="Qho-9V-gBz" firstAttribute="top" secondItem="p9a-37-tiM" secondAttribute="bottom" constant="72" id="9Q6-hy-pp6"/>
                         <constraint firstItem="p9a-37-tiM" firstAttribute="top" secondItem="9DB-0A-NnN" secondAttribute="top" constant="48" id="Cxa-ra-dO2"/>
+                        <constraint firstItem="Qho-9V-gBz" firstAttribute="centerX" secondItem="9DB-0A-NnN" secondAttribute="centerX" id="IOk-Rd-G24"/>
                         <constraint firstItem="p9a-37-tiM" firstAttribute="leading" secondItem="9DB-0A-NnN" secondAttribute="leading" constant="112" id="IsQ-rb-0Pv"/>
-                        <constraint firstItem="Qho-9V-gBz" firstAttribute="leading" secondItem="9DB-0A-NnN" secondAttribute="leading" constant="128" id="T4v-yv-1Dn"/>
+                        <constraint firstItem="BrZ-8I-qA6" firstAttribute="top" secondItem="9DB-0A-NnN" secondAttribute="top" constant="20" id="RVo-Nn-RRn"/>
+                        <constraint firstAttribute="bottom" secondItem="Qho-9V-gBz" secondAttribute="bottom" constant="44" id="Ufh-gm-ReL"/>
+                        <constraint firstItem="p9a-37-tiM" firstAttribute="centerX" secondItem="9DB-0A-NnN" secondAttribute="centerX" id="dAl-hp-9Jp"/>
+                        <constraint firstAttribute="trailing" secondItem="BrZ-8I-qA6" secondAttribute="trailing" constant="20" id="hQF-ce-sYF"/>
                         <constraint firstAttribute="trailing" secondItem="p9a-37-tiM" secondAttribute="trailing" constant="112" id="pnd-nI-9ul"/>
-                        <constraint firstAttribute="bottom" secondItem="Qho-9V-gBz" secondAttribute="bottom" constant="44" id="upN-ar-vUO"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-8I-qA6">
-                    <rect key="frame" x="14" y="14" width="39" height="30"/>
-                    <state key="normal" title="Close">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="closeView:" destination="-1" eventType="touchUpInside" id="g85-AR-Ra0"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eu-di-hAo">
                     <rect key="frame" x="30" y="348.5" width="315" height="142.5"/>
                     <string key="text">Great job! You have reached
@@ -90,16 +95,17 @@ taken 22 days off your debt :)</string>
                 <constraint firstItem="8eu-di-hAo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="ECK-f1-tLD"/>
                 <constraint firstItem="RYl-0x-3Rt" firstAttribute="top" secondItem="8eu-di-hAo" secondAttribute="bottom" constant="112" id="G2W-wx-W7z"/>
                 <constraint firstItem="9DB-0A-NnN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KD5-lz-v4P"/>
-                <constraint firstItem="BrZ-8I-qA6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="Kea-lp-TGx"/>
                 <constraint firstItem="9DB-0A-NnN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZmT-uQ-grb"/>
                 <constraint firstAttribute="trailing" secondItem="RYl-0x-3Rt" secondAttribute="trailing" constant="20" id="bCR-1b-CIc"/>
                 <constraint firstItem="RYl-0x-3Rt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="bEV-aK-Amj"/>
                 <constraint firstItem="8eu-di-hAo" firstAttribute="top" secondItem="9DB-0A-NnN" secondAttribute="bottom" constant="64" id="l8q-Hc-Ybd"/>
                 <constraint firstAttribute="trailing" secondItem="9DB-0A-NnN" secondAttribute="trailing" id="q1L-lt-kb8"/>
                 <constraint firstAttribute="bottom" secondItem="RYl-0x-3Rt" secondAttribute="bottom" constant="20" id="ue3-hs-SLn"/>
-                <constraint firstItem="BrZ-8I-qA6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="zVh-sz-0St"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="close" width="25" height="25"/>
+    </resources>
 </document>

@@ -10,11 +10,12 @@ import UIKit
 
 class PendingTransferCell: UITableViewCell {
     
+    @IBOutlet weak var pendingTransferLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
     var pendingTransfer: AggTransactions! {
         didSet {
-            amountLabel.text = "\(pendingTransfer.amount!)"
+            amountLabel.text = "\(pendingTransfer.amount)"
         }
     }
 
@@ -22,6 +23,8 @@ class PendingTransferCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.accessoryType = .disclosureIndicator
+        pendingTransferLabel.textColor = AppColor.Charcoal.color
+        amountLabel.textColor = AppColor.Charcoal.color
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

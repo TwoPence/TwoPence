@@ -17,11 +17,11 @@ class DebtMilestoneView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    var currentMilestoneView: UIView?
     
     var milestones = [DebtMilestone]() {
         didSet {
             addTimeline()
-            scrollView.scrollToBottom()
             layoutIfNeeded()
         }
     }
@@ -49,7 +49,7 @@ class DebtMilestoneView: UIView {
 
     func addTimeline(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
+    
         var timeframes = [TimeFrame]()
         for (index, milestone) in milestones.enumerated() {
             if milestone.type == MilestoneType.Complete {
@@ -64,6 +64,8 @@ class DebtMilestoneView: UIView {
         scrollView.addSubview(timeline)
         scrollView.isUserInteractionEnabled = true
         
+        currentMilestoneView = timeline.currentMilestoneView
+        
         scrollView.addConstraints([
             NSLayoutConstraint(item: timeline, attribute: .left, relatedBy: .equal, toItem: scrollView, attribute: .left, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: timeline, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: scrollView, attribute: .bottom, multiplier: 1.0, constant: 0),
@@ -72,6 +74,12 @@ class DebtMilestoneView: UIView {
             
             NSLayoutConstraint(item: timeline, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1.0, constant: 0)
             ])
+    }
+    
+    func scrollToCurrentMilestone(){
+        if let milestone = currentMilestoneView {
+            scrollView.scrollToView(view: milestone, animated: true)
+        }
     }
     
     func onTapMilestoneItem(_ sender: AnyObject, event: UIEvent) {
@@ -104,6 +112,10 @@ extension UIScrollView {
         }
     }
 
+    func scrollTo(point: CGPoint) {
+        setContentOffset(point, animated: true)
+    }
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         /*
         var scaleFactor:CGFloat = 0.0

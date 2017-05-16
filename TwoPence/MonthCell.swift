@@ -33,10 +33,13 @@ class MonthCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.isUserInteractionEnabled = true
-        self.selectedBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-        self.selectedBackgroundView?.backgroundColor = UIColor(red: 66/255, green: 181/255, blue: 128/255, alpha: 1.0)
-        self.selectedBackgroundView?.isHidden = true
+        isUserInteractionEnabled = true
+        selectedBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
+        selectedBackgroundView?.backgroundColor = UIColor(red: 66/255, green: 181/255, blue: 128/255, alpha: 1.0)
+        let selectedBar = UIView(frame: CGRect(x: 0, y: self.bounds.height - 1, width: self.bounds.width, height: 1))
+        selectedBar.backgroundColor = UIColor.white
+        selectedBackgroundView?.addSubview(selectedBar)
+        selectedBackgroundView?.isHidden = true
     }
     
     override func prepareForReuse() {

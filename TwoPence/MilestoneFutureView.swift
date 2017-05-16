@@ -56,9 +56,11 @@ class MilestoneFutureView: UIView {
         contentView.frame = bounds
         joltButton.layer.cornerRadius = 4
         
-        topView.backgroundColor = AppColor.DarkGreen.color
-        joltButton.backgroundColor = AppColor.DarkGreen.color
         milestoneNextImage.image = #imageLiteral(resourceName: "cup_white")
+
+        topView.backgroundColor = AppColor.DarkSeaGreen.color
+        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
+
         addSubview(contentView)
         setMilestoneProgressBar()
     }

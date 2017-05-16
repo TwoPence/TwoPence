@@ -23,6 +23,31 @@ class JoltViewController: UIViewController {
         maybeLoadUserFinMetrics()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = "Jolt"
+        let closeBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "close"), style: .plain, target: self, action: #selector(JoltViewController.closeJoltModal))
+        closeBtn.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = closeBtn
+        if let navigationBar = navigationController?.navigationBar{
+            navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
+                NSFontAttributeName : UIFont(name: "Lato-Regular", size: 17)!
+            ]
+            navigationBar.barTintColor = UIColor.clear
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.isTranslucent = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // This is a hack to force the display to update after the view loads.
+        contentView.joltAmount = 20
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,12 +72,16 @@ class JoltViewController: UIViewController {
             contentView.userFinMetrics = userFinMetrics
         }
     }
+    
+    func closeJoltModal() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension JoltViewController: JoltViewDelegate {
     
-    func didTapCloseButton(didTap: Bool) {
-        if didTap {
+    func didCompleteJolt(completed: Bool) {
+        if completed {
             dismiss(animated: true, completion: nil)
         }
     }
