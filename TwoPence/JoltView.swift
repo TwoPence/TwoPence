@@ -140,23 +140,21 @@ class JoltView: UIView {
     }
     
     func showSuccessView(){
-        
         let title = "Congratulations!"
         let message = "You have successfully added \(amountLabel.text ?? "$0")!"
-        let image = #imageLiteral(resourceName: "images") //Some nice GIF here
-        
-        let popup = PopupDialog(title: title, message: message, image: image, gestureDismissal: false)
-        
+        let popup = PopupDialog(title: title, message: message, gestureDismissal: false)
         let buttonOne = DefaultButton(title: "Done") {
-            self.delegate?.didCompleteJolt?(completed: true) // Replace this with image like X?
+            self.delegate?.didCompleteJolt?(completed: true)
         }
-        
         popup.addButton(buttonOne)
         
         var topVC = UIApplication.shared.keyWindow?.rootViewController
         while((topVC!.presentedViewController) != nil) {
             topVC = topVC!.presentedViewController
         }
+        
+        let vc = popup.viewController as! PopupDialogDefaultViewController
+        vc.image = #imageLiteral(resourceName: "lightningbolt")
         
         topVC?.present(popup, animated: true, completion: nil)
     }

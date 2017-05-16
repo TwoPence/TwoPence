@@ -55,7 +55,7 @@ class MilestoneCompleteView: UIView {
     func setupViewData() {
         if let milestone = debtMilestone {
             // TODO Pass correct data
-            self.milestoneCompleteLabel.text = "Great job! You have reached \(milestone.goal) milestone! \n \n \n By reaching this milestone you have avoided \(milestone.current) on interest and taken \(milestone.current) days off your debt :)"
+            self.milestoneCompleteLabel.text = "Great job! 🙌 You have reached \(milestone.goal) milestone!!"
         }
     }
     
