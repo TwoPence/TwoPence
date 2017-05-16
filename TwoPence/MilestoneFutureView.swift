@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EFCountingLabel
 
 @objc protocol MilestoneFutureViewDelegate {
     @objc optional func didTapCloseButton()
@@ -15,17 +16,26 @@ import UIKit
 
 class MilestoneFutureView: UIView {
     
+    var pgBar: CustomProgressBar!
     var debtMilestone: DebtMilestone?{
         didSet {
             setupViewData()
-            layoutSubviews()
         }
     }
-    
+    var increment: CGFloat!
+    var animateProgressBar: Bool! {
+        didSet {
+            incrementProgressBar()
+        }
+    }
+
     @IBOutlet weak var topView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var joltButton: UIButton!
-    @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var currentValue: EFCountingLabel!
+    @IBOutlet weak var goalValue: UILabel!
+    @IBOutlet weak var barContainer: UIView!
+    @IBOutlet weak var milestoneFutureLabel: UILabel!
     
     weak var delegate: MilestoneFutureViewDelegate?
     
@@ -48,6 +58,7 @@ class MilestoneFutureView: UIView {
         topView.backgroundColor = AppColor.DarkGreen.color
         joltButton.backgroundColor = AppColor.DarkGreen.color
         addSubview(contentView)
+        setMilestoneProgressBar()
     }
     
     @IBAction func onCloseTap(_ sender: Any) {
@@ -60,9 +71,25 @@ class MilestoneFutureView: UIView {
     
     func setupViewData(){
         if let milestone = debtMilestone {
-            let chart = MilestoneFutureChartView(frame: chartView.bounds)
-            self.chartView.addSubview(chart)
-            chart.debtMilestone = milestone
+            currentValue.text = milestone.current.formatted(withStyle: .currency)
+
+            goalValue.text = "of \(String(describing: milestone.goal.formatted(withStyle: .currency)))"
+            
+            let diff = milestone.goal.subtracting(milestone.current)
+            milestoneFutureLabel.text = "You are \(String(describing: diff.formatted(withStyle: .currency))) away from your next milestone!"
+            
+            let inc = (milestone.current.floatValue / milestone.goal.floatValue) * Double(barContainer.bounds.width)
+            increment = CGFloat(inc)
         }
+    }
+    
+    func incrementProgressBar(){
+        pgBar.progress(incremented: increment)
+    }
+    
+    func setMilestoneProgressBar(){
+        pgBar = CustomProgressBar(width: barContainer.bounds.width, height: barContainer.bounds.height)
+        barContainer.addSubview(self.pgBar)
+        pgBar.configure()
     }
 }

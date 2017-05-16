@@ -164,7 +164,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Dta-1d-0O3">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="VYi-EW-Qn6">
+                        <barButtonItem key="rightBarButtonItem" image="inviteAndEarn" id="VYi-EW-Qn6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="zVq-qi-Mtb" kind="presentation" id="2wf-c0-tmG"/>
                             </connections>
@@ -239,7 +240,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Milestones" id="XLc-dx-fZT">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="hU8-vG-7Oa">
+                        <barButtonItem key="rightBarButtonItem" image="inviteAndEarn" id="hU8-vG-7Oa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="zVq-qi-Mtb" kind="presentation" id="0Jm-Fa-eBa"/>
                             </connections>
@@ -393,11 +395,11 @@
             </objects>
             <point key="canvasLocation" x="4543" y="1275"/>
         </scene>
-        <!--Settings-->
+        <!--Navigation Controller-->
         <scene sceneID="XaY-of-NcJ">
             <objects>
                 <navigationController storyboardIdentifier="SettingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SaJ-Wt-4Vs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="24w-Yq-dGA"/>
+                    <tabBarItem key="tabBarItem" selectedImage="settings_selected" systemItem="more" id="24w-Yq-dGA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OEY-As-ryI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -487,7 +489,7 @@
         <scene sceneID="Rqs-QM-Mkq">
             <objects>
                 <navigationController storyboardIdentifier="DashboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CcD-VX-5AU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="R4L-Le-G0f"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="group" id="R4L-Le-G0f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="4nM-dZ-Iqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -510,7 +512,7 @@
         <scene sceneID="AQj-z1-4zw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qga-2a-V9n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Milestones" id="Pr4-Jh-y8B"/>
+                    <tabBarItem key="tabBarItem" title="Milestones" image="milestoneOption3" selectedImage="milestoneOption3_selected" id="Pr4-Jh-y8B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="g9D-Kh-2eh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -526,10 +528,17 @@
             <point key="canvasLocation" x="1834" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="group" width="22" height="25"/>
+        <image name="inviteAndEarn" width="20" height="18"/>
+        <image name="milestoneOption3" width="25" height="24"/>
+        <image name="milestoneOption3_selected" width="25" height="24"/>
+        <image name="settings_selected" width="20" height="20"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FSX-Y8-wR9"/>
+        <segue reference="0Jm-Fa-eBa"/>
+        <segue reference="4av-4V-h7c"/>
         <segue reference="pmX-9Q-8BE"/>
         <segue reference="WGS-9C-F6l"/>
-        <segue reference="nYt-xH-5EY"/>
     </inferredMetricsTieBreakers>
 </document>

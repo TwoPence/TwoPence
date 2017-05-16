@@ -44,15 +44,19 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if completeView != nil {
             completeView?.debtMilestone = debtMilestone
         } else if futureView != nil {
             futureView?.debtMilestone = debtMilestone
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        futureView?.animateProgressBar = true
     }
     
     /*

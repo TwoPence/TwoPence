@@ -64,6 +64,19 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         } else if indexPath.section == 1 || indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") as! SettingsCell
             cell.settingOptionName.text = menuOptions[indexPath.section][indexPath.row]["name"]
+            if indexPath.section == 1 {
+                cell.imageView?.image = #imageLiteral(resourceName: "shape")
+            } else {
+                if indexPath.row == 0 {
+                    cell.imageView?.image = #imageLiteral(resourceName: "shape")
+                } else if indexPath.row == 1 {
+                    cell.imageView?.image = #imageLiteral(resourceName: "linkedUserOption1")
+                } else if indexPath.row == 2 {
+                    
+                } else if indexPath.row == 3 {
+                    cell.imageView?.image = #imageLiteral(resourceName: "inviteAndEarn")
+                }
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SignoutCell") as! SignoutCell

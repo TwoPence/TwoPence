@@ -18,7 +18,7 @@ class DebtMilestoneView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var milestones: [DebtMilestone]?
+    var milestones = [DebtMilestone]()
     var delegate: DebtMilestoneViewDelegate?
     var timeline: TimelineView!
     
@@ -38,12 +38,12 @@ class DebtMilestoneView: UIView {
         contentView.frame = bounds
         contentView.isUserInteractionEnabled = true
         addSubview(contentView)
-        self.milestones = [DebtMilestone]()
-        self.milestones?.append(DebtMilestone(type: MilestoneType.Complete))
-        self.milestones?.append(DebtMilestone(type: MilestoneType.Complete))
-        self.milestones?.append(DebtMilestone(type: MilestoneType.Complete))
-        self.milestones?.append(DebtMilestone(type: MilestoneType.Current))
-        self.milestones?.append(DebtMilestone(type: MilestoneType.Future))
+        
+        TwoPenceAPI.sharedClient.getMilestones(success: { (milestones) in
+            self.milestones = milestones
+        }) { (error) in
+            print(error)
+        }
         
         addTimeline()
     }
@@ -52,7 +52,7 @@ class DebtMilestoneView: UIView {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         var timeframes = [TimeFrame]()
-        for (index, milestone) in milestones!.enumerated() {
+        for (index, milestone) in milestones.enumerated() {
             timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "images")))
         }
         
@@ -73,8 +73,8 @@ class DebtMilestoneView: UIView {
     }
     
     func onTapMilestoneItem(_ sender: AnyObject, event: UIEvent) {
-        let debtMilestone = self.milestones?[sender.tag]
-        delegate?.navigateToDebtMilestoneDetailViewController(selectedMiletone: debtMilestone!)
+        let debtMilestone = self.milestones[sender.tag]
+        delegate?.navigateToDebtMilestoneDetailViewController(selectedMiletone: debtMilestone)
     }
 }
 

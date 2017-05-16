@@ -15,6 +15,7 @@ target 'TwoPence' do
   pod 'Whisper', '~> 5.0.0'
   pod 'RevealingSplashView'
   pod 'AlamofireImage', '~> 3.1'
+  pod 'EFCountingLabel', '~> 1.0'
 
   target 'TwoPenceTests' do
     inherit! :search_paths

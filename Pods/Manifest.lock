@@ -5,6 +5,7 @@ PODS:
   - Cely (2.0.0):
     - Cely/Core (= 2.0.0)
   - Cely/Core (2.0.0)
+  - EFCountingLabel (1.0.1)
   - Hero (0.3.6)
   - Money (2.0.1):
     - ValueCoding (~> 2)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
   - Cely (~> 2.0.0)
+  - EFCountingLabel (~> 1.0)
   - Hero
   - Money (= 2.0.1)
   - PopupDialog (~> 0.5)
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   Cely: 10e51eadc776f132982446165b4f35c11b8970bd
+  EFCountingLabel: fcdf2193bb02ee77e0e0e8f72a1eb5931c54aa41
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
@@ -37,6 +40,6 @@ SPEC CHECKSUMS:
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 86ca4738c55d8390cf684bbe23819c7807e798be
+PODFILE CHECKSUM: 625ae45f4adffde7bf4f82a48d28fc1330430354
 
 COCOAPODS: 1.2.0

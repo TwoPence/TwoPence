@@ -51,24 +51,4 @@ class DebtMilestone: Unboxable {
         
         return milestones
     }
-    
-    // For testing only
-    init(type: MilestoneType) {
-        self.current = Money(10.0)
-        self.goal = Money(200.0)
-        self.type = type
-        self.imageName = "completed"
-        self.description = "Testing my description"
-        
-        if type == MilestoneType.Complete {
-            self.milestoneTitle = "Congratulations!"
-            self.milestoneSubTitle = "Milestone completed!"
-        } else if type == MilestoneType.Current {
-            self.milestoneTitle = "Next Milestone!"
-            self.milestoneSubTitle = "Jolt to reach your milestone sooner!"
-        } else {
-            self.milestoneTitle = "Upcoming Milestone!"
-            self.milestoneSubTitle = "View this on completing previous milestone"
-        }
-    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 enum AppColor: UInt32 {
     
+    case SplashColor = 0x239964
     case Charcoal = 0x1D2323
     case LightGray = 0x939FAE
     case ExtraLightGray = 0xF4F5F6
