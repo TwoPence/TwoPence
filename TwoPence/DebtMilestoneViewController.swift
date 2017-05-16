@@ -20,6 +20,12 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
         contentView.delegate = self
         contentView.heroModifiers = [.fade, .translate(x:0, y:-250)]
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        TwoPenceAPI.sharedClient.getMilestones(success: { (milestones) in
+            self.contentView.milestones = milestones
+        }) { (error) in
+            print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +35,6 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        contentView.scrollView.scrollToBottom()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

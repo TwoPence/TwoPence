@@ -10,7 +10,7 @@ import UIKit
 import Unbox
 import Money
 
-enum MilestoneType: Int, UnboxableEnum {
+enum MilestoneType: String, UnboxableEnum {
     case Complete
     case Current
     case Future
@@ -34,7 +34,7 @@ class DebtMilestone: Unboxable {
         self.goal = Money(goalDouble)
         
         self.type = try unboxer.unbox(key: "type")
-        self.imageName = try unboxer.unbox(key: "imageName")
+        self.imageName = try unboxer.unbox(key: "image_name")
         self.description = try unboxer.unbox(key: "description")
         self.milestoneTitle = try unboxer.unbox(key: "milestone_title")
         self.milestoneSubTitle = try unboxer.unbox(key: "milestone_sub_title")

@@ -17,6 +17,7 @@
                 <outlet property="goalValue" destination="CcI-Rn-acg" id="dai-Pe-OR5"/>
                 <outlet property="joltButton" destination="cPD-Vu-Dei" id="txq-lg-Uf2"/>
                 <outlet property="milestoneFutureLabel" destination="6oO-hh-K5S" id="G6r-dV-BTB"/>
+                <outlet property="milestoneNextImage" destination="qMB-eG-J4h" id="deq-hD-adO"/>
                 <outlet property="topView" destination="duZ-Rw-2CI" id="Snd-QT-Pgf"/>
             </connections>
         </placeholder>

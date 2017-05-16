@@ -336,15 +336,16 @@ open class TimelineView: UIView {
             imageView.layer.cornerRadius = 4
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.contentMode = UIViewContentMode.scaleAspectFit
+
             v.addSubview(imageView)
             imageView.tag = imageTag
-            v.addConstraints([
-                NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .left, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: imageView, attribute: .right, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .right, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .bottom, multiplier: 1.0, constant: 0)
-                ])
+
+            v.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: backgroundViewForImage, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0.0))
             
+            v.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: backgroundViewForImage, attribute: NSLayoutAttribute.topMargin, multiplier: 1.0, constant: 20.0))
+            v.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: backgroundViewForImage, attribute: NSLayoutAttribute.bottomMargin, multiplier: 1.0, constant: 20.0))
+            v.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 100.0))
+
             let button = UIButton(type: .custom)
             button.tag = element.debtMilestonePosition
             button.translatesAutoresizingMaskIntoConstraints = false

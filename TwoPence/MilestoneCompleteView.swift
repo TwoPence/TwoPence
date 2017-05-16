@@ -46,6 +46,7 @@ class MilestoneCompleteView: UIView {
         shareButton.layer.cornerRadius = 4
         shareButton.backgroundColor = AppColor.DarkGreen.color
         topView.backgroundColor = AppColor.DarkGreen.color
+        milestoneCompleteImage.image = #imageLiteral(resourceName: "gift_white")
         addSubview(contentView)
     }
     

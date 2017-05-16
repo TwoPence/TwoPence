@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-0A-NnN">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="294.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="284.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9a-37-tiM">
                             <rect key="frame" x="112" y="48" width="151" height="21"/>
@@ -33,7 +33,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qho-9V-gBz">
-                            <rect key="frame" x="128" y="141" width="119" height="109.5"/>
+                            <rect key="frame" x="128" y="141" width="119" height="99.5"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,7 +57,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eu-di-hAo">
-                    <rect key="frame" x="30" y="358.5" width="315" height="142.5"/>
+                    <rect key="frame" x="30" y="348.5" width="315" height="142.5"/>
                     <string key="text">Great job! You have reached
 $600 milestone!
 
@@ -69,8 +69,11 @@ taken 22 days off your debt :)</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYl-0x-3Rt">
-                    <rect key="frame" x="20" y="613" width="335" height="34"/>
+                    <rect key="frame" x="20" y="603" width="335" height="44"/>
                     <color key="backgroundColor" red="0.050230436660000002" green="0.5682990228" blue="0.38310904890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="YCn-od-5re"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Share with friends!">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

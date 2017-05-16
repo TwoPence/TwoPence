@@ -18,7 +18,14 @@ class DebtMilestoneView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var milestones = [DebtMilestone]()
+    var milestones = [DebtMilestone]() {
+        didSet {
+            addTimeline()
+            scrollView.scrollToBottom()
+            layoutIfNeeded()
+        }
+    }
+    
     var delegate: DebtMilestoneViewDelegate?
     var timeline: TimelineView!
     
@@ -38,14 +45,6 @@ class DebtMilestoneView: UIView {
         contentView.frame = bounds
         contentView.isUserInteractionEnabled = true
         addSubview(contentView)
-        
-        TwoPenceAPI.sharedClient.getMilestones(success: { (milestones) in
-            self.milestones = milestones
-        }) { (error) in
-            print(error)
-        }
-        
-        addTimeline()
     }
 
     func addTimeline(){
@@ -53,7 +52,11 @@ class DebtMilestoneView: UIView {
         
         var timeframes = [TimeFrame]()
         for (index, milestone) in milestones.enumerated() {
-            timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "images")))
+            if milestone.type == MilestoneType.Complete {
+                timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "gift")))
+            } else {
+                timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "cup")))
+            }
         }
         
         timeline = TimelineView(bulletType: .circle, timeFrames: timeframes, onTap: onTapMilestoneItem)
@@ -69,7 +72,6 @@ class DebtMilestoneView: UIView {
             
             NSLayoutConstraint(item: timeline, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1.0, constant: 0)
             ])
-        scrollView.scrollToBottom()
     }
     
     func onTapMilestoneItem(_ sender: AnyObject, event: UIEvent) {

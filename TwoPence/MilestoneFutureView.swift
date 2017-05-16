@@ -29,6 +29,7 @@ class MilestoneFutureView: UIView {
         }
     }
 
+    @IBOutlet weak var milestoneNextImage: UIImageView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var joltButton: UIButton!
@@ -57,6 +58,7 @@ class MilestoneFutureView: UIView {
         
         topView.backgroundColor = AppColor.DarkGreen.color
         joltButton.backgroundColor = AppColor.DarkGreen.color
+        milestoneNextImage.image = #imageLiteral(resourceName: "cup_white")
         addSubview(contentView)
         setMilestoneProgressBar()
     }
