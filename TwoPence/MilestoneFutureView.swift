@@ -56,8 +56,6 @@ class MilestoneFutureView: UIView {
         contentView.frame = bounds
         joltButton.layer.cornerRadius = 4
         
-        milestoneNextImage.image = #imageLiteral(resourceName: "cup_white")
-        
         Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
         joltButton.backgroundColor = AppColor.DarkSeaGreen.color
 
@@ -86,6 +84,9 @@ class MilestoneFutureView: UIView {
             
             let inc = (milestone.current.floatValue / milestone.goal.floatValue) * Double(barContainer.bounds.width)
             increment = CGFloat(inc)
+            
+            let imageName = Utils.getMilestoneImageName(name: milestone.imageName)
+            milestoneNextImage.image = UIImage(named: imageName)
         }
     }
     

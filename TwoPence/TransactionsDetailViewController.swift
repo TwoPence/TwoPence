@@ -30,6 +30,7 @@ class TransactionsDetailViewController: UIViewController {
     
     func updateNavigationBar() {
         navigationItem.title = "Transactions"
+        self.navigationController?.navigationBar.tintColor = AppColor.Charcoal.color
         if let navigationBar = navigationController?.navigationBar {
             let pageControl = navigationBar.viewWithTag(1) as! UIPageControl
             pageControl.isHidden = true

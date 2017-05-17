@@ -16,4 +16,13 @@ class Utils: NSObject {
         gradientLayer.frame = view.frame
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    class func getMilestoneImageName(name: String) -> String {
+        var imageName = name
+        if imageName == "fifteen_hundred" || imageName == "two_thousand" {
+            imageName = "one_thousand"
+        }
+        
+        return imageName
+    }
 }

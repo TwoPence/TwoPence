@@ -321,7 +321,7 @@ open class TimelineView: UIView {
             
             let backgroundViewForImage = UIView()
             backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
-            backgroundViewForImage.backgroundColor = AppColor.PaleGray.color
+            backgroundViewForImage.backgroundColor = AppColor.MediumGreen.color
             backgroundViewForImage.layer.cornerRadius = 4
             v.addSubview(backgroundViewForImage)
             v.addConstraints([

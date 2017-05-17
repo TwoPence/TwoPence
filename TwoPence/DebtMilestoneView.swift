@@ -52,11 +52,8 @@ class DebtMilestoneView: UIView {
     
         var timeframes = [TimeFrame]()
         for (index, milestone) in milestones.enumerated() {
-            if milestone.type == MilestoneType.Complete {
-                timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "gift")))
-            } else {
-                timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: #imageLiteral(resourceName: "cup")))
-            }
+            let imageName = Utils.getMilestoneImageName(name: milestone.imageName)
+            timeframes.append(TimeFrame(text: milestone.milestoneSubTitle, date: milestone.milestoneTitle, debtMilestone: milestone, debtMilestonePosition: index, image: UIImage(named: imageName)))
         }
         
         timeline = TimelineView(bulletType: .circle, timeFrames: timeframes, onTap: onTapMilestoneItem)

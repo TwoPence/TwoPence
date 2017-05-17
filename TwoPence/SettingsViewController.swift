@@ -65,7 +65,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") as! SettingsCell
             cell.settingOptionName.text = menuOptions[indexPath.section][indexPath.row]["name"]
             if indexPath.section == 1 {
-                cell.imageView?.image = #imageLiteral(resourceName: "shape")
+                cell.imageView?.image = #imageLiteral(resourceName: "accounts")
             } else {
                 if indexPath.row == 0 {
                     cell.imageView?.image = #imageLiteral(resourceName: "shape")

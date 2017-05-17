@@ -38,7 +38,7 @@ class MilestoneCompleteView: UIView {
         super.init(frame: frame)
         initSubviews()
     }
-    
+
     func initSubviews() {
         let nib = UINib(nibName: "MilestoneCompleteView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
@@ -47,8 +47,9 @@ class MilestoneCompleteView: UIView {
 
         milestoneCompleteImage.image = #imageLiteral(resourceName: "gift_white")
         shareButton.backgroundColor = AppColor.DarkSeaGreen.color
-        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
         
+        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
+
         addSubview(contentView)
         
         UIApplication.shared.statusBarStyle = .lightContent
@@ -57,6 +58,8 @@ class MilestoneCompleteView: UIView {
     func setupViewData() {
         if let milestone = debtMilestone {
             // TODO Pass correct data
+            let imageName = Utils.getMilestoneImageName(name: milestone.imageName)
+            milestoneCompleteImage.image = UIImage(named: imageName)
             self.milestoneCompleteLabel.text = "Great job! 🙌 You have reached \(milestone.goal) milestone!!"
         }
     }
