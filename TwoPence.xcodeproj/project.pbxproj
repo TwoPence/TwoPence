@@ -85,6 +85,8 @@
 		BF8F9C531EC43B3900279E5D /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8F9C521EC43B3900279E5D /* SettingsCell.xib */; };
 		BF8F9C551EC4CC6800279E5D /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */; };
 		BF8F9C571EC4CC8000279E5D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */; };
+		BFB423131ECBC6410035E398 /* JoltSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB423121ECBC6410035E398 /* JoltSuccessView.swift */; };
+		BFB423151ECBCB790035E398 /* JoltSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB423141ECBCB790035E398 /* JoltSuccessView.xib */; };
 		BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */; };
 		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
@@ -189,6 +191,8 @@
 		BF8F9C521EC43B3900279E5D /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		BFB423121ECBC6410035E398 /* JoltSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltSuccessView.swift; sourceTree = "<group>"; };
+		BFB423141ECBCB790035E398 /* JoltSuccessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltSuccessView.xib; sourceTree = "<group>"; };
 		BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 			children = (
 				BEEF580E1EB6910B001EE950 /* JoltView.swift */,
 				BEEF58101EB69116001EE950 /* JoltView.xib */,
+				BFB423121ECBC6410035E398 /* JoltSuccessView.swift */,
+				BFB423141ECBCB790035E398 /* JoltSuccessView.xib */,
 			);
 			name = "Jolt Views";
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 				BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */,
 				BEEF58031EB64C68001EE950 /* InstitutionCell.xib in Resources */,
 				BEEF57FF1EB6497F001EE950 /* AccountDetailView.xib in Resources */,
+				BFB423151ECBCB790035E398 /* JoltSuccessView.xib in Resources */,
 				BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */,
 				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
 				BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */,
@@ -569,7 +576,6 @@
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
 				BE3F8D831EC8160A00CA6F34 /* Lato-Light.ttf in Resources */,
-				BFD41C091EC7C2A800CA2580 /* MilestoneFutureChartView.xib in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
 				BF8F9C531EC43B3900279E5D /* SettingsCell.xib in Resources */,
 				BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */,
@@ -735,6 +741,7 @@
 				BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */,
 				BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */,
 				BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */,
+				BFB423131ECBC6410035E398 /* JoltSuccessView.swift in Sources */,
 				BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */,
 				BEEF57F31EB64303001EE950 /* AccountsView.swift in Sources */,
 				BEEF57D51EB3FB1C001EE950 /* AssetView.swift in Sources */,
