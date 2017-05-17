@@ -66,6 +66,8 @@ class JoltView: UIView {
         decreaseButton.tintColor = AppColor.DarkSeaGreen.color
         joltButton.layer.cornerRadius = 4
         joltButton.backgroundColor = AppColor.DarkSeaGreen.color
+        
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func layoutSubviews() {

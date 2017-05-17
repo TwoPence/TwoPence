@@ -31,18 +31,6 @@ class AssetView: UIView {
         addSubview(contentView)
         
         headerView.backgroundColor = UIColor.clear
-        
-        setupGradientBackground()
+        Utils.setupGradientBackground(topColor: AppColor.MediumGray.color.cgColor, bottomColor: AppColor.PaleGray.color.cgColor, view: headerView)
     }
-    
-    func setupGradientBackground() {
-        let topColor = AppColor.MediumGray.color.cgColor
-        let bottomColor = AppColor.PaleGray.color.cgColor
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [topColor, bottomColor]
-        gradientLayer.locations = [0.2, 1.0]
-        gradientLayer.frame = headerView.frame
-        headerView.layer.insertSublayer(gradientLayer, at: 0)
-    }
-
 }

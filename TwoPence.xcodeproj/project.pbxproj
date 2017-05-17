@@ -87,6 +87,7 @@
 		BF8F9C571EC4CC8000279E5D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */; };
 		BFB423131ECBC6410035E398 /* JoltSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB423121ECBC6410035E398 /* JoltSuccessView.swift */; };
 		BFB423151ECBCB790035E398 /* JoltSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB423141ECBCB790035E398 /* JoltSuccessView.xib */; };
+		BFB423171ECBF6740035E398 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB423161ECBF6740035E398 /* Utils.swift */; };
 		BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */; };
 		BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */; };
 		BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */; };
@@ -193,6 +194,7 @@
 		BF8F9C561EC4CC8000279E5D /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		BFB423121ECBC6410035E398 /* JoltSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltSuccessView.swift; sourceTree = "<group>"; };
 		BFB423141ECBCB790035E398 /* JoltSuccessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltSuccessView.xib; sourceTree = "<group>"; };
+		BFB423161ECBF6740035E398 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		BFC255971EA5EA6A004FA1A8 /* TwoPence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoPence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC2559A1EA5EA6A004FA1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				BF395B741EC98203004E5D64 /* AppMessage.swift */,
 				BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */,
 				BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */,
+				BFB423161ECBF6740035E398 /* Utils.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */,
 				BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */,
 				BF8F9C511EC43AA000279E5D /* SettingsCell.swift in Sources */,
+				BFB423171ECBF6740035E398 /* Utils.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BF395B781EC98445004E5D64 /* SignoutCell.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,

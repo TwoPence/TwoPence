@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         
         //Adds the revealing splash view as a sub view
         self.view.addSubview(revealingSplashView)
-        
+
         //Starts animation
         revealingSplashView.startAnimation(){
             print("Completed")
@@ -39,7 +39,16 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    }
+    
     /*
     // MARK: - Navigation
 

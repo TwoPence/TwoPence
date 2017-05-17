@@ -59,6 +59,11 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
         futureView?.animateProgressBar = true
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+    }
+    
     /*
     // MARK: - Navigation
 

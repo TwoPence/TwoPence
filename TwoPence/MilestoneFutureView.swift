@@ -57,12 +57,14 @@ class MilestoneFutureView: UIView {
         joltButton.layer.cornerRadius = 4
         
         milestoneNextImage.image = #imageLiteral(resourceName: "cup_white")
-
-        topView.backgroundColor = AppColor.DarkSeaGreen.color
+        
+        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
         joltButton.backgroundColor = AppColor.DarkSeaGreen.color
 
         addSubview(contentView)
         setMilestoneProgressBar()
+        
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     @IBAction func onCloseTap(_ sender: Any) {

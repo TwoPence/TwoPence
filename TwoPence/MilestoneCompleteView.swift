@@ -47,9 +47,11 @@ class MilestoneCompleteView: UIView {
 
         milestoneCompleteImage.image = #imageLiteral(resourceName: "gift_white")
         shareButton.backgroundColor = AppColor.DarkSeaGreen.color
-        topView.backgroundColor = AppColor.DarkSeaGreen.color
+        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
         
         addSubview(contentView)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     func setupViewData() {
