@@ -72,7 +72,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 } else if indexPath.row == 1 {
                     cell.imageView?.image = #imageLiteral(resourceName: "linkedUserOption1")
                 } else if indexPath.row == 2 {
-                    
+                    cell.imageView?.image = #imageLiteral(resourceName: "faq")
                 } else if indexPath.row == 3 {
                     cell.imageView?.image = #imageLiteral(resourceName: "inviteAndEarn")
                 }
