@@ -12,10 +12,12 @@ import Whisper
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Initialize a revealing Splash with with the iconImage, the initial size and the background color
-        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "group_selected"),iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: AppColor.MediumGreen.color)
+        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo"),iconInitialSize: CGSize(width: 120, height: 130), backgroundColor: AppColor.MediumGreen.color)
         
         //Adds the revealing splash view as a sub view
         self.view.addSubview(revealingSplashView)
@@ -24,20 +26,12 @@ class LoginViewController: UIViewController {
         revealingSplashView.startAnimation(){
             print("Completed")
         }
-        TwoPenceAPI.sharedClient.getAggTransactions(success: { (aggTransaction) in
-            print(aggTransaction.count)
-        }) { (error) in
-            print((error.localizedDescription))
-        }
         
-        TwoPenceAPI.sharedClient.getAccounts(success: { (accounts) in
-            print(accounts.count)
-        }) { (error) in
-            // Remove me
-            let murmur = Murmur(title: "Network error with login")
-            Whisper.show(whistle: murmur, action: .show(0.5))
-            print((error.localizedDescription))
-        }
+        loginButton.backgroundColor = UIColor.clear
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        loginButton.layer.borderColor = UIColor.white.cgColor
     }
 
     override func didReceiveMemoryWarning() {

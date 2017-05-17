@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,19 +23,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoS-2g-eGf">
-                                <rect key="frame" x="168.5" y="318.5" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="36" y="598" width="303" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="59O-LR-kjw"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="qZ8-Cm-Ajb" kind="show" id="DZO-Rx-Mjb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-8R-Aiw">
+                                <rect key="frame" x="128.5" y="264" width="119" height="134"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3411764705882353" green="0.80392156862745101" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hoS-2g-eGf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FpY-UN-Yj9"/>
-                            <constraint firstItem="hoS-2g-eGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xyo-oZ-AAD"/>
+                            <constraint firstItem="hoS-2g-eGf" firstAttribute="top" secondItem="jOM-8R-Aiw" secondAttribute="bottom" constant="200" id="9vt-sc-aTn"/>
+                            <constraint firstItem="jOM-8R-Aiw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="244" id="DaA-nX-LeN"/>
+                            <constraint firstItem="hoS-2g-eGf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="SIa-8e-CEO"/>
+                            <constraint firstItem="hoS-2g-eGf" firstAttribute="centerX" secondItem="jOM-8R-Aiw" secondAttribute="centerX" id="eTo-Cd-sdE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hoS-2g-eGf" secondAttribute="trailing" constant="20" id="sUu-2q-VQb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="hoS-2g-eGf" id="yEo-NY-YkQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,7 +417,7 @@
                 <navigationController storyboardIdentifier="SettingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SaJ-Wt-4Vs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" selectedImage="settings_selected" systemItem="more" id="24w-Yq-dGA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OEY-As-ryI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OEY-As-ryI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -473,7 +488,7 @@
                 <navigationController storyboardIdentifier="AccountsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="AN2-OZ-6wY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="oSQ-Qb-Gc4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZM-1j-Y6W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JZM-1j-Y6W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -515,7 +530,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qga-2a-V9n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Milestones" image="milestoneOption3" selectedImage="milestoneOption3_selected" id="Pr4-Jh-y8B"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9D-Kh-2eh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="g9D-Kh-2eh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -533,7 +548,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Oy-J7-kFb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tGu-jb-ZtL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="tGu-jb-ZtL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -550,6 +565,7 @@
     <resources>
         <image name="heart" width="20" height="18"/>
         <image name="inviteAndEarn" width="20" height="18"/>
+        <image name="logo" width="119" height="134"/>
         <image name="milestoneOption3" width="25" height="24"/>
         <image name="milestoneOption3_selected" width="25" height="24"/>
         <image name="settings_selected" width="20" height="20"/>
