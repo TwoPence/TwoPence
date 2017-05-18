@@ -60,12 +60,20 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
         let sectionView = UIView(frame: frame)
         sectionView.backgroundColor = AppColor.PaleGray.color
         
+        let topBorder = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 1))
+        let bottomBorder = UIView(frame: CGRect(x: 0, y: sectionView.bounds.height - 1, width: tableView.bounds.width, height: 1))
+        topBorder.backgroundColor = AppColor.LightBlueGray.color
+        bottomBorder.backgroundColor = AppColor.LightBlueGray.color
+        sectionView.addSubview(topBorder)
+        sectionView.addSubview(bottomBorder)
+
         let labelFrame = CGRect(x: 16, y: 0, width: tableView.bounds.width - 16, height: sectionHeight)
         let sectionLabel = UILabel(frame: labelFrame)
         dateFormatter.dateStyle = .long
         let dateText = dateFormatter.string(from: groupedTransactions[section].date)
         sectionLabel.text = dateText.uppercased()
         sectionLabel.font = UIFont(name: AppFontName.regular, size: 11)
+        sectionLabel.textColor = AppColor.MediumGray.color
         sectionLabel.textAlignment = .left
         sectionView.addSubview(sectionLabel)
         

@@ -43,6 +43,7 @@
                     <constraint firstItem="Ffm-Om-vVb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mq1-bf-ODp"/>
                 </constraints>
             </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="amountLabel" destination="Ffm-Om-vVb" id="Wof-CR-NOr"/>
                 <outlet property="dateLabel" destination="7vD-lM-COl" id="EWp-lP-9R6"/>

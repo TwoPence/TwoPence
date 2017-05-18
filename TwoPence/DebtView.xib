@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,14 +20,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DebtView" customModule="TwoPence" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="fFA-o1-9Ho"/>
+                <outlet property="footerLabel" destination="2V6-kh-zdG" id="u59-Ng-B5x"/>
                 <outlet property="headerView" destination="spB-q5-eLa" id="w8W-I0-0I0"/>
                 <outlet property="horizontalDividerView" destination="N60-PC-vEW" id="vgG-fG-awY"/>
                 <outlet property="joltButton" destination="yd2-K9-GkZ" id="bxY-yh-pxK"/>
+                <outlet property="joltMessageLabel" destination="53s-7f-UJb" id="3cB-iO-RyD"/>
                 <outlet property="joltView" destination="Kg8-di-ut4" id="SyI-Yt-xqL"/>
+                <outlet property="withTPAmountLabel" destination="SXT-og-5Yu" id="frQ-7e-aY4"/>
                 <outlet property="withTPBarContainer" destination="Omd-Rf-AMR" id="rJi-p3-A5Z"/>
-                <outlet property="withTPLabel" destination="SXT-og-5Yu" id="eDN-jj-dHe"/>
+                <outlet property="withTPLabel" destination="xgT-h7-mEz" id="m1Z-n0-7LA"/>
+                <outlet property="withoutTPAmountLabel" destination="OgM-Qd-JNm" id="j5l-Y9-3jp"/>
                 <outlet property="withoutTPBarContainer" destination="nWl-Ph-ZxP" id="e6F-ls-haC"/>
-                <outlet property="withoutTPLabel" destination="OgM-Qd-JNm" id="wyt-g5-Xky"/>
+                <outlet property="withoutTPLabel" destination="Ysf-HZ-4PN" id="rQC-El-3a7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,14 +42,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7a-QJ-8tw" userLabel="Footer View">
                     <rect key="frame" x="0.0" y="400" width="375" height="267"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL DAYS UNTIL DEBT FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V6-kh-zdG">
-                            <rect key="frame" x="16" y="16" width="185.5" height="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME UNTIL DEBT FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V6-kh-zdG">
+                            <rect key="frame" x="20" y="16" width="141.5" height="16"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With TwoPence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgT-h7-mEz">
-                            <rect key="frame" x="16" y="56" width="90" height="16"/>
+                            <rect key="frame" x="20" y="56" width="90" height="16"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -57,7 +61,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXT-og-5Yu">
-                            <rect key="frame" x="342.5" y="52.5" width="12" height="24"/>
+                            <rect key="frame" x="342.5" y="48" width="12" height="24"/>
                             <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -77,7 +81,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgM-Qd-JNm">
-                            <rect key="frame" x="342.5" y="112" width="12" height="24"/>
+                            <rect key="frame" x="342.5" y="108" width="12" height="24"/>
                             <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -85,11 +89,11 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Omd-Rf-AMR" firstAttribute="top" secondItem="SXT-og-5Yu" secondAttribute="bottom" constant="4" id="FTh-n1-zi6"/>
+                        <constraint firstItem="SXT-og-5Yu" firstAttribute="bottom" secondItem="xgT-h7-mEz" secondAttribute="bottom" id="GnJ-h4-jNg"/>
                         <constraint firstItem="xgT-h7-mEz" firstAttribute="leading" secondItem="2V6-kh-zdG" secondAttribute="leading" id="Hnq-Wj-UZd"/>
                         <constraint firstAttribute="trailing" secondItem="nWl-Ph-ZxP" secondAttribute="trailing" constant="20" id="INF-2b-hbg"/>
-                        <constraint firstItem="2V6-kh-zdG" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="16" id="RII-Vf-I5J"/>
-                        <constraint firstItem="nWl-Ph-ZxP" firstAttribute="top" secondItem="OgM-Qd-JNm" secondAttribute="bottom" constant="4" id="TPX-OY-YqZ"/>
+                        <constraint firstItem="2V6-kh-zdG" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="20" id="RII-Vf-I5J"/>
+                        <constraint firstItem="nWl-Ph-ZxP" firstAttribute="top" secondItem="Ysf-HZ-4PN" secondAttribute="bottom" constant="8" id="YCY-Ld-4CE"/>
                         <constraint firstAttribute="trailing" secondItem="OgM-Qd-JNm" secondAttribute="trailing" constant="20" id="drs-Lb-7Wx"/>
                         <constraint firstItem="nWl-Ph-ZxP" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="20" id="hkW-FP-siX"/>
                         <constraint firstAttribute="trailing" secondItem="Omd-Rf-AMR" secondAttribute="trailing" constant="20" id="hle-WD-agT"/>
@@ -97,10 +101,10 @@
                         <constraint firstItem="Ysf-HZ-4PN" firstAttribute="top" secondItem="Omd-Rf-AMR" secondAttribute="bottom" constant="24" id="kY3-A0-19o"/>
                         <constraint firstItem="xgT-h7-mEz" firstAttribute="top" secondItem="2V6-kh-zdG" secondAttribute="bottom" constant="24" id="l9s-pc-VFE"/>
                         <constraint firstItem="Ysf-HZ-4PN" firstAttribute="leading" secondItem="Omd-Rf-AMR" secondAttribute="leading" id="nit-M8-mxf"/>
-                        <constraint firstItem="OgM-Qd-JNm" firstAttribute="centerY" secondItem="Ysf-HZ-4PN" secondAttribute="centerY" id="p5k-F2-ojd"/>
-                        <constraint firstItem="SXT-og-5Yu" firstAttribute="centerY" secondItem="xgT-h7-mEz" secondAttribute="centerY" id="rFY-V7-etj"/>
+                        <constraint firstItem="Omd-Rf-AMR" firstAttribute="top" secondItem="xgT-h7-mEz" secondAttribute="bottom" constant="8" id="ody-gy-wjG"/>
                         <constraint firstAttribute="trailing" secondItem="SXT-og-5Yu" secondAttribute="trailing" constant="20" id="s1T-n8-NNe"/>
                         <constraint firstItem="Omd-Rf-AMR" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="20" id="tUl-Rw-kd7"/>
+                        <constraint firstItem="OgM-Qd-JNm" firstAttribute="bottom" secondItem="Ysf-HZ-4PN" secondAttribute="bottom" id="ydI-Xa-8P8"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spB-q5-eLa" userLabel="Header View">
@@ -114,7 +118,7 @@
                     <rect key="frame" x="0.0" y="340" width="375" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-K9-GkZ">
-                            <rect key="frame" x="299" y="15" width="60" height="30"/>
+                            <rect key="frame" x="295" y="15" width="60" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="SNg-1k-UzY"/>
                                 <constraint firstAttribute="width" constant="60" id="w2A-X6-Dx4"/>
@@ -128,7 +132,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've spent less than usual this month. Jolt to save your extra cash!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53s-7f-UJb">
-                            <rect key="frame" x="16" y="12" width="251" height="36"/>
+                            <rect key="frame" x="20" y="12" width="243" height="36"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -139,8 +143,8 @@
                         <constraint firstAttribute="height" constant="60" id="EyF-Y3-f2s"/>
                         <constraint firstItem="yd2-K9-GkZ" firstAttribute="centerY" secondItem="Kg8-di-ut4" secondAttribute="centerY" id="JRw-pn-1fn"/>
                         <constraint firstItem="yd2-K9-GkZ" firstAttribute="centerY" secondItem="53s-7f-UJb" secondAttribute="centerY" id="Kn7-sf-cYL"/>
-                        <constraint firstAttribute="trailing" secondItem="yd2-K9-GkZ" secondAttribute="trailing" constant="16" id="TKw-nn-xem"/>
-                        <constraint firstItem="53s-7f-UJb" firstAttribute="leading" secondItem="Kg8-di-ut4" secondAttribute="leading" constant="16" id="XDb-ym-q07"/>
+                        <constraint firstAttribute="trailing" secondItem="yd2-K9-GkZ" secondAttribute="trailing" constant="20" id="TKw-nn-xem"/>
+                        <constraint firstItem="53s-7f-UJb" firstAttribute="leading" secondItem="Kg8-di-ut4" secondAttribute="leading" constant="20" id="XDb-ym-q07"/>
                         <constraint firstItem="yd2-K9-GkZ" firstAttribute="leading" secondItem="53s-7f-UJb" secondAttribute="trailing" constant="32" id="ifn-ka-cUy"/>
                     </constraints>
                 </view>

@@ -31,6 +31,9 @@ class TransactionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        merchantLabel.textColor = AppColor.Charcoal.color
+        amountLabel.textColor = AppColor.Charcoal.color
+        amountSavedLabel.textColor = AppColor.Charcoal.color
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

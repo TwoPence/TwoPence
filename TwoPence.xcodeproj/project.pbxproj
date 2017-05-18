@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		11B828FE3F8065EA1143B368 /* Pods_TwoPenceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */; };
 		433E021548F1500E56357705 /* Pods_TwoPence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */; };
+		BE09ABCF1ECC085000EEE0C7 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */; };
+		BE09ABD11ECCE79800EEE0C7 /* ArcherPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */; };
 		BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1983531EBD08C60059F716 /* PendingTransferCell.swift */; };
 		BE1983561EBD08C60059F716 /* PendingTransferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1983541EBD08C60059F716 /* PendingTransferCell.xib */; };
 		BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1983571EBD0A230059F716 /* MatchedCell.swift */; };
@@ -114,6 +116,8 @@
 		AFF19F0EAE0D429842E3D9E7 /* Pods-TwoPence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPence.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPence/Pods-TwoPence.release.xcconfig"; sourceTree = "<group>"; };
 		B95380FACD16431EF605C997 /* Pods-TwoPenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPenceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArcherPro-Bold.otf"; sourceTree = "<group>"; };
 		BE1983531EBD08C60059F716 /* PendingTransferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTransferCell.swift; sourceTree = "<group>"; };
 		BE1983541EBD08C60059F716 /* PendingTransferCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingTransferCell.xib; sourceTree = "<group>"; };
 		BE1983571EBD0A230059F716 /* MatchedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedCell.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 		BE3F8D7F1EC5005900CA6F34 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */,
 				BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */,
 				BE3F8D821EC8160A00CA6F34 /* Lato-Light.ttf */,
 			);
@@ -392,6 +397,7 @@
 				BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */,
 				BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */,
 				BFB423161ECBF6740035E398 /* Utils.swift */,
+				BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -413,10 +419,10 @@
 				BEEF57D81EB52DC1001EE950 /* DebtMilestoneView.swift */,
 				BEEF57DA1EB52DCE001EE950 /* DebtMilestoneView.xib */,
 				BFBD3AFF1EB7032100A7F767 /* TimelineView.swift */,
-				BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */,
 				BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */,
-				BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */,
+				BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */,
 				BF38F9E51EBEE050002AA6C0 /* MilestoneFutureView.swift */,
+				BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */,
 				BF38F9E71EBF9F4D002AA6C0 /* SAConfettiView.swift */,
 			);
 			name = "Milestone Views";
@@ -589,6 +595,7 @@
 				BFC255A01EA5EA6A004FA1A8 /* Main.storyboard in Resources */,
 				BE1983561EBD08C60059F716 /* PendingTransferCell.xib in Resources */,
 				BF8F9C551EC4CC6800279E5D /* ProfileCell.xib in Resources */,
+				BE09ABD11ECCE79800EEE0C7 /* ArcherPro-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +747,7 @@
 				BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */,
 				BE3F8D691EC3994900CA6F34 /* DebtHeaderView.swift in Sources */,
 				BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */,
+				BE09ABCF1ECC085000EEE0C7 /* IntExtensions.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
 				BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */,

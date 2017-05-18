@@ -118,7 +118,7 @@ class JoltView: UIView {
         let customView = UIView(frame: rect)
         
         let label = UILabel(frame: CGRect(x: customView.center.x, y: customView.center.y, width: customView.frame.width, height: customView.frame.height/3))
-        label.text = "TwoPence will debit \(amountLabel.text ?? "$0") from your bank account."
+        label.text = "TwoPence will debit \(amountLabel.text ?? "$0") from your account"
         label.center = customView.center
         label.center.x = customView.center.x
         label.center.y = customView.center.y
@@ -143,9 +143,15 @@ class JoltView: UIView {
     
     func showSuccessView(){
         let joltSuccessVc = JoltSuccessView(nibName: "JoltSuccessView", bundle: nil)
-        joltSuccessVc.successMessage = "Congratulations! \n \n \n You have successfully added \(amountLabel.text ?? "$0")!"
+        joltSuccessVc.successMessage = "Congratulations! \n \n \n You successfully saved \(amountLabel.text ?? "$0")!"
         let popup = PopupDialog(viewController: joltSuccessVc, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: false)
 
+        let buttonAppearance = DefaultButton.appearance()
+        buttonAppearance.buttonColor = AppColor.DarkSeaGreen.color
+        buttonAppearance.titleFont = UIFont(name: AppFontName.regular, size: 17)!
+        buttonAppearance.titleColor = UIColor.white
+        buttonAppearance.separatorColor = AppColor.MediumGreen.color
+        
         let buttonOne = DefaultButton(title: "Done") {
             self.delegate?.didCompleteJolt?(completed: true)
         }

@@ -35,7 +35,7 @@ class TransactionsDetailViewController: UIViewController {
             let pageControl = navigationBar.viewWithTag(1) as! UIPageControl
             pageControl.isHidden = true
             navigationBar.titleTextAttributes = [
-                NSForegroundColorAttributeName : UIColor.black,
+                NSForegroundColorAttributeName : AppColor.Charcoal.color,
                 NSFontAttributeName : UIFont(name: AppFontName.regular, size: 17)!
             ]
         }

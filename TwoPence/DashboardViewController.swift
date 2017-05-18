@@ -1,4 +1,4 @@
-//
+
 //  DashboardViewController.swift
 //  TwoPence
 //
@@ -49,6 +49,7 @@ class DashboardViewController: UIViewController {
             navigationBar.addSubview(pageControl)
             navigationItem.title = "Savings"
             
+            navigationBar.tintColor = AppColor.Charcoal.color
             navigationBar.backIndicatorImage = UIImage(named: "left_chevron")
             navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left_chevron")
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)

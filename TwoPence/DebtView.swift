@@ -19,8 +19,14 @@ class DebtView: UIView {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var horizontalDividerView: UIView!
     @IBOutlet weak var joltView: UIView!
+    @IBOutlet weak var joltMessageLabel: UILabel!
+    @IBOutlet weak var footerLabel: UILabel!
+    
     @IBOutlet weak var withTPLabel: UILabel!
     @IBOutlet weak var withoutTPLabel: UILabel!
+    @IBOutlet weak var withTPAmountLabel: UILabel!
+    @IBOutlet weak var withoutTPAmountLabel: UILabel!
+    
     @IBOutlet weak var withTPBarContainer: UIView!
     @IBOutlet weak var withoutTPBarContainer: UIView!
     @IBOutlet weak var joltButton: UIButton!
@@ -30,12 +36,19 @@ class DebtView: UIView {
     var userFinMetrics: UserFinMetrics? {
         didSet {
             debtHeaderView.userFinMetrics = userFinMetrics
-            setupProgress()
+            setupProgressBars()
         }
     }
     var debtHeaderView: DebtHeaderView!
     var withTPProgressBar: CustomProgressBar!
     var withoutTPProgressBar: CustomProgressBar!
+    var firstScrolled: Bool = false {
+        didSet {
+            if firstScrolled {
+                fillProgress()
+            }
+        }
+    }
     var withTPRatio: Float = 0
     var withoutTPRatio: Float = 0
     
@@ -56,13 +69,19 @@ class DebtView: UIView {
         addSubview(contentView)
         
         horizontalDividerView.backgroundColor = AppColor.MediumGreen.color
+        joltMessageLabel.textColor = UIColor.white
+        footerLabel.textColor = AppColor.MediumGray.color
+        withTPLabel.textColor = AppColor.DarkGray.color
+        withTPAmountLabel.textColor = AppColor.DarkGray.color
+        withoutTPLabel.textColor = AppColor.DarkGray.color
+        withoutTPAmountLabel.textColor = AppColor.DarkGray.color
+        
+        setupJoltButton()
         setupGradientBackgroud()
         
         debtHeaderView = DebtHeaderView()
         headerView.addSubview(debtHeaderView)
         contentView.sendSubview(toBack: headerView)
-        
-        setupJoltButton()
     }
     
     override func layoutSubviews() {
@@ -84,27 +103,25 @@ class DebtView: UIView {
     }
     
     func setupJoltButton() {
-        joltButton.backgroundColor = AppColor.PaleGreen.color
+        joltButton.backgroundColor = AppColor.LightGreen.color
         joltButton.layer.cornerRadius = 5
         joltButton.layer.borderWidth = 1
         joltButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         joltButton.layer.borderColor = UIColor.white.cgColor
     }
 
-    func setupProgress() {
-        layoutProgressBars()
-        
+    func fillProgress() {
         if let userFinMetrics = userFinMetrics {
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
             numberFormatter.maximumFractionDigits = 0
             
             let withTPDaysFormatted = numberFormatter.string(from: userFinMetrics.loanTermInDaysWithTp as NSNumber)
-            withTPLabel.text = "\(withTPDaysFormatted!)"
+            withTPAmountLabel.text = "\(withTPDaysFormatted!) days"
             withTPRatio = Float(userFinMetrics.loanTermInDaysWithTp) / Float(userFinMetrics.loanTermInDaysAtEnrollment)
             
             let withoutTPDaysFormatted = numberFormatter.string(from: userFinMetrics.loanTermInDaysWithoutTp as NSNumber)
-            withoutTPLabel.text = "\(withoutTPDaysFormatted!)"
+            withoutTPAmountLabel.text = "\(withoutTPDaysFormatted!) days"
             withoutTPRatio = Float(userFinMetrics.loanTermInDaysWithoutTp) / Float(userFinMetrics.loanTermInDaysAtEnrollment)
         }
         
@@ -116,7 +133,7 @@ class DebtView: UIView {
     }
     
     
-    func layoutProgressBars() {
+    func setupProgressBars() {
         withTPProgressBar = CustomProgressBar(width: withTPBarContainer.bounds.width, height: withTPBarContainer.bounds.height)
         withTPBarContainer.addSubview(withTPProgressBar)
         withTPProgressBar.configure()

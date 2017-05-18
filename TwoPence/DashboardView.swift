@@ -98,6 +98,9 @@ extension DashboardView: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
         delegate?.changePage(page: page)
+        if page == 1 {
+            debtView.firstScrolled = true
+        }
     }
 }
 

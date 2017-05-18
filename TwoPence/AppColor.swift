@@ -18,16 +18,9 @@ enum AppColor: UInt32 {
     case PaleGray = 0xf4f5f6
     case Red = 0xd14836
     
-//    case SplashColor = 0x239964
-//    case Charcoal = 0x1D2323
-//    case LightGray = 0x939FAE
-//    case ExtraLightGray = 0xF4F5F6
-//    case DarkGreen = 0x34AB74
-//    case DarkMint = 0x57CD90
-//    case LightGreen = 0x42B580
-//    case TwoPenceGreen = 0x169B62
-//    case ProgressBar = 0x36C19E
-//    case PaleRed = 0xd14836
+    case DarkGray = 0x383A35
+    case LightGreen = 0x42B580
+    case LightBlueGray = 0xD0DBE6
 
     var color: UIColor {
         return UIColor(hex: rawValue)

@@ -12,6 +12,7 @@ struct AppFontName {
     static let regular = "Lato-Regular"
     static let bold = "Lato-Regular"
     static let italic = "Lato-Regular"
+    static let light = "Lato-Light"
 }
 
 extension UIFont {
@@ -26,6 +27,10 @@ extension UIFont {
     
     class func myItalicSystemFont(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: AppFontName.italic, size: size)!
+    }
+    
+    class func myLightSystemFont(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: AppFontName.light, size: size)!
     }
     
     convenience init(myCoder aDecoder: NSCoder) {

@@ -39,8 +39,8 @@ class DebtHeaderView: UIView {
         contentView.frame = bounds
         addSubview(contentView)
         
-        verticalDividerView.backgroundColor = AppColor.DarkSeaGreen.color
-        horizontalDividerView.backgroundColor = AppColor.DarkSeaGreen.color
+        verticalDividerView.backgroundColor = AppColor.MediumGreen.color
+        horizontalDividerView.backgroundColor = AppColor.MediumGreen.color
         
         loanRepaidDeltaLabel.alpha = 0.0
         interestAvoidedDeltaLabel.alpha = 0.0
@@ -49,37 +49,30 @@ class DebtHeaderView: UIView {
     
     var userFinMetrics: UserFinMetrics? {
         didSet {
-            if let loanRepaid = userFinMetrics?.loanRepaid {
-                self.loanRepaidLabel.text = "\(loanRepaid)"
+            if let userFinMetrics = userFinMetrics {
+                loanRepaidLabel.text = "\(userFinMetrics.loanRepaid)"
+                interestAvoidedLabel.text = "\(userFinMetrics.interestAvoided)"
+                daysOffLabel.text = userFinMetrics.daysOffLoanTerm.toLCD()
             }
-            if let interestAvoided = userFinMetrics?.interestAvoided {
-                self.interestAvoidedLabel.text = "\(interestAvoided)"
-            }
-            if let daysOff = userFinMetrics?.daysOffLoanTerm {
-                self.daysOffLabel.text = "\(daysOff)"
-            }
-            self.layoutIfNeeded()
         }
     }
     
     var loanRepaidDelta: Money? {
         didSet {
-            if let loan = userFinMetrics?.loanRepaid {
-                loanRepaidLabel.text = "\(loan.adding(loanRepaidDelta!))"
+            if let userFinMetrics = userFinMetrics {
+                loanRepaidLabel.text = "\(userFinMetrics.loanRepaid.adding(loanRepaidDelta!))"
                 loanRepaidDeltaLabel.text = "+\(loanRepaidDelta!)"
                 loanRepaidDeltaLabel.alpha = 1.0
-                self.layoutIfNeeded()
             }
         }
     }
     
     var interestAvoidedDelta: Money? {
         didSet {
-            if let interest = userFinMetrics?.interestAvoided {
-                interestAvoidedLabel.text = "\(interest.adding(interestAvoidedDelta!))"
+            if let userFinMetrics = userFinMetrics {
+                interestAvoidedLabel.text = "\(userFinMetrics.interestAvoided.adding(interestAvoidedDelta!))"
                 interestAvoidedDeltaLabel.text = "+\(interestAvoidedDelta!)"
                 interestAvoidedDeltaLabel.alpha = 1.0
-                self.layoutIfNeeded()
             }
         }
         
@@ -87,12 +80,12 @@ class DebtHeaderView: UIView {
     
     var daysOffDelta: Int? {
         didSet {
-            if let days = userFinMetrics?.daysOffLoanTerm {
-                daysOffLabel.text = "\(days + daysOffDelta!)"
-                let descriptor = daysOffDelta == 1 ? "day" : "days"
-                daysOffDeltaLabel.text = "+\(daysOffDelta!) \(descriptor)"
+            if let userFinMetrics = userFinMetrics {
+                let newDays = userFinMetrics.daysOffLoanTerm + daysOffDelta!
+                daysOffLabel.text = "\(newDays.toLCD())"
+                let units = daysOffDelta == 1 ? "day" : "days"
+                daysOffDeltaLabel.text = "+\(daysOffDelta!) \(units)"
                 daysOffDeltaLabel.alpha = 1.0
-                self.layoutIfNeeded()
             }
         }
     }

@@ -11,8 +11,8 @@ import UIKit
 class CustomProgressBar: UIView {
     
     var viewCornerRadius : CGFloat = 5
-    var color = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.00).cgColor
-    var progressColor = UIColor(red:0.17, green:0.76, blue:0.62, alpha:1.00).cgColor
+    var color = AppColor.PaleGray.color.cgColor
+    var progressColor = AppColor.DarkSeaGreen.color.cgColor
     var borderLayer = CAShapeLayer()
     var progressLayer = CAShapeLayer()
     

@@ -279,7 +279,12 @@ open class TimelineView: UIView {
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont(name: AppFontName.regular, size: 17)
-        titleLabel.textColor = titleLabelColor
+        // Set Future milestone title to Gray to reflect disabled.
+        if element.debtMilestone.type == .Future {
+            titleLabel.textColor = AppColor.MediumGray.color
+        } else {
+            titleLabel.textColor = titleLabelColor
+        }
         titleLabel.text = element.date
         titleLabel.numberOfLines = 0
         titleLabel.layer.masksToBounds = false
@@ -321,7 +326,11 @@ open class TimelineView: UIView {
             
             let backgroundViewForImage = UIView()
             backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
-            backgroundViewForImage.backgroundColor = AppColor.MediumGreen.color
+            if element.debtMilestone.type == .Complete {
+                backgroundViewForImage.backgroundColor = AppColor.MediumGreen.color
+            } else {
+                backgroundViewForImage.backgroundColor = AppColor.PaleGray.color
+            }
             backgroundViewForImage.layer.cornerRadius = 4
             v.addSubview(backgroundViewForImage)
             v.addConstraints([

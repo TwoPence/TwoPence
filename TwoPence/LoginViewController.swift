@@ -12,7 +12,10 @@ import Whisper
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var twoLabel: UILabel!
+    @IBOutlet weak var penceLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +30,26 @@ class LoginViewController: UIViewController {
             print("Completed")
         }
         
+        formatDisplay()
+    }
+    
+    func formatDisplay() {
+        twoLabel.textColor = AppColor.DarkSeaGreen.color
+        penceLabel.textColor = UIColor.white
+        
+        signUpButton.backgroundColor = UIColor.white
+        signUpButton.layer.cornerRadius = 4
+        signUpButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        signUpButton.titleLabel?.textColor = UIColor.red
+        signUpButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
+        
         loginButton.backgroundColor = UIColor.clear
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
         loginButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         loginButton.layer.borderColor = UIColor.white.cgColor
+        loginButton.titleLabel?.textColor = UIColor.white
+        loginButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
     }
 
     override func didReceiveMemoryWarning() {

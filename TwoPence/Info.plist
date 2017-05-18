@@ -29,6 +29,7 @@
 	<array>
 		<string>Lato-Regular.ttf</string>
 		<string>Lato-Light.ttf</string>
+		<string>ArcherPro-Bold.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

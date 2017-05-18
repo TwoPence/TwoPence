@@ -54,15 +54,26 @@ class MilestoneFutureView: UIView {
         let nib = UINib(nibName: "MilestoneFutureView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
-        joltButton.layer.cornerRadius = 4
-        
-        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
-        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
-
         addSubview(contentView)
+        
+        Utils.setupGradientBackground(topColor: AppColor.MediumGray.color.cgColor, bottomColor: AppColor.PaleGray.color.cgColor, view: topView)
+        formatDisplay()
         setMilestoneProgressBar()
         
         UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    func formatDisplay() {
+        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
+        joltButton.layer.cornerRadius = 4
+        joltButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
+        joltButton.titleLabel?.textColor = UIColor.white
+        currentValue.textColor = AppColor.Charcoal.color
+        currentValue.font = UIFont(name: AppFontName.light, size: 28)
+        goalValue.textColor = AppColor.MediumGray.color
+        goalValue.font = UIFont(name: AppFontName.regular, size: 15)
+        milestoneFutureLabel.textColor = AppColor.Charcoal.color
+        milestoneFutureLabel.font = UIFont(name: AppFontName.regular, size: 17)
     }
     
     @IBAction func onCloseTap(_ sender: Any) {

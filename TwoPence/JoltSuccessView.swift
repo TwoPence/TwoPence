@@ -15,7 +15,10 @@ class JoltSuccessView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.successTextLabel.text = successMessage
+        view.backgroundColor = AppColor.DarkSeaGreen.color
+        successTextLabel.textColor = UIColor.white
+        successTextLabel.font = UIFont(name: AppFontName.regular, size: 17)
+        successTextLabel.text = successMessage
     }
     
     override func didReceiveMemoryWarning() {

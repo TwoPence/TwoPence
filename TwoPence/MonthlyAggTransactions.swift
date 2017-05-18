@@ -42,7 +42,7 @@ class MonthlyAggTransactions {
         let months = Set<String>(allMonths)
         
         for month in months {
-            let amounts = aggTransactions.filter({$0.month == month}).map({$0.amount}) as! [Money]
+            let amounts = aggTransactions.filter({$0.month == month}).map({$0.amount}) as [Money]
             let total = amounts.reduce(0, +)
             monthlyTotals.append(MonthlyAggTransactions(month: month, amount: total))
         }
