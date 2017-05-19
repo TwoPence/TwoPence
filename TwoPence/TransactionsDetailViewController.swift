@@ -14,16 +14,14 @@ class TransactionsDetailViewController: UIViewController {
     
     var transactions: [Transaction]?
     var groupedTransactions: [(date: Date, transactions: [Transaction])]?
-    var editable: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         automaticallyAdjustsScrollViewInsets = false
         
-        if groupedTransactions != nil && editable != nil {
+        if groupedTransactions != nil {
             contentView.groupedTransactions = groupedTransactions!
-            contentView.editable = editable!
         }
         updateNavigationBar()
     }

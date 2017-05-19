@@ -11,7 +11,7 @@ import Money
 
 protocol SavingsViewDelegate {
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])])
 }
 
 class SavingsView: UIView, JoltViewDelegate {
@@ -212,8 +212,7 @@ extension SavingsView: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let row = filtered[indexPath.section].aggTransactions[indexPath.row]
         let groupedTrans = Transaction.groupByDate(transactions: row.transactions)
-        let editable = (row.aggType == .Pending) ? true : false
-        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: groupedTrans, editable: editable)
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: groupedTrans)
     }
     
     // -------------------- Begin Methods for Resizing Header --------------------

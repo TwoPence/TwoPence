@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class TransactionCell: UITableViewCell {
+class TransactionCell: SwipeTableViewCell {
     
     @IBOutlet weak var merchantLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -17,8 +18,17 @@ class TransactionCell: UITableViewCell {
     var transaction: Transaction! {
         didSet {
             merchantLabel.text = transaction.merchant
-            amountLabel.text = "\(transaction.amount!)"
-            amountSavedLabel.text = "\(transaction.amountSaved!)"
+            amountLabel.text = "\(transaction.amount) spent"
+            amountSavedLabel.text = "\(transaction.amountSaved)"
+            if transaction.status == .Skipped {
+                merchantLabel.textColor = AppColor.MediumGray.color
+                amountLabel.textColor = AppColor.MediumGray.color
+                amountSavedLabel.textColor = AppColor.MediumGray.color
+            } else {
+                merchantLabel.textColor = AppColor.Charcoal.color
+                amountLabel.textColor = AppColor.Charcoal.color
+                amountSavedLabel.textColor = AppColor.Charcoal.color
+            }
         }
     }
     

@@ -13,8 +13,6 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var contentView: DashboardView!
     
     var userFinMetrics: UserFinMetrics?
-    var groupedTransactions: [(date: Date, transactions: [Transaction])]?
-    var editable: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,8 +90,8 @@ class DashboardViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TransactionsDetailViewController {
             let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
+            let groupedTransactions = sender as! [(date: Date, transactions: [Transaction])]
             transactionsDetailViewController.groupedTransactions = groupedTransactions
-            transactionsDetailViewController.editable = editable
             
         } else if segue.destination is JoltViewController {
             let joltViewController = segue.destination as! JoltViewController
@@ -110,10 +108,8 @@ extension DashboardViewController: DashboardViewDelegate {
         }
     }
 
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool) {
-        self.groupedTransactions = selectedTransactions
-        self.editable = editable
-        self.performSegue(withIdentifier: "TransactionsSegue", sender: nil)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])]) {
+        self.performSegue(withIdentifier: "TransactionsSegue", sender: selectedTransactions)
     }
     
     func changePage(page: Int) {

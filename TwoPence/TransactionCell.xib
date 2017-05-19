@@ -43,13 +43,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU9-Dy-qBZ">
-                        <rect key="frame" x="20" y="45" width="33" height="16"/>
-                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udN-zb-rTZ">
-                        <rect key="frame" x="56" y="45" width="32" height="16"/>
+                        <rect key="frame" x="20" y="45" width="34" height="16"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -60,11 +54,9 @@
                     <constraint firstAttribute="trailingMargin" secondItem="dBO-xz-NTM" secondAttribute="trailing" constant="20" id="88M-JV-Nf2"/>
                     <constraint firstItem="dBO-xz-NTM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lw1-f7-JPW" secondAttribute="trailing" constant="16" id="Gbs-Yd-JZk"/>
                     <constraint firstItem="DU9-Dy-qBZ" firstAttribute="top" secondItem="Lw1-f7-JPW" secondAttribute="bottom" constant="8" id="H3I-Yu-UTW"/>
-                    <constraint firstItem="udN-zb-rTZ" firstAttribute="leading" secondItem="DU9-Dy-qBZ" secondAttribute="trailing" constant="3" id="Ibp-T1-gsK"/>
                     <constraint firstItem="dBO-xz-NTM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lcs-vo-Xtb"/>
                     <constraint firstItem="Lw1-f7-JPW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="aSd-PI-3ol"/>
                     <constraint firstItem="Lw1-f7-JPW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="beb-kH-9LH"/>
-                    <constraint firstItem="udN-zb-rTZ" firstAttribute="centerY" secondItem="DU9-Dy-qBZ" secondAttribute="centerY" id="bfv-5m-hzH"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="DU9-Dy-qBZ" secondAttribute="bottom" constant="14" id="crr-RP-aj0"/>
                 </constraints>
             </tableViewCellContentView>

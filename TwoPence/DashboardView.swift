@@ -12,7 +12,7 @@ protocol DashboardViewDelegate {
     
     func didTapJoltButton(didTap: Bool)
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])])
     
     func changePage(page: Int)
 }
@@ -106,8 +106,8 @@ extension DashboardView: UIScrollViewDelegate {
 
 extension DashboardView: SavingsViewDelegate {
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], editable: Bool) {
-        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: selectedTransactions, editable: editable)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])]) {
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: selectedTransactions)
     }
 
 }

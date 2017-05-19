@@ -11,6 +11,7 @@ PODS:
     - ValueCoding (~> 2)
   - PopupDialog (0.5.4)
   - RevealingSplashView (0.2.0)
+  - SwipeCellKit (1.8.0)
   - Unbox (2.4.0)
   - ValueCoding (2.1.0)
   - Whisper (5.0.0)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - Money (= 2.0.1)
   - PopupDialog (~> 0.5)
   - RevealingSplashView
+  - SwipeCellKit
   - Unbox (~> 2.4.0)
   - Whisper (~> 5.0.0)
 
@@ -36,10 +38,11 @@ SPEC CHECKSUMS:
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   RevealingSplashView: a19962358db66188841c73afd51eb663a29f75cd
+  SwipeCellKit: 01a58bf7e63d5df09aedd161828833944c4c333c
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 625ae45f4adffde7bf4f82a48d28fc1330430354
+PODFILE CHECKSUM: 9ad8df20a09898aef533067b5667927335aca41e
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

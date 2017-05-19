@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwipeCellKit
 
 class TransactionsView: UIView {
 
@@ -16,8 +17,11 @@ class TransactionsView: UIView {
     let sectionHeight: CGFloat = 25
     let dateFormatter = DateFormatter()
     
-    var groupedTransactions = [(date: Date, transactions: [Transaction])]()
-    var editable: Bool = false
+    var groupedTransactions = [(date: Date, transactions: [Transaction])]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -49,7 +53,7 @@ class TransactionsView: UIView {
     }
 }
 
-extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
+extension TransactionsView: UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return groupedTransactions.count
@@ -90,6 +94,7 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+        cell.delegate = self
         cell.transaction = groupedTransactions[indexPath.section].transactions[indexPath.row]
         cell.selectionStyle = .none
         return cell
@@ -99,26 +104,47 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        if editable {
-            let skip = UITableViewRowAction(style: .destructive, title: "Skip") { (action: UITableViewRowAction, indexPath: IndexPath) in
-                print("User tapped skip")
-                // POST call to API to update transaction status to "skipped".
-                self.groupedTransactions[indexPath.section].transactions.remove(at: indexPath.row)
-                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
-            return [skip]
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        let trans = groupedTransactions[indexPath.section].transactions[indexPath.row]
+        
+        if trans.status == .Queued {
+            guard orientation == .right else { return nil }
+            let skipAction = SwipeAction(style: .destructive, title: "Skip", handler: { (action: SwipeAction, indexPath: IndexPath) in
+                // POST status to API
+                
+                trans.status = .Skipped
+                self.groupedTransactions[indexPath.section].transactions[indexPath.row] = trans
+                let cell = tableView.cellForRow(at: indexPath) as! TransactionCell
+                cell.transaction = trans
+            })
+            skipAction.backgroundColor = AppColor.Red.color
+            skipAction.font = UIFont(name: AppFontName.regular, size: 17)
+            skipAction.textColor = UIColor.white
+            return [skipAction]
+            
+        } else if trans.status == .Skipped {
+            guard orientation == .left else { return nil }
+            let undoAction = SwipeAction(style: .default, title: "Undo", handler: { (action: SwipeAction, indexPath: IndexPath) in
+                // POST status to API
+                
+                trans.status = .Queued
+                self.groupedTransactions[indexPath.section].transactions[indexPath.row] = trans
+                let cell = tableView.cellForRow(at: indexPath) as! TransactionCell
+                cell.transaction = trans
+            })
+            undoAction.backgroundColor = UIColor.blue
+            undoAction.font = UIFont(name: AppFontName.regular, size: 17)
+            undoAction.textColor = UIColor.white
+            return [undoAction]
         } else {
             return []
         }
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        // Nothing here.
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var options = SwipeTableOptions()
+        options.expansionStyle = .selection
+        return options
     }
 
 }
