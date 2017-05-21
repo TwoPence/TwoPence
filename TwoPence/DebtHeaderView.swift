@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Money
+import EFCountingLabel
 
 class DebtHeaderView: UIView {
 
@@ -15,12 +15,12 @@ class DebtHeaderView: UIView {
     @IBOutlet weak var horizontalDividerView: UIView!
     @IBOutlet weak var verticalDividerView: UIView!
     
-    @IBOutlet weak var loanRepaidLabel: UILabel!
-    @IBOutlet weak var interestAvoidedLabel: UILabel!
+    @IBOutlet weak var loanRepaidLabel: EFCountingLabel!
+    @IBOutlet weak var interestAvoidedLabel: EFCountingLabel!
     @IBOutlet weak var daysOffLabel: UILabel!
     
-    @IBOutlet weak var loanRepaidDeltaLabel: UILabel!
-    @IBOutlet weak var interestAvoidedDeltaLabel: UILabel!
+    @IBOutlet weak var loanRepaidDeltaLabel: EFCountingLabel!
+    @IBOutlet weak var interestAvoidedDeltaLabel: EFCountingLabel!
     @IBOutlet weak var daysOffDeltaLabel: UILabel!
     
     required init(coder aDecoder: NSCoder) {
@@ -42,38 +42,58 @@ class DebtHeaderView: UIView {
         verticalDividerView.backgroundColor = AppColor.MediumGreen.color
         horizontalDividerView.backgroundColor = AppColor.MediumGreen.color
         
+        loanRepaidLabel.formatBlock = { (value) in return Double(value).money(round: true) }
+        loanRepaidDeltaLabel.formatBlock = { (value) in return Double(value).money(round: true) }
+        interestAvoidedLabel.formatBlock = { (value) in return Double(value).money() }
+        interestAvoidedDeltaLabel.formatBlock = { (value) in return Double(value).money() }
+        
         loanRepaidDeltaLabel.alpha = 0.0
         interestAvoidedDeltaLabel.alpha = 0.0
         daysOffDeltaLabel.alpha = 0.0
     }
     
+    var currentLoanRepaid: CGFloat = 0
+    var currentInterestAvoided: CGFloat = 0
+    var currentLoanRepaidDelta: CGFloat = 20
+    var currentInterestAvoidedDelta: CGFloat = 0
+    let withDuration: CFTimeInterval = 0.2
+    
     var userFinMetrics: UserFinMetrics? {
         didSet {
             if let userFinMetrics = userFinMetrics {
-                loanRepaidLabel.text = "\(userFinMetrics.loanRepaid)"
-                interestAvoidedLabel.text = "\(userFinMetrics.interestAvoided)"
+                currentLoanRepaid = CGFloat(userFinMetrics.loanRepaid)
+                currentInterestAvoided = CGFloat(userFinMetrics.interestAvoided)
+                
+                loanRepaidLabel.countFromZeroTo(currentLoanRepaid, withDuration: 0.0)
+                interestAvoidedLabel.countFromZeroTo(currentInterestAvoided, withDuration: 0.0)
                 daysOffLabel.text = userFinMetrics.daysOffLoanTerm.toLCD()
             }
         }
     }
     
-    var loanRepaidDelta: Money? {
+    var loanRepaidDelta: Double? {
         didSet {
-            if let userFinMetrics = userFinMetrics {
-                loanRepaidLabel.text = "\(userFinMetrics.loanRepaid.adding(loanRepaidDelta!))"
-                loanRepaidDeltaLabel.text = "+\(loanRepaidDelta!)"
-                loanRepaidDeltaLabel.alpha = 1.0
-            }
+            let newLoanRepaidDelta = CGFloat(loanRepaidDelta!)
+            let newLoanRepaid = currentLoanRepaid + newLoanRepaidDelta
+            
+            loanRepaidLabel.countFrom(currentLoanRepaid, to: newLoanRepaid, withDuration: withDuration)
+            loanRepaidDeltaLabel.countFrom(currentLoanRepaidDelta, to: newLoanRepaidDelta, withDuration: withDuration)
+            loanRepaidDeltaLabel.alpha = 1.0
+            
+            currentLoanRepaidDelta = newLoanRepaidDelta
         }
     }
     
-    var interestAvoidedDelta: Money? {
+    var interestAvoidedDelta: Double? {
         didSet {
-            if let userFinMetrics = userFinMetrics {
-                interestAvoidedLabel.text = "\(userFinMetrics.interestAvoided.adding(interestAvoidedDelta!))"
-                interestAvoidedDeltaLabel.text = "+\(interestAvoidedDelta!)"
-                interestAvoidedDeltaLabel.alpha = 1.0
-            }
+            let newInterestAvoidedDelta = CGFloat(interestAvoidedDelta!)
+            let newInterestAvoided = currentInterestAvoided + newInterestAvoidedDelta
+            
+            interestAvoidedLabel.countFrom(currentInterestAvoided, to: newInterestAvoided, withDuration: withDuration)
+            interestAvoidedDeltaLabel.countFrom(currentInterestAvoidedDelta, to: newInterestAvoidedDelta, withDuration: withDuration)
+            interestAvoidedDeltaLabel.alpha = 1.0
+            
+            currentInterestAvoidedDelta = newInterestAvoidedDelta
         }
         
     }

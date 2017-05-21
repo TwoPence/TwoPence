@@ -55,13 +55,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Without TwoPence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-HZ-4PN">
-                            <rect key="frame" x="20" y="116" width="109" height="16"/>
+                            <rect key="frame" x="20" y="116" width="110" height="16"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXT-og-5Yu">
-                            <rect key="frame" x="342.5" y="48" width="12" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXT-og-5Yu" customClass="EFCountingLabel" customModule="EFCountingLabel">
+                            <rect key="frame" x="313" y="48" width="12" height="24"/>
                             <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -80,8 +80,20 @@
                                 <constraint firstAttribute="height" constant="12" id="f66-cj-VyL"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgM-Qd-JNm">
-                            <rect key="frame" x="342.5" y="108" width="12" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIf-9V-jhg">
+                            <rect key="frame" x="329" y="54.5" width="26" height="16"/>
+                            <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5R-OX-bBm">
+                            <rect key="frame" x="329" y="114.5" width="26" height="16"/>
+                            <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgM-Qd-JNm" customClass="EFCountingLabel" customModule="EFCountingLabel">
+                            <rect key="frame" x="313" y="108" width="12" height="24"/>
                             <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -89,12 +101,14 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lIf-9V-jhg" secondAttribute="trailing" constant="20" id="1cW-0a-gQh"/>
+                        <constraint firstItem="lIf-9V-jhg" firstAttribute="leading" secondItem="SXT-og-5Yu" secondAttribute="trailing" constant="4" id="5Ty-Hy-S5Z"/>
                         <constraint firstItem="SXT-og-5Yu" firstAttribute="bottom" secondItem="xgT-h7-mEz" secondAttribute="bottom" id="GnJ-h4-jNg"/>
                         <constraint firstItem="xgT-h7-mEz" firstAttribute="leading" secondItem="2V6-kh-zdG" secondAttribute="leading" id="Hnq-Wj-UZd"/>
                         <constraint firstAttribute="trailing" secondItem="nWl-Ph-ZxP" secondAttribute="trailing" constant="20" id="INF-2b-hbg"/>
+                        <constraint firstItem="S5R-OX-bBm" firstAttribute="leading" secondItem="OgM-Qd-JNm" secondAttribute="trailing" constant="4" id="LUg-xi-xXl"/>
                         <constraint firstItem="2V6-kh-zdG" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="20" id="RII-Vf-I5J"/>
                         <constraint firstItem="nWl-Ph-ZxP" firstAttribute="top" secondItem="Ysf-HZ-4PN" secondAttribute="bottom" constant="8" id="YCY-Ld-4CE"/>
-                        <constraint firstAttribute="trailing" secondItem="OgM-Qd-JNm" secondAttribute="trailing" constant="20" id="drs-Lb-7Wx"/>
                         <constraint firstItem="nWl-Ph-ZxP" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="20" id="hkW-FP-siX"/>
                         <constraint firstAttribute="trailing" secondItem="Omd-Rf-AMR" secondAttribute="trailing" constant="20" id="hle-WD-agT"/>
                         <constraint firstItem="2V6-kh-zdG" firstAttribute="top" secondItem="Q7a-QJ-8tw" secondAttribute="top" constant="16" id="ilA-Zx-3mi"/>
@@ -102,8 +116,10 @@
                         <constraint firstItem="xgT-h7-mEz" firstAttribute="top" secondItem="2V6-kh-zdG" secondAttribute="bottom" constant="24" id="l9s-pc-VFE"/>
                         <constraint firstItem="Ysf-HZ-4PN" firstAttribute="leading" secondItem="Omd-Rf-AMR" secondAttribute="leading" id="nit-M8-mxf"/>
                         <constraint firstItem="Omd-Rf-AMR" firstAttribute="top" secondItem="xgT-h7-mEz" secondAttribute="bottom" constant="8" id="ody-gy-wjG"/>
-                        <constraint firstAttribute="trailing" secondItem="SXT-og-5Yu" secondAttribute="trailing" constant="20" id="s1T-n8-NNe"/>
                         <constraint firstItem="Omd-Rf-AMR" firstAttribute="leading" secondItem="Q7a-QJ-8tw" secondAttribute="leading" constant="20" id="tUl-Rw-kd7"/>
+                        <constraint firstItem="S5R-OX-bBm" firstAttribute="baseline" secondItem="OgM-Qd-JNm" secondAttribute="baseline" id="ujp-QZ-IEp"/>
+                        <constraint firstAttribute="trailing" secondItem="S5R-OX-bBm" secondAttribute="trailing" constant="20" id="uzL-eR-iVY"/>
+                        <constraint firstItem="lIf-9V-jhg" firstAttribute="baseline" secondItem="SXT-og-5Yu" secondAttribute="baseline" id="yNQ-Vx-v4t"/>
                         <constraint firstItem="OgM-Qd-JNm" firstAttribute="bottom" secondItem="Ysf-HZ-4PN" secondAttribute="bottom" id="ydI-Xa-8P8"/>
                     </constraints>
                 </view>

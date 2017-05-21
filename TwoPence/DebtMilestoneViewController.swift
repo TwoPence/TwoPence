@@ -36,6 +36,12 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Money
 
 protocol SavingsViewDelegate {
     
@@ -90,20 +89,10 @@ class SavingsView: UIView, JoltViewDelegate {
         headerHeightConstraint.constant = headerMaxHeight
         transfersLabel.textColor = AppColor.MediumGray.color
         
-        setupGradientBackground()
+        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: headerView)
 
         setupTableView()
         setupCollectionView()
-    }
-    
-    func setupGradientBackground() {
-        let topColor = AppColor.DarkSeaGreen.color.cgColor
-        let bottomColor = AppColor.MediumGreen.color.cgColor
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [topColor, bottomColor]
-        gradientLayer.locations = [0.2, 1.0]
-        gradientLayer.frame = headerView.frame
-        headerView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     func setupTableView() {
@@ -143,13 +132,13 @@ class SavingsView: UIView, JoltViewDelegate {
         let indexPath = IndexPath(row: monthlyAggTransactions.count - 1, section: 0)
         collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .right)
         
-        let allSavings = aggTransactions.map({$0.amount}) as [Money]
+        let allSavings = aggTransactions.map({$0.amount}) as [Double]
         let totalSaved = allSavings.reduce(0, +)
-        let allMatched = aggTransactions.filter({$0.aggType == .Matched}).map({$0.amount}) as [Money]
+        let allMatched = aggTransactions.filter({$0.aggType == .Matched}).map({$0.amount}) as [Double]
         let totalMatched = allMatched.reduce(0, +)
         
-        savedAmountLabel.text = "\(totalSaved)"
-        matchedAmountLabel.text = "\(totalMatched) Matched"
+        savedAmountLabel.text = totalSaved.money(round: true)
+        matchedAmountLabel.text = totalMatched.money(round: true) + " Matched"
     }
 }
 

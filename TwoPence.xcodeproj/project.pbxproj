@@ -11,6 +11,7 @@
 		433E021548F1500E56357705 /* Pods_TwoPence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */; };
 		BE09ABCF1ECC085000EEE0C7 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */; };
 		BE09ABD11ECCE79800EEE0C7 /* ArcherPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */; };
+		BE09ABD31ED0E2B400EEE0C7 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */; };
 		BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1983531EBD08C60059F716 /* PendingTransferCell.swift */; };
 		BE1983561EBD08C60059F716 /* PendingTransferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1983541EBD08C60059F716 /* PendingTransferCell.xib */; };
 		BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1983571EBD0A230059F716 /* MatchedCell.swift */; };
@@ -118,6 +119,7 @@
 		BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArcherPro-Bold.otf"; sourceTree = "<group>"; };
+		BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		BE1983531EBD08C60059F716 /* PendingTransferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTransferCell.swift; sourceTree = "<group>"; };
 		BE1983541EBD08C60059F716 /* PendingTransferCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingTransferCell.xib; sourceTree = "<group>"; };
 		BE1983571EBD0A230059F716 /* MatchedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedCell.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */,
 				BFB423161ECBF6740035E398 /* Utils.swift */,
 				BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */,
+				BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
 				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
+				BE09ABD31ED0E2B400EEE0C7 /* DoubleExtensions.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
 				BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */,
 				BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */,

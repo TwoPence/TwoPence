@@ -52,7 +52,7 @@ class CustomProgressBar: UIView {
         borderLayer.addSublayer(progressLayer)
     }
     
-    func progress(incremented: CGFloat) {
+    func progress(incremented: CGFloat, withDuration: CFTimeInterval? = nil) {
         if incremented <= bounds.width {
             let toPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: incremented, height: bounds.height), cornerRadius: viewCornerRadius)
             
@@ -62,7 +62,7 @@ class CustomProgressBar: UIView {
             let animation = CABasicAnimation(keyPath: "path")
             animation.fromValue = fromPath
             animation.toValue = toPath.cgPath
-            animation.duration = 0.5
+            animation.duration = withDuration ?? 0.5
             progressLayer.add(animation, forKey: animation.keyPath)
             
             borderLayer.addSublayer(progressLayer)

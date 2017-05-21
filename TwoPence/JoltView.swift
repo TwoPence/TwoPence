@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Money
 import PopupDialog
 
 @objc protocol JoltViewDelegate {
@@ -66,8 +65,6 @@ class JoltView: UIView {
         decreaseButton.tintColor = AppColor.DarkSeaGreen.color
         joltButton.layer.cornerRadius = 4
         joltButton.backgroundColor = AppColor.DarkSeaGreen.color
-        
-        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func layoutSubviews() {
@@ -98,7 +95,7 @@ class JoltView: UIView {
     func updateDisplay(amount: Double) {
         UIView.animate(withDuration: 0.15, animations: {
             if let computationMetrics = self.computationMetrics {
-                self.debtHeaderView.loanRepaidDelta = Money(amount)
+                self.debtHeaderView.loanRepaidDelta = amount
                 
                 let interestAvoided = ComputationMetrics.interestAvoided(computationMetrics: computationMetrics, payment: amount)
                 self.debtHeaderView.interestAvoidedDelta = interestAvoided

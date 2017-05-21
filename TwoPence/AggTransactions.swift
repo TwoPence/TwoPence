@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Money
 import Unbox
 
 enum AggType: String, UnboxableEnum {
@@ -18,15 +17,14 @@ enum AggType: String, UnboxableEnum {
 }
 
 class AggTransactions: Unboxable {
-    var amount: Money
+    var amount: Double
     var date: Date
     var month: String
     var transactions: [Transaction]
     var aggType: AggType
     
     required init(unboxer: Unboxer) throws {
-        let amountDouble: Double = try unboxer.unbox(key: "amount")
-        self.amount = Money(amountDouble)
+        self.amount = try unboxer.unbox(key: "amount")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"

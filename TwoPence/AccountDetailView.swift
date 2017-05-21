@@ -57,12 +57,12 @@ class AccountDetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return institution.accounts!.count
+        return institution.accounts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as! AccountCell
-        cell.account = institution.accounts![indexPath.row]
+        cell.account = institution.accounts[indexPath.row]
         return cell
     }
 

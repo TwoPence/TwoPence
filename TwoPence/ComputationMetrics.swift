@@ -7,26 +7,19 @@
 //
 
 import UIKit
-import Money
 import Unbox
 import Foundation
 
 class ComputationMetrics: Unboxable {
     
-    var principal: Double?
-    var monthlyPayment: Double?
-    var annualInterestRate: Double?
+    var principal: Double
+    var monthlyPayment: Double
+    var annualInterestRate: Double
     
     required init(unboxer: Unboxer) throws {
-        let principalDouble: Double = try unboxer.unbox(key: "principal")
-        self.principal = principalDouble
-        
-        let monthlyPaymentDouble: Double = try unboxer.unbox(key: "monthly_payment")
-        self.monthlyPayment = monthlyPaymentDouble
-        
-        let annualInterestRateDouble: Double = try unboxer.unbox(key: "annual_interest_rate")
-        self.annualInterestRate = annualInterestRateDouble
-        
+        self.principal = try unboxer.unbox(key: "principal")
+        self.monthlyPayment = try unboxer.unbox(key: "monthly_payment")
+        self.annualInterestRate = try unboxer.unbox(key: "annual_interest_rate")
     }
     
     class func termReductionInDays(computationMetrics: ComputationMetrics, payment: Double) -> Int {
@@ -37,11 +30,11 @@ class ComputationMetrics: Unboxable {
         return prePaymentTermInDays - postPaymentTermInDays
     }
     
-    class func interestAvoided(computationMetrics: ComputationMetrics, payment: Double) -> Money {
+    class func interestAvoided(computationMetrics: ComputationMetrics, payment: Double) -> Double {
         
         let annualPeriodDays: Double = 365.25
-        let interestRateFactor = computationMetrics.annualInterestRate! / annualPeriodDays
-        let principal = computationMetrics.principal!
+        let interestRateFactor = computationMetrics.annualInterestRate / annualPeriodDays
+        let principal = computationMetrics.principal
         let newPrincipal = principal - payment
         
         let prePaymentTermInDays = termInDays(computationMetrics: computationMetrics, payment: nil)
@@ -51,14 +44,14 @@ class ComputationMetrics: Unboxable {
         
         let interestAvoided = prePaymentCumulativeInterest - postPaymentCumulativeInterest
         
-        return Money(interestAvoided)
+        return interestAvoided
     }
     
     class func termInDays(computationMetrics: ComputationMetrics, payment: Double?) -> Int {
         let annualPeriodDays: Double = 365.25
-        let interestRateFactor = computationMetrics.annualInterestRate! / annualPeriodDays
-        let dailyPaymentEquivalent = computationMetrics.monthlyPayment! * 12.0 / annualPeriodDays
-        let principal = computationMetrics.principal!
+        let interestRateFactor = computationMetrics.annualInterestRate / annualPeriodDays
+        let dailyPaymentEquivalent = computationMetrics.monthlyPayment * 12.0 / annualPeriodDays
+        let principal = computationMetrics.principal
         let newPrincipal = principal - (payment ?? 0)
     
         let termInDays = log(-dailyPaymentEquivalent / (-dailyPaymentEquivalent + (newPrincipal * interestRateFactor))) / log(1 + interestRateFactor)

@@ -7,20 +7,16 @@
 //
 
 import UIKit
-import Money
 
 class MonthCell: UICollectionViewCell {
 
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    let moneyHandler = NSDecimalNumberHandler(roundingMode: .plain, scale: 0, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
-    
     var monthlyAggTransactions: MonthlyAggTransactions! {
         didSet {
             monthLabel.text = monthlyAggTransactions.monthAbbrev
-            let amount = monthlyAggTransactions.amount.storage.rounding(accordingToBehavior: moneyHandler)
-            self.amountLabel.text = "$\(amount)"
+            self.amountLabel.text = monthlyAggTransactions.amount.money(round: true)
         }
     }
     

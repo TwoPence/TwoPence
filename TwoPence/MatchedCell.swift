@@ -18,7 +18,7 @@ class MatchedCell: UITableViewCell {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/YYYY"
             dateLabel.text = dateFormatter.string(from: match.date)
-            amountLabel.text = "\(match.amount)"
+            amountLabel.text = match.amount.money()
         }
     }
 

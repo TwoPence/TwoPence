@@ -8,7 +8,6 @@
 
 import UIKit
 import Unbox
-import Money
 
 enum MilestoneType: String, UnboxableEnum {
     case Complete
@@ -16,10 +15,16 @@ enum MilestoneType: String, UnboxableEnum {
     case Future
 }
 
+enum GoalType: String, UnboxableEnum {
+    case Days
+    case Dollars
+}
+
 class DebtMilestone: Unboxable {
-    var current: Money
-    var goal: Money
-    
+    var current: Double
+    var goal: Double
+    var priorGoal: Double
+    var goalType: GoalType
     var type: MilestoneType
     var imageName: String //Shold be enum mapped to images?
     var description: String
@@ -27,12 +32,10 @@ class DebtMilestone: Unboxable {
     var milestoneSubTitle: String
     
     required init(unboxer: Unboxer) throws {
-        let currentDouble: Double = try unboxer.unbox(key: "current")
-        self.current = Money(currentDouble)
-        
-        let goalDouble: Double = try unboxer.unbox(key: "goal")
-        self.goal = Money(goalDouble)
-        
+        self.current = try unboxer.unbox(key: "current")
+        self.goal = try unboxer.unbox(key: "goal")
+        self.priorGoal = try unboxer.unbox(key: "prior_goal")
+        self.goalType = try unboxer.unbox(key: "goal_type")
         self.type = try unboxer.unbox(key: "type")
         self.imageName = try unboxer.unbox(key: "image_name")
         self.description = try unboxer.unbox(key: "description")

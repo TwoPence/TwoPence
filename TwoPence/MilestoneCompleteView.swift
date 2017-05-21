@@ -48,7 +48,6 @@ class MilestoneCompleteView: UIView {
         
         Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: topView)
         formatDisplay()
-        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     func formatDisplay() {

@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         ])
          */
+        UIApplication.shared.statusBarStyle = .lightContent
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: User.userDidLogoutNotification), object: nil, queue: OperationQueue.main) { (Notification) in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

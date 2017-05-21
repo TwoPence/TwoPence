@@ -18,7 +18,7 @@ class TransferCell: UITableViewCell {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/YYYY"
             dateLabel.text = dateFormatter.string(from: transfer.date)
-            amountLabel.text = "\(transfer.amount)"
+            amountLabel.text = transfer.amount.money()
         }
     }
     

@@ -6,7 +6,6 @@ target 'TwoPence' do
   use_frameworks!
 
   # Pods for TwoPence
-  pod 'Money', '2.0.1'
   pod 'Cely', '~> 2.0.0'
   pod 'Alamofire', '~> 4.4'
   pod 'Unbox', '~> 2.4.0'

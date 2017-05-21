@@ -18,7 +18,7 @@ class JoltCell: UITableViewCell {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MM/dd/YYYY"
             dateLabel.text = dateFormatter.string(from: jolt.date)
-            amountLabel.text = "\(jolt.amount)"
+            amountLabel.text = jolt.amount.money()
         }
     }
 

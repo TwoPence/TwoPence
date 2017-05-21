@@ -84,9 +84,9 @@ class AccountsView: UIView, UITableViewDelegate, UITableViewDataSource {
             Account(name: "Consolidated 01", value: 30831.42, type: "Student Loan")
         ]
         
-        institutions.append(Institution(name: "Bank of America", logoUrl: nil, accounts: bankAccounts))
-        institutions.append(Institution(name: "Capital One", logoUrl: nil, accounts: creditAccounts))
-        institutions.append(Institution(name: "Nelnet", logoUrl: nil, accounts: loanAccounts))
+        institutions.append(Institution(name: "Bank of America", logoUrl: "someurl", accounts: bankAccounts))
+        institutions.append(Institution(name: "Capital One", logoUrl: "someurl", accounts: creditAccounts))
+        institutions.append(Institution(name: "Nelnet", logoUrl: "someurl", accounts: loanAccounts))
     }
     // ------------------------------------
 

@@ -18,8 +18,8 @@ class TransactionCell: SwipeTableViewCell {
     var transaction: Transaction! {
         didSet {
             merchantLabel.text = transaction.merchant
-            amountLabel.text = "\(transaction.amount) spent"
-            amountSavedLabel.text = "\(transaction.amountSaved)"
+            amountLabel.text = transaction.amount.money() + " spent"
+            amountSavedLabel.text = transaction.amountSaved.money()
             if transaction.status == .Skipped {
                 merchantLabel.textColor = AppColor.MediumGray.color
                 amountLabel.textColor = AppColor.MediumGray.color

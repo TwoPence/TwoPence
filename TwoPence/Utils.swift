@@ -9,12 +9,14 @@
 import UIKit
 
 class Utils: NSObject {
-    class func setupGradientBackground(topColor: CGColor, bottomColor: CGColor, view: UIView) {
+    
+    class func setupGradientBackground(topColor: CGColor, bottomColor: CGColor, view: UIView, frame: CGRect? = nil, index: UInt32? = nil) {
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [topColor, bottomColor]
         gradientLayer.locations = [0.2, 1.0]
-        gradientLayer.frame = view.frame
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        gradientLayer.frame = frame ?? view.frame
+        view.layer.insertSublayer(gradientLayer, at: index ?? 0)
     }
     
     class func getMilestoneImageName(name: String) -> String {

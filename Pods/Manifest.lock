@@ -7,13 +7,10 @@ PODS:
   - Cely/Core (2.0.0)
   - EFCountingLabel (1.0.1)
   - Hero (0.3.6)
-  - Money (2.0.1):
-    - ValueCoding (~> 2)
   - PopupDialog (0.5.4)
   - RevealingSplashView (0.2.0)
   - SwipeCellKit (1.8.0)
   - Unbox (2.4.0)
-  - ValueCoding (2.1.0)
   - Whisper (5.0.0)
 
 DEPENDENCIES:
@@ -22,7 +19,6 @@ DEPENDENCIES:
   - Cely (~> 2.0.0)
   - EFCountingLabel (~> 1.0)
   - Hero
-  - Money (= 2.0.1)
   - PopupDialog (~> 0.5)
   - RevealingSplashView
   - SwipeCellKit
@@ -35,14 +31,12 @@ SPEC CHECKSUMS:
   Cely: 10e51eadc776f132982446165b4f35c11b8970bd
   EFCountingLabel: fcdf2193bb02ee77e0e0e8f72a1eb5931c54aa41
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
-  Money: 6faa689f86c455112971c900e8a31fa0b9c02365
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   RevealingSplashView: a19962358db66188841c73afd51eb663a29f75cd
   SwipeCellKit: 01a58bf7e63d5df09aedd161828833944c4c333c
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
-  ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 9ad8df20a09898aef533067b5667927335aca41e
+PODFILE CHECKSUM: de63bfa51b2797c89d3fed2fdc3167b84ce88f99
 
 COCOAPODS: 1.2.1

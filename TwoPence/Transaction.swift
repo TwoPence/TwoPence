@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Money
 import Unbox
 
 enum Status: String, UnboxableEnum {
@@ -17,19 +16,16 @@ enum Status: String, UnboxableEnum {
 }
 
 class Transaction: Unboxable {
-    var amount: Money
-    var amountSaved: Money
+    var amount: Double
+    var amountSaved: Double
     var date: Date
     var merchant: String
     var status: Status
     var pending: Bool
     
     required init(unboxer: Unboxer) throws {
-        let amountDouble: Double = try unboxer.unbox(key: "amount")
-        self.amount = Money(amountDouble)
-        
-        let amountSavedDouble: Double = try unboxer.unbox(key: "amount_saved")
-        self.amountSaved = Money(amountSavedDouble)
+        self.amount = try unboxer.unbox(key: "amount")
+        self.amountSaved = try unboxer.unbox(key: "amount_saved")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"

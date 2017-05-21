@@ -17,17 +17,18 @@ import EFCountingLabel
 class MilestoneFutureView: UIView {
     
     var pgBar: CustomProgressBar!
-    var debtMilestone: DebtMilestone?{
+    var debtMilestone: DebtMilestone? {
         didSet {
             setupViewData()
         }
     }
     var increment: CGFloat!
-    var animateProgressBar: Bool! {
+    var animateProgress: Bool! {
         didSet {
-            incrementProgressBar()
+            incrementProgress()
         }
     }
+    var withDuration: CFTimeInterval = 1.0
 
     @IBOutlet weak var milestoneNextImage: UIImageView!
     @IBOutlet weak var topView: UIView!
@@ -36,7 +37,7 @@ class MilestoneFutureView: UIView {
     @IBOutlet weak var currentValue: EFCountingLabel!
     @IBOutlet weak var goalValue: UILabel!
     @IBOutlet weak var barContainer: UIView!
-    @IBOutlet weak var milestoneFutureLabel: UILabel!
+    @IBOutlet weak var milestoneFutureLabel: EFCountingLabel!
     
     weak var delegate: MilestoneFutureViewDelegate?
     
@@ -59,8 +60,6 @@ class MilestoneFutureView: UIView {
         Utils.setupGradientBackground(topColor: AppColor.MediumGray.color.cgColor, bottomColor: AppColor.PaleGray.color.cgColor, view: topView)
         formatDisplay()
         setMilestoneProgressBar()
-        
-        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     func formatDisplay() {
@@ -70,10 +69,15 @@ class MilestoneFutureView: UIView {
         joltButton.titleLabel?.textColor = UIColor.white
         currentValue.textColor = AppColor.Charcoal.color
         currentValue.font = UIFont(name: AppFontName.light, size: 28)
+        currentValue.formatBlock = { (value) in return Double(value).money(round: true) }
         goalValue.textColor = AppColor.MediumGray.color
         goalValue.font = UIFont(name: AppFontName.regular, size: 15)
         milestoneFutureLabel.textColor = AppColor.Charcoal.color
         milestoneFutureLabel.font = UIFont(name: AppFontName.regular, size: 17)
+        milestoneFutureLabel.formatBlock = {
+            (value) in
+            return "You are " + Double(value).money(round: true) + " away from your next milestone!"
+        }
     }
     
     @IBAction func onCloseTap(_ sender: Any) {
@@ -86,14 +90,12 @@ class MilestoneFutureView: UIView {
     
     func setupViewData(){
         if let milestone = debtMilestone {
-            currentValue.text = milestone.current.formatted(withStyle: .currency)
-
-            goalValue.text = "of \(String(describing: milestone.goal.formatted(withStyle: .currency)))"
+            currentValue.text = milestone.priorGoal.money(round: true)
+            goalValue.text = "of " + milestone.goal.money(round: true)
+            let range = milestone.goal - milestone.priorGoal
+            milestoneFutureLabel.countFromZeroTo(CGFloat(range), withDuration: 0.0)
             
-            let diff = milestone.goal.subtracting(milestone.current)
-            milestoneFutureLabel.text = "You are \(String(describing: diff.formatted(withStyle: .currency))) away from your next milestone!"
-            
-            let inc = (milestone.current.floatValue / milestone.goal.floatValue) * Double(barContainer.bounds.width)
+            let inc = (milestone.current / milestone.goal) * Double(barContainer.bounds.width)
             increment = CGFloat(inc)
             
             let imageName = Utils.getMilestoneImageName(name: milestone.imageName)
@@ -101,8 +103,14 @@ class MilestoneFutureView: UIView {
         }
     }
     
-    func incrementProgressBar(){
-        pgBar.progress(incremented: increment)
+    func incrementProgress() {
+        if let milestone = debtMilestone {
+            let range = milestone.goal - milestone.priorGoal
+            let diff = milestone.goal - milestone.current
+            milestoneFutureLabel.countFrom(CGFloat(range), to: CGFloat(diff), withDuration: withDuration)
+            currentValue.countFrom(CGFloat(milestone.priorGoal), to: CGFloat(milestone.current), withDuration: withDuration)
+        }
+        pgBar.progress(incremented: increment, withDuration: withDuration)
     }
     
     func setMilestoneProgressBar(){

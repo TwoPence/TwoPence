@@ -77,6 +77,7 @@ class DashboardView: UIView {
         
         scrollView.contentSize = CGSize(width: pageWidth * 3, height: pageHeight)
         scrollView.isPagingEnabled = true
+        scrollView.bounces = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
                 

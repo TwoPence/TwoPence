@@ -8,17 +8,15 @@
 
 import UIKit
 import Unbox
-import Money
 
 class Account: Unboxable {
     var name: String
-    var value: Money
+    var value: Double
     var type: String
     
     required init(unboxer: Unboxer) throws {
-        let valueDouble: Double = try unboxer.unbox(key: "value")
         self.name = try unboxer.unbox(key: "name")
-        self.value = Money(valueDouble)
+        self.value = try unboxer.unbox(key: "value")
         self.type = try unboxer.unbox(key: "type")
     }
     
@@ -34,7 +32,7 @@ class Account: Unboxable {
     }
 
     // REMOVE: Testing only
-    init(name: String, value: Money, type: String) {
+    init(name: String, value: Double, type: String) {
         self.name = name
         self.value = value
         self.type = type

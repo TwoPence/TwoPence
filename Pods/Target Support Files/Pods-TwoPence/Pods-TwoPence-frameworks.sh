@@ -94,12 +94,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Cely/Cely.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EFCountingLabel/EFCountingLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Money/Money.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PopupDialog/PopupDialog.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RevealingSplashView/RevealingSplashView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwipeCellKit/SwipeCellKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Unbox/Unbox.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ValueCoding/ValueCoding.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Whisper/Whisper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -108,12 +106,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Cely/Cely.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EFCountingLabel/EFCountingLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Money/Money.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PopupDialog/PopupDialog.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RevealingSplashView/RevealingSplashView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwipeCellKit/SwipeCellKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Unbox/Unbox.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ValueCoding/ValueCoding.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Whisper/Whisper.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

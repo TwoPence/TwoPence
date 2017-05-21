@@ -15,7 +15,7 @@ class PendingTransferCell: UITableViewCell {
     
     var pendingTransfer: AggTransactions! {
         didSet {
-            amountLabel.text = "\(pendingTransfer.amount)"
+            amountLabel.text = pendingTransfer.amount.money()
         }
     }
 
