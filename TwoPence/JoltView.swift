@@ -159,15 +159,9 @@ class JoltView: UIView {
             topVC = topVC!.presentedViewController
         }
         
+        let amountDict:[String: Int] = ["amount": joltAmount]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "JoltAmount"), object: nil, userInfo: amountDict)
+
         topVC?.present(popup, animated: true, completion: nil)
     }
-    
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
 }

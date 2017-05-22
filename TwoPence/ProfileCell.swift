@@ -14,6 +14,20 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userFullName: UILabel!
     
+    var userProfile: UserProfile? {
+        didSet {
+            if let profile = userProfile {
+                userFullName.text = profile.firstName + " " + profile.lastName
+                let gravatar = Gravatar(
+                    emailAddress: profile.email,
+                    defaultImage: Gravatar.DefaultImage.identicon,
+                    forceDefault: false
+                )
+                profileImageUrl = gravatar.url(size: profileImage.frame.width)
+            }
+        }
+    }
+    
     var profileImageUrl: URL? {
         didSet {
             self.profileImage.af_setImage(withURL: profileImageUrl!,

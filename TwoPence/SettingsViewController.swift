@@ -11,7 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    //var gravatar: Gravatar?
+    var userProfile: UserProfile?
     
     let menuOptions = [
         [["name":"Profile"]],
@@ -30,6 +30,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 45
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        TwoPenceAPI.sharedClient.getProfile(success: { (profile) in
+            self.userProfile = profile
+            self.tableView.reloadData()
+        }) { (error) in
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,14 +59,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
-            cell.userFullName.text = "Utkarsh Sengar"
-            // Pull gravatar
-            let gravatar = Gravatar(
-                emailAddress: "utkarsh2012@gmail.com",
-                defaultImage: Gravatar.DefaultImage.identicon,
-                forceDefault: false
-            )
-            cell.profileImageUrl = gravatar.url(size: cell.profileImage.frame.width)
+            cell.userProfile = userProfile
             return cell
         } else if indexPath.section == 1 || indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") as! SettingsCell

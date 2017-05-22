@@ -16,6 +16,7 @@ import Whisper
 
 class TwoPenceAPI: NSObject {
     static let sharedClient = TwoPenceAPI(baseURL: "https://onepence.co/")
+    
     let baseURL: String
     var loginSuccess:  (() -> ())?
     var loginFailure:  ((Error) -> ())?

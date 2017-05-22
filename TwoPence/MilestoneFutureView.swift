@@ -8,6 +8,7 @@
 
 import UIKit
 import EFCountingLabel
+import PopupDialog
 
 @objc protocol MilestoneFutureViewDelegate {
     @objc optional func didTapCloseButton()
@@ -57,6 +58,8 @@ class MilestoneFutureView: UIView {
         contentView.frame = bounds
         addSubview(contentView)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateWithJoltedAmount(_:)), name: NSNotification.Name(rawValue: "JoltAmount"), object: nil)
+
         Utils.setupGradientBackground(topColor: AppColor.MediumGray.color.cgColor, bottomColor: AppColor.PaleGray.color.cgColor, view: topView)
         formatDisplay()
         setMilestoneProgressBar()
@@ -93,6 +96,7 @@ class MilestoneFutureView: UIView {
             currentValue.text = milestone.priorGoal.money(round: true)
             goalValue.text = "of " + milestone.goal.money(round: true)
             let range = milestone.goal - milestone.priorGoal
+            
             milestoneFutureLabel.countFromZeroTo(CGFloat(range), withDuration: 0.0)
             
             let inc = (milestone.current / milestone.goal) * Double(barContainer.bounds.width)
@@ -100,6 +104,14 @@ class MilestoneFutureView: UIView {
             
             let imageName = Utils.getMilestoneImageName(name: milestone.imageName)
             milestoneNextImage.image = UIImage(named: imageName)
+            
+            if range <= 0 {
+                showSuccessView()
+                joltButton.isEnabled = false
+                joltButton.tintColor = AppColor.Charcoal.color
+                joltButton.setTitleColor(AppColor.MediumGray.color, for: .disabled)
+                joltButton.backgroundColor = AppColor.PaleGray.color
+            }
         }
     }
     
@@ -117,5 +129,39 @@ class MilestoneFutureView: UIView {
         pgBar = CustomProgressBar(width: barContainer.bounds.width, height: barContainer.bounds.height)
         barContainer.addSubview(self.pgBar)
         pgBar.configure()
+    }
+    
+    func showSuccessView(){
+        let joltSuccessVc = JoltSuccessView(nibName: "JoltSuccessView", bundle: nil)
+        joltSuccessVc.successMessage = "Congratulations! \n \n \n You have hit your milestone!!"
+        let popup = PopupDialog(viewController: joltSuccessVc, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: false)
+        
+        let buttonAppearance = DefaultButton.appearance()
+        buttonAppearance.buttonColor = AppColor.DarkSeaGreen.color
+        buttonAppearance.titleFont = UIFont(name: AppFontName.regular, size: 17)!
+        buttonAppearance.titleColor = UIColor.white
+        buttonAppearance.separatorColor = AppColor.MediumGreen.color
+        
+        let buttonOne = DefaultButton(title: "Done") { 
+            
+        }
+        popup.addButton(buttonOne)
+        
+        var topVC = UIApplication.shared.keyWindow?.rootViewController
+        while((topVC!.presentedViewController) != nil) {
+            topVC = topVC!.presentedViewController
+        }
+        
+        topVC?.present(popup, animated: true, completion: nil)
+    }
+    
+    func updateWithJoltedAmount(_ notification: NSNotification) {
+        if let joltAmount = notification.userInfo?["amount"] as? Int {
+            if let milestone = debtMilestone {
+                debtMilestone?.priorGoal = milestone.current
+                debtMilestone?.current = milestone.priorGoal.adding(Double(joltAmount))
+                setupViewData()
+            }
+        }
     }
 }
