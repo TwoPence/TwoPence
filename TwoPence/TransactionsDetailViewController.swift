@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Whisper
 
 class TransactionsDetailViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class TransactionsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentView.delegate = self
         automaticallyAdjustsScrollViewInsets = false
         
         if groupedTransactions != nil {
@@ -48,5 +50,13 @@ class TransactionsDetailViewController: UIViewController {
             ]
         }
     }
+}
 
+extension TransactionsDetailViewController: TransactionsViewDelegate {
+    
+    func didSkipTransaction(amountSkipped: Double) {
+        let title = amountSkipped.money() + " removed from your savings"
+        let message = Message(title: title, textColor: UIColor.white, backgroundColor: AppColor.DarkSeaGreen.color, images: nil)
+        Whisper.show(whisper: message, to: self.navigationController!, action: .show)
+    }
 }

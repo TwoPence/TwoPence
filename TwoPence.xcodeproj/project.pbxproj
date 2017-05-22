@@ -534,6 +534,7 @@
 				TargetAttributes = {
 					BFC255961EA5EA6A004FA1A8 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = QQ7F8UFQ5X;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -910,10 +911,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QQ7F8UFQ5X;
 				INFOPLIST_FILE = TwoPence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPence;
+				PRODUCT_BUNDLE_IDENTIFIER = com1.gmail.wfgilman.TwoPence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TwoPence/TwoPence-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -927,10 +929,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QQ7F8UFQ5X;
 				INFOPLIST_FILE = TwoPence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.samadhi.TwoPence;
+				PRODUCT_BUNDLE_IDENTIFIER = com1.gmail.wfgilman.TwoPence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TwoPence/TwoPence-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

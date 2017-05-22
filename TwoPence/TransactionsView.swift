@@ -9,6 +9,11 @@
 import UIKit
 import SwipeCellKit
 
+protocol TransactionsViewDelegate {
+    
+    func didSkipTransaction(amountSkipped: Double)
+}
+
 class TransactionsView: UIView {
 
     @IBOutlet var contentView: UIView!
@@ -22,6 +27,7 @@ class TransactionsView: UIView {
             tableView.reloadData()
         }
     }
+    var delegate: TransactionsViewDelegate?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -110,7 +116,10 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource, SwipeTab
         if trans.status == .Queued {
             guard orientation == .right else { return nil }
             let skipAction = SwipeAction(style: .destructive, title: "Skip", handler: { (action: SwipeAction, indexPath: IndexPath) in
-                // POST status to API
+                // POST status to API.
+                
+                // Notify user they removed amount from their savings.
+                self.delegate?.didSkipTransaction(amountSkipped: trans.amountSaved)
                 
                 trans.status = .Skipped
                 self.groupedTransactions[indexPath.section].transactions[indexPath.row] = trans
