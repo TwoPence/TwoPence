@@ -9,7 +9,7 @@
 import UIKit
 import Hero
 
-class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDelegate, MilestoneCompleteViewDelegate {
+class DebtMilestoneDetailViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     
@@ -59,16 +59,13 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
         futureView?.animateProgress = true
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func shareMilestone(shareText: String){
+        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+        present(vc, animated: true, completion: nil)
     }
-    */
-    
+}
+
+extension DebtMilestoneDetailViewController: MilestoneFutureViewDelegate, MilestoneCompleteViewDelegate {
     func didTapCloseButton() {
         self.confettiView?.stopConfetti()
         dismiss(animated: true, completion: nil)
@@ -76,10 +73,5 @@ class DebtMilestoneDetailViewController: UIViewController, MilestoneFutureViewDe
     
     func doJolt() {
         self.performSegue(withIdentifier: "JoltSegue", sender: nil)
-    }
-    
-    func shareMilestone(shareText: String){
-        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
-        present(vc, animated: true, completion: nil)
     }
 }
