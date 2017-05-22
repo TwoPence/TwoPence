@@ -15,7 +15,7 @@ import Whisper
 //TODO: Fix url concat with Router pattern in Alamofire
 
 class TwoPenceAPI: NSObject {
-    static let sharedClient = TwoPenceAPI(baseURL: "http:localhost:4000/")
+    static let sharedClient = TwoPenceAPI(baseURL: "https://onepence.co/")
     let baseURL: String
     var loginSuccess:  (() -> ())?
     var loginFailure:  ((Error) -> ())?

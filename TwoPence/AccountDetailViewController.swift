@@ -34,7 +34,7 @@ class AccountDetailViewController: UIViewController, AccountDetailViewDelegate {
     }
     
     func cofirmDeleteAccount(selectedInstitution: Institution){
-        let alert = UIAlertController(title: "Confirm?", message: "Are you sure you want to delete \(institution?.name) and \(institution?.accounts.count) accounts associated with it from TwoPence?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Confirm?", message: "Are you sure you want to delete \(String(describing: institution?.name)) and \(String(describing: institution?.accounts.count)) accounts associated with it from TwoPence?", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: deleteInstitution))
         self.present(alert, animated: true, completion: nil)
