@@ -16,6 +16,7 @@ target 'TwoPence' do
   pod 'AlamofireImage', '~> 3.1'
   pod 'EFCountingLabel', '~> 1.0'
   pod 'SwipeCellKit'
+  pod 'PieCharts'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
