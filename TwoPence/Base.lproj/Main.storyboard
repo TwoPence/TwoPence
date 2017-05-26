@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoS-2g-eGf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoS-2g-eGf" customClass="TKTransitionSubmitButton" customModule="TwoPence" customModuleProvider="target">
                                 <rect key="frame" x="20" y="603" width="335" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="59O-LR-kjw"/>
@@ -35,14 +35,14 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qZ8-Cm-Ajb" kind="show" id="DZO-Rx-Mjb"/>
+                                    <action selector="onLoginTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p59-7f-Wry"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-8R-Aiw">
                                 <rect key="frame" x="128" y="180" width="119" height="134"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-Ok-WtM" userLabel="Title Stack View">
-                                <rect key="frame" x="107.5" y="322" width="161" height="36"/>
+                                <rect key="frame" x="107" y="322" width="161" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ko-3fg">
                                         <rect key="frame" x="0.0" y="0.0" width="66.5" height="36"/>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="90"/>
+            <point key="canvasLocation" x="-113" y="90"/>
         </scene>
         <!--Transactions Detail View Controller-->
         <scene sceneID="JUr-pM-nzl">
@@ -529,7 +529,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mkn-PT-Jw6">
             <objects>
-                <tabBarController id="qZ8-Cm-Ajb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TwoPenceTabBarController" id="qZ8-Cm-Ajb" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KNH-KN-39o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

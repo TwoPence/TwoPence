@@ -63,6 +63,11 @@
 		BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58201EBBB4F2001EE950 /* MonthCell.xib */; };
 		BF08074B1ED6CC74000C4F44 /* ReferralContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */; };
 		BF08074D1ED6CC83000C4F44 /* ReferralContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */; };
+		BF0807541ED8EAE3000C4F44 /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08074F1ED8EAE3000C4F44 /* TransitionSubmitButton.swift */; };
+		BF0807551ED8EAE3000C4F44 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0807501ED8EAE3000C4F44 /* SpinerLayer.swift */; };
+		BF0807561ED8EAE3000C4F44 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0807511ED8EAE3000C4F44 /* FadeTransition.swift */; };
+		BF0807571ED8EAE3000C4F44 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0807521ED8EAE3000C4F44 /* CGRectEx.swift */; };
+		BF0807581ED8EAE3000C4F44 /* TimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0807531ED8EAE3000C4F44 /* TimerEx.swift */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -173,6 +178,11 @@
 		BEEF58201EBBB4F2001EE950 /* MonthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
 		BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralContactCell.swift; sourceTree = "<group>"; };
 		BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferralContactCell.xib; sourceTree = "<group>"; };
+		BF08074F1ED8EAE3000C4F44 /* TransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSubmitButton.swift; sourceTree = "<group>"; };
+		BF0807501ED8EAE3000C4F44 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		BF0807511ED8EAE3000C4F44 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		BF0807521ED8EAE3000C4F44 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		BF0807531ED8EAE3000C4F44 /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -385,6 +395,18 @@
 			name = "Collection View Cells";
 			sourceTree = "<group>";
 		};
+		BF08074E1ED8EAC2000C4F44 /* TKSubmitTransition */ = {
+			isa = PBXGroup;
+			children = (
+				BF08074F1ED8EAE3000C4F44 /* TransitionSubmitButton.swift */,
+				BF0807501ED8EAE3000C4F44 /* SpinerLayer.swift */,
+				BF0807511ED8EAE3000C4F44 /* FadeTransition.swift */,
+				BF0807521ED8EAE3000C4F44 /* CGRectEx.swift */,
+				BF0807531ED8EAE3000C4F44 /* TimerEx.swift */,
+			);
+			name = TKSubmitTransition;
+			sourceTree = "<group>";
+		};
 		BF8F9C411EC04B8D00279E5D /* Accounts View */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +421,7 @@
 		BF8F9C4D1EC435FD00279E5D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BF08074E1ED8EAC2000C4F44 /* TKSubmitTransition */,
 				BF8F9C4A1EC4270600279E5D /* AppColor.swift */,
 				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
 				BF395B741EC98203004E5D64 /* AppMessage.swift */,
@@ -718,12 +741,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */,
+				BF0807561ED8EAE3000C4F44 /* FadeTransition.swift in Sources */,
 				BF395B751EC98203004E5D64 /* AppMessage.swift in Sources */,
 				BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */,
 				BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */,
+				BF0807551ED8EAE3000C4F44 /* SpinerLayer.swift in Sources */,
 				BF8F9C491EC3922E00279E5D /* CustomProgressBar.swift in Sources */,
 				BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */,
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
+				BF0807541ED8EAE3000C4F44 /* TransitionSubmitButton.swift in Sources */,
 				BF8F9C571EC4CC8000279E5D /* ProfileCell.swift in Sources */,
 				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
@@ -738,6 +764,7 @@
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BF395B781EC98445004E5D64 /* SignoutCell.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
+				BF0807581ED8EAE3000C4F44 /* TimerEx.swift in Sources */,
 				BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */,
 				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
 				BEEF58021EB64C68001EE950 /* InstitutionCell.swift in Sources */,
@@ -776,6 +803,7 @@
 				BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */,
+				BF0807571ED8EAE3000C4F44 /* CGRectEx.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

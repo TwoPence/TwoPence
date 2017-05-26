@@ -10,11 +10,11 @@ import UIKit
 import RevealingSplashView
 import Whisper
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var twoLabel: UILabel!
     @IBOutlet weak var penceLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: TKTransitionSubmitButton!
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
         signUpButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         signUpButton.titleLabel?.textColor = UIColor.red
         signUpButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
-        
+
         loginButton.backgroundColor = UIColor.clear
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
@@ -57,14 +57,21 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onLoginTap(_ sender: TKTransitionSubmitButton) {
+        sender.animate(1, completion: { () -> () in
+            let tabViewController = self.storyboard?.instantiateViewController(withIdentifier: "TwoPenceTabBarController") as? UITabBarController
+            tabViewController?.transitioningDelegate = self
+            self.present(tabViewController!, animated: true, completion: nil)
+        })
     }
-    */
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return TKFadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
+    }
 
 }
