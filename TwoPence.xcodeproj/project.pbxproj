@@ -61,6 +61,8 @@
 		BEEF58111EB69116001EE950 /* JoltView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58101EB69116001EE950 /* JoltView.xib */; };
 		BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */; };
 		BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58201EBBB4F2001EE950 /* MonthCell.xib */; };
+		BF08074B1ED6CC74000C4F44 /* ReferralContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */; };
+		BF08074D1ED6CC83000C4F44 /* ReferralContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */; };
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
@@ -169,6 +171,8 @@
 		BEEF58101EB69116001EE950 /* JoltView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltView.xib; sourceTree = "<group>"; };
 		BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
 		BEEF58201EBBB4F2001EE950 /* MonthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
+		BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralContactCell.swift; sourceTree = "<group>"; };
+		BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferralContactCell.xib; sourceTree = "<group>"; };
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
@@ -351,6 +355,8 @@
 				BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */,
 				BE3F8D841EC9784800CA6F34 /* JoltCell.swift */,
 				BE3F8D851EC9784800CA6F34 /* JoltCell.xib */,
+				BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */,
+				BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -587,6 +593,7 @@
 				BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
+				BF08074D1ED6CC83000C4F44 /* ReferralContactCell.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
 				BE3F8D831EC8160A00CA6F34 /* Lato-Light.ttf in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
@@ -737,6 +744,7 @@
 				BEEF57CD1EB3E249001EE950 /* SavingsView.swift in Sources */,
 				BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
+				BF08074B1ED6CC74000C4F44 /* ReferralContactCell.swift in Sources */,
 				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
 				BE09ABD31ED0E2B400EEE0C7 /* DoubleExtensions.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
