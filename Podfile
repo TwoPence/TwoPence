@@ -12,7 +12,7 @@ target 'TwoPence' do
   pod 'Hero'
   pod 'PopupDialog', '~> 0.5'
   pod 'Whisper', '~> 5.0.0'
-  pod 'RevealingSplashView'
+  # pod 'RevealingSplashView'
   pod 'AlamofireImage', '~> 3.1'
   pod 'EFCountingLabel', '~> 1.0'
   pod 'SwipeCellKit'

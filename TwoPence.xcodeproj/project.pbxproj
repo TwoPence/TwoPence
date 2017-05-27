@@ -86,6 +86,10 @@
 		BF395B791EC98445004E5D64 /* SignoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF395B771EC98445004E5D64 /* SignoutCell.xib */; };
 		BF395B7B1ECA2C03004E5D64 /* AppFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */; };
 		BF395B7D1ECA3048004E5D64 /* Gravatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF395B7C1ECA3048004E5D64 /* Gravatar.swift */; };
+		BF46ED611EDA3B390042B8EE /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46ED5C1EDA3B390042B8EE /* Animations.swift */; };
+		BF46ED621EDA3B390042B8EE /* RevealingSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46ED5E1EDA3B390042B8EE /* RevealingSplashView.swift */; };
+		BF46ED631EDA3B390042B8EE /* SplashAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46ED5F1EDA3B390042B8EE /* SplashAnimatable.swift */; };
+		BF46ED641EDA3B390042B8EE /* SplashAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46ED601EDA3B390042B8EE /* SplashAnimationType.swift */; };
 		BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */; };
 		BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */; };
 		BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F9C441EC1978300279E5D /* ReferralViewController.swift */; };
@@ -202,6 +206,10 @@
 		BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFontName.swift; sourceTree = "<group>"; };
 		BF395B7C1ECA3048004E5D64 /* Gravatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gravatar.swift; sourceTree = "<group>"; };
 		BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwoPence-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF46ED5C1EDA3B390042B8EE /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		BF46ED5E1EDA3B390042B8EE /* RevealingSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealingSplashView.swift; sourceTree = "<group>"; };
+		BF46ED5F1EDA3B390042B8EE /* SplashAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimatable.swift; sourceTree = "<group>"; };
+		BF46ED601EDA3B390042B8EE /* SplashAnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimationType.swift; sourceTree = "<group>"; };
 		BF6CC9501EB3AE4B0029D734 /* TwoPenceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPenceAPI.swift; sourceTree = "<group>"; };
 		BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneDetailViewController.swift; sourceTree = "<group>"; };
 		BF8F9C421EC18BC500279E5D /* AddAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
@@ -407,6 +415,17 @@
 			name = TKSubmitTransition;
 			sourceTree = "<group>";
 		};
+		BF46ED5B1EDA3B390042B8EE /* RevealingSplashView */ = {
+			isa = PBXGroup;
+			children = (
+				BF46ED5C1EDA3B390042B8EE /* Animations.swift */,
+				BF46ED5E1EDA3B390042B8EE /* RevealingSplashView.swift */,
+				BF46ED5F1EDA3B390042B8EE /* SplashAnimatable.swift */,
+				BF46ED601EDA3B390042B8EE /* SplashAnimationType.swift */,
+			);
+			path = RevealingSplashView;
+			sourceTree = "<group>";
+		};
 		BF8F9C411EC04B8D00279E5D /* Accounts View */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +440,7 @@
 		BF8F9C4D1EC435FD00279E5D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BF46ED5B1EDA3B390042B8EE /* RevealingSplashView */,
 				BF08074E1ED8EAC2000C4F44 /* TKSubmitTransition */,
 				BF8F9C4A1EC4270600279E5D /* AppColor.swift */,
 				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
@@ -754,12 +774,15 @@
 				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
 				BEA1B63D1EB1374C00F41663 /* LoginViewController.swift in Sources */,
 				BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */,
+				BF46ED631EDA3B390042B8EE /* SplashAnimatable.swift in Sources */,
 				BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */,
 				BF8F9C4B1EC4270600279E5D /* AppColor.swift in Sources */,
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,
 				BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */,
 				BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */,
 				BF8F9C511EC43AA000279E5D /* SettingsCell.swift in Sources */,
+				BF46ED621EDA3B390042B8EE /* RevealingSplashView.swift in Sources */,
+				BF46ED611EDA3B390042B8EE /* Animations.swift in Sources */,
 				BFB423171ECBF6740035E398 /* Utils.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
 				BF395B781EC98445004E5D64 /* SignoutCell.swift in Sources */,
@@ -804,6 +827,7 @@
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,
 				BF38F9E61EBEE050002AA6C0 /* MilestoneFutureView.swift in Sources */,
 				BF0807571ED8EAE3000C4F44 /* CGRectEx.swift in Sources */,
+				BF46ED641EDA3B390042B8EE /* SplashAnimationType.swift in Sources */,
 				BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

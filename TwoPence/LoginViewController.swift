@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import RevealingSplashView
 import Whisper
 import IBAnimatable
 
-class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var twoLabel: AnimatableLabel!
     @IBOutlet weak var penceLabel: AnimatableLabel!
@@ -25,7 +24,8 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         self.penceLabel.isHidden = true
         
         //Initialize a revealing Splash with with the iconImage, the initial size and the background color
-        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo"),iconInitialSize: CGSize(width: 120, height: 130), backgroundColor: AppColor.MediumGreen.color)
+        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo"),iconInitialSize: CGSize(width: 119, height: 134), backgroundColor: AppColor.MediumGreen.color)
+        revealingSplashView.animationType = .down
         
         //Adds the revealing splash view as a sub view
         self.view.addSubview(revealingSplashView)
@@ -36,17 +36,7 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         }
         
         formatDisplay()
-        
-        twopenceLogo.delay(1)
-            .then(.squeezeFade(way: .in, direction: .down))
-            .completion {
-                self.twoLabel.isHidden = false
-                self.penceLabel.isHidden = false
-                self.twoLabel.delay(0)
-                    .then(.squeezeFade(way: .in, direction: .left))
-                self.penceLabel.delay(0)
-                    .then(.squeezeFade(way: .in, direction: .right))
-        }
+        animateLogo()
     }
     
     func formatDisplay() {
@@ -80,6 +70,22 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
             self.present(tabViewController!, animated: true, completion: nil)
         })
     }
+}
+
+
+extension LoginViewController: UIViewControllerTransitioningDelegate {
+    func animateLogo(){
+        twopenceLogo.delay(1.2)
+            .then(.squeezeFade(way: .in, direction: .down))
+            .completion {
+                self.twoLabel.isHidden = false
+                self.penceLabel.isHidden = false
+                self.twoLabel.delay(0)
+                    .then(.squeezeFade(way: .in, direction: .left))
+                self.penceLabel.delay(0)
+                    .then(.squeezeFade(way: .in, direction: .right))
+        }
+    }
     
     // MARK: UIViewControllerTransitioningDelegate
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -89,5 +95,4 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return nil
     }
-
 }

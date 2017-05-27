@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 public typealias SplashAnimatableCompletion = () -> Void
 public typealias SplashAnimatableExecution = () -> Void
@@ -41,8 +41,10 @@ public extension SplashAnimatable where Self: UIView {
             
         case .heartBeat:
             playHeartBeatAnimation(completion)
+            
+        case .down:
+            playShrinkAndDownAnimation(completion)
         }
-        
     }
     
     
@@ -232,10 +234,9 @@ public extension SplashAnimatable where Self: UIView {
     {
         if let imageView =  imageView
         {
-            let growDuration: TimeInterval =  duration * 0.3
+            let growDuration: TimeInterval =  duration * 0.2
             
             UIView.animate(withDuration: growDuration, animations:{
-                
                 imageView.transform = self.getZoomOutTranform()
                 self.alpha = 0
                 
@@ -250,6 +251,48 @@ public extension SplashAnimatable where Self: UIView {
     }
     
     
+    /**
+     Plays the go down animation with completion
+     
+     - parameter completion: completion
+     */
+    public func playShrinkAndDownAnimation(_ completion: SplashAnimatableCompletion? = nil)
+    {
+        
+        if let imageView = self.imageView {
+            
+            //Define the shink and grow duration based on the duration parameter
+            let shrinkDuration: TimeInterval = duration * 0.3
+            
+            //Plays the shrink animation
+            UIView.animate(withDuration: shrinkDuration, delay: delay, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: UIViewAnimationOptions(), animations: {
+                //Shrinks the image
+                let scaleTransform: CGAffineTransform = CGAffineTransform(scaleX: 0.75,y: 0.75)
+                imageView.transform = scaleTransform
+                
+                //When animation completes, grow the image
+            }, completion: { finished in
+                
+                self.playGoDownAnimation(completion)
+            })
+        }
+    }
+
+    public func playGoDownAnimation(_ completion: SplashAnimatableCompletion? = nil)
+    {
+        if let imageView =  imageView
+        {
+            let growDuration: TimeInterval =  duration * 0.2
+            UIView.animate(withDuration: growDuration, animations:{
+                imageView.frame = CGRect(x: imageView.bounds.maxX, y: UIScreen.main.bounds.height, width: imageView.frame.width, height: imageView.frame.height)
+                
+                //When animation completes remove self from super view
+            }, completion: { finished in
+                self.removeFromSuperview()
+                completion?()
+            })
+        }
+    }
     
     /**
      Retuns the default zoom out transform to be use mixed with other transform
@@ -258,7 +301,7 @@ public extension SplashAnimatable where Self: UIView {
      */
     fileprivate func getZoomOutTranform() -> CGAffineTransform
     {
-        let zoomOutTranform: CGAffineTransform = CGAffineTransform(scaleX: 20, y: 20)
+        let zoomOutTranform: CGAffineTransform = CGAffineTransform(scaleX: 5, y: 5)
         return zoomOutTranform
     }
     
