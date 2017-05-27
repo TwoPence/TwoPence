@@ -346,6 +346,7 @@ open class TimelineView: UIView {
             }
             
             let imageView = UIImageView(image: image)
+            imageView.heroID = element.debtMilestone.imageName
             imageView.layer.cornerRadius = 4
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.contentMode = UIViewContentMode.scaleAspectFit

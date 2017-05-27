@@ -55,6 +55,7 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     
     func navigateToDebtMilestoneDetailViewController(selectedMiletone: DebtMilestone) {
         self.selectedMiletone = selectedMiletone
+        
         if selectedMiletone.type != MilestoneType.Future {
             self.performSegue(withIdentifier: "DebtMilestoneDetailSegue", sender: nil)
         }
