@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var userProfile: UserProfile?
@@ -34,6 +34,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         TwoPenceAPI.sharedClient.getProfile(success: { (profile) in
             self.userProfile = profile
             self.tableView.reloadData()
+            self.animateTableLoad()
         }) { (error) in
             
         }
@@ -52,10 +53,17 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return menuOptions[section].count
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
+}
 
+
+extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuOptions[section].count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
@@ -115,18 +123,24 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func animateTableLoad() {
+        let cells = self.tableView.visibleCells
+        let tableWidth: CGFloat = self.tableView.bounds.size.width
         
+        for i in cells {
+            let cell: UITableViewCell = i as UITableViewCell
+            cell.transform = CGAffineTransform(translationX: tableWidth, y: 0)
+        }
+        
+        var index = 0
+        for m in cells {
+            let cell: UITableViewCell = m as UITableViewCell
+            UIView.animate(withDuration: 0.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: ({
+                cell.transform = CGAffineTransform.identity
+            }), completion: nil)
+            
+            index += 1
+        }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+

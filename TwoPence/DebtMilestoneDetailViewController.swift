@@ -28,6 +28,7 @@ class DebtMilestoneDetailViewController: UIViewController {
                 completeView = MilestoneCompleteView(frame: self.view.frame)
                 completeView?.delegate = self
                 completeView?.milestoneCompleteImage.heroID = debtMilestone?.imageName
+                completeView?.topView.heroID = (debtMilestone?.imageName)! + "_background"
                 
                 self.contentView.addSubview(completeView!)
                 self.contentView.addSubview(confettiView!)
@@ -35,7 +36,8 @@ class DebtMilestoneDetailViewController: UIViewController {
             } else if(debtMilestone?.type == MilestoneType.Current){
                 futureView = MilestoneFutureView(frame: self.view.frame)
                 futureView?.delegate = self
-                futureView?.milestoneNextImage.heroID = "DebtMilestone"
+                futureView?.milestoneNextImage.heroID = debtMilestone?.imageName
+                futureView?.topView.heroID = (debtMilestone?.imageName)! + "_background"
                 
                 self.contentView.addSubview(futureView!)
             }

@@ -325,6 +325,7 @@ open class TimelineView: UIView {
         if let image = element.image{
             
             let backgroundViewForImage = UIView()
+            backgroundViewForImage.heroID = element.debtMilestone.imageName + "_background"
             backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
             if element.debtMilestone.type == .Complete {
                 backgroundViewForImage.backgroundColor = AppColor.MediumGreen.color
