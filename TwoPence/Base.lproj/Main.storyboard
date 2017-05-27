@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,19 +38,19 @@
                                     <action selector="onLoginTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p59-7f-Wry"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-8R-Aiw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-8R-Aiw" customClass="AnimatableImageView" customModule="IBAnimatable">
                                 <rect key="frame" x="128" y="180" width="119" height="134"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-Ok-WtM" userLabel="Title Stack View">
-                                <rect key="frame" x="107" y="322" width="161" height="36"/>
+                                <rect key="frame" x="107.5" y="322" width="161" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ko-3fg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ko-3fg" customClass="AnimatableLabel" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="0.0" width="66.5" height="36"/>
                                         <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
                                         <color key="textColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Gy-sJf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Gy-sJf" customClass="AnimatableLabel" customModule="IBAnimatable">
                                         <rect key="frame" x="66.5" y="0.0" width="94.5" height="36"/>
                                         <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,6 +89,7 @@
                         <outlet property="penceLabel" destination="j84-Gy-sJf" id="sRa-YM-LBc"/>
                         <outlet property="signUpButton" destination="PAn-GP-GJf" id="0Kp-MV-EDj"/>
                         <outlet property="twoLabel" destination="V4X-ko-3fg" id="MS4-v9-QNX"/>
+                        <outlet property="twopenceLogo" destination="jOM-8R-Aiw" id="htC-qX-3B6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

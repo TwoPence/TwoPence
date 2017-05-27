@@ -9,16 +9,21 @@
 import UIKit
 import RevealingSplashView
 import Whisper
+import IBAnimatable
 
 class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-    @IBOutlet weak var twoLabel: UILabel!
-    @IBOutlet weak var penceLabel: UILabel!
+    @IBOutlet weak var twoLabel: AnimatableLabel!
+    @IBOutlet weak var penceLabel: AnimatableLabel!
     @IBOutlet weak var loginButton: TKTransitionSubmitButton!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var twopenceLogo: AnimatableImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.twoLabel.isHidden = true
+        self.penceLabel.isHidden = true
+        
         //Initialize a revealing Splash with with the iconImage, the initial size and the background color
         let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo"),iconInitialSize: CGSize(width: 120, height: 130), backgroundColor: AppColor.MediumGreen.color)
         
@@ -31,6 +36,17 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         }
         
         formatDisplay()
+        
+        twopenceLogo.delay(1)
+            .then(.squeezeFade(way: .in, direction: .down))
+            .completion {
+                self.twoLabel.isHidden = false
+                self.penceLabel.isHidden = false
+                self.twoLabel.delay(0)
+                    .then(.squeezeFade(way: .in, direction: .left))
+                self.penceLabel.delay(0)
+                    .then(.squeezeFade(way: .in, direction: .right))
+        }
     }
     
     func formatDisplay() {

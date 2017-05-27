@@ -7,6 +7,7 @@ PODS:
   - Cely/Core (2.0.0)
   - EFCountingLabel (1.0.1)
   - Hero (0.3.6)
+  - IBAnimatable (4.0.0)
   - PieCharts (0.0.5)
   - PopupDialog (0.5.4)
   - RevealingSplashView (0.2.0)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Cely (~> 2.0.0)
   - EFCountingLabel (~> 1.0)
   - Hero
+  - IBAnimatable
   - PieCharts
   - PopupDialog (~> 0.5)
   - RevealingSplashView
@@ -33,6 +35,7 @@ SPEC CHECKSUMS:
   Cely: 10e51eadc776f132982446165b4f35c11b8970bd
   EFCountingLabel: fcdf2193bb02ee77e0e0e8f72a1eb5931c54aa41
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
+  IBAnimatable: 63997e8a6cdb233249a3b57cfff2feb535fb01ff
   PieCharts: a0fb4784a3460088c8ba7dfb00b89784ddaa7e70
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   RevealingSplashView: a19962358db66188841c73afd51eb663a29f75cd
@@ -40,6 +43,6 @@ SPEC CHECKSUMS:
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 4f08499392b3487ead655a3bb59a7601a90afb4e
+PODFILE CHECKSUM: fa2e4d1a257dd2e944f1175b5aa32fc740b37404
 
 COCOAPODS: 1.2.0

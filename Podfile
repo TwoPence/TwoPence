@@ -17,6 +17,7 @@ target 'TwoPence' do
   pod 'EFCountingLabel', '~> 1.0'
   pod 'SwipeCellKit'
   pod 'PieCharts'
+  pod 'IBAnimatable'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
