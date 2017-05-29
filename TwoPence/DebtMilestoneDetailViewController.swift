@@ -11,13 +11,13 @@ import Hero
 
 class DebtMilestoneDetailViewController: UIViewController {
 
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var backgroundView: UIView!
     
     var completeView: MilestoneCompleteView?
     var futureView: MilestoneFutureView?
     var confettiView: SAConfettiView?
     var debtMilestone: DebtMilestone?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,17 +29,17 @@ class DebtMilestoneDetailViewController: UIViewController {
                 completeView?.delegate = self
                 completeView?.milestoneCompleteImage.heroID = debtMilestone?.imageName
                 completeView?.topView.heroID = (debtMilestone?.imageName)! + "_background"
+
+                backgroundView.addSubview(completeView!)
                 
-                self.contentView.addSubview(completeView!)
-                self.contentView.addSubview(confettiView!)
+                self.backgroundView.addSubview(confettiView!)
                 confettiView?.startConfetti()
             } else if(debtMilestone?.type == MilestoneType.Current){
                 futureView = MilestoneFutureView(frame: self.view.frame)
                 futureView?.delegate = self
                 futureView?.milestoneNextImage.heroID = debtMilestone?.imageName
                 futureView?.topView.heroID = (debtMilestone?.imageName)! + "_background"
-                
-                self.contentView.addSubview(futureView!)
+                backgroundView.addSubview(futureView!)
             }
         }
     }
