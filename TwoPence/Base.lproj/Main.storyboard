@@ -42,16 +42,16 @@
                                 <rect key="frame" x="128" y="180" width="119" height="134"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-Ok-WtM" userLabel="Title Stack View">
-                                <rect key="frame" x="107" y="322" width="161" height="36"/>
+                                <rect key="frame" x="104.5" y="322" width="166.5" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ko-3fg" customClass="AnimatableLabel" customModule="IBAnimatable">
-                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="42"/>
                                         <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
                                         <color key="textColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Gy-sJf" customClass="AnimatableLabel" customModule="IBAnimatable">
-                                        <rect key="frame" x="66.5" y="0.0" width="94.5" height="36"/>
+                                        <rect key="frame" x="65" y="0.0" width="101.5" height="42"/>
                                         <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
