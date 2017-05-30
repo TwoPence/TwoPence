@@ -12,21 +12,33 @@ import Contacts
 class ReferralContactCell: UITableViewCell {
 
     @IBOutlet weak var contactName: UILabel!
-    @IBOutlet weak var selectedIcon: UIImageView!
+    @IBOutlet weak var contactEmail: UILabel!
+    @IBOutlet weak var selectedButton: UIButton!
+    @IBOutlet weak var profilePicture: UIImageView!
     
     var contact: CNContact! {
         didSet {
             self.contactName.text = contact.givenName
+            self.contactEmail.text = contact.emailAddresses.first?.value as String?
+            if contact.imageDataAvailable {
+                self.profilePicture.image = UIImage(data: contact.imageData!)?.af_imageRoundedIntoCircle()
+            } else {
+                self.profilePicture.image = UIImage(named: "logo")?.af_imageRoundedIntoCircle()
+            }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contactName.textColor = AppColor.Charcoal.color
-        self.accessoryType = .disclosureIndicator
-        self.preservesSuperviewLayoutMargins = false
-        self.separatorInset = UIEdgeInsets.zero
-        self.layoutMargins = UIEdgeInsets.zero
+        self.contactEmail.textColor = AppColor.MediumGray.color
+        //self.accessoryType = .disclosureIndicator
+        
+        selectedButton.tag = 0
+        selectedButton.layer.cornerRadius = 0.5 * selectedButton.bounds.size.width
+        selectedButton.layer.borderColor = AppColor.DarkSeaGreen.color.cgColor
+        selectedButton.layer.borderWidth = 1
+        selectedButton.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

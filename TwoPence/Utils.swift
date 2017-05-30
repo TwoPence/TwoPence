@@ -32,7 +32,11 @@ class Utils: NSObject {
     class func findContactsOnBackgroundThread ( completionHandler:@escaping (_ contacts:[CNContact]?)->()) {
         DispatchQueue.global(qos: .userInitiated).async(execute: { () -> Void in
             
-            let keysToFetch = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName),CNContactPhoneNumbersKey] as [Any] //CNContactIdentifierKey
+            let keysToFetch = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName),CNContactPhoneNumbersKey,
+                               CNContactEmailAddressesKey,
+                               CNContactPhoneNumbersKey,
+                               CNContactImageDataAvailableKey,
+                               CNContactThumbnailImageDataKey] as [Any]
             let fetchRequest = CNContactFetchRequest( keysToFetch: keysToFetch as! [CNKeyDescriptor])
             var contacts = [CNContact]()
             CNContact.localizedString(forKey: CNLabelPhoneNumberiPhone)

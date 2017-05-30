@@ -42,16 +42,16 @@
                                 <rect key="frame" x="128" y="180" width="119" height="134"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-Ok-WtM" userLabel="Title Stack View">
-                                <rect key="frame" x="104.5" y="322" width="166.5" height="42"/>
+                                <rect key="frame" x="107.5" y="322" width="161" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ko-3fg" customClass="AnimatableLabel" customModule="IBAnimatable">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="36"/>
                                         <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
                                         <color key="textColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Gy-sJf" customClass="AnimatableLabel" customModule="IBAnimatable">
-                                        <rect key="frame" x="65" y="0.0" width="101.5" height="42"/>
+                                        <rect key="frame" x="66.5" y="0.0" width="94.5" height="36"/>
                                         <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -178,38 +178,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-zH-Ffk">
-                                <rect key="frame" x="20" y="20" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-zH-Ffk">
+                                <rect key="frame" x="326" y="30" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="onClose:" destination="zVq-qi-Mtb" eventType="touchUpInside" id="MSO-E7-wsb"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Deq-gX-wcS">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Deq-gX-wcS">
+                                <rect key="frame" x="0.0" y="221" width="375" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite your friends to TwoPence and earn free service!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aol-oP-dxM">
-                                <rect key="frame" x="65" y="92" width="245" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-ns-TAX">
+                                <rect key="frame" x="171" y="80" width="32" height="28"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilN-X6-RPA">
+                                <rect key="frame" x="20" y="161" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mEZ-fr-BoP"/>
+                                </constraints>
+                                <state key="normal" title="Share a link"/>
+                                <connections>
+                                    <action selector="shareLink:" destination="zVq-qi-Mtb" eventType="touchUpInside" id="sWK-O0-Y8T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer TwoPence to a friend!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aol-oP-dxM">
+                                <rect key="frame" x="82" y="124" width="211" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qR-XZ-Day">
-                                <rect key="frame" x="287" y="20" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share Link"/>
-                                <connections>
-                                    <action selector="shareLink:" destination="zVq-qi-Mtb" eventType="touchUpInside" id="RUg-cO-GkR"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXO-gK-tm1">
+                                <rect key="frame" x="0.0" y="220" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.57647058823529407" green="0.62352941176470589" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="k0d-Pz-h38"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lmv-zH-Ffk" firstAttribute="top" secondItem="wwF-RN-N3h" secondAttribute="bottom" constant="10" id="0K2-2T-0Zf"/>
+                            <constraint firstItem="Deq-gX-wcS" firstAttribute="leading" secondItem="J9r-5n-lTw" secondAttribute="leading" id="54E-20-zmy"/>
+                            <constraint firstItem="Aol-oP-dxM" firstAttribute="top" secondItem="Y4y-ns-TAX" secondAttribute="bottom" constant="16" id="BJv-5D-d5I"/>
+                            <constraint firstItem="Y4y-ns-TAX" firstAttribute="leading" secondItem="J9r-5n-lTw" secondAttribute="leading" constant="171" id="HLc-ky-zn1"/>
+                            <constraint firstAttribute="trailing" secondItem="Y4y-ns-TAX" secondAttribute="trailing" constant="172" id="RfM-FV-30F"/>
+                            <constraint firstItem="Aol-oP-dxM" firstAttribute="leading" secondItem="J9r-5n-lTw" secondAttribute="leading" constant="82" id="W59-Rs-KYp"/>
+                            <constraint firstItem="ilN-X6-RPA" firstAttribute="top" secondItem="Aol-oP-dxM" secondAttribute="bottom" constant="16" id="W82-Qd-mti"/>
+                            <constraint firstAttribute="trailing" secondItem="Deq-gX-wcS" secondAttribute="trailing" id="ZS6-mH-m5f"/>
+                            <constraint firstItem="ilN-X6-RPA" firstAttribute="leading" secondItem="J9r-5n-lTw" secondAttribute="leading" constant="20" id="aR6-Zw-C4K"/>
+                            <constraint firstAttribute="trailing" secondItem="ilN-X6-RPA" secondAttribute="trailing" constant="20" id="dNc-eg-2vX"/>
+                            <constraint firstItem="BDf-by-iWD" firstAttribute="top" secondItem="Deq-gX-wcS" secondAttribute="bottom" id="fzs-t0-kj7"/>
+                            <constraint firstItem="Y4y-ns-TAX" firstAttribute="top" secondItem="wwF-RN-N3h" secondAttribute="bottom" constant="60" id="jcx-RF-Uuy"/>
+                            <constraint firstItem="Deq-gX-wcS" firstAttribute="top" secondItem="ilN-X6-RPA" secondAttribute="bottom" constant="16" id="jt3-Dn-izc"/>
+                            <constraint firstAttribute="trailing" secondItem="NXO-gK-tm1" secondAttribute="trailing" id="rFb-Wq-twr"/>
+                            <constraint firstAttribute="trailing" secondItem="Aol-oP-dxM" secondAttribute="trailing" constant="82" id="u9C-by-Da5"/>
+                            <constraint firstItem="Deq-gX-wcS" firstAttribute="top" secondItem="NXO-gK-tm1" secondAttribute="bottom" id="uM2-8E-C3f"/>
+                            <constraint firstItem="NXO-gK-tm1" firstAttribute="leading" secondItem="J9r-5n-lTw" secondAttribute="leading" id="z4y-Wp-dVE"/>
+                            <constraint firstAttribute="trailing" secondItem="Lmv-zH-Ffk" secondAttribute="trailing" constant="10" id="zuc-Ld-CSb"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="referralLabel" destination="Aol-oP-dxM" id="jmy-Vp-Did"/>
+                        <outlet property="shareButton" destination="ilN-X6-RPA" id="LTx-3X-euc"/>
                         <outlet property="tableView" destination="Deq-gX-wcS" id="VUA-Kd-Rqy"/>
                     </connections>
                 </viewController>
@@ -485,7 +516,7 @@
                 <navigationController storyboardIdentifier="SettingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="SaJ-Wt-4Vs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" selectedImage="settings_selected" systemItem="more" id="24w-Yq-dGA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OEY-As-ryI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OEY-As-ryI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -556,7 +587,7 @@
                 <navigationController storyboardIdentifier="AccountsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="AN2-OZ-6wY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="oSQ-Qb-Gc4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JZM-1j-Y6W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZM-1j-Y6W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -575,7 +606,7 @@
                 <navigationController storyboardIdentifier="DashboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CcD-VX-5AU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="Tab Bar" id="R4L-Le-G0f"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="4nM-dZ-Iqc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="4nM-dZ-Iqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -598,7 +629,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qga-2a-V9n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Milestones" image="milestoneOption3" selectedImage="milestoneOption3_selected" id="Pr4-Jh-y8B"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="g9D-Kh-2eh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9D-Kh-2eh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -616,7 +647,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Oy-J7-kFb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="tGu-jb-ZtL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tGu-jb-ZtL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -631,6 +662,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Green Heart" width="32" height="28"/>
         <image name="Tab Bar" width="25" height="25"/>
         <image name="heart" width="20" height="18"/>
         <image name="inviteAndEarn" width="20" height="18"/>
