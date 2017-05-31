@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SAr-jE-Vr3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,93 +8,80 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="ArcherPro-Bold.otf">
-            <string>ArcherPro-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Login View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Intro View Controller-->
+        <scene sceneID="kO9-xq-QgN">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SAr-jE-Vr3" customClass="IntroViewController" customModule="TwoPence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="gsU-0W-ICB"/>
+                        <viewControllerLayoutGuide type="bottom" id="UY0-zj-bp2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Yg2-Za-I8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoS-2g-eGf" customClass="TKTransitionSubmitButton" customModule="TwoPence" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuX-yJ-cpX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZnN-e7-Zau">
+                                <rect key="frame" x="144" y="492" width="87" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.086274509799999996" green="0.60784313729999995" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4h-xI-ek5" customClass="TKTransitionSubmitButton" customModule="TwoPence" customModuleProvider="target">
                                 <rect key="frame" x="20" y="603" width="335" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="59O-LR-kjw"/>
+                                    <constraint firstAttribute="height" constant="44" id="Uqf-Vr-YWE"/>
                                 </constraints>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onLoginTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p59-7f-Wry"/>
+                                    <action selector="onSignin:" destination="SAr-jE-Vr3" eventType="touchUpInside" id="Src-6s-ja5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-8R-Aiw" customClass="AnimatableImageView" customModule="IBAnimatable">
-                                <rect key="frame" x="128" y="180" width="119" height="134"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-Ok-WtM" userLabel="Title Stack View">
-                                <rect key="frame" x="107.5" y="322" width="161" height="36"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ko-3fg" customClass="AnimatableLabel" customModule="IBAnimatable">
-                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="36"/>
-                                        <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
-                                        <color key="textColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Gy-sJf" customClass="AnimatableLabel" customModule="IBAnimatable">
-                                        <rect key="frame" x="66.5" y="0.0" width="94.5" height="36"/>
-                                        <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="36"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAn-GP-GJf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lt-NS-tPZ">
                                 <rect key="frame" x="20" y="547" width="335" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="sKA-mM-0sk"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="w1q-Ji-DbF"/>
+                                    <constraint firstAttribute="height" constant="44" id="ZL7-a9-m2g"/>
                                 </constraints>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="SAr-jE-Vr3" eventType="touchUpInside" id="exh-4x-fPr"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.3411764705882353" green="0.80392156862745101" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jOM-8R-Aiw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="0ML-4N-VJh"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hoS-2g-eGf" secondAttribute="bottom" constant="20" id="1M6-ap-zrw"/>
-                            <constraint firstAttribute="trailing" secondItem="PAn-GP-GJf" secondAttribute="trailing" constant="20" id="6Ch-au-f6k"/>
-                            <constraint firstItem="cUk-Ok-WtM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7R0-IX-VRZ"/>
-                            <constraint firstItem="jOM-8R-Aiw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JG0-JZ-hVQ"/>
-                            <constraint firstItem="cUk-Ok-WtM" firstAttribute="top" secondItem="jOM-8R-Aiw" secondAttribute="bottom" constant="8" id="Jat-kc-CYF"/>
-                            <constraint firstItem="PAn-GP-GJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nk5-KJ-s9n"/>
-                            <constraint firstItem="hoS-2g-eGf" firstAttribute="top" secondItem="PAn-GP-GJf" secondAttribute="bottom" constant="12" id="QZ6-ed-65m"/>
-                            <constraint firstAttribute="trailing" secondItem="hoS-2g-eGf" secondAttribute="trailing" constant="20" id="RRV-J4-J5L"/>
-                            <constraint firstItem="PAn-GP-GJf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xQd-vQ-MfN"/>
-                            <constraint firstItem="hoS-2g-eGf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="z98-ye-Ovd"/>
+                            <constraint firstItem="ZnN-e7-Zau" firstAttribute="leading" secondItem="Yg2-Za-I8E" secondAttribute="leading" constant="144" id="1fU-MI-tOp"/>
+                            <constraint firstAttribute="trailing" secondItem="4Lt-NS-tPZ" secondAttribute="trailing" constant="20" id="DmC-aP-2XU"/>
+                            <constraint firstItem="kuX-yJ-cpX" firstAttribute="leading" secondItem="Yg2-Za-I8E" secondAttribute="leading" id="FqN-LM-slk"/>
+                            <constraint firstAttribute="trailing" secondItem="o4h-xI-ek5" secondAttribute="trailing" constant="20" id="IqM-Ed-i3h"/>
+                            <constraint firstAttribute="trailing" secondItem="kuX-yJ-cpX" secondAttribute="trailing" id="J9m-5b-46g"/>
+                            <constraint firstItem="4Lt-NS-tPZ" firstAttribute="top" secondItem="ZnN-e7-Zau" secondAttribute="bottom" constant="18" id="JDQ-ru-3ua"/>
+                            <constraint firstItem="o4h-xI-ek5" firstAttribute="top" secondItem="4Lt-NS-tPZ" secondAttribute="bottom" constant="12" id="UG9-0i-1UA"/>
+                            <constraint firstItem="o4h-xI-ek5" firstAttribute="leading" secondItem="Yg2-Za-I8E" secondAttribute="leading" constant="20" id="WiR-na-GE9"/>
+                            <constraint firstItem="UY0-zj-bp2" firstAttribute="top" secondItem="o4h-xI-ek5" secondAttribute="bottom" constant="20" id="Y34-xq-0eU"/>
+                            <constraint firstItem="ZnN-e7-Zau" firstAttribute="top" secondItem="kuX-yJ-cpX" secondAttribute="bottom" constant="8" id="b2N-sl-z9a"/>
+                            <constraint firstItem="4Lt-NS-tPZ" firstAttribute="leading" secondItem="Yg2-Za-I8E" secondAttribute="leading" constant="20" id="j77-TU-ivh"/>
+                            <constraint firstItem="kuX-yJ-cpX" firstAttribute="top" secondItem="Yg2-Za-I8E" secondAttribute="top" id="nqP-Fx-qBl"/>
+                            <constraint firstAttribute="trailing" secondItem="ZnN-e7-Zau" secondAttribute="trailing" constant="144" id="rGj-Kb-iTf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="hoS-2g-eGf" id="yEo-NY-YkQ"/>
-                        <outlet property="penceLabel" destination="j84-Gy-sJf" id="sRa-YM-LBc"/>
-                        <outlet property="signUpButton" destination="PAn-GP-GJf" id="0Kp-MV-EDj"/>
-                        <outlet property="twoLabel" destination="V4X-ko-3fg" id="MS4-v9-QNX"/>
-                        <outlet property="twopenceLogo" destination="jOM-8R-Aiw" id="htC-qX-3B6"/>
+                        <outlet property="pageControl" destination="ZnN-e7-Zau" id="GAy-po-5og"/>
+                        <outlet property="scrollView" destination="kuX-yJ-cpX" id="gsX-T2-arl"/>
+                        <outlet property="signinButton" destination="o4h-xI-ek5" id="bQY-b2-opE"/>
+                        <outlet property="sigupButton" destination="4Lt-NS-tPZ" id="WPo-jv-U7H"/>
+                        <segue destination="qZ8-Cm-Ajb" kind="show" identifier="ShowLoginSegue" id="8eO-Vc-Cj8"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6G8-Ox-0eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="90"/>
+            <point key="canvasLocation" x="-103" y="91"/>
         </scene>
         <!--Transactions Detail View Controller-->
         <scene sceneID="JUr-pM-nzl">
@@ -666,7 +653,6 @@
         <image name="Tab Bar" width="25" height="25"/>
         <image name="heart" width="20" height="18"/>
         <image name="inviteAndEarn" width="20" height="18"/>
-        <image name="logo" width="119" height="134"/>
         <image name="milestoneOption3" width="25" height="24"/>
         <image name="milestoneOption3_selected" width="25" height="24"/>
         <image name="settings_selected" width="20" height="20"/>

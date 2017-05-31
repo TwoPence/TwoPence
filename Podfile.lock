@@ -8,6 +8,7 @@ PODS:
   - EFCountingLabel (1.0.1)
   - Hero (0.3.6)
   - IBAnimatable (4.0.0)
+  - lottie-ios (1.5.1)
   - PieCharts (0.0.5)
   - PopupDialog (0.5.4)
   - SwipeCellKit (1.8.0)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - EFCountingLabel (~> 1.0)
   - Hero
   - IBAnimatable
+  - lottie-ios
   - PieCharts
   - PopupDialog (~> 0.5)
   - SwipeCellKit
@@ -34,12 +36,13 @@ SPEC CHECKSUMS:
   EFCountingLabel: fcdf2193bb02ee77e0e0e8f72a1eb5931c54aa41
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   IBAnimatable: 63997e8a6cdb233249a3b57cfff2feb535fb01ff
+  lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
   PieCharts: a0fb4784a3460088c8ba7dfb00b89784ddaa7e70
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   SwipeCellKit: 01a58bf7e63d5df09aedd161828833944c4c333c
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 1400115a60f28b0163effd16d2e6b473db1da33d
+PODFILE CHECKSUM: 77ddc652fea7a78cc0a6be3d7a24c7f39adef335
 
 COCOAPODS: 1.2.0
