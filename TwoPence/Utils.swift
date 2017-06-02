@@ -28,47 +28,4 @@ class Utils: NSObject {
         
         return imageName
     }
-    
-    class func findContactsOnBackgroundThread ( completionHandler:@escaping (_ contacts:[CNContact]?)->()) {
-        DispatchQueue.global(qos: .userInitiated).async(execute: { () -> Void in
-            
-            let keysToFetch = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName),CNContactPhoneNumbersKey,
-                               CNContactEmailAddressesKey,
-                               CNContactPhoneNumbersKey,
-                               CNContactImageDataAvailableKey,
-                               CNContactThumbnailImageDataKey] as [Any]
-            let fetchRequest = CNContactFetchRequest( keysToFetch: keysToFetch as! [CNKeyDescriptor])
-            var contacts = [CNContact]()
-            CNContact.localizedString(forKey: CNLabelPhoneNumberiPhone)
-            
-            if #available(iOS 10.0, *) {
-                fetchRequest.mutableObjects = false
-            } else {
-                // Fallback on earlier versions
-            }
-            fetchRequest.unifyResults = true
-            fetchRequest.sortOrder = .userDefault
-            
-            let contactStoreID = CNContactStore().defaultContainerIdentifier()
-            print("\(contactStoreID)")
-            
-            
-            do {
-                
-                try CNContactStore().enumerateContacts(with: fetchRequest) { (contact, stop) -> Void in
-                    //do something with contact
-                    if contact.phoneNumbers.count > 0 {
-                        contacts.append(contact)
-                    }
-                    
-                }
-            } catch let e as NSError {
-                print(e.localizedDescription)
-            }
-            
-            DispatchQueue.main.async(execute: { () -> Void in
-                completionHandler(contacts)
-            })
-        })
-    }
 }

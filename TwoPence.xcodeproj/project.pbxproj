@@ -77,6 +77,7 @@
 		BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */; };
 		BF1FDC1C1EDE9F7A0022C45C /* LogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1FDC1B1EDE9F7A0022C45C /* LogoView.xib */; };
 		BF1FDC1E1EDE9FB80022C45C /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FDC1D1EDE9FB80022C45C /* LogoView.swift */; };
+		BF1FDC201EE1390A0022C45C /* ContactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FDC1F1EE1390A0022C45C /* ContactsAPI.swift */; };
 		BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */; };
 		BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */; };
 		BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */; };
@@ -199,6 +200,7 @@
 		BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputationMetrics.swift; sourceTree = "<group>"; };
 		BF1FDC1B1EDE9F7A0022C45C /* LogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoView.xib; sourceTree = "<group>"; };
 		BF1FDC1D1EDE9FB80022C45C /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		BF1FDC1F1EE1390A0022C45C /* ContactsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsAPI.swift; sourceTree = "<group>"; };
 		BF38F9DF1EBEE00C002AA6C0 /* MilestoneCompleteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneCompleteView.xib; sourceTree = "<group>"; };
 		BF38F9E11EBEE01F002AA6C0 /* MilestoneFutureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilestoneFutureView.xib; sourceTree = "<group>"; };
 		BF38F9E31EBEE03F002AA6C0 /* MilestoneCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneCompleteView.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 				BFB423161ECBF6740035E398 /* Utils.swift */,
 				BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */,
 				BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */,
+				BF1FDC1F1EE1390A0022C45C /* ContactsAPI.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
 				BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */,
 				BF46ED631EDA3B390042B8EE /* SplashAnimatable.swift in Sources */,
+				BF1FDC201EE1390A0022C45C /* ContactsAPI.swift in Sources */,
 				BFD8EC991EB684BC00A362F8 /* UserProfile.swift in Sources */,
 				BF8F9C4B1EC4270600279E5D /* AppColor.swift in Sources */,
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,

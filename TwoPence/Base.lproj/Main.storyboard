@@ -175,6 +175,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Deq-gX-wcS">
                                 <rect key="frame" x="0.0" y="221" width="375" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" text="" id="y6q-ow-tjh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-ns-TAX">
                                 <rect key="frame" x="171" y="80" width="32" height="28"/>
@@ -227,11 +234,21 @@
                     </view>
                     <connections>
                         <outlet property="referralLabel" destination="Aol-oP-dxM" id="jmy-Vp-Did"/>
+                        <outlet property="searchBar" destination="y6q-ow-tjh" id="evS-3i-Re1"/>
+                        <outlet property="searchDisplayController" destination="MPa-9v-B71" id="e2U-dm-tza"/>
                         <outlet property="shareButton" destination="ilN-X6-RPA" id="LTx-3X-euc"/>
                         <outlet property="tableView" destination="Deq-gX-wcS" id="VUA-Kd-Rqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQl-PN-38V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="MPa-9v-B71">
+                    <connections>
+                        <outlet property="delegate" destination="zVq-qi-Mtb" id="LgD-wT-JUt"/>
+                        <outlet property="searchContentsController" destination="zVq-qi-Mtb" id="vJE-gW-rc7"/>
+                        <outlet property="searchResultsDataSource" destination="zVq-qi-Mtb" id="b2A-v2-8Ke"/>
+                        <outlet property="searchResultsDelegate" destination="zVq-qi-Mtb" id="qde-0o-LCj"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="5485.6000000000004" y="-855.02248875562225"/>
         </scene>
