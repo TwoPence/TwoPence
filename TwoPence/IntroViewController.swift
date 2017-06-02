@@ -88,7 +88,7 @@ class IntroViewController: UIViewController {
             label.text = dataSourceArray[i]
             
             if i == 0 {
-                logoView = LogoView(frame: CGRect(x: positionX, y: 0, width:200, height: 200))
+                logoView = LogoView(frame: CGRect(x: positionX, y: 0, width:237, height: 224))
                 logoView?.center = scrollView.center
                 scrollView.addSubview(logoView!)
             }
