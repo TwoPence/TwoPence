@@ -84,6 +84,7 @@ class ContactsAPI: NSObject {
         case .authorized:
             completionHandler(true)
         case .denied, .notDetermined:
+            // First show a manual popup before asking
             store.requestAccess(for: CNEntityType.contacts, completionHandler: { (access, accessError) -> Void in
                 if access {
                     completionHandler(access)
