@@ -12,7 +12,7 @@ import Contacts
 class AddSponsorDetailViewController: UIViewController {
 
     @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -106,8 +106,6 @@ class AddSponsorDetailViewController: UIViewController {
     func setupDisplay() {
         let font = UIFont(name: AppFontName.regular, size: 17)
         let color = AppColor.Charcoal.color
-        titleLabel.textColor = color
-        titleLabel.font = font
 
         firstNameTextField.textColor = color
         firstNameTextField.font = font?.withSize(15)
@@ -141,6 +139,19 @@ class AddSponsorDetailViewController: UIViewController {
         messageTextView.layer.borderWidth = 1.0
         messageTextView.layer.cornerRadius = 8.0
         messageTextView.text = AppCopy.linkSponsorMessage
+        
+        profileImageView.contentMode = .scaleAspectFill
+        profileImageView.clipsToBounds = true
+        if contact.imageDataAvailable {
+            let profileImage = UIImage(data: contact.thumbnailImageData!)
+            profileImageView.image = profileImage?.af_imageRoundedIntoCircle()
+            profileImageView.layer.borderWidth = 1.0
+            profileImageView.layer.borderColor = AppColor.DarkSeaGreen.color.cgColor
+            profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
+        } else {
+            let profileImage = Utils.profileImageFromContact(contact: contact)
+            profileImageView.image = profileImage
+        }
         
         linkButton.backgroundColor = AppColor.DarkSeaGreen.color
         linkButton.layer.cornerRadius = 4.0

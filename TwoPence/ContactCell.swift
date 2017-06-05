@@ -23,12 +23,13 @@ class ContactCell: UITableViewCell {
             profileImageView.contentMode = .scaleAspectFit
             profileImageView.clipsToBounds = true
             if contact.imageDataAvailable {
-                if let thumbnailImageData = contact.thumbnailImageData {
-                    let profileImage = UIImage(data: thumbnailImageData)
-                    profileImageView.image = profileImage?.af_imageRoundedIntoCircle()
-                }
+                let profileImage = UIImage(data: contact.thumbnailImageData!)
+                profileImageView.image = profileImage?.af_imageRoundedIntoCircle()
+                profileImageView.layer.borderWidth = 1.0
+                profileImageView.layer.borderColor = AppColor.DarkSeaGreen.color.cgColor
+                profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
             } else {
-                let profileImage = defaultProfileImage(contact: contact)
+                let profileImage = Utils.profileImageFromContact(contact: contact)
                 profileImageView.image = profileImage
             }
         }
@@ -43,27 +44,6 @@ class ContactCell: UITableViewCell {
                 selectedButton.backgroundColor = UIColor.clear
             }
         }
-    }
-    
-    func defaultProfileImage(contact: CNContact) -> UIImage? {
-        let profileLabel = UILabel()
-        profileLabel.frame.size = CGSize(width: 100.0, height: 100.0)
-        profileLabel.layer.borderColor = AppColor.DarkSeaGreen.color.cgColor
-        profileLabel.layer.borderWidth = 2.0
-        profileLabel.layer.cornerRadius = 50
-        profileLabel.font = UIFont(name: AppFontName.regular, size: 40)
-        profileLabel.textColor = AppColor.DarkSeaGreen.color
-        profileLabel.adjustsFontSizeToFitWidth = true
-        profileLabel.textAlignment = .center
-        let fullName = CNContactFormatter.string(from: contact, style: .fullName) ?? "Two Pence"
-        let initials = fullName.components(separatedBy: " ").reduce("") { ($0 == "" ? "" : "\($0.characters.first!)") + "\($1.characters.first!)" }
-        profileLabel.text = initials
-        
-        UIGraphicsBeginImageContext(profileLabel.frame.size)
-        profileLabel.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let profileImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return profileImage
     }
     
     func disableButton() {
@@ -97,6 +77,7 @@ class ContactCell: UITableViewCell {
         nameLabel.text = nil
         emailLabel.text = nil
         profileImageView.image = nil
+        profileImageView.layer.borderWidth = 0.0
         isContactSelected = false
     }
     

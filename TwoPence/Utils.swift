@@ -28,4 +28,25 @@ class Utils: NSObject {
         
         return imageName
     }
+    
+    class func profileImageFromContact(contact: CNContact) -> UIImage? {
+        let profileLabel = UILabel()
+        profileLabel.frame.size = CGSize(width: 100.0, height: 100.0)
+        profileLabel.layer.borderColor = AppColor.DarkSeaGreen.color.cgColor
+        profileLabel.layer.borderWidth = 2.0
+        profileLabel.layer.cornerRadius = 50
+        profileLabel.font = UIFont(name: AppFontName.regular, size: 44)
+        profileLabel.textColor = AppColor.DarkSeaGreen.color
+        profileLabel.adjustsFontSizeToFitWidth = true
+        profileLabel.textAlignment = .center
+        let fullName = CNContactFormatter.string(from: contact, style: .fullName) ?? "Two Pence"
+        let initials = fullName.components(separatedBy: " ").reduce("") { ($0 == "" ? "" : "\($0.characters.first!)") + "\($1.characters.first!)" }
+        profileLabel.text = initials
+        
+        UIGraphicsBeginImageContext(profileLabel.frame.size)
+        profileLabel.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let profileImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return profileImage
+    }
 }
