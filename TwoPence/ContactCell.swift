@@ -20,14 +20,15 @@ class ContactCell: UITableViewCell {
         didSet {
             nameLabel.text = CNContactFormatter.string(from: contact, style: .fullName)
             emailLabel.text = contact.emailAddresses.first?.value as String?
+            profileImageView.contentMode = .scaleAspectFit
+            profileImageView.clipsToBounds = true
             if contact.imageDataAvailable {
-                if let profileImageData = contact.imageData {
-                    profileImageView.image = UIImage(data: profileImageData) ?? UIImage(named: "logo")?.af_imageRoundedIntoCircle()
-                    print("custom image")
+                if let thumbnailImageData = contact.thumbnailImageData {
+                    let profileImage = UIImage(data: thumbnailImageData)
+                    profileImageView.image = profileImage?.af_imageRoundedIntoCircle()
                 }
             } else {
                 let profileImage = defaultProfileImage(contact: contact)
-                profileImageView.contentMode = .scaleAspectFit
                 profileImageView.image = profileImage
             }
         }
