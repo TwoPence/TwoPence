@@ -58,6 +58,7 @@ class AddSponsorDetailViewController: UIViewController {
         relationTextField.addTarget(self, action: #selector(relationTextFieldActive), for: .touchDown)
         
         messageTextView.delegate = self
+        messageTextView.textContainerInset = UIEdgeInsetsMake(12, 12, 12, 12)
     }
     
     override func viewDidAppear(_ animated: Bool) {
