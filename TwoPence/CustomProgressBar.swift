@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum CustomProgressBarFillDirection: Int {
+    case right
+    case left
+}
+
 class CustomProgressBar: UIView {
     
     var viewCornerRadius : CGFloat = 5
@@ -15,9 +20,10 @@ class CustomProgressBar: UIView {
     var progressColor = AppColor.DarkSeaGreen.color.cgColor
     var borderLayer = CAShapeLayer()
     var progressLayer = CAShapeLayer()
+    var fillDirection: CustomProgressBarFillDirection = .right
     
     
-    public init(width: CGFloat, height: CGFloat, color: CGColor? = nil, progressColor: CGColor? = nil, cornerRadius: CGFloat?=nil){
+    public init(width: CGFloat, height: CGFloat, color: CGColor? = nil, progressColor: CGColor? = nil, cornerRadius: CGFloat? = nil, fillDirection: CustomProgressBarFillDirection? = nil){
         if let radius = cornerRadius {
             viewCornerRadius = radius
         }
@@ -26,8 +32,12 @@ class CustomProgressBar: UIView {
             self.color = isColor
         }
         
-        if let isProgressColor = color {
+        if let isProgressColor = progressColor {
             self.progressColor = isProgressColor
+        }
+        
+        if let isFillDirection = fillDirection {
+            self.fillDirection = isFillDirection
         }
         
         super.init(frame: CGRect(x: 0, y: 0, width: width, height: height))
@@ -45,7 +55,8 @@ class CustomProgressBar: UIView {
         borderLayer.strokeEnd = 0
         layer.addSublayer(borderLayer)
         
-        let fromPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 0, height: bounds.height), cornerRadius: viewCornerRadius)
+        let width = fillDirection == .right ? 0 : bounds.width
+        let fromPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: width, height: bounds.height), cornerRadius: viewCornerRadius)
         progressLayer.path = fromPath.cgPath
         progressLayer.fillColor = progressColor
         
@@ -54,7 +65,9 @@ class CustomProgressBar: UIView {
     
     func progress(incremented: CGFloat, withDuration: CFTimeInterval? = nil) {
         if incremented <= bounds.width {
-            let toPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: incremented, height: bounds.height), cornerRadius: viewCornerRadius)
+            
+            let width = fillDirection == .right ? incremented : bounds.width - incremented
+            let toPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: width, height: bounds.height), cornerRadius: viewCornerRadius)
             
             let fromPath = progressLayer.path
             progressLayer.path = toPath.cgPath

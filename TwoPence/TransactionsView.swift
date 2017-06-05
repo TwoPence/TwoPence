@@ -18,16 +18,28 @@ class TransactionsView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var colorView: UIView!
     
-    let sectionHeight: CGFloat = 25
+    var delegate: TransactionsViewDelegate?
     let dateFormatter = DateFormatter()
     
     var groupedTransactions = [(date: Date, transactions: [Transaction])]() {
         didSet {
+            let transactions = groupedTransactions.map({$0.transactions}).flatMap({$0})
+            totalSaved = transactions.filter({$0.status != .Skipped}).map({$0.amountSaved}).reduce(0, +)
             tableView.reloadData()
         }
     }
-    var delegate: TransactionsViewDelegate?
+    let sectionHeight: CGFloat = 25
+    var peekingBenView: PeekingBenView!
+    var peekHeight: CGFloat = 80
+    var previousScrollOffset: CGFloat = 0
+    var totalSaved: Double = 0 {
+        didSet {
+            amountLabel.text = totalSaved.money()
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -46,8 +58,19 @@ class TransactionsView: UIView {
         addSubview(contentView)
         
         setupTableView()
+        peekingBenView = PeekingBenView()
+        tableView.addSubview(peekingBenView)
+        amountLabel.textColor = AppColor.Charcoal.color
+        amountLabel.font = UIFont(name: AppFontName.regular, size: 17)
+        colorView.backgroundColor = AppColor.PaleGreen.color
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        peekingBenView.frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.contentSize.width, height: peekHeight)
+        peekingBenView.isHidden = true
+    }
     
     func setupTableView() {
         let cell = UINib(nibName: "TransactionCell", bundle: nil)
@@ -56,6 +79,7 @@ class TransactionsView: UIView {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80.0
+        tableView.tableFooterView = UIView()
     }
 }
 
@@ -81,10 +105,10 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource, SwipeTab
         let sectionLabel = UILabel(frame: labelFrame)
         dateFormatter.dateStyle = .long
         let dateText = dateFormatter.string(from: groupedTransactions[section].date)
-        sectionLabel.text = dateText.uppercased()
+        sectionLabel.text = dateText
         sectionLabel.font = UIFont(name: AppFontName.regular, size: 11)
-        sectionLabel.textColor = AppColor.MediumGray.color
-        sectionLabel.textAlignment = .left
+        sectionLabel.textColor = AppColor.Charcoal.color
+        sectionLabel.textAlignment = .center
         sectionView.addSubview(sectionLabel)
         
         return sectionView
@@ -154,6 +178,27 @@ extension TransactionsView: UITableViewDelegate, UITableViewDataSource, SwipeTab
         var options = SwipeTableOptions()
         options.expansionStyle = .selection
         return options
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewContentHeight = tableView.contentSize.height
+        let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+        let didScrollToEnd = scrollView.contentOffset.y > scrollOffsetThreshold
+        let isScrollingDown = (scrollView.contentOffset.y - previousScrollOffset) > 0
+        let canScroll = scrollView.contentSize.height > tableView.bounds.size.height
+        
+        if canScroll && didScrollToEnd && tableView.isDragging && isScrollingDown {
+            // Show peeking
+            let scrollableRange = tableView.contentSize.height - tableView.bounds.height
+            let bounceAmount = scrollView.contentOffset.y - scrollableRange
+            let peekAmount = min(bounceAmount, peekHeight)
+            let y = tableView.contentSize.height + bounceAmount - peekAmount
+            let frame = CGRect(x: 0, y: y, width: tableView.contentSize.width, height: peekHeight)
+            peekingBenView.frame = frame
+            peekingBenView.isHidden = false
+        }
+        
+        previousScrollOffset = scrollView.contentOffset.y
     }
 
 }

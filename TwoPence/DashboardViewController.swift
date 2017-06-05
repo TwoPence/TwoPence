@@ -13,6 +13,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var contentView: DashboardView!
     
     var userFinMetrics: UserFinMetrics?
+    var transfers = [Transfer]()
+    var transferType: TransferType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class DashboardViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         setupNavigationBar()
-        loadAggTransactions()
+        loadTransfers()
         loadUserFinMetrics()
     }
     
@@ -64,9 +66,9 @@ class DashboardViewController: UIViewController {
         }
     }
 
-    func loadAggTransactions() {
-        TwoPenceAPI.sharedClient.getAggTransactions(success: { (aggTransactions: [AggTransactions]) in
-            self.contentView.aggTransactions = aggTransactions
+    func loadTransfers() {
+        TwoPenceAPI.sharedClient.getTransfers(success: { (transfers: [Transfer]) in
+            self.contentView.transfers = transfers
         }) { (error: Error) in
             print(error.localizedDescription)
         }
@@ -82,10 +84,10 @@ class DashboardViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is TransactionsDetailViewController {
-            let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
-            let groupedTransactions = sender as! [(date: Date, transactions: [Transaction])]
-            transactionsDetailViewController.groupedTransactions = groupedTransactions
+        if segue.destination is TransfersViewController {
+            let transfersViewController = segue.destination as! TransfersViewController
+            transfersViewController.transfers = self.transfers
+            transfersViewController.transferType = self.transferType
             
         } else if segue.destination is JoltViewController {
             let joltViewController = segue.destination as! JoltViewController
@@ -102,8 +104,10 @@ extension DashboardViewController: DashboardViewDelegate {
         }
     }
 
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])]) {
-        self.performSegue(withIdentifier: "TransactionsSegue", sender: selectedTransactions)
+    func navigateToTransfersViewController(transfers: [Transfer], transferType: TransferType) {
+        self.transfers = transfers
+        self.transferType = transferType
+        self.performSegue(withIdentifier: "TransfersSegue", sender: nil)
     }
     
     func changePage(page: Int) {

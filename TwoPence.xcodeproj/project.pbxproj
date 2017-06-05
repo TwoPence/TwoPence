@@ -9,24 +9,42 @@
 /* Begin PBXBuildFile section */
 		11B828FE3F8065EA1143B368 /* Pods_TwoPenceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */; };
 		433E021548F1500E56357705 /* Pods_TwoPence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D396EF33C417C0F5EA4E633C /* Pods_TwoPence.framework */; };
-		BE09ABCF1ECC085000EEE0C7 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */; };
+		BE088F201EDF71DF00F1B8C2 /* TransferTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE088F1E1EDF71DF00F1B8C2 /* TransferTypeCell.swift */; };
+		BE088F211EDF71DF00F1B8C2 /* TransferTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE088F1F1EDF71DF00F1B8C2 /* TransferTypeCell.xib */; };
+		BE09ABCF1ECC085000EEE0C7 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABCE1ECC085000EEE0C7 /* Int.swift */; };
 		BE09ABD11ECCE79800EEE0C7 /* ArcherPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */; };
-		BE09ABD31ED0E2B400EEE0C7 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */; };
+		BE09ABD31ED0E2B400EEE0C7 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09ABD21ED0E2B400EEE0C7 /* Double.swift */; };
 		BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1983531EBD08C60059F716 /* PendingTransferCell.swift */; };
 		BE1983561EBD08C60059F716 /* PendingTransferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1983541EBD08C60059F716 /* PendingTransferCell.xib */; };
 		BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1983571EBD0A230059F716 /* MatchedCell.swift */; };
 		BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1983581EBD0A230059F716 /* MatchedCell.xib */; };
 		BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19835B1EBD119E0059F716 /* SavingsRate.swift */; };
-		BE19835E1EBD89980059F716 /* MonthlyAggTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE19835D1EBD89980059F716 /* MonthlyAggTransactions.swift */; };
 		BE3F8D691EC3994900CA6F34 /* DebtHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */; };
 		BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */; };
 		BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */; };
 		BE3F8D831EC8160A00CA6F34 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D821EC8160A00CA6F34 /* Lato-Light.ttf */; };
 		BE3F8D861EC9784900CA6F34 /* JoltCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8D841EC9784800CA6F34 /* JoltCell.swift */; };
 		BE3F8D871EC9784900CA6F34 /* JoltCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3F8D851EC9784800CA6F34 /* JoltCell.xib */; };
+		BE61444E1EE0E03500E3F799 /* AppCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE61444D1EE0E03500E3F799 /* AppCopy.swift */; };
 		BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */; };
 		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
 		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
+		BEC79A731ED624AF00DD6227 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A721ED624AF00DD6227 /* TransfersViewController.swift */; };
+		BEC79A751ED625B800DD6227 /* TransfersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A741ED625B800DD6227 /* TransfersView.swift */; };
+		BEC79A771ED625D400DD6227 /* TransfersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC79A761ED625D400DD6227 /* TransfersView.xib */; };
+		BEC79A7F1ED7AD9100DD6227 /* PeekingBenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A7E1ED7AD9100DD6227 /* PeekingBenView.swift */; };
+		BEC79A811ED7ADA200DD6227 /* PeekingBenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC79A801ED7ADA200DD6227 /* PeekingBenView.xib */; };
+		BEC79A851ED8CD7800DD6227 /* EmptyTableStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A841ED8CD7800DD6227 /* EmptyTableStateView.swift */; };
+		BEC79A871ED8CD8B00DD6227 /* EmptyTableStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC79A861ED8CD8B00DD6227 /* EmptyTableStateView.xib */; };
+		BEC79A8B1EDB738D00DD6227 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A8A1EDB738D00DD6227 /* Sponsor.swift */; };
+		BEC79A8D1EDDADC300DD6227 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A8C1EDDADC300DD6227 /* Date.swift */; };
+		BEC79A8F1EDDB7E300DD6227 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A8E1EDDB7E300DD6227 /* SponsorsViewController.swift */; };
+		BEC79A921EDDC65C00DD6227 /* SponsorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A901EDDC65C00DD6227 /* SponsorCell.swift */; };
+		BEC79A931EDDC65C00DD6227 /* SponsorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC79A911EDDC65C00DD6227 /* SponsorCell.xib */; };
+		BEC79A951EDE123700DD6227 /* AddSponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A941EDE123600DD6227 /* AddSponsorViewController.swift */; };
+		BEC79A971EDE1DCB00DD6227 /* AddSponsorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A961EDE1DCB00DD6227 /* AddSponsorDetailViewController.swift */; };
+		BEC79A9A1EDE26B100DD6227 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A981EDE26B100DD6227 /* ContactCell.swift */; };
+		BEC79A9B1EDE26B100DD6227 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC79A991EDE26B100DD6227 /* ContactCell.xib */; };
 		BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */; };
 		BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */; };
 		BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */; };
@@ -58,10 +76,6 @@
 		BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF580C1EB69031001EE950 /* JoltViewController.swift */; };
 		BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF580E1EB6910B001EE950 /* JoltView.swift */; };
 		BEEF58111EB69116001EE950 /* JoltView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58101EB69116001EE950 /* JoltView.xib */; };
-		BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */; };
-		BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF58201EBBB4F2001EE950 /* MonthCell.xib */; };
-		BF08074B1ED6CC74000C4F44 /* ReferralContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */; };
-		BF08074D1ED6CC83000C4F44 /* ReferralContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */; };
 		BF0807541ED8EAE3000C4F44 /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08074F1ED8EAE3000C4F44 /* TransitionSubmitButton.swift */; };
 		BF0807551ED8EAE3000C4F44 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0807501ED8EAE3000C4F44 /* SpinerLayer.swift */; };
 		BF0807561ED8EAE3000C4F44 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0807511ED8EAE3000C4F44 /* FadeTransition.swift */; };
@@ -70,7 +84,7 @@
 		BF134BCF1EB3A7DA0096DD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BCE1EB3A7DA0096DD5B /* User.swift */; };
 		BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */; };
 		BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */; };
-		BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD41EB3A8160096DD5B /* AggTransactions.swift */; };
+		BF134BD51EB3A8160096DD5B /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD41EB3A8160096DD5B /* Transfer.swift */; };
 		BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD61EB3A8320096DD5B /* Institution.swift */; };
 		BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BD81EB3A83D0096DD5B /* Account.swift */; };
 		BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF134BDA1EB3A8550096DD5B /* Transaction.swift */; };
@@ -132,26 +146,44 @@
 		AFF19F0EAE0D429842E3D9E7 /* Pods-TwoPence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPence.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPence/Pods-TwoPence.release.xcconfig"; sourceTree = "<group>"; };
 		B95380FACD16431EF605C997 /* Pods-TwoPenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoPenceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBA659A8259FF831A743AD73 /* Pods_TwoPenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoPenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		BE088F1E1EDF71DF00F1B8C2 /* TransferTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferTypeCell.swift; sourceTree = "<group>"; };
+		BE088F1F1EDF71DF00F1B8C2 /* TransferTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransferTypeCell.xib; sourceTree = "<group>"; };
+		BE09ABCE1ECC085000EEE0C7 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		BE09ABD01ECCE79800EEE0C7 /* ArcherPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArcherPro-Bold.otf"; sourceTree = "<group>"; };
-		BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		BE09ABD21ED0E2B400EEE0C7 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		BE1983531EBD08C60059F716 /* PendingTransferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTransferCell.swift; sourceTree = "<group>"; };
 		BE1983541EBD08C60059F716 /* PendingTransferCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingTransferCell.xib; sourceTree = "<group>"; };
 		BE1983571EBD0A230059F716 /* MatchedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedCell.swift; sourceTree = "<group>"; };
 		BE1983581EBD0A230059F716 /* MatchedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchedCell.xib; sourceTree = "<group>"; };
 		BE19835B1EBD119E0059F716 /* SavingsRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsRate.swift; sourceTree = "<group>"; };
-		BE19835D1EBD89980059F716 /* MonthlyAggTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyAggTransactions.swift; sourceTree = "<group>"; };
 		BE3F8D681EC3994900CA6F34 /* DebtHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtHeaderView.swift; sourceTree = "<group>"; };
 		BE3F8D6A1EC3995500CA6F34 /* DebtHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebtHeaderView.xib; sourceTree = "<group>"; };
 		BE3F8D801EC5006400CA6F34 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		BE3F8D821EC8160A00CA6F34 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		BE3F8D841EC9784800CA6F34 /* JoltCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltCell.swift; sourceTree = "<group>"; };
 		BE3F8D851EC9784800CA6F34 /* JoltCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltCell.xib; sourceTree = "<group>"; };
+		BE61444D1EE0E03500E3F799 /* AppCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCopy.swift; sourceTree = "<group>"; };
 		BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneViewController.swift; sourceTree = "<group>"; };
 		BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
+		BEC79A721ED624AF00DD6227 /* TransfersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		BEC79A741ED625B800DD6227 /* TransfersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersView.swift; sourceTree = "<group>"; };
+		BEC79A761ED625D400DD6227 /* TransfersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransfersView.xib; sourceTree = "<group>"; };
+		BEC79A7E1ED7AD9100DD6227 /* PeekingBenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekingBenView.swift; sourceTree = "<group>"; };
+		BEC79A801ED7ADA200DD6227 /* PeekingBenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeekingBenView.xib; sourceTree = "<group>"; };
+		BEC79A841ED8CD7800DD6227 /* EmptyTableStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableStateView.swift; sourceTree = "<group>"; };
+		BEC79A861ED8CD8B00DD6227 /* EmptyTableStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableStateView.xib; sourceTree = "<group>"; };
+		BEC79A8A1EDB738D00DD6227 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
+		BEC79A8C1EDDADC300DD6227 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BEC79A8E1EDDB7E300DD6227 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		BEC79A901EDDC65C00DD6227 /* SponsorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorCell.swift; sourceTree = "<group>"; };
+		BEC79A911EDDC65C00DD6227 /* SponsorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorCell.xib; sourceTree = "<group>"; };
+		BEC79A941EDE123600DD6227 /* AddSponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSponsorViewController.swift; sourceTree = "<group>"; };
+		BEC79A961EDE1DCB00DD6227 /* AddSponsorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSponsorDetailViewController.swift; sourceTree = "<group>"; };
+		BEC79A981EDE26B100DD6227 /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		BEC79A991EDE26B100DD6227 /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		BEEF57C41EB3D3E8001EE950 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardView.xib; sourceTree = "<group>"; };
 		BEEF57CC1EB3E249001EE950 /* SavingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsView.swift; sourceTree = "<group>"; };
@@ -181,10 +213,6 @@
 		BEEF580C1EB69031001EE950 /* JoltViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltViewController.swift; sourceTree = "<group>"; };
 		BEEF580E1EB6910B001EE950 /* JoltView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoltView.swift; sourceTree = "<group>"; };
 		BEEF58101EB69116001EE950 /* JoltView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoltView.xib; sourceTree = "<group>"; };
-		BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
-		BEEF58201EBBB4F2001EE950 /* MonthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
-		BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralContactCell.swift; sourceTree = "<group>"; };
-		BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferralContactCell.xib; sourceTree = "<group>"; };
 		BF08074F1ED8EAE3000C4F44 /* TransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSubmitButton.swift; sourceTree = "<group>"; };
 		BF0807501ED8EAE3000C4F44 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
 		BF0807511ED8EAE3000C4F44 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -193,7 +221,7 @@
 		BF134BCE1EB3A7DA0096DD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFinMetrics.swift; sourceTree = "<group>"; };
 		BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestone.swift; sourceTree = "<group>"; };
-		BF134BD41EB3A8160096DD5B /* AggTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggTransactions.swift; sourceTree = "<group>"; };
+		BF134BD41EB3A8160096DD5B /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		BF134BD61EB3A8320096DD5B /* Institution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
 		BF134BD81EB3A83D0096DD5B /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BF134BDA1EB3A8550096DD5B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -302,6 +330,7 @@
 				BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */,
 				BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */,
 				BF82C7A01EBC599700F43E27 /* DebtMilestoneDetailViewController.swift */,
+				BEC79A721ED624AF00DD6227 /* TransfersViewController.swift */,
 				BEEF57F01EB5ADBC001EE950 /* TransactionsDetailViewController.swift */,
 				BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */,
 				BEEF57FA1EB648AB001EE950 /* AccountDetailViewController.swift */,
@@ -309,6 +338,9 @@
 				BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */,
 				BEEF580C1EB69031001EE950 /* JoltViewController.swift */,
 				BF8F9C441EC1978300279E5D /* ReferralViewController.swift */,
+				BEC79A8E1EDDB7E300DD6227 /* SponsorsViewController.swift */,
+				BEC79A941EDE123600DD6227 /* AddSponsorViewController.swift */,
+				BEC79A961EDE1DCB00DD6227 /* AddSponsorDetailViewController.swift */,
 				BFF34FFE1EDCA71D0042BD9D /* IntroViewController.swift */,
 			);
 			name = "View Controllers";
@@ -323,10 +355,16 @@
 				BEEF57C61EB3D3F7001EE950 /* DashboardView.xib */,
 				BEEF57E81EB54DF2001EE950 /* TransactionsView.swift */,
 				BEEF57EA1EB54E0A001EE950 /* TransactionsView.xib */,
+				BEC79A741ED625B800DD6227 /* TransfersView.swift */,
+				BEC79A761ED625D400DD6227 /* TransfersView.xib */,
 				BF8F9C411EC04B8D00279E5D /* Accounts View */,
 				BEEF57E31EB53E69001EE950 /* Dashboard Views */,
 				BEEF581E1EBBB4CE001EE950 /* Collection View Cells */,
 				BEEF57E01EB53E0E001EE950 /* Table View Cells */,
+				BEC79A7E1ED7AD9100DD6227 /* PeekingBenView.swift */,
+				BEC79A801ED7ADA200DD6227 /* PeekingBenView.xib */,
+				BEC79A841ED8CD7800DD6227 /* EmptyTableStateView.swift */,
+				BEC79A861ED8CD8B00DD6227 /* EmptyTableStateView.xib */,
 				BF1FDC1B1EDE9F7A0022C45C /* LogoView.xib */,
 				BF1FDC1D1EDE9FB80022C45C /* LogoView.swift */,
 			);
@@ -341,12 +379,12 @@
 				BF134BD01EB3A7F00096DD5B /* UserFinMetrics.swift */,
 				BF134BDC1EB3A86C0096DD5B /* ComputationMetrics.swift */,
 				BF134BD21EB3A7FF0096DD5B /* DebtMilestone.swift */,
-				BF134BD41EB3A8160096DD5B /* AggTransactions.swift */,
+				BF134BD41EB3A8160096DD5B /* Transfer.swift */,
 				BF134BDA1EB3A8550096DD5B /* Transaction.swift */,
 				BF134BD61EB3A8320096DD5B /* Institution.swift */,
 				BF134BD81EB3A83D0096DD5B /* Account.swift */,
 				BE19835B1EBD119E0059F716 /* SavingsRate.swift */,
-				BE19835D1EBD89980059F716 /* MonthlyAggTransactions.swift */,
+				BEC79A8A1EDB738D00DD6227 /* Sponsor.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -383,8 +421,12 @@
 				BF8F9C541EC4CC6800279E5D /* ProfileCell.xib */,
 				BE3F8D841EC9784800CA6F34 /* JoltCell.swift */,
 				BE3F8D851EC9784800CA6F34 /* JoltCell.xib */,
-				BF08074A1ED6CC74000C4F44 /* ReferralContactCell.swift */,
-				BF08074C1ED6CC83000C4F44 /* ReferralContactCell.xib */,
+				BEC79A901EDDC65C00DD6227 /* SponsorCell.swift */,
+				BEC79A911EDDC65C00DD6227 /* SponsorCell.xib */,
+				BEC79A981EDE26B100DD6227 /* ContactCell.swift */,
+				BEC79A991EDE26B100DD6227 /* ContactCell.xib */,
+				BE088F1E1EDF71DF00F1B8C2 /* TransferTypeCell.swift */,
+				BE088F1F1EDF71DF00F1B8C2 /* TransferTypeCell.xib */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -407,8 +449,6 @@
 		BEEF581E1EBBB4CE001EE950 /* Collection View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF581F1EBBB4F2001EE950 /* MonthCell.swift */,
-				BEEF58201EBBB4F2001EE950 /* MonthCell.xib */,
 			);
 			name = "Collection View Cells";
 			sourceTree = "<group>";
@@ -461,13 +501,15 @@
 				BF46ED5B1EDA3B390042B8EE /* RevealingSplashView */,
 				BF08074E1ED8EAC2000C4F44 /* TKSubmitTransition */,
 				BF8F9C4A1EC4270600279E5D /* AppColor.swift */,
-				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
-				BF395B741EC98203004E5D64 /* AppMessage.swift */,
 				BF395B7A1ECA2C03004E5D64 /* AppFontName.swift */,
+				BF395B741EC98203004E5D64 /* AppMessage.swift */,
+				BE61444D1EE0E03500E3F799 /* AppCopy.swift */,
+				BF8F9C481EC3922E00279E5D /* CustomProgressBar.swift */,
 				BF395B7E1ECA394E004E5D64 /* TwoPence-Bridging-Header.h */,
 				BFB423161ECBF6740035E398 /* Utils.swift */,
-				BE09ABCE1ECC085000EEE0C7 /* IntExtensions.swift */,
-				BE09ABD21ED0E2B400EEE0C7 /* DoubleExtensions.swift */,
+				BEC79A8C1EDDADC300DD6227 /* Date.swift */,
+				BE09ABCE1ECC085000EEE0C7 /* Int.swift */,
+				BE09ABD21ED0E2B400EEE0C7 /* Double.swift */,
 				BF1FDC1F1EE1390A0022C45C /* ContactsAPI.swift */,
 			);
 			name = Common;
@@ -640,28 +682,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC255A51EA5EA6A004FA1A8 /* LaunchScreen.storyboard in Resources */,
+				BEC79A871ED8CD8B00DD6227 /* EmptyTableStateView.xib in Resources */,
+				BE088F211EDF71DF00F1B8C2 /* TransferTypeCell.xib in Resources */,
 				BEEF58031EB64C68001EE950 /* InstitutionCell.xib in Resources */,
 				BEEF57FF1EB6497F001EE950 /* AccountDetailView.xib in Resources */,
+				BEC79A931EDDC65C00DD6227 /* SponsorCell.xib in Resources */,
 				BFB423151ECBCB790035E398 /* JoltSuccessView.xib in Resources */,
 				BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */,
 				BFC255A21EA5EA6A004FA1A8 /* Assets.xcassets in Resources */,
 				BEEF58071EB65C83001EE950 /* AccountCell.xib in Resources */,
 				BF38F9E21EBEE01F002AA6C0 /* MilestoneFutureView.xib in Resources */,
 				BEEF57F51EB64324001EE950 /* AccountsView.xib in Resources */,
-				BEEF58221EBBB4F2001EE950 /* MonthCell.xib in Resources */,
+				BEC79A9B1EDE26B100DD6227 /* ContactCell.xib in Resources */,
 				BF395B791EC98445004E5D64 /* SignoutCell.xib in Resources */,
 				BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */,
 				BE3F8D871EC9784900CA6F34 /* JoltCell.xib in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
 				BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
+				BEC79A771ED625D400DD6227 /* TransfersView.xib in Resources */,
 				BEEF58111EB69116001EE950 /* JoltView.xib in Resources */,
-				BF08074D1ED6CC83000C4F44 /* ReferralContactCell.xib in Resources */,
 				BF38F9E01EBEE00C002AA6C0 /* MilestoneCompleteView.xib in Resources */,
 				BE3F8D831EC8160A00CA6F34 /* Lato-Light.ttf in Resources */,
 				BEEF57EB1EB54E0A001EE950 /* TransactionsView.xib in Resources */,
 				BF46ED691EDB8A320042B8EE /* Watermelon.json in Resources */,
 				BF8F9C531EC43B3900279E5D /* SettingsCell.xib in Resources */,
+				BEC79A811ED7ADA200DD6227 /* PeekingBenView.xib in Resources */,
 				BE19835A1EBD0A230059F716 /* MatchedCell.xib in Resources */,
 				BEEF57EF1EB5501A001EE950 /* TransactionCell.xib in Resources */,
 				BEEF57C71EB3D3F7001EE950 /* DashboardView.xib in Resources */,
@@ -697,7 +743,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2C1E0DF42C2CC97164023C83 /* [CP] Check Pods Manifest.lock */ = {
@@ -712,7 +758,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4648AA7EF16E7B717DE7058C /* [CP] Copy Pods Resources */ = {
@@ -786,14 +832,20 @@
 				BF0807561ED8EAE3000C4F44 /* FadeTransition.swift in Sources */,
 				BF395B751EC98203004E5D64 /* AppMessage.swift in Sources */,
 				BF134BDD1EB3A86C0096DD5B /* ComputationMetrics.swift in Sources */,
+				BEC79A731ED624AF00DD6227 /* TransfersViewController.swift in Sources */,
+				BEC79A7F1ED7AD9100DD6227 /* PeekingBenView.swift in Sources */,
+				BEC79A971EDE1DCB00DD6227 /* AddSponsorDetailViewController.swift in Sources */,
 				BF82C7A11EBC599700F43E27 /* DebtMilestoneDetailViewController.swift in Sources */,
 				BF0807551ED8EAE3000C4F44 /* SpinerLayer.swift in Sources */,
 				BF8F9C491EC3922E00279E5D /* CustomProgressBar.swift in Sources */,
+				BEC79A951EDE123700DD6227 /* AddSponsorViewController.swift in Sources */,
+				BEC79A9A1EDE26B100DD6227 /* ContactCell.swift in Sources */,
 				BEEF57D91EB52DC1001EE950 /* DebtMilestoneView.swift in Sources */,
 				BF134BD71EB3A8320096DD5B /* Institution.swift in Sources */,
 				BF0807541ED8EAE3000C4F44 /* TransitionSubmitButton.swift in Sources */,
 				BF8F9C571EC4CC8000279E5D /* ProfileCell.swift in Sources */,
 				BEEF57E91EB54DF2001EE950 /* TransactionsView.swift in Sources */,
+				BEC79A8B1EDB738D00DD6227 /* Sponsor.swift in Sources */,
 				BE1983591EBD0A230059F716 /* MatchedCell.swift in Sources */,
 				BF46ED631EDA3B390042B8EE /* SplashAnimatable.swift in Sources */,
 				BF1FDC201EE1390A0022C45C /* ContactsAPI.swift in Sources */,
@@ -801,15 +853,20 @@
 				BF8F9C4B1EC4270600279E5D /* AppColor.swift in Sources */,
 				BEEF57D11EB3FAE6001EE950 /* DebtView.swift in Sources */,
 				BE19835C1EBD119E0059F716 /* SavingsRate.swift in Sources */,
+				BE088F201EDF71DF00F1B8C2 /* TransferTypeCell.swift in Sources */,
 				BF38F9E41EBEE03F002AA6C0 /* MilestoneCompleteView.swift in Sources */,
 				BF8F9C511EC43AA000279E5D /* SettingsCell.swift in Sources */,
 				BF46ED621EDA3B390042B8EE /* RevealingSplashView.swift in Sources */,
+				BEC79A8F1EDDB7E300DD6227 /* SponsorsViewController.swift in Sources */,
 				BF46ED611EDA3B390042B8EE /* Animations.swift in Sources */,
 				BFB423171ECBF6740035E398 /* Utils.swift in Sources */,
 				BF134BD91EB3A83D0096DD5B /* Account.swift in Sources */,
+				BEC79A851ED8CD7800DD6227 /* EmptyTableStateView.swift in Sources */,
 				BF395B781EC98445004E5D64 /* SignoutCell.swift in Sources */,
+				BE61444E1EE0E03500E3F799 /* AppCopy.swift in Sources */,
 				BF1FDC1E1EDE9FB80022C45C /* LogoView.swift in Sources */,
 				BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */,
+				BEC79A8D1EDDADC300DD6227 /* Date.swift in Sources */,
 				BF0807581ED8EAE3000C4F44 /* TimerEx.swift in Sources */,
 				BEEF57F11EB5ADBC001EE950 /* TransactionsDetailViewController.swift in Sources */,
 				BF134BD31EB3A7FF0096DD5B /* DebtMilestone.swift in Sources */,
@@ -817,9 +874,9 @@
 				BEEF57CD1EB3E249001EE950 /* SavingsView.swift in Sources */,
 				BEEF580D1EB69031001EE950 /* JoltViewController.swift in Sources */,
 				BFC2559B1EA5EA6A004FA1A8 /* AppDelegate.swift in Sources */,
-				BF08074B1ED6CC74000C4F44 /* ReferralContactCell.swift in Sources */,
-				BF134BD51EB3A8160096DD5B /* AggTransactions.swift in Sources */,
-				BE09ABD31ED0E2B400EEE0C7 /* DoubleExtensions.swift in Sources */,
+				BEC79A921EDDC65C00DD6227 /* SponsorCell.swift in Sources */,
+				BF134BD51EB3A8160096DD5B /* Transfer.swift in Sources */,
+				BE09ABD31ED0E2B400EEE0C7 /* Double.swift in Sources */,
 				BF134BDB1EB3A8550096DD5B /* Transaction.swift in Sources */,
 				BF8F9C451EC1978300279E5D /* ReferralViewController.swift in Sources */,
 				BEEF58061EB65C83001EE950 /* AccountCell.swift in Sources */,
@@ -829,22 +886,21 @@
 				BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */,
 				BF395B7B1ECA2C03004E5D64 /* AppFontName.swift in Sources */,
 				BF8F9C431EC18BC500279E5D /* AddAccountViewController.swift in Sources */,
-				BEEF58211EBBB4F2001EE950 /* MonthCell.swift in Sources */,
 				BE1983551EBD08C60059F716 /* PendingTransferCell.swift in Sources */,
 				BE3F8D691EC3994900CA6F34 /* DebtHeaderView.swift in Sources */,
 				BF38F9E81EBF9F4D002AA6C0 /* SAConfettiView.swift in Sources */,
-				BE09ABCF1ECC085000EEE0C7 /* IntExtensions.swift in Sources */,
+				BE09ABCF1ECC085000EEE0C7 /* Int.swift in Sources */,
 				BEEF57C21EB3CDCB001EE950 /* FaqViewController.swift in Sources */,
 				BEEF57C31EB3CDCB001EE950 /* AccountsViewController.swift in Sources */,
 				BEEF580F1EB6910B001EE950 /* JoltView.swift in Sources */,
 				BEEF57EE1EB5501A001EE950 /* TransactionCell.swift in Sources */,
 				BFBD3AFE1EB6B57C00A7F767 /* TwoPenceAPI.swift in Sources */,
 				BFB423131ECBC6410035E398 /* JoltSuccessView.swift in Sources */,
+				BEC79A751ED625B800DD6227 /* TransfersView.swift in Sources */,
 				BEEF57C51EB3D3E8001EE950 /* DashboardView.swift in Sources */,
 				BEEF57F31EB64303001EE950 /* AccountsView.swift in Sources */,
 				BEEF57D51EB3FB1C001EE950 /* AssetView.swift in Sources */,
 				BEEF57FD1EB6496F001EE950 /* AccountDetailView.swift in Sources */,
-				BE19835E1EBD89980059F716 /* MonthlyAggTransactions.swift in Sources */,
 				BE3F8D861EC9784900CA6F34 /* JoltCell.swift in Sources */,
 				BFBD3B001EB7032100A7F767 /* TimelineView.swift in Sources */,
 				BF134BD11EB3A7F00096DD5B /* UserFinMetrics.swift in Sources */,

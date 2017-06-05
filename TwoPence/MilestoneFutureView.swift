@@ -66,10 +66,7 @@ class MilestoneFutureView: UIView {
     }
     
     func formatDisplay() {
-        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
-        joltButton.layer.cornerRadius = 4
-        joltButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
-        joltButton.titleLabel?.textColor = UIColor.white
+        setupJoltButton()
         currentValue.textColor = AppColor.Charcoal.color
         currentValue.font = UIFont(name: AppFontName.light, size: 28)
         currentValue.formatBlock = { (value) in return Double(value).money(round: true) }
@@ -79,8 +76,15 @@ class MilestoneFutureView: UIView {
         milestoneFutureLabel.font = UIFont(name: AppFontName.regular, size: 17)
         milestoneFutureLabel.formatBlock = {
             (value) in
-            return "You are " + Double(value).money(round: true) + " away from your next milestone!"
+            return "You are " + Double(value).money(round: true) + " away from your next milestone"
         }
+    }
+    
+    func setupJoltButton() {
+        joltButton.layer.cornerRadius = 4
+        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
+        joltButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
+        joltButton.titleLabel?.textColor = UIColor.white
     }
     
     @IBAction func onCloseTap(_ sender: Any) {

@@ -13,11 +13,11 @@ class MatchedCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var match: AggTransactions! {
+    var match: Transfer! {
         didSet {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/YYYY"
-            dateLabel.text = dateFormatter.string(from: match.date)
+            dateFormatter.dateFormat = "MMM d"
+            dateLabel.text = dateFormatter.string(from: match.date) + match.date.daySuffix()
             amountLabel.text = match.amount.money()
         }
     }
@@ -26,7 +26,9 @@ class MatchedCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         dateLabel.textColor = AppColor.Charcoal.color
+        dateLabel.font = UIFont(name: AppFontName.regular, size: 17)
         amountLabel.textColor = AppColor.Charcoal.color
+        amountLabel.font = UIFont(name: AppFontName.regular, size: 17)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

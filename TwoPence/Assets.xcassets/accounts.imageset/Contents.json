@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "accounts.png",
+      "filename" : "accoutsSolidSimple2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "accounts@2x.png",
+      "filename" : "accoutsSolidSimple2@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "accounts@3x.png",
+      "filename" : "accoutsSolidSimple2@3x.png",
       "scale" : "3x"
     }
   ],

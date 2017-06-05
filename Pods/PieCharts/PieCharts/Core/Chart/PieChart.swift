@@ -56,7 +56,7 @@ import UIKit
     
     public fileprivate(set) var container: CALayer = CALayer()
     
-    fileprivate var slices: [PieSlice] = []
+    public fileprivate(set) var slices: [PieSlice] = []
     
     public var models: [PieSliceModel] = [] {
         didSet {
@@ -218,6 +218,15 @@ import UIKit
             slice.view.removeFromSuperlayer()
         }
         slices = []
+    }
+    
+    public func clear() {
+        for layer in layers {
+            layer.clear()
+        }
+        layers = []
+        models = []
+        removeSlices()
     }
     
     open override func prepareForInterfaceBuilder() {

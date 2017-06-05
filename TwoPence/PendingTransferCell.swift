@@ -13,7 +13,7 @@ class PendingTransferCell: UITableViewCell {
     @IBOutlet weak var pendingTransferLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var pendingTransfer: AggTransactions! {
+    var pendingTransfer: Transfer! {
         didSet {
             amountLabel.text = pendingTransfer.amount.money()
         }
@@ -24,7 +24,9 @@ class PendingTransferCell: UITableViewCell {
         // Initialization code
         self.accessoryType = .disclosureIndicator
         pendingTransferLabel.textColor = AppColor.Charcoal.color
+        pendingTransferLabel.font = UIFont(name: AppFontName.regular, size: 17)
         amountLabel.textColor = AppColor.Charcoal.color
+        amountLabel.font = UIFont(name: AppFontName.regular, size: 17)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

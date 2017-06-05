@@ -19,7 +19,7 @@ class IntroViewController: UIViewController {
     
     var logoView: LogoView?
     var animationView: LOTAnimationView?
-    let dataSourceArray = ["Swipe left to begin", "Don't forget to make your bed", "Clean your toilet", "And windows", "Make a snack", "And go!"]
+    let dataSourceArray = [AppCopy.onboardingScreen1, AppCopy.onboardingScreen2, AppCopy.onboardingScreen3, AppCopy.onboardingScreen4]
     
     override func viewDidLoad() {
         super.viewDidLoad()

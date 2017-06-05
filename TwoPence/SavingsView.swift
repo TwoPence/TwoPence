@@ -7,69 +7,45 @@
 //
 
 import UIKit
+import EFCountingLabel
+import PieCharts
 
 protocol SavingsViewDelegate {
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])])
+    func navigateToTransfersViewController(transfers: [Transfer], transferType: TransferType)
 }
 
-class SavingsView: UIView, JoltViewDelegate {
+class SavingsView: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var savedLabel: UILabel!
+    @IBOutlet weak var amountSavedLabel: EFCountingLabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
-
-    @IBOutlet weak var savedAmountLabel: UILabel!
-    @IBOutlet weak var matchedAmountLabel: UILabel!
-    @IBOutlet weak var transfersLabel: UILabel!
-    
-    @IBOutlet weak var savedAmountLabelTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var totalSavedLabelBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var matchedAmountLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var chartView: PieChart!
     
     var delegate: SavingsViewDelegate?
-    
-    var aggTransactions = [AggTransactions]() {
+    var transfers = [Transfer]() {
         didSet {
-            monthlyAggTransactions = MonthlyAggTransactions.withArray(aggTransactions: aggTransactions)
-            selectedMonth = currentMonth()
-            filtered = [(selectedMonth, aggTransactions.filter({$0.month == selectedMonth}))]
+            typeTotals = Transfer.typeTotals(transfers: transfers)
         }
     }
-    var filtered = [(month: String?, aggTransactions: [AggTransactions])]() {
+    var typeTotals = [(type: TransferType, total: Double)]() {
         didSet {
+            totalAmountSaved = typeTotals.map({$0.total}).reduce(0, +)
+            Timer.schedule(delay: startDelay) { (_) in
+                self.amountSavedLabel.countFromZeroTo(CGFloat(self.totalAmountSaved), withDuration: self.withDuration)
+            }
             tableView.reloadData()
+            setupChart()
         }
     }
-    var monthlyAggTransactions = [MonthlyAggTransactions]() {
-        didSet {
-            collectionView.reloadData()
-            setupHeaderElements()
-        }
-    }
-    var selectedMonth: String?
-    
-    var previousScrollOffset: CGFloat = 0
-    
-    let headerMaxHeight: CGFloat = 400
-    let headerMinHeight: CGFloat = 275
-    
-    let savedAmountLabelTopConstraintMax: CGFloat = 94
-    let savedAmountLabelTopConstraintMin: CGFloat = 40
+    var totalAmountSaved: Double = 0
+    var chartThickness: CGFloat = 30
+    var chartInset: CGFloat = 68
+    var withDuration: CFTimeInterval = 1.0
+    var startDelay: CFTimeInterval = 0.5
 
-    let totalSavedLabelBottomConstraintMax: CGFloat = 8
-    let totalSavedLabelBottomConstraintMin: CGFloat = -12
-    
-    let matchedAmountLabelTopConstraintMax: CGFloat = 48
-    let matchedAmountLabelTopConstraintMin: CGFloat = -12
-    
-    let savedAmountLabelMinScale: CGFloat = 0.4
-    
-    let tableViewSectionHeaderHeight: CGFloat = 25
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         initSubviews()
@@ -86,231 +62,102 @@ class SavingsView: UIView, JoltViewDelegate {
         contentView.frame = bounds
         addSubview(contentView)
         
-        headerHeightConstraint.constant = headerMaxHeight
-        transfersLabel.textColor = AppColor.MediumGray.color
-        
-        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: headerView)
-
+        amountSavedLabel.formatBlock = { (value) in return Double(value).money(round: true) }
+        amountSavedLabel.method = .easeOut
+        Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: backgroundView)
         setupTableView()
-        setupCollectionView()
     }
     
     func setupTableView() {
-        let transferCell = UINib(nibName: "TransferCell", bundle: nil)
-        tableView.register(transferCell, forCellReuseIdentifier: "TransferCell")
-        let pendingTransferCell = UINib(nibName: "PendingTransferCell", bundle: nil)
-        tableView.register(pendingTransferCell, forCellReuseIdentifier: "PendingTransferCell")
-        let matchedCell = UINib(nibName: "MatchedCell", bundle: nil)
-        tableView.register(matchedCell, forCellReuseIdentifier: "MatchedCell")
-        let joltCell = UINib(nibName: "JoltCell", bundle: nil)
-        tableView.register(joltCell, forCellReuseIdentifier: "JoltCell")
-        tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "MonthSection")
+        let cell = UINib(nibName: "TransferTypeCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "TransferTypeCell")
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = (tableView.bounds.size.height - 49) / 3
+        tableView.bounces = true
+        tableView.tableFooterView = UIView()
     }
     
-    func setupCollectionView() {
-        let collectionCell = UINib(nibName: "MonthCell", bundle: nil)
-        collectionView.register(collectionCell, forCellWithReuseIdentifier: "MonthCell")
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.allowsSelection = true
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionViewFlowLayout.scrollDirection = .horizontal
-        collectionViewFlowLayout.minimumLineSpacing = 32
-        collectionViewFlowLayout.itemSize = CGSize(width: 66, height: 45)
+    func setupChart() {
+        let width = chartView.bounds.width
+        chartView.selectedOffset = 10
+        chartView.animDuration = 0.0
+        chartView.innerRadius = width / 2 - chartInset - chartThickness
+        chartView.outerRadius = width / 2 - chartInset
+        chartView.delegate = self
+        chartView.models = createModels()
+        Timer.schedule(delay: startDelay) { (_) in
+            self.chartView.animDuration = self.withDuration
+            self.updateChart()
+        }
     }
     
-    func currentMonth() -> String {
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM"
-        return dateFormatter.string(from: date)
-    }
-    
-    func setupHeaderElements() {
-        let indexPath = IndexPath(row: monthlyAggTransactions.count - 1, section: 0)
-        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .right)
+    fileprivate func createModels() -> [PieSliceModel] {
+        var slices = [PieSliceModel]()
+        for typeTotal in typeTotals {
+            let fakeSlice = PieSliceModel(value: 0.1, color: typeTotal.type.color, obj: typeTotal.type.rawValue as String)
+            slices.append(fakeSlice)
+        }
         
-        let allSavings = aggTransactions.map({$0.amount}) as [Double]
-        let totalSaved = allSavings.reduce(0, +)
-        let allMatched = aggTransactions.filter({$0.aggType == .Matched}).map({$0.amount}) as [Double]
-        let totalMatched = allMatched.reduce(0, +)
-        
-        savedAmountLabel.text = totalSaved.money(round: true)
-        matchedAmountLabel.text = totalMatched.money(round: true) + " Matched"
+        return slices
+    }
+    
+    func updateChart() {
+        var index = 0
+        for typeTotal in typeTotals {
+            let slice = PieSliceModel(value: typeTotal.total, color: typeTotal.type.color, obj: typeTotal.type.rawValue as String)
+            chartView.insertSlice(index: index, model: slice)
+            index += 1
+        }
     }
 }
 
 extension SavingsView: UITableViewDataSource, UITableViewDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return filtered.count
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableViewSectionHeaderHeight)
-        let headerView = UIView(frame: frame)
-        headerView.backgroundColor = AppColor.PaleGray.color
-        
-        let monthLabel = UILabel(frame: frame)
-        monthLabel.text = filtered[section].month
-        monthLabel.font = UIFont(name: AppFontName.regular, size: 11)
-        monthLabel.textColor = AppColor.Charcoal.color
-        monthLabel.textAlignment = .center
-        headerView.addSubview(monthLabel)
-
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableViewSectionHeaderHeight
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filtered[section].aggTransactions.count
+        return typeTotals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let trans = filtered[indexPath.section].aggTransactions
-        
-        if trans[indexPath.row].aggType == .Pending {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTransferCell", for: indexPath) as! PendingTransferCell
-            cell.pendingTransfer = trans[indexPath.row]
-            return cell
-        } else if trans[indexPath.row].aggType == .Matched {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MatchedCell", for: indexPath) as! MatchedCell
-            cell.match = trans[indexPath.row]
-            cell.selectionStyle = .none
-            cell.isUserInteractionEnabled = false
-            return cell
-        } else if trans[indexPath.row].aggType == .Jolt {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JoltCell", for: indexPath) as! JoltCell
-            cell.jolt = trans[indexPath.row]
-            cell.selectionStyle = .none
-            cell.isUserInteractionEnabled = false
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransferCell", for: indexPath) as! TransferCell
-            cell.transfer = trans[indexPath.row]
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransferTypeCell", for: indexPath) as! TransferTypeCell
+        cell.typeTotal = typeTotals[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let row = filtered[indexPath.section].aggTransactions[indexPath.row]
-        let groupedTrans = Transaction.groupByDate(transactions: row.transactions)
-        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: groupedTrans)
-    }
-    
-    // -------------------- Begin Methods for Resizing Header --------------------
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
-        let absoluteTop: CGFloat = 0
-        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
-        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
-        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
-        
-        if canAnimateHeader(scrollView) {
-            var newHeight = self.headerHeightConstraint.constant
-            
-            if isScrollingDown {
-                newHeight = max(self.headerMinHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
-            } else if isScrollingUp {
-                newHeight = min(self.headerMaxHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
-            }
-            
-            if newHeight != self.headerHeightConstraint.constant {
-                self.headerHeightConstraint.constant = newHeight
-                self.updateHeader()
-                self.setScrollPosition(self.previousScrollOffset)
-            }
-        }
-        
-        self.previousScrollOffset = scrollView.contentOffset.y
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        self.scrollViewDidStopScrolling()
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            self.scrollViewDidStopScrolling()
-        }
-    }
-    
-    func scrollViewDidStopScrolling() {
-        let range = self.headerMaxHeight - self.headerMinHeight
-        let midpoint = self.headerMinHeight + range / 2
-        
-        if self.headerHeightConstraint.constant > midpoint {
-            self.expandHeader()
-        } else {
-            self.collapseHeader()
-        }
-    }
-    
-    func canAnimateHeader(_ scrollView: UIScrollView) -> Bool {
-        let scrollViewMaxHeight = scrollView.frame.height + self.headerHeightConstraint.constant - headerMinHeight
-        return scrollView.contentSize.height > scrollViewMaxHeight
-    }
-    
-    func setScrollPosition(_ position: CGFloat) {
-        self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x, y: position)
-    }
-    
-    func expandHeader() {
-        UIView.animate(withDuration: 0.2) {
-            self.headerHeightConstraint.constant = self.headerMaxHeight
-            self.updateHeader()
-        }
-    }
-    
-    func collapseHeader() {
-        UIView.animate(withDuration: 0.2) {
-            self.headerHeightConstraint.constant = self.headerMinHeight
-            self.updateHeader()
-        }
-    }
-    
-    func updateHeader() {
-        let range = headerMaxHeight - headerMinHeight
-        let openAmount = self.headerHeightConstraint.constant - headerMinHeight
-        let percentage = openAmount / range
-        
-        let amountRange = savedAmountLabelTopConstraintMax - savedAmountLabelTopConstraintMin
-        savedAmountLabelTopConstraint.constant = percentage * amountRange + savedAmountLabelTopConstraintMin
-        
-        let topRange = totalSavedLabelBottomConstraintMax - totalSavedLabelBottomConstraintMin
-        totalSavedLabelBottomConstraint.constant = percentage * topRange + totalSavedLabelBottomConstraintMin
-        
-        let matchedRange = matchedAmountLabelTopConstraintMax - matchedAmountLabelTopConstraintMin
-        matchedAmountLabelTopConstraint.constant = percentage * matchedRange + matchedAmountLabelTopConstraintMin
-        
-        let savedAmountScale = percentage * (1 - savedAmountLabelMinScale) + savedAmountLabelMinScale
-        savedAmountLabel.transform = CGAffineTransform(scaleX: savedAmountScale, y: savedAmountScale)
+        let type = typeTotals[indexPath.row].type
+        let filtered = transfers.filter({$0.type == type})
+        delegate?.navigateToTransfersViewController(transfers: filtered, transferType: type)
     }
 }
 
-extension SavingsView: UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return monthlyAggTransactions.count
+extension SavingsView: PieChartDelegate {
+
+    func onSelected(slice: PieSlice, selected: Bool) {
+        if selected {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.savedLabel.alpha = 0.0
+                self.amountSavedLabel.alpha = 0.0
+            })
+            savedLabel.text = slice.data.model.obj as? String
+            let selectedAmount = CGFloat(slice.data.model.value)
+            amountSavedLabel.countFromCurrentValueTo(selectedAmount, withDuration: 0.0)
+            UIView.animate(withDuration: 0.2, animations: {
+                self.savedLabel.alpha = 1.0
+                self.amountSavedLabel.alpha = 1.0
+            })
+        } else {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.savedLabel.alpha = 0.0
+                self.amountSavedLabel.alpha = 0.0
+            })
+            savedLabel.text = "Total Saved"
+            amountSavedLabel.countFromCurrentValueTo(CGFloat(totalAmountSaved), withDuration: 0.0)
+            UIView.animate(withDuration: 0.2, animations: {
+                self.savedLabel.alpha = 1.0
+                self.amountSavedLabel.alpha = 1.0
+            })
+        }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MonthCell", for: indexPath) as! MonthCell
-        cell.monthlyAggTransactions = monthlyAggTransactions[indexPath.row]
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedMonth = monthlyAggTransactions[indexPath.row].month
-        filtered = [(selectedMonth, aggTransactions.filter({$0.month == selectedMonth}))]
-        tableView.reloadData()
-    }
-    
 }

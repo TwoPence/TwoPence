@@ -1,5 +1,5 @@
 //
-//  AggTransactionsCell.swift
+//  TransferCell.swift
 //  TwoPence
 //
 //  Created by Will Gilman on 4/29/17.
@@ -13,11 +13,11 @@ class TransferCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var transfer: AggTransactions! {
+    var transfer: Transfer! {
         didSet {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/YYYY"
-            dateLabel.text = dateFormatter.string(from: transfer.date)
+            dateFormatter.dateFormat = "MMM d"
+            dateLabel.text = dateFormatter.string(from: transfer.date) + transfer.date.daySuffix()
             amountLabel.text = transfer.amount.money()
         }
     }
@@ -26,7 +26,9 @@ class TransferCell: UITableViewCell {
         super.awakeFromNib()
         self.accessoryType = .disclosureIndicator
         dateLabel.textColor = AppColor.Charcoal.color
+        dateLabel.font = UIFont(name: AppFontName.regular, size: 17)
         amountLabel.textColor = AppColor.Charcoal.color
+        amountLabel.font = UIFont(name: AppFontName.regular, size: 17)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,5 +41,4 @@ class TransferCell: UITableViewCell {
         dateLabel.text = nil
         amountLabel.text = nil
     }
-    
 }

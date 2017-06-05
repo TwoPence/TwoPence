@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,21 +19,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="TransactionCell" customModule="TwoPence" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TransactionCell" customModule="TwoPence" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$0.30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBO-xz-NTM">
-                        <rect key="frame" x="231.5" y="28.5" width="60.5" height="28"/>
+                        <rect key="frame" x="238.5" y="20.5" width="61.5" height="29"/>
                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-f7-JPW">
-                        <rect key="frame" x="20" y="19" width="68.5" height="18"/>
+                        <rect key="frame" x="20" y="8" width="64.5" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="AhW-fe-5tt"/>
                         </constraints>
@@ -43,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU9-Dy-qBZ">
-                        <rect key="frame" x="20" y="45" width="33" height="16"/>
+                        <rect key="frame" x="20" y="34" width="33" height="16"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -51,13 +50,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="DU9-Dy-qBZ" firstAttribute="leading" secondItem="Lw1-f7-JPW" secondAttribute="leading" id="7yv-KU-3P7"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="dBO-xz-NTM" secondAttribute="trailing" constant="20" id="88M-JV-Nf2"/>
                     <constraint firstItem="dBO-xz-NTM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lw1-f7-JPW" secondAttribute="trailing" constant="16" id="Gbs-Yd-JZk"/>
                     <constraint firstItem="DU9-Dy-qBZ" firstAttribute="top" secondItem="Lw1-f7-JPW" secondAttribute="bottom" constant="8" id="H3I-Yu-UTW"/>
                     <constraint firstItem="dBO-xz-NTM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lcs-vo-Xtb"/>
-                    <constraint firstItem="Lw1-f7-JPW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="aSd-PI-3ol"/>
-                    <constraint firstItem="Lw1-f7-JPW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="beb-kH-9LH"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="DU9-Dy-qBZ" secondAttribute="bottom" constant="14" id="crr-RP-aj0"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DU9-Dy-qBZ" secondAttribute="bottom" constant="16" id="P4l-0i-dpt"/>
+                    <constraint firstAttribute="trailing" secondItem="dBO-xz-NTM" secondAttribute="trailing" constant="20" id="TQC-SK-Mzb"/>
+                    <constraint firstItem="Lw1-f7-JPW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qJn-Zu-ws5"/>
+                    <constraint firstItem="Lw1-f7-JPW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="s8C-bw-tek"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -66,7 +65,7 @@
                 <outlet property="amountSavedLabel" destination="dBO-xz-NTM" id="5ov-Ys-WoA"/>
                 <outlet property="merchantLabel" destination="Lw1-f7-JPW" id="7Tt-7e-ZfS"/>
             </connections>
-            <point key="canvasLocation" x="22" y="86.5"/>
+            <point key="canvasLocation" x="22" y="79"/>
         </tableViewCell>
     </objects>
 </document>

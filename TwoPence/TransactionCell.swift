@@ -42,8 +42,11 @@ class TransactionCell: SwipeTableViewCell {
         super.awakeFromNib()
         // Initialization code
         merchantLabel.textColor = AppColor.Charcoal.color
+        merchantLabel.font = UIFont(name: AppFontName.regular, size: 17)
         amountLabel.textColor = AppColor.Charcoal.color
+        amountLabel.font = UIFont(name: AppFontName.regular, size: 13)
         amountSavedLabel.textColor = AppColor.Charcoal.color
+        amountSavedLabel.font = UIFont(name: AppFontName.light, size: 24)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

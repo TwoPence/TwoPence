@@ -12,7 +12,7 @@ enum AppColor: UInt32 {
     
     case DarkSeaGreen = 0x169b62
     case MediumGreen = 0x57cd90
-    case PaleGreen = 0xc1e6d5
+    case PaleGreen = 0xa2e3ba
     case Charcoal = 0x1d2323
     case MediumGray = 0x939fae
     case PaleGray = 0xf4f5f6
@@ -21,6 +21,8 @@ enum AppColor: UInt32 {
     case DarkGray = 0x383A35
     case LightGreen = 0x42B580
     case LightBlueGray = 0xD0DBE6
+    case Cream = 0xF5EAC6
+    case Blue = 0x4982cf
 
     var color: UIColor {
         return UIColor(hex: rawValue)

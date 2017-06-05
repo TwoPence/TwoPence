@@ -23,11 +23,20 @@ DEPENDENCIES:
   - Hero
   - IBAnimatable
   - lottie-ios
-  - PieCharts
+  - PieCharts (from `https://github.com/i-schuetz/PieCharts.git`)
   - PopupDialog (~> 0.5)
   - SwipeCellKit
   - Unbox (~> 2.4.0)
   - Whisper (~> 5.0.0)
+
+EXTERNAL SOURCES:
+  PieCharts:
+    :git: https://github.com/i-schuetz/PieCharts.git
+
+CHECKOUT OPTIONS:
+  PieCharts:
+    :commit: c850e878f3915bb69f564adef396ba7beac8e95f
+    :git: https://github.com/i-schuetz/PieCharts.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -37,12 +46,12 @@ SPEC CHECKSUMS:
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   IBAnimatable: 63997e8a6cdb233249a3b57cfff2feb535fb01ff
   lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
-  PieCharts: a0fb4784a3460088c8ba7dfb00b89784ddaa7e70
+  PieCharts: 4935d6672fae20706f05aa5f7d854bfa1925e40f
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   SwipeCellKit: 01a58bf7e63d5df09aedd161828833944c4c333c
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 77ddc652fea7a78cc0a6be3d7a24c7f39adef335
+PODFILE CHECKSUM: 8d3165e29ed0cd3b7e8ac35c2b48c38a78c43516
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

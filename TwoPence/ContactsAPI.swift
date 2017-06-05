@@ -34,7 +34,7 @@ class ContactsAPI: NSObject {
                             // Fallback on earlier versions
                         }
                         fetchRequest.unifyResults = true
-                        fetchRequest.sortOrder = .userDefault
+                        fetchRequest.sortOrder = CNContactSortOrder.givenName
                         
                         try self.store.enumerateContacts(with: fetchRequest) { (contact, stop) -> Void in
                             if contact.phoneNumbers.count > 0 {

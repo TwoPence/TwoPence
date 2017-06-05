@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,9 +8,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionsView" customModule="TwoPence" customModuleProvider="target">
             <connections>
+                <outlet property="amountLabel" destination="Yqh-UW-Tcg" id="6je-tW-IdS"/>
+                <outlet property="colorView" destination="Jn4-Sl-1Sf" id="HDg-Od-wLS"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="ej7-sd-yGb"/>
                 <outlet property="tableView" destination="n4x-UN-EyQ" id="Nqe-NF-jPn"/>
             </connections>
@@ -21,16 +28,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n4x-UN-EyQ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$43.41" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqh-UW-Tcg">
+                    <rect key="frame" x="160.5" y="0.0" width="53.5" height="20"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn4-Sl-1Sf">
+                    <rect key="frame" x="0.0" y="36" width="375" height="8"/>
+                    <color key="backgroundColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="rPp-wD-Z0O"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="n4x-UN-EyQ" secondAttribute="trailing" id="6ea-3i-fho"/>
+                <constraint firstItem="Yqh-UW-Tcg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8XP-19-3lA"/>
+                <constraint firstItem="Jn4-Sl-1Sf" firstAttribute="top" secondItem="Yqh-UW-Tcg" secondAttribute="bottom" constant="16" id="CcF-cE-zOx"/>
+                <constraint firstAttribute="trailing" secondItem="Jn4-Sl-1Sf" secondAttribute="trailing" id="Dra-k0-k09"/>
                 <constraint firstAttribute="bottom" secondItem="n4x-UN-EyQ" secondAttribute="bottom" id="G5X-oy-ePx"/>
                 <constraint firstItem="n4x-UN-EyQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QFR-hG-5Oe"/>
-                <constraint firstItem="n4x-UN-EyQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="i99-yN-tpz"/>
+                <constraint firstItem="n4x-UN-EyQ" firstAttribute="top" secondItem="Jn4-Sl-1Sf" secondAttribute="bottom" id="hcy-wc-VCc"/>
+                <constraint firstItem="Yqh-UW-Tcg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pB3-4c-giX"/>
+                <constraint firstItem="Jn4-Sl-1Sf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xrt-rT-pCW"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>

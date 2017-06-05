@@ -8,6 +8,7 @@
 
 import UIKit
 import PopupDialog
+import AudioToolbox
 
 @objc protocol JoltViewDelegate {
     
@@ -28,6 +29,7 @@ class JoltView: UIView {
     var computationMetrics: ComputationMetrics?
     var userFinMetrics: UserFinMetrics? {
         didSet {
+            debtHeaderView.inJoltView = true
             debtHeaderView.userFinMetrics = userFinMetrics
         }
     }
@@ -63,8 +65,7 @@ class JoltView: UIView {
         amountLabel.textColor = AppColor.DarkSeaGreen.color
         increaseButton.tintColor = AppColor.DarkSeaGreen.color
         decreaseButton.tintColor = AppColor.DarkSeaGreen.color
-        joltButton.layer.cornerRadius = 4
-        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
+        setupJoltButton()
     }
     
     override func layoutSubviews() {
@@ -80,6 +81,19 @@ class JoltView: UIView {
         gradientLayer.locations = [0.2, 1.0]
         gradientLayer.frame = headerView.frame
         headerView.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func setupJoltButton() {
+        let jolt = #imageLiteral(resourceName: "lightningboltcream")
+        let joltResized = jolt.af_imageAspectScaled(toFit: CGSize(width: 12.5, height: 25))
+        joltButton.tintColor = AppColor.Cream.color
+        joltButton.setImage(joltResized, for: .normal)
+        joltButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 80, bottom: 5, right: 5)
+        joltButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: -15, bottom: 5, right: 5)
+        joltButton.layer.cornerRadius = 4
+        joltButton.backgroundColor = AppColor.DarkSeaGreen.color
+        joltButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
+        joltButton.titleLabel?.textColor = UIColor.white
     }
     
     @IBAction func onDecreaseTap(_ sender: UIButton) {
@@ -107,6 +121,9 @@ class JoltView: UIView {
     }
     
     @IBAction func onJoltTap(_ sender: UIButton) {
+        
+        // Vibrate phone.
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
         let alertController = UIAlertController(title: "\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         

@@ -22,8 +22,8 @@ class TransactionsDetailViewController: UIViewController {
         contentView.delegate = self
         automaticallyAdjustsScrollViewInsets = false
         
-        if groupedTransactions != nil {
-            contentView.groupedTransactions = groupedTransactions!
+        if let groupedTrans = groupedTransactions  {
+            contentView.groupedTransactions = groupedTrans
         }
         updateNavigationBar()
     }

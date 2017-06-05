@@ -13,6 +13,7 @@
 		0284CAE458402787B4827699213F2289 /* LOTMask.m in Sources */ = {isa = PBXBuildFile; fileRef = E79EEE13907B8BEF53E6382D1D1BF258 /* LOTMask.m */; };
 		029984E021E853DF1F3362B2FFF87CC3 /* LOTShapeTrimPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 81041EA48148E8AF68628FF99F5E30FC /* LOTShapeTrimPath.m */; };
 		036EB22F6563221D73B010DA1587834F /* LOTAnimationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD232E763016F79C30555F04F37C0A6 /* LOTAnimationCache.m */; };
+		04B3444EFD7E1108F7B9543E015C8D11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */; };
 		04ED9E74602D406172340CD99F553111 /* NSValue+Compat.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A3221D35708C0EBB19E074FACE1BA /* NSValue+Compat.m */; };
 		05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66322D6C0F830901E8B05BB6F52240B /* UIImage+AlamofireImage.swift */; };
 		0523B7C8A63DA42128DD53158BE63E20 /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8C426FFE7BA77A86C5525438419AF /* PieSlice.swift */; };
@@ -22,6 +23,7 @@
 		08E26DF8C601CC5DE88D8ABCDB377E26 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C764C3ECE68F934E220CE813F613B /* PopupDialog.swift */; };
 		092080F1DF547E2BA5961DE79832BAAA /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89B249A319EB46B29901FE86B050D62 /* Int.swift */; };
 		096CB1CE7F1B90DAC3AB22BCBAB19DD9 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ACB9ECBFA4BADD67AA6104B43E19A1 /* Swipeable.swift */; };
+		0A0C15DA0E7A990D3886BEE96D50A8DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		0A41EC6FE425AAA397096805B5F5883A /* CelyWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8578AA50D0C246C3F6660E41003D26 /* CelyWindowManager.swift */; };
 		0A490EFF5F22749F3A6306BD5F31FD82 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC06F3853464012BEF4D097833E3C0F /* SwipeTableViewCell+Accessibility.swift */; };
 		0A61965C2F0ADA1B5BA285A19A2C6B29 /* ActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17359AFD8723E5B8688891B84013BA0F /* ActivityIndicatorAnimationBallGridPulse.swift */; };
@@ -34,25 +36,20 @@
 		0BBF04CC3A1C3BE2CBFFA2391E7303F1 /* ActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B686CBE516A93ECADC1E8BAEE4D88B1 /* ActivityIndicatorAnimationLineScalePulseOut.swift */; };
 		0D0E32AAD4A6E9D100A270670BB0FF1B /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF830020F3A03D79B853A50DD81775D /* InteractiveTransition.swift */; };
 		0DA21E732596100C88761DA40C290796 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3CB184123A47EA9B443353170E8134 /* Nodes.swift */; };
-		0E7E5C63D33972BAE55F3B54C5AF2CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
-		103BFA0A5F5F22ED9F333E225314E5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E28F8F2EDC78193CA29060C42FC9943 /* Assets.xcassets */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E4135E5BF84338AA6453162C1141D /* Timeline.swift */; };
-		11AA6332FB296C193BE571907794431B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */; };
 		125622085352C9AEFF918424E2B819E6 /* BackgroundImageDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19027BD788403E6CEAA52AF51FC22A /* BackgroundImageDesignable.swift */; };
-		1290F95D90FE61B4DA7DBCF39E02F251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		12DCCA87053350F785626F98193830A6 /* LOTShapeRectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = B6D2C839B81811C7C4CD8519970CF04C /* LOTShapeRectangle.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		132D6AFDA68AF1B62112BC668BF68DFC /* LOTShapeLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB25245551FF1763131469B9758CB3CE /* LOTShapeLayerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		139A3A87DBF63D7A5D8EE8E2F8466CC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */; };
 		13DA9866516AB0778460D91D4182F827 /* PresentSlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8566E768E7BE7BBDAAD33107B3A178 /* PresentSlideSegue.swift */; };
 		14208670595C97455E20E6FE2139F058 /* AnimatableActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F20F36538FD8F4A4A308BD3BA3848 /* AnimatableActivityIndicatorView.swift */; };
 		1586218574313AC9D6FA4FDABBB0B186 /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C66E60436571E620BE1CBBCDE31DD /* TZStackViewDistribution.swift */; };
 		178BDB7701C7ED9E900101941CD7B1D7 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03716E378583988DF585ACFE1760B59 /* PresentationController.swift */; };
+		1939534268124081742915E0541439D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		19D0891D8DF0929968FED7E011FDB992 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0346C981C4928CCEB6523F6A6D7727E /* CGPoint.swift */; };
 		19D7F6683A3763F805A81E610ECBCD04 /* Pods-TwoPenceTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCA3BA2EB0D0799C8D3E5E52D5A1DA /* Pods-TwoPenceTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19F3E8D41D38C80907E142F8558BC945 /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6EB8299AF667D34804E913A99FE46A /* SwipeActionTransitioning.swift */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA650405951A135ADE1B856283DA4B2 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D030FD35221838E1BC264DBD51B3A93 /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFC4AB9905CDFC25A81FADC602E577 /* HeroStringConvertible.swift */; };
-		1D0605F04EFE6F4212F9C78E3BFE9A23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */; };
 		1D2541A932F78F6040E4B7A2A3258998 /* ActivityIndicatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04659220F618B8ED64115DED7E1561 /* ActivityIndicatorFactory.swift */; };
 		1D44ED7DA2492614CCA48F2642B2BED6 /* LOTShapeGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F449E412BA5FA279605DF97A0E96239 /* LOTShapeGroup.m */; };
 		1E5E139D96EF0107869A918BD5BEF465 /* DropDownAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE65F6415DCA38A96E887BA1FD8C77FA /* DropDownAnimator.swift */; };
@@ -69,11 +66,11 @@
 		23D0910E3017990C259AD9B569F3FEE6 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD5B80243171E6B6FFBECE408FF08C /* PopupDialogContainerView.swift */; };
 		23EDD9BB2BFA5C925AF5E182C6C65E88 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBAB124C606026786CC4FD5CDE4A3D0 /* DismissSegue.swift */; };
 		2441B20961301FC66E93C5BE91864336 /* ActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF81540AF559882AF1290013309836 /* ActivityIndicatorAnimationBallScale.swift */; };
-		245DAEE5793271CA5BECA7A816092142 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		247E3BEDF93D39FE674AA880B3F77BE0 /* CelyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741A008085E51957B92D82215F464E9 /* CelyStorage.swift */; };
 		249381E3E19C90158B723B5C3BCEB410 /* CALayer+Compat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B47A65DEA0F92A493070A64D9B9A57C /* CALayer+Compat.m */; };
 		24DABD49D5DD1F433079CD502C2F21EF /* LOTAnimatableLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9400BC31883CEBB4BB0A9938A9A41323 /* LOTAnimatableLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		25E4380C4E887056BE895E67AE6DA8CE /* CALayer+Compat.h in Headers */ = {isa = PBXBuildFile; fileRef = F92CE98FFD6157D8EBAB6B79DAEE2237 /* CALayer+Compat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26479B07464784F3BF8C0853CA049976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		26D1B798B1E994F205CBF423DD1F7029 /* ShadowDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC23F66E7F4D86780B0114DCF0465896 /* ShadowDesignable.swift */; };
 		2711616E819BDB81F2235827D901EEAA /* PlaceholderDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA3C805DA94CCBAF47FFF6381C678E /* PlaceholderDesignable.swift */; };
 		27446B8A369170C35FAF94B0D5B8FE86 /* ActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703C465F2AEC6E8401800778A85F2C69 /* ActivityIndicatorAnimationBallZigZag.swift */; };
@@ -81,6 +78,8 @@
 		27996F52CCABBD6D0874B79D1B913598 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81958DA9EA075CD46B996C59C42CCF7 /* ImageFilter.swift */; };
 		27CD5ACBCEE0915A06D6A80CABE89D22 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7613587D7F77396653A899E55C9F04BB /* PieChart.swift */; };
 		2808DEA4E83D337D6A0F0D3EE9AFC8CB /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B58C1FC55126268C5316F2A312952C /* UIView+Hero.swift */; };
+		284758295827A89AC1F40FC716C5B0C3 /* Cely.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC6D170104D7AAA4C0577AE84623CA9 /* Cely.storyboard */; };
+		287B62B305C926B98B5C540CF7AA8C68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		29E1C79CB521E7299EFF904E327451A8 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBEE8C908F0F7C7DB8AE16401124356 /* IgnoreSubviewModifiersPreprocessor.swift */; };
 		2BD7CFD41DACC439E8C0A527F1643495 /* Request+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5436F83BAEB0AD249D165EBDC0C615 /* Request+AlamofireImage.swift */; };
 		2CE00ABB1E8F4B456453D39D4686B008 /* LOTLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0ACFD0C59DFC499C8E1FEDCD55329B /* LOTLayer.m */; };
@@ -88,6 +87,7 @@
 		2E168444B1EC39F6489D84C454840816 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B4C02E4296A6A8606CAF0BBBF39C3 /* SwipeAnimator.swift */; };
 		2EA0415A1A8A4FFC7403E201F915F9A4 /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6DCB7D322561059581B4AB6CC46CF /* AFIError.swift */; };
 		2F44F37D2F6170E3B3186555CF82F575 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA2EED9771B6390B64683799003C890 /* HeroDebugPlugin.swift */; };
+		2F55AD647ABBF3E77DABAD8794B30DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		2F673A4EC86743882DCE8A3AEA220541 /* ActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF131E3195D0731A848F72DFDCCBB65 /* ActivityIndicatorAnimationBallRotateChase.swift */; };
 		2FE7AD0904C8BE2F0A9EF9B02A753F76 /* UIBezierPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 40463D6DAF57E4CF6004021A4D575456 /* UIBezierPath.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		301DCA491110B9CF7EF793E61D39E76D /* CelyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663D0FA95EECDA266E4DCC5303502BFC /* CelyLoginViewController.swift */; };
@@ -113,17 +113,18 @@
 		390A810BD8E4284432CBC5892B1A9AB3 /* ActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062896306438966706C83988A832B4E /* ActivityIndicatorAnimationBallClipRotatePulse.swift */; };
 		3969B88CE3FE70F098B3B679331CB19A /* LOTGroupLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48E9A29F8D1A71A862FAA75C2A7E854 /* LOTGroupLayerView.m */; };
 		398917958AEE73A2ABA9DE141F4468CE /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79E254795EA84AD5E29721C4066EEF /* DefaultAnimationPreprocessor.swift */; };
+		39AF3BF1D1CE7BC06696E37439AEB450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FF7BE76E1BEB124D13726BEC08C070 /* Assets.xcassets */; };
 		3A7A7F54164C56DA1AFF5A471A18CC51 /* LOTMaskLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BFC2BD1FB9EA51D5985B39D97D44CB49 /* LOTMaskLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3AF608A2311B6A77D044E941E2BBF4E8 /* ActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BEF09E607BD8AE4B0F8EBE44AFD1E /* ActivityIndicatorShape.swift */; };
 		3BEDF7C3D04F4C263157D38DDDF61339 /* InteractiveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF1CFFC6AD9B46E55FAD6203D20190 /* InteractiveAnimator.swift */; };
 		3D2BAAF64E4CE44E7475ABD9B5509B18 /* MaskDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214CC744A0C874DE02A0B28D20D8106 /* MaskDesignable.swift */; };
+		3E0B09C7FAF8ADCA54A8283668B2F8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		3EB7FDCBEC31065231D4125F25BF4A5D /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A974C89E71D2800635360E020D682D65 /* PopupDialog+Keyboard.swift */; };
 		3F45DC49F1C6BCD82B0807D1E060695A /* LOTAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E86C449A0A330D415F8A9F3FDBEF73 /* LOTAsset.m */; };
 		3F801B248D5083C37DFA58DEE8C7B71F /* ActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC269AEC598838159CFF0365836B6A /* ActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
 		3FA7D7D881ACBC3311599BDF29162763 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE71509111BBF2FCC32BF730ADCFF01 /* Message.swift */; };
 		4169E324ADC2731E7CB01A0FA738D765 /* CGGeometry+LOTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC4A527393A3CE4320E7CE87273FC5 /* CGGeometry+LOTAdditions.m */; };
 		41B2F8AAA77C685BE65A43E495BD7386 /* ActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BDC0F4284170A207FBAAF6EA0349E /* ActivityIndicatorAnimationBallZigZagDeflect.swift */; };
-		42F9D54D9A743541FDD3BC7FF8642930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		43A4F0FF4123F26FAE55A698CD998049 /* TableViewCellDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3F9A3F5B2B15057439469B24CE023 /* TableViewCellDesignable.swift */; };
 		43AB83E345935EA35802625F0559D320 /* LOTMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A88ADA25BD83913DDF4250B613898 /* LOTMask.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4425A03AF515402F1F2667B317C14E85 /* PresentCardsSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24DA2C1870F7F271D21A13A682A733E /* PresentCardsSegue.swift */; };
@@ -149,6 +150,7 @@
 		507FDA2AC0EADD6A568C51E4EA93F1C9 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10071BA6577FBAFE5F3CCA6E85FAB7 /* TransitionAnimations.swift */; };
 		50DB50FF5FF378DCFD561341AA037B8B /* RefreshControlerDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD89197DB740FE8269D90D0A137946 /* RefreshControlerDesignable.swift */; };
 		5147D5F163947B7A378E82FD53334D9F /* Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F88BFB88B6E370BD42CD8EB93220D4C /* Unbox.swift */; };
+		528C5A051577531C0C99456EF0F929A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		52EE0C5D59E190922307E77F23A01EA2 /* AnimatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17242CE22FD7978815D7770D67805E47 /* AnimatableTextField.swift */; };
 		52FEC469DC1B6E386AAA842598CD19BA /* PieCharts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 239E77BE047C9E9C2ABEFAA450D1F76A /* PieCharts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52FF3A4520ACB71917FB64F852FFB7F5 /* WhisperFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF33E769BEA02A3F2BFAC29DF3B334C /* WhisperFactory.swift */; };
@@ -186,6 +188,7 @@
 		69C8F9CB4C695672395946F7C8A23E24 /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C169B5315D20F0539B20225F9C7FC27 /* HeroPlugin.swift */; };
 		69EE2D2D33D30E5DC357CE0A30FC5E27 /* ActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867F6175C26C783C09405032B35F54C /* ActivityIndicatorAnimationBallTrianglePath.swift */; };
 		69F7080CF026FB314617AA98CFBAED12 /* LOTMaskLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9F997F1D5779BF8EB104BC7BBAF96 /* LOTMaskLayer.m */; };
+		6ABD371E779B70D7230BB3DC82EBB446 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */; };
 		6B694E51F340F0A0B657394EA328517E /* LOTShapeTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B120CEA83EA2B063FFA856054261C91B /* LOTShapeTransform.m */; };
 		6B76015FB5A7E8450026BC11402C93E9 /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA4EEAE10E56115DCBBD8AACC905AAA /* UIViewController+Hero.swift */; };
 		6CA761451B45C8297D78282043DABCE4 /* PieCustomViewsLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1B3EB1F6B597D46F72BCAB2207C4C /* PieCustomViewsLayer.swift */; };
@@ -196,13 +199,14 @@
 		72D89403C95AC35334D3ECEFCAF95A45 /* Showing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E146BCC841B3FB9C05A1FD0B66773 /* Showing.swift */; };
 		731BDB378A5E0759C89BACA382B6412B /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BA55CBF4A03AEF377EAE136CC4AD /* Regex.swift */; };
 		739454EC5777E7E3426480AD9CFE77F6 /* ActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C9131CE0272EEB032E9628E576A41 /* ActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		749391D0D7712CB678D3E85B5B8B9617 /* LOTLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44E44F41C1C78562D8B01281681595CD /* LOTLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		75F146C3462E90D8AB307F2A6B15562C /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711513D1A21F665B787235A0F41E992B /* PopupDialogOverlayView.swift */; };
 		76AD3937DAFEF2C0E675E14AA7044C05 /* ActivityIndicatorAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBE688C969845D86B2FCAB4B9453C9A /* ActivityIndicatorAnimating.swift */; };
-		776362ED03878131757A4F7B3721E2C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		78108E55223E5BC15F68AA728A23A7A8 /* RootWindowDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43E196EA3EA57478761016BA51EB38 /* RootWindowDesignable.swift */; };
 		795A6CD21C27F9D4C9C97D3BD7745C46 /* ShoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF00AA45E439A48FCEB9C7F13E36AE8 /* ShoutFactory.swift */; };
 		79A6EAFFBA90C030D1B4E745D9F6570D /* TransitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9116914FB537765688AABA0D9E631 /* TransitionPresenter.swift */; };
+		7A63E21284C53335B6D422EE359143BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		7A774692C493F5B7A27D2AAE7144C64C /* ActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F57D1EB623BCD3D7E2324F3D66E2B5 /* ActivityIndicatorAnimationCubeTransition.swift */; };
 		7B4D9C06627E966B9CBEE05FE407C69B /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D38C7911C01FBC800F33CB16EA13B /* SlideAnimator.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BDB1F686DA22908A309F53C7D1569 /* SessionDelegate.swift */; };
@@ -216,13 +220,10 @@
 		7EBA7ADE517B81F0A33296485D885008 /* PresentOverCurrentContextSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC798A30ED47AAE3E3A717045A67A93B /* PresentOverCurrentContextSegue.swift */; };
 		7F748617C530BE33479F6757DCA38B0E /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E2F20AB9996C9AA1941AD3D721F68 /* SwipeAction.swift */; };
 		7F975F79309DC18528D4237524426F47 /* CADisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B70731E5407C5330E2543521D213B /* CADisplayLink.m */; };
-		80CD37FE5BBB586BF4E7EBF9D6B7BD8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		81D879B7574CC5431D1058E6AD391636 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BA215495C75C20125189FBA80575D /* PopupDialogDefaultButtons.swift */; };
 		8271AB245582AE68644533F59E73D597 /* LOTGroupLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 79843114335A7DAA6F2898530396CB1A /* LOTGroupLayerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		827603E6B2533A1619E2DCD7515F1EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		82AE25FB41B7D7FC23EEEC1EF5F32C16 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072DF54E8AE1624F898275D23CCCB378 /* TZStackViewAlignment.swift */; };
 		83482A91585DEB12883A7D39749C381F /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 206EAF1C07CD60C1596FBA3B4D8B0DD7 /* SwipeCellKit-dummy.m */; };
-		83E8B2E4C36FF81AE84090F484F99D21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		847BAD9822C05029A78ED83F6F5D92A6 /* PieSliceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6801BE780A6871B4AAD2253678EB26E2 /* PieSliceModel.swift */; };
 		84B25B1A071858745816A95418F9F77A /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A43052B8E085A6E08685AF3B6AC43 /* HeroAnimatorViewContext.swift */; };
 		86793C735F2F41CE1B375A28DD51619C /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8C551B863F92CFC7ACC796161F614 /* SwipeExpansionStyle.swift */; };
@@ -250,8 +251,6 @@
 		97F4BBFCA30C3BCBC4D24660C440DB23 /* PresentFlipWithDismissInteractionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAB204E5C15EC31265DE0D814C9ABF /* PresentFlipWithDismissInteractionSegue.swift */; };
 		99417015E99AEF137E26EDF64ADBC853 /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F8C4F425D3AD7A8C40AEA3878625D /* TZStackView.swift */; };
 		99B36B92FF3FE96BF5FF91429F69A6B6 /* SwipeTableOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCF0EDC5C6626691B4C7760F70E001 /* SwipeTableOptions.swift */; };
-		9A0743A6AA29D7DFC1D906A6E697CBE6 /* Cely.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B211D4D71EECA358CAF5FE8B8FFA068B /* Cely.storyboard */; };
-		9A9161C359D62B78B7699620EF285FFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B768CEF13A8FD0017215245C29C0183 /* CoreGraphics.framework */; };
 		9AC999E397FE4D30B7AA76066F5F8C4C /* SliderImagesDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF405E2E2FB74C794B05023931B56D /* SliderImagesDesignable.swift */; };
 		9B0CB1889B5E7022817169E44AAA23F7 /* TintDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AC9EDB6B2FCD429F1E4941E66E8FB3 /* TintDesignable.swift */; };
 		9BE2CB749FC58F8755089CC7DE77221B /* BorderDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CF4F95633B85C8D8896F26828C46B3 /* BorderDesignable.swift */; };
@@ -260,12 +259,10 @@
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8EE9A05D5953A036F3CD698756EDE /* AFError.swift */; };
 		9ED93AD6027C5CCE0E4F546FFAAA567F /* CoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B0BDD71B1D2AC288328FE5AB810881 /* CoverAnimator.swift */; };
 		9F56B8970C0355A9311DFECEF137E0BB /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7D09199B5DC8CA92C282059C16AE5 /* PopupDialogButton.swift */; };
-		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		A051D1F9672736DD337928E1BAD9DB66 /* LOTStrokeShapeLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C37402885876D9A6B96326286489331 /* LOTStrokeShapeLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A0DEADD83F5657BA0567142ED69484B7 /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371F2E6A9113403147CF0912448F33B /* SwipeExpanding.swift */; };
 		A0ED2C501167E09DCE716A620F884B68 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D848215746FDAE1D78055C6A3D6439 /* LocksmithError.swift */; };
 		A19004E5F97AC9E6FAEFB8E64F2A2524 /* LOTComposition.h in Headers */ = {isa = PBXBuildFile; fileRef = F31D9390C0E1A64B4C296F1525D19C16 /* LOTComposition.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A193927E3417B70CA859EA0D6C688D2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */; };
 		A1EF267D6DEDBC911FDC5C8DC34211D4 /* PieViewLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CF88EF7F5B5B7F40837974950BE83C /* PieViewLayerAnimator.swift */; };
 		A271792E9BD1BF7C0F7FC526D33C68C3 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B567F6787590C3A9427EAE7342914 /* Parser.swift */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D0E00AB2CBCDA0DA59AB15C989FFD /* NetworkReachabilityManager.swift */; };
@@ -280,6 +277,7 @@
 		A72A258B0E285A00B063B0AF42E488A5 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19855BC7E278548AFF6252F5F706DB /* HeroTargetState.swift */; };
 		A757207E3AE8C0644705E633537765DB /* PresentationDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C33B99FF4E576D1AED0E9B05AA703 /* PresentationDesignable.swift */; };
 		A76F86247CE0791A2275E81E9DA8B567 /* ScreenEdgePanInteractiveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0278A64977023681534DD66ACD2AAC /* ScreenEdgePanInteractiveAnimator.swift */; };
+		A77249D35873EBE12C1700C3D3E95AD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A03D43E88B50C46C0A1F4D81ECDA340 /* CoreGraphics.framework */; };
 		A7E639071039637DCFDBB38832EDC65F /* LOTShapePath.m in Sources */ = {isa = PBXBuildFile; fileRef = A123AA7E45ACBCA828FE53C0BDB9E0F4 /* LOTShapePath.m */; };
 		A81D9392162BA7303F1C95C5F7C901D1 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D17267163150565B4B966475876B76 /* PopupDialogDefaultViewController.swift */; };
 		A886C3EBF285F2B4A7D2A7EB15DC3BD5 /* PieLineTextLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D518EEA12E6CE7DE5C6B069C1D43FD5 /* PieLineTextLayerAnimator.swift */; };
@@ -297,7 +295,7 @@
 		ACF0A76A2812BECF94A15B8E89360394 /* LOTAnimatableShapeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B1587171F26FD91E8673D931C9FA9451 /* LOTAnimatableShapeValue.m */; };
 		ADB4FE39D6C33A2128965C543906FCEC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB218174364BF46DFF16D667CBBD0584 /* Extensions.swift */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2DF5AB6E2FD255F4FC4356E40A6404 /* SessionManager.swift */; };
-		AE82726B85F9488997339A759DDDE999 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
+		AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		AF5BDCCBF59A6D2B690DDD31FF11079A /* PortalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7F3EFC71C9AC2569E5BC64E0CA171 /* PortalAnimator.swift */; };
 		AFDFDD790A9E1E3889F1D64F2339EE01 /* LOTCompositionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9B96E76C502169940BCEC6DF4DBD5 /* LOTCompositionLayer.m */; };
 		B009F6013FF65223E1C5E2C75FD8F9A5 /* PresentationModalSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36545EA4C79A40EA5824CCD7A28D5489 /* PresentationModalSize.swift */; };
@@ -312,9 +310,11 @@
 		B642F412CEB13FF4909AC0CCB13B7B66 /* PresentFlipSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9FEA31D9EE5A8C1F08D123789AD25C /* PresentFlipSegue.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A51D8E2691A48EB93AB7581D2C0EA /* MultipartFormData.swift */; };
 		B6C199D4317BAE09F7ECFE774C7494C9 /* GradientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948C86F5DED352A7CA011C348C1261E /* GradientType.swift */; };
+		B816D05421F1C3A224B1E49383AEAF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A03D43E88B50C46C0A1F4D81ECDA340 /* CoreGraphics.framework */; };
 		B902FF7F2C46908F83BC82FAD3E66417 /* ActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A63E1337496626D0AAB6D5E6CBA06B /* ActivityIndicatorAnimationBallPulseRise.swift */; };
 		B9F38CFD5D47DD0B6C7E7E178C457172 /* PopupDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05232537F9AE98E8C981259C0578352B /* PopupDialog-dummy.m */; };
 		BAD33C420145740B6B901093312BAA0A /* LOTShapeTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 778C99A59B7DF3962BED539B28E8CBD7 /* LOTShapeTransform.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB2A14A3336A611A363C2839AC1B7C2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		BB49D6778B3A9A23A9FFE59A62611ECD /* ActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8FA19BE77495E82DD5C3925F89989 /* ActivityIndicatorAnimationBallPulseSync.swift */; };
 		BB79DE81E4F0DEF663F824DAACC92C6E /* Unbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF47DAAA5EA3994F9A155E54581AD /* Unbox-dummy.m */; };
 		BB7E6CA50EF56EF89CECA4DE5FEF66B9 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3FDD57EC8D5A9A582396919CA84FAF /* HeroCoreAnimationViewContext.swift */; };
@@ -324,10 +324,10 @@
 		BDCF7EA25A6894A8516BD30946F82188 /* PresentationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76322DE2344AE6CB6E328CB4D197800 /* PresentationPresenter.swift */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6C0EB68B5B1A03B983E05C3D57ABF2 /* ParameterEncoding.swift */; };
 		BEB47A3CAB4F7D3C8EDA608599417596 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F31D830AB6A95BCEEF87E475ECB17A8 /* HeroDebugView.swift */; };
-		BEEC37DE72D6BE4CF2DE214C1C53F8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */; };
 		BF87802224155791E635A8AB754F561C /* LOTShapeFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A940A198C2CFFBB699F44861FFDCF1D /* LOTShapeFill.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C09B3EF3E331B93054FE510C745E62DF /* WhisperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB14170B990A03EAD32E65DF8C3B5 /* WhisperView.swift */; };
 		C199F7237424A21D66F69CF0013E1B0A /* InteractiveAnimatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D501F844CCEDAD220E9CFE85AE81F7AA /* InteractiveAnimatorFactory.swift */; };
+		C1D7C318F2418A5FE5F341B4806DE422 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */; };
 		C20A76C04742BB0B0E9D3B0AA07EA05D /* PresentExplodeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614DCECEE787A0B0EEE7F151ED78130D /* PresentExplodeSegue.swift */; };
 		C2CFBFF503C7843BA753684D2550C825 /* Pods-TwoPence-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C68D5CB41164C76BBE921206859D70 /* Pods-TwoPence-dummy.m */; };
 		C6BA8AA1A097345C91E5727DD0F8EC8D /* GradientDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2552BE6CA37A6B7F3980146C8F9F29 /* GradientDesignable.swift */; };
@@ -350,13 +350,13 @@
 		CE43A36214F38B4DF5937B9A519796E6 /* CelyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A77BA388BFB7FA431E984C6BFA3C43F /* CelyConstants.swift */; };
 		CE4501723EC8667ADB9698705CC0AA04 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD74F54E898BC09431AFAC89714329E0 /* HeroTypes.swift */; };
 		CE4A28B70185589B97A52C2375F224E1 /* PieChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2F08B73C7269E549EBECFA256871B /* PieChartDelegate.swift */; };
+		CEF684EF3C423FE3B24CBB7A0D02C555 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */; };
 		CF395A8550B1403B594F77D091667FAC /* PresentTurnWithDismissInteractionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382B2F1BD88A9E0D1F6E374295F391E /* PresentTurnWithDismissInteractionSegue.swift */; };
 		D0287B55116F6242D10FFEECBA6CEE56 /* CAAnimationGroup+LOTAnimatableGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E21C89C193B601351D541F2BE779811C /* CAAnimationGroup+LOTAnimatableGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D1087377090643A3CF4BFB0079F5249E /* Cely-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F38EE1109E0BDE5CC80E93CF7A8A86D /* Cely-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1ED4A564E956EAA8E0DD8E30E30CAEB /* CornerDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E7949C993CB29E0CD0A347D1D08E9A /* CornerDesignable.swift */; };
 		D20C105CB6D1059CB5AEBFDBAB49CD31 /* LOTShapeCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3B9ACCA71B745107BB67DAE84B219E /* LOTShapeCircle.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D2BF0245E58048E026C09BA1893D880B /* AnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A592BA03FE48AB5B5371E9888E2327 /* AnimatableViewController.swift */; };
-		D3587FA3AADFC915DE4CEF92F5AA4CE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		D4072D893B03CF4AE1AD77D21CA8A9F4 /* AnimatableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3023061D88D5DC36FCA44417D8B4AB0E /* AnimatableLabel.swift */; };
 		D48039A4AAAD63B84E8041F816AAE5CC /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB564BB118CFC51FE2CED4F4612FA18 /* BasePreprocessor.swift */; };
 		D56AEA099DD08BC450FA0CC42DCAA44D /* ViewControllerDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8B5B42E8908A7454595CFB56E5A5C /* ViewControllerDesignable.swift */; };
@@ -371,7 +371,6 @@
 		DB2FC35ED5947C995EAB5BA5FB769C9E /* AnimatableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9564CCB11CB3504CC736AA44FDC6E /* AnimatableScrollView.swift */; };
 		DC2CF05F640D44BDB3B26F9DA27664D9 /* LOTAssetGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = F609107897F50008DDB090C2EFECA602 /* LOTAssetGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DC361653C9D206993756EB103CE3BB26 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766749CC6D85662636AEDE304B3ABDAD /* UIViewControllerExtension.swift */; };
-		DC56D8C48A4F1C3B9DD9C718E18D3132 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		DD6DD482E85C76BB1C312CED7263F605 /* UIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4349E9B407390926BB21ED7868F06244 /* UIColor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DE0199CC0C4A442F75804DBAB74C33B2 /* CGGeometry+LOTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE946F2E114627CD64FEE1D80FA22DE /* CGGeometry+LOTAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DE4FD12FD11924E71640A08AF3AFA2E4 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2117644B0B24067BFDBC99DEA736BD9 /* SourcePreprocessor.swift */; };
@@ -385,10 +384,10 @@
 		E1D62C5AE853D475FBEB562A105BDDA7 /* PiePlainTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0122DCE903CBD717AA42D3C7D20A6707 /* PiePlainTextLayer.swift */; };
 		E1FF4985892E23B75A3381EFF830DFD5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA80BEC85771AA04D878DD30D7237CA /* Image.swift */; };
 		E25C36BA06E00587444E5AD04FC2E27F /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC39276E14A834D627A6DA200415F7A1 /* TransitionType.swift */; };
-		E2B3196EDE1D03AF9C71385CE006F684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		E4068BC89E4D59953E478090D496B9E1 /* LOTCompositionLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D40EBA1EEBDC6FFF3F11FC8DB47594 /* LOTCompositionLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E467687A4A8A981F5293BECDBCDADC74 /* PieSliceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084024955640D654F8337407B1CCB00 /* PieSliceData.swift */; };
 		E4D9A4F9FBBFBC07CA43FA56154913DF /* LOTStrokeShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF0C22B46A452313D308A52C91B4E7 /* LOTStrokeShapeLayer.m */; };
+		E54F73EB2BE4A901D4609C74D07A4A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		E57BB5C5A234EE3344BB5AAECFC7CC7A /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292618B2E83369643E27326426583D30 /* HeroModifier+HeroStringConvertible.swift */; };
 		E590801DB48B58C665B201020583E31B /* LOTAnimationTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E5AD19B02AD4CD8D8238A6FD61F08 /* LOTAnimationTransitionController.m */; };
 		E5B5F4A5B0513993651FEB27C0B24F27 /* LOTAnimatableNumberValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 43205E41D8FF0CFF2E3FC20A3750CF9D /* LOTAnimatableNumberValue.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -399,6 +398,7 @@
 		E67E82020DEF39E2B13F04F2B797DDD8 /* LOTShapeGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 611F97AFF2A3A23778EBBA16FEA99116 /* LOTShapeGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E72B372B9C85797DB0DB29BFDC2EAB8B /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EA9B65023C6A70F5A07A519532281 /* ZoomAnimator.swift */; };
 		E87438828DF8DD13F06F0B969C55B045 /* AlphaPieViewLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B8D03C68AAA9BF3888F64D206453FA /* AlphaPieViewLayerAnimator.swift */; };
+		E8C2D49C57C9D0BF377B6C58279D1EE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		E91E80F3AA36C095A59C59A446271BF0 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B1BE5E550781BA473C49A59DA35DBA /* CG+Hero.swift */; };
 		E9FB7590484CB4864CB2F54189241750 /* FillDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10800C05C06390E30A72E4CA04F21EC2 /* FillDesignable.swift */; };
 		EA6ED986D31AF4F9AE17879F969BB628 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAC8404D5C4DA20B7A60A6344985E4 /* SwipeTableViewCellDelegate.swift */; };
@@ -412,12 +412,14 @@
 		EECB3E0AC6A7F748AD2469D4E91E9B79 /* UIColor+Expanded.h in Headers */ = {isa = PBXBuildFile; fileRef = 22B14435BB738A253421483A18A02786 /* UIColor+Expanded.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD61FC82FD861E1D07438CF8B90E4D /* Notifications.swift */; };
 		F179F4D1FB1C7E378C563E1CCA18A97B /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A606F16D128AFC36DB1D819EDB6A4AE /* FXBlurView.m */; };
+		F1A5FEC5DCD37E3984C9D79492EE6D43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */; };
 		F45AB407BEA77BAF35BF4E4EE152D48A /* LOTAssetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 167167E42F5FB1AA556EF64260B14504 /* LOTAssetGroup.m */; };
 		F486D4FF82E12618B72E70B59B494F40 /* PresentTurnSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55783955472E828D888AB0AECF0355 /* PresentTurnSegue.swift */; };
 		F4BE586ACA8CD9989A5951C99118A06B /* PresentPortalSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A071510E42BD71911BEB7EC88B72B00 /* PresentPortalSegue.swift */; };
 		F5074E648C58653ECD46630E87E098FE /* AnimatableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A850DE6F40A07B500E2D4B5FF7B5B /* AnimatableSlider.swift */; };
 		F507953214F9047B142F5FC1E4066433 /* AnimatableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09AC957E94AECF25DF671B88531A1D1 /* AnimatableNavigationController.swift */; };
 		F5A1304C92E35265CE987024315E1FC6 /* TransitionAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12850621FD3B2BBA81062E952E5A23C1 /* TransitionAnimationType.swift */; };
+		F678B06EBFCA45F7423A5627B5A85F4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24945CAA4415D6759265C2F442321A93 /* Foundation.framework */; };
 		F67CB14F5F2CB8FAB69B7938772FDBA4 /* Pods-TwoPenceTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF393B510010D63FFD8F2DDE508A0CF /* Pods-TwoPenceTests-dummy.m */; };
 		F6A2E2BE599DF2B1037D3C24FCBBE814 /* AnimatablePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB73A0191DC5E06D335EB18B5F1B3D /* AnimatablePresentationController.swift */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F1FE0AB09E36F9BCC7D6346DE9FD2 /* ResponseSerialization.swift */; };
@@ -428,13 +430,11 @@
 		F95AC1A044A78D0F5B675794F20349F6 /* LOTAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 559FE14BD1395DC2C8939A2199695E39 /* LOTAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA740D6EBF10751C5E32855DF2369717 /* BlurEffectStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FF904CEFF421AF02C255A773711A5 /* BlurEffectStyle.swift */; };
 		FB12DDC0CB41E3D61E603E1D80731948 /* ActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E36FE2D2146D3D043156D5B26B435 /* ActivityIndicatorAnimationLineScaleParty.swift */; };
-		FB970ED2959B57EB234739394F0E66E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B768CEF13A8FD0017215245C29C0183 /* CoreGraphics.framework */; };
 		FBAD0D952DAF50544EE3F319E200D9E8 /* AnimatableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A351E33BC6A3DB7D076A4E2A53C31 /* AnimatableButton.swift */; };
 		FC470F50C9291B0CBE08BB4BF40DBCFE /* SideImageDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D8498B5D0DDFCDC365AD6C1BB719 /* SideImageDesignable.swift */; };
 		FC8EBB5B4B22771570F25BEE24D49F94 /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4112A8FD4688FCFFF43D8FCBEF0725E0 /* AnimatableTableViewCell.swift */; };
 		FCC2E42013A42B4A3CE9F019111D08B7 /* LOTLayerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4D710FA19B457556B75631822185F3 /* LOTLayerGroup.m */; };
 		FDDB8D65F603EDAFADBA538D28EA7B75 /* PieLineTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FF37B3D7FA958A965B56926A2FAB5 /* PieLineTextLayer.swift */; };
-		FE128061529C4BADF6C84B6018032642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */; };
 		FE76C1E245F590F6AF8F6B4412DCC059 /* CAAnimationGroup+LOTAnimatableGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E4336AB315D3A96BD218C80E7F4F39BB /* CAAnimationGroup+LOTAnimatableGroup.m */; };
 		FE80164C63451CB0F6DFF7F86A23BA9F /* LOTEllipseShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF13DDC336C310242977DC52ECF1CC /* LOTEllipseShapeLayer.m */; };
 		FEEFE7C53433FBA33A15B73388E99C7A /* ActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDFFA7E1EF54FBDCCF36AB5B870C95 /* ActivityIndicatorAnimationBallScaleRipple.swift */; };
@@ -546,6 +546,7 @@
 		01C2BA55CBF4A03AEF377EAE136CC4AD /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Sources/Parser/Regex.swift; sourceTree = "<group>"; };
 		024885B181F29B1D42128846CCE3E17A /* Pods-TwoPence-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TwoPence-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0371F2E6A9113403147CF0912448F33B /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		03FF7BE76E1BEB124D13726BEC08C070 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Sources/Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
 		0468EFD835A863D4CF29DF2B46BA8DCE /* LOTShapePath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTShapePath.h; path = "lottie-ios/Classes/Models/LOTShapePath.h"; sourceTree = "<group>"; };
 		04918F208E7FBA48AF994EA55908FA33 /* Pods-TwoPenceTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TwoPenceTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0503BA89AF369312A22B612673847A29 /* FloatingPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPoint.swift; path = PieCharts/Extensions/FloatingPoint.swift; sourceTree = "<group>"; };
@@ -571,7 +572,6 @@
 		0CF0AA8B291390FB2A9DB8C83AB910EF /* Pods-TwoPenceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TwoPenceTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0DC4181D559BC57E170EF333FDC7AE24 /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopupDialog.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE71509111BBF2FCC32BF730ADCFF01 /* Message.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Source/Message.swift; sourceTree = "<group>"; };
-		0E28F8F2EDC78193CA29060C42FC9943 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Sources/Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
 		0ECAD574BC1BDAA403E2D6C1055C5D6C /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
 		0F449E412BA5FA279605DF97A0E96239 /* LOTShapeGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTShapeGroup.m; path = "lottie-ios/Classes/Models/LOTShapeGroup.m"; sourceTree = "<group>"; };
 		0F66672E93BE876A2B793E8BC577C01C /* Cely.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cely.modulemap; sourceTree = "<group>"; };
@@ -579,6 +579,7 @@
 		104B5D351C4E3C651EF4B567E3BF9E94 /* PresentPortalWithDismissInteractionSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentPortalWithDismissInteractionSegue.swift; path = IBAnimatable/PresentPortalWithDismissInteractionSegue.swift; sourceTree = "<group>"; };
 		10800C05C06390E30A72E4CA04F21EC2 /* FillDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillDesignable.swift; path = IBAnimatable/FillDesignable.swift; sourceTree = "<group>"; };
 		1089F94A7D2FE9428CF636878D54F9C8 /* LOTShapeRectangle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTShapeRectangle.m; path = "lottie-ios/Classes/Models/LOTShapeRectangle.m"; sourceTree = "<group>"; };
+		11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		121B1D9F11583AF3D1FB5D2C29C2DC23 /* PopupDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-umbrella.h"; sourceTree = "<group>"; };
 		12850621FD3B2BBA81062E952E5A23C1 /* TransitionAnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimationType.swift; path = IBAnimatable/TransitionAnimationType.swift; sourceTree = "<group>"; };
 		12AC9EDB6B2FCD429F1E4941E66E8FB3 /* TintDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TintDesignable.swift; path = IBAnimatable/TintDesignable.swift; sourceTree = "<group>"; };
@@ -626,6 +627,7 @@
 		2214CC744A0C874DE02A0B28D20D8106 /* MaskDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskDesignable.swift; path = IBAnimatable/MaskDesignable.swift; sourceTree = "<group>"; };
 		22B14435BB738A253421483A18A02786 /* UIColor+Expanded.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Expanded.h"; path = "lottie-ios/Classes/Extensions/UIColor+Expanded.h"; sourceTree = "<group>"; };
 		239E77BE047C9E9C2ABEFAA450D1F76A /* PieCharts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PieCharts-umbrella.h"; sourceTree = "<group>"; };
+		24945CAA4415D6759265C2F442321A93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		25AD728320FC666344FD05EBFEE8DD5F /* ContainerTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerTransition.swift; path = IBAnimatable/ContainerTransition.swift; sourceTree = "<group>"; };
 		26F06CA2E46281C39ABF8AC532C03A69 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2720EBA4DE42E9DDF26E4163A65B1F11 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
@@ -702,6 +704,7 @@
 		49069868F1489B30C381360914911FAE /* AnimatableModalViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableModalViewController.swift; path = IBAnimatable/AnimatableModalViewController.swift; sourceTree = "<group>"; };
 		4923B02C9FF151B0037A3C21747EFA4B /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = IBAnimatable/UIColorExtension.swift; sourceTree = "<group>"; };
 		498827C79CCA208CBECD3089E21CCC4C /* LOTRectShapeLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTRectShapeLayer.m; path = "lottie-ios/Classes/AnimatableLayers/LOTRectShapeLayer.m"; sourceTree = "<group>"; };
+		4A03D43E88B50C46C0A1F4D81ECDA340 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		4A7FF37B3D7FA958A965B56926A2FAB5 /* PieLineTextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieLineTextLayer.swift; path = PieCharts/Layer/Impl/LineText/PieLineTextLayer.swift; sourceTree = "<group>"; };
 		4A9CCA95EF2743C5439397974BE0AE0B /* UIView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "PopupDialog/Classes/UIView+Animations.swift"; sourceTree = "<group>"; };
 		4AE9116914FB537765688AABA0D9E631 /* TransitionPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionPresenter.swift; path = IBAnimatable/TransitionPresenter.swift; sourceTree = "<group>"; };
@@ -768,7 +771,6 @@
 		6ACC561C6D03F14B8750119BB856AE09 /* EFCountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-prefix.pch"; sourceTree = "<group>"; };
 		6B00F89959BF448627924BE71A3804BF /* LOTAnimatableBoundsValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTAnimatableBoundsValue.h; path = "lottie-ios/Classes/AnimatableProperties/LOTAnimatableBoundsValue.h"; sourceTree = "<group>"; };
 		6B099D5CECBEE549436DCCB24B87F28A /* LOTAnimatableLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTAnimatableLayer.m; path = "lottie-ios/Classes/AnimatableLayers/LOTAnimatableLayer.m"; sourceTree = "<group>"; };
-		6B768CEF13A8FD0017215245C29C0183 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		6D2280F61F68A1B53DDC7CA82CA83154 /* CALayer+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Hero.swift"; path = "Sources/Extensions/CALayer+Hero.swift"; sourceTree = "<group>"; };
 		6DE120C205155299ECDA80E7EE4621D5 /* ActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorAnimationBallGridBeat.swift; path = IBAnimatable/ActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
 		6F714F6A22CAF7BA8133A34C7D6C904C /* UIColor+Expanded.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Expanded.m"; path = "lottie-ios/Classes/Extensions/UIColor+Expanded.m"; sourceTree = "<group>"; };
@@ -836,7 +838,6 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9400BC31883CEBB4BB0A9938A9A41323 /* LOTAnimatableLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTAnimatableLayer.h; path = "lottie-ios/Classes/AnimatableLayers/LOTAnimatableLayer.h"; sourceTree = "<group>"; };
 		94A3141656AC66A3CB514E980B20B41B /* Whisper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Whisper.xcconfig; sourceTree = "<group>"; };
-		94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		958D908D539636A678C09885B241BFC3 /* Pods-TwoPence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoPence.debug.xcconfig"; sourceTree = "<group>"; };
 		95994F84345EE8C5787C78D36EC096D4 /* LOTLayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTLayerView.h; path = "lottie-ios/Classes/AnimatableLayers/LOTLayerView.h"; sourceTree = "<group>"; };
 		9613C0FA85B4AA43A14DAC9B25532C23 /* LOTShapeStroke.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTShapeStroke.m; path = "lottie-ios/Classes/Models/LOTShapeStroke.m"; sourceTree = "<group>"; };
@@ -874,7 +875,6 @@
 		AB6E87C96BFCE67510B3643374B8D831 /* PieCharts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PieCharts.modulemap; sourceTree = "<group>"; };
 		ABA2EED9771B6390B64683799003C890 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugPlugin.swift; path = "Sources/Debug Plugin/HeroDebugPlugin.swift"; sourceTree = "<group>"; };
 		ABCB49199F6933188E50EEDE10B9706D /* Cely.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cely.xcconfig; sourceTree = "<group>"; };
-		AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		ACCF3E931D1E4D70B58CB1ECC3F2E6F0 /* Unbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-prefix.pch"; sourceTree = "<group>"; };
 		AD82720767BE086AFFDC4C648C1C0A4C /* LOTShapeTrimPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTShapeTrimPath.h; path = "lottie-ios/Classes/Models/LOTShapeTrimPath.h"; sourceTree = "<group>"; };
 		AE550BC37CEFE2C4F0AEC474DD0BD16D /* HeroViewPropertyViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewPropertyViewContext.swift; path = Sources/Animator/HeroViewPropertyViewContext.swift; sourceTree = "<group>"; };
@@ -887,7 +887,6 @@
 		B120CEA83EA2B063FFA856054261C91B /* LOTShapeTransform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTShapeTransform.m; path = "lottie-ios/Classes/Models/LOTShapeTransform.m"; sourceTree = "<group>"; };
 		B13E6C1482AC5F5D69D02C7CDBE0986B /* Cely.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cely.swift; path = Sources/Cely.swift; sourceTree = "<group>"; };
 		B1587171F26FD91E8673D931C9FA9451 /* LOTAnimatableShapeValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTAnimatableShapeValue.m; path = "lottie-ios/Classes/AnimatableProperties/LOTAnimatableShapeValue.m"; sourceTree = "<group>"; };
-		B211D4D71EECA358CAF5FE8B8FFA068B /* Cely.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = Cely.storyboard; path = "Sources/Supporting Files/Cely.storyboard"; sourceTree = "<group>"; };
 		B28411F545C279730D720400C0F04139 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		B2C06ADC76C832CE9CDDAA4233CB16ED /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = PopupDialog/Classes/TransitionAnimator.swift; sourceTree = "<group>"; };
 		B30EFC5BA02272B11F544D133D13D890 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Sources/Locksmith.swift; sourceTree = "<group>"; };
@@ -975,6 +974,7 @@
 		DC39276E14A834D627A6DA200415F7A1 /* TransitionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionType.swift; path = IBAnimatable/TransitionType.swift; sourceTree = "<group>"; };
 		DDA8C551B863F92CFC7ACC796161F614 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
 		DDB909DB6C8DE5456019ABA2AA2DCDD6 /* PieChartLabelSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartLabelSettings.swift; path = PieCharts/Layer/Impl/Common/PieChartLabelSettings.swift; sourceTree = "<group>"; };
+		DDC6D170104D7AAA4C0577AE84623CA9 /* Cely.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Cely.storyboard; path = "Sources/Supporting Files/Cely.storyboard"; sourceTree = "<group>"; };
 		DE815EFAF1138447125F1B99C8DECB2B /* Unbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Unbox.xcconfig; sourceTree = "<group>"; };
 		DEEDB92FAD06D82D58001F083D1FA2DB /* BorderSide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BorderSide.swift; path = IBAnimatable/BorderSide.swift; sourceTree = "<group>"; };
 		DFF522F07660303AF2F1371D2CBEAF1B /* AnimatableCheckBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableCheckBox.swift; path = IBAnimatable/AnimatableCheckBox.swift; sourceTree = "<group>"; };
@@ -1040,8 +1040,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				827603E6B2533A1619E2DCD7515F1EB2 /* Foundation.framework in Frameworks */,
-				11AA6332FB296C193BE571907794431B /* UIKit.framework in Frameworks */,
+				1939534268124081742915E0541439D5 /* Foundation.framework in Frameworks */,
+				6ABD371E779B70D7230BB3DC82EBB446 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1049,7 +1049,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E8B2E4C36FF81AE84090F484F99D21 /* Foundation.framework in Frameworks */,
+				E54F73EB2BE4A901D4609C74D07A4A06 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,8 +1057,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE82726B85F9488997339A759DDDE999 /* Foundation.framework in Frameworks */,
-				BEEC37DE72D6BE4CF2DE214C1C53F8AC /* UIKit.framework in Frameworks */,
+				AF04AD552E6BE94703E8EC8BEAEEA076 /* Foundation.framework in Frameworks */,
+				C1D7C318F2418A5FE5F341B4806DE422 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,7 +1066,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1290F95D90FE61B4DA7DBCF39E02F251 /* Foundation.framework in Frameworks */,
+				3E0B09C7FAF8ADCA54A8283668B2F8DB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,8 +1074,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3587FA3AADFC915DE4CEF92F5AA4CE6 /* Foundation.framework in Frameworks */,
-				1D0605F04EFE6F4212F9C78E3BFE9A23 /* UIKit.framework in Frameworks */,
+				BB2A14A3336A611A363C2839AC1B7C2D /* Foundation.framework in Frameworks */,
+				F1A5FEC5DCD37E3984C9D79492EE6D43 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,7 +1083,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7E5C63D33972BAE55F3B54C5AF2CD3 /* Foundation.framework in Frameworks */,
+				E8C2D49C57C9D0BF377B6C58279D1EE5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,7 +1091,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42F9D54D9A743541FDD3BC7FF8642930 /* Foundation.framework in Frameworks */,
+				287B62B305C926B98B5C540CF7AA8C68 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1099,7 +1099,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				776362ED03878131757A4F7B3721E2C2 /* Foundation.framework in Frameworks */,
+				0A0C15DA0E7A990D3886BEE96D50A8DF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,7 +1107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B3196EDE1D03AF9C71385CE006F684 /* Foundation.framework in Frameworks */,
+				7A63E21284C53335B6D422EE359143BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,7 +1115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,9 +1123,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A9161C359D62B78B7699620EF285FFE /* CoreGraphics.framework in Frameworks */,
-				FE128061529C4BADF6C84B6018032642 /* Foundation.framework in Frameworks */,
-				A193927E3417B70CA859EA0D6C688D2C /* UIKit.framework in Frameworks */,
+				B816D05421F1C3A224B1E49383AEAF18 /* CoreGraphics.framework in Frameworks */,
+				F678B06EBFCA45F7423A5627B5A85F4C /* Foundation.framework in Frameworks */,
+				04B3444EFD7E1108F7B9543E015C8D11 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,8 +1133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC56D8C48A4F1C3B9DD9C718E18D3132 /* Foundation.framework in Frameworks */,
-				139A3A87DBF63D7A5D8EE8E2F8466CC6 /* UIKit.framework in Frameworks */,
+				2F55AD647ABBF3E77DABAD8794B30DBA /* Foundation.framework in Frameworks */,
+				CEF684EF3C423FE3B24CBB7A0D02C555 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,7 +1143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				613167D898FF421A6F75D1FE5D145B9B /* Alamofire.framework in Frameworks */,
-				245DAEE5793271CA5BECA7A816092142 /* Foundation.framework in Frameworks */,
+				26479B07464784F3BF8C0853CA049976 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,14 +1151,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB970ED2959B57EB234739394F0E66E0 /* CoreGraphics.framework in Frameworks */,
-				80CD37FE5BBB586BF4E7EBF9D6B7BD8F /* Foundation.framework in Frameworks */,
+				A77249D35873EBE12C1700C3D3E95AD6 /* CoreGraphics.framework in Frameworks */,
+				528C5A051577531C0C99456EF0F929A4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03DBA6296DA34D6C287DF153D6E68D3A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4A03D43E88B50C46C0A1F4D81ECDA340 /* CoreGraphics.framework */,
+				24945CAA4415D6759265C2F442321A93 /* Foundation.framework */,
+				11730AA9D3ADDC754E560511D4F82EE8 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		0AE5642535B04CB8E0A5EAF48B191087 /* PieCharts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1517,16 +1527,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		8BE7D28ABAE73766F2328BC2E1DCE860 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6B768CEF13A8FD0017215245C29C0183 /* CoreGraphics.framework */,
-				94F28CB045AFB07136FD939E59BC2A5B /* Foundation.framework */,
-				AC74E319D852EA21FAA4F3D155944874 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		914A8AF5326ACDE54288AB7FD2B440CC /* EFCountingLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1535,6 +1535,15 @@
 			);
 			name = EFCountingLabel;
 			path = EFCountingLabel;
+			sourceTree = "<group>";
+		};
+		920BB987E5A605F8559385DC2501337F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03FF7BE76E1BEB124D13726BEC08C070 /* Assets.xcassets */,
+				DDC6D170104D7AAA4C0577AE84623CA9 /* Cely.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		96FC37879E4F2FEBAA963F5A850DB8B6 /* Support Files */ = {
@@ -1856,7 +1865,7 @@
 				458D25A4602F4077802AF0DF01494981 /* LocksmithAccessibleOption.swift */,
 				41D848215746FDAE1D78055C6A3D6439 /* LocksmithError.swift */,
 				3FACF4391A580302423F82C3F71B9E1A /* LocksmithSecurityClass.swift */,
-				E5F5213183AEE827979A405A8150C788 /* Resources */,
+				920BB987E5A605F8559385DC2501337F /* Resources */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1865,7 +1874,7 @@
 			isa = PBXGroup;
 			children = (
 				26F06CA2E46281C39ABF8AC532C03A69 /* Alamofire.framework */,
-				8BE7D28ABAE73766F2328BC2E1DCE860 /* iOS */,
+				03DBA6296DA34D6C287DF153D6E68D3A /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1921,15 +1930,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Unbox";
-			sourceTree = "<group>";
-		};
-		E5F5213183AEE827979A405A8150C788 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0E28F8F2EDC78193CA29060C42FC9943 /* Assets.xcassets */,
-				B211D4D71EECA358CAF5FE8B8FFA068B /* Cely.storyboard */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		F630812589829A5FAD0626ADE39E7F7C /* AlamofireImage */ = {
@@ -2241,7 +2241,7 @@
 			buildPhases = (
 				5B6B454969CF1855670CBA177A6AFD6B /* Sources */,
 				2FA642FD574A7E7E46DF1B81388C3EAB /* Frameworks */,
-				6C6D079A29F91691B849C94FBBA9A549 /* Resources */,
+				7F6BFA37E456A341496DB5BBA48CF739 /* Resources */,
 				250C7D9008204EF48F6BC6F0333A5DB9 /* Headers */,
 			);
 			buildRules = (
@@ -2374,7 +2374,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -2408,12 +2408,12 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6C6D079A29F91691B849C94FBBA9A549 /* Resources */ = {
+		7F6BFA37E456A341496DB5BBA48CF739 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				103BFA0A5F5F22ED9F333E225314E5C3 /* Assets.xcassets in Resources */,
-				9A0743A6AA29D7DFC1D906A6E697CBE6 /* Cely.storyboard in Resources */,
+				39AF3BF1D1CE7BC06696E37439AEB450 /* Assets.xcassets in Resources */,
+				284758295827A89AC1F40FC716C5B0C3 /* Cely.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2950,10 +2950,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
+		070DBA57ABFFB59864060CC99509B40D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E5B16202E714169498CA0B425AC4381 /* Alamofire.xcconfig */;
+			baseConfigurationReference = DE815EFAF1138447125F1B99C8DECB2B /* Unbox.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2965,16 +2966,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
+				PRODUCT_NAME = Unbox;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2982,47 +2984,16 @@
 			};
 			name = Release;
 		};
-		0E9AA79113A50A83BA66ACC0FD150365 /* Debug */ = {
+		076EFA6009042EE9DC6C3E5FE5FBA213 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 095131678DA5DF57A115DB096B6C40E3 /* lottie-ios.xcconfig */;
+			baseConfigurationReference = F54195555A1D3CEF0986D42EFF31C8CD /* AlamofireImage.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/lottie-ios/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Lottie;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		168AC353350A012966FF45AF002B7312 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54195555A1D3CEF0986D42EFF31C8CD /* AlamofireImage.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3035,109 +3006,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = AlamofireImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		19947C94BAABB27A26B3A2591FBFAD39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9619D976FE143AB57A161FC1BF4CCF4 /* Pods-TwoPenceTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPenceTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1B172402C1CAC2E5A26C7B0562632BD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 741BB902F9643EB52D3AA52EDB050669 /* EFCountingLabel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EFCountingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1D7758A0E7D38390DA91B010D016DCA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89E5511F90E6E7832330218C276BE56F /* PieCharts.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PieCharts/PieCharts-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PieCharts/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PieCharts/PieCharts.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PieCharts;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3146,75 +3019,45 @@
 			};
 			name = Debug;
 		};
-		2282CD859991038B60F8649DD8B68262 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 741BB902F9643EB52D3AA52EDB050669 /* EFCountingLabel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = EFCountingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3A3DC56B5D0CDEF2FC67EAF6B21DC76E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8D77428E8FA314889E6543679343321 /* PopupDialog.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PopupDialog;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3D15BE980190267B2F4CDC8CA7FC827A /* Debug */ = {
+		07B3F6A1CBA8F004625B4E5AFE114355 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D24BB1CBE7A127AA3B097B91D4E8602F /* IBAnimatable.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IBAnimatable/IBAnimatable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBAnimatable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IBAnimatable/IBAnimatable.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IBAnimatable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1497133651507A68EA47FC1C2BA09D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D24BB1CBE7A127AA3B097B91D4E8602F /* IBAnimatable.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -3236,6 +3079,7 @@
 				PRODUCT_NAME = IBAnimatable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3244,207 +3088,12 @@
 			};
 			name = Debug;
 		};
-		43D6036ADF4990B5E4D87E2FF0C6C652 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56813C3C7AB38F7C482A044A2B76159F /* SwipeCellKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4DC27FAA3C1F9B1AC0333DD67FBFD84C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 095131678DA5DF57A115DB096B6C40E3 /* lottie-ios.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/lottie-ios/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Lottie;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4F97767CCD8EBA4D34C50AE8E9853219 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94A3141656AC66A3CB514E980B20B41B /* Whisper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Whisper/Whisper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Whisper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Whisper/Whisper.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Whisper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		513E64C3A41E4AE350D74264500BBF49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA6AC5F9BEC6E08E56232C28C1F6BF65 /* Pods-TwoPence.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPence;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5C03154C4951CB03CE7D5D7F0E872ABA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE815EFAF1138447125F1B99C8DECB2B /* Unbox.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Unbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		634E4BD50F37649B7D6BE051D76E1F68 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89E5511F90E6E7832330218C276BE56F /* PieCharts.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PieCharts/PieCharts-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PieCharts/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PieCharts/PieCharts.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PieCharts;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+		166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -3452,350 +3101,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		6B6E284BB491DC6CA481CB69C4266123 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 958D908D539636A678C09885B241BFC3 /* Pods-TwoPence.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPence;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		708A3EB40A9780E5EFBACFC2C752A79A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54195555A1D3CEF0986D42EFF31C8CD /* AlamofireImage.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AlamofireImage/AlamofireImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AlamofireImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AlamofireImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		70C8855F60B6E2CDB93EA8A8DA9A093C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD869498554EB53A0872CCCA91D46B9 /* Pods-TwoPenceTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TwoPenceTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7E572A9DE968E183EFB787F94E51A86A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56813C3C7AB38F7C482A044A2B76159F /* SwipeCellKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		93A04FD9BA02531590C753D441323910 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8D77428E8FA314889E6543679343321 /* PopupDialog.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PopupDialog;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		97FA2C5CA8C1E4426759C69C9B0B0C81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABCB49199F6933188E50EEDE10B9706D /* Cely.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Cely;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		986196D8366196F30A3BCB3F98F8493B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD0FDA3E5C8CA1F2314937764E0AE69B /* Hero.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Hero/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Hero;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A8AE83B5598BF867E8ED7CD29B114A8B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABCB49199F6933188E50EEDE10B9706D /* Cely.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Cely;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AB7B93DF694A016B44823D4063D95500 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE815EFAF1138447125F1B99C8DECB2B /* Unbox.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Unbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -3824,15 +3136,16 @@
 			};
 			name = Debug;
 		};
-		EF83A67AAB503FB6DFD8122376F5DF2C /* Release */ = {
+		1A8E2C890A9F1DF5C35388C7AFE67855 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD0FDA3E5C8CA1F2314937764E0AE69B /* Hero.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3845,10 +3158,46 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Hero;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		41F235432861D0DA20141DAF5D88F874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741BB902F9643EB52D3AA52EDB050669 /* EFCountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EFCountingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3856,15 +3205,153 @@
 			};
 			name = Release;
 		};
-		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
+		52F85BB8F9A57CF7BAF4423550C82E8D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E5B16202E714169498CA0B425AC4381 /* Alamofire.xcconfig */;
+			baseConfigurationReference = DE815EFAF1138447125F1B99C8DECB2B /* Unbox.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Unbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5406F469878A33833E1E37167B463927 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F54195555A1D3CEF0986D42EFF31C8CD /* AlamofireImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AlamofireImage/AlamofireImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlamofireImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AlamofireImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67B48B4C772A4AC5E4AC7F28371A5E4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D77428E8FA314889E6543679343321 /* PopupDialog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PopupDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		694AA3BFBF6135D409B6228B58FF985C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89E5511F90E6E7832330218C276BE56F /* PieCharts.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PieCharts/PieCharts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PieCharts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PieCharts/PieCharts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PieCharts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D072D0D174F12EAACC1862DA756E67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5B16202E714169498CA0B425AC4381 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3877,10 +3364,49 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		843F54CD8CA06F34140D51C2368E9DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 958D908D539636A678C09885B241BFC3 /* Pods-TwoPence.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPence;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3889,10 +3415,11 @@
 			};
 			name = Debug;
 		};
-		F43D160A619F4CEF29B73D5B05FBA3E9 /* Release */ = {
+		847DBDEC9A0EA4DE41398FB2FC9B9692 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D24BB1CBE7A127AA3B097B91D4E8602F /* IBAnimatable.xcconfig */;
+			baseConfigurationReference = 56813C3C7AB38F7C482A044A2B76159F /* SwipeCellKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -3904,16 +3431,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IBAnimatable/IBAnimatable-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IBAnimatable/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IBAnimatable/IBAnimatable.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = IBAnimatable;
+				PRODUCT_NAME = SwipeCellKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3921,10 +3449,196 @@
 			};
 			name = Release;
 		};
-		FCF4D2C6DC8574E2C7CE8A3A6CBF6825 /* Debug */ = {
+		9050BCD95747042B47008A8AFB82A2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9619D976FE143AB57A161FC1BF4CCF4 /* Pods-TwoPenceTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPenceTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		944B00B3ABC9437469C9953EB7B7F0FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94A3141656AC66A3CB514E980B20B41B /* Whisper.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Whisper/Whisper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Whisper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Whisper/Whisper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Whisper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C125555387E6C864008D5592CB02F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD869498554EB53A0872CCCA91D46B9 /* Pods-TwoPenceTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPenceTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPenceTests/Pods-TwoPenceTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPenceTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A04B0082E194E9CAE9A26070060ADBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABCB49199F6933188E50EEDE10B9706D /* Cely.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cely;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4BF2806E338F326BAC4245FADF7B822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94A3141656AC66A3CB514E980B20B41B /* Whisper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -3946,6 +3660,7 @@
 				PRODUCT_NAME = Whisper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3954,14 +3669,361 @@
 			};
 			name = Debug;
 		};
+		B4C832E24A2C1678D5BC67C9F3F6A4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741BB902F9643EB52D3AA52EDB050669 /* EFCountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EFCountingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9660A42FEDD040185578ADA021EC8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5B16202E714169498CA0B425AC4381 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE75395D8F04B06C1EF804E212712818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6AC5F9BEC6E08E56232C28C1F6BF65 /* Pods-TwoPence.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwoPence/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwoPence/Pods-TwoPence.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TwoPence;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFD60ADF690E7301C593342CA2BDD44F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABCB49199F6933188E50EEDE10B9706D /* Cely.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cely/Cely-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cely/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cely/Cely.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cely;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D49A5B494CC96A7F9B22105565EFFBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD0FDA3E5C8CA1F2314937764E0AE69B /* Hero.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Hero/Hero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hero/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hero/Hero.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Hero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6781B929786CFE34FFF49DEA5B2CDD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56813C3C7AB38F7C482A044A2B76159F /* SwipeCellKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D8F9FE4CAE183488B05C5E4D65CF4B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D77428E8FA314889E6543679343321 /* PopupDialog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PopupDialog/PopupDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PopupDialog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PopupDialog/PopupDialog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PopupDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DBFDAAE6C26AA7E066950565BCAEC557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095131678DA5DF57A115DB096B6C40E3 /* lottie-ios.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lottie-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Lottie;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DDCA4975609AEC5AF4F9B258FC92C18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89E5511F90E6E7832330218C276BE56F /* PieCharts.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PieCharts/PieCharts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PieCharts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PieCharts/PieCharts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PieCharts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E339CACF220EB938A2949F7C7674D64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095131678DA5DF57A115DB096B6C40E3 /* lottie-ios.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lottie-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Lottie;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		01F2198AF9DCCF3700AE9DD21E64D480 /* Build configuration list for PBXNativeTarget "AlamofireImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				708A3EB40A9780E5EFBACFC2C752A79A /* Debug */,
-				168AC353350A012966FF45AF002B7312 /* Release */,
+				076EFA6009042EE9DC6C3E5FE5FBA213 /* Debug */,
+				5406F469878A33833E1E37167B463927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3969,8 +4031,8 @@
 		0B10E4751B470010876D4DDCE91ACD48 /* Build configuration list for PBXNativeTarget "Unbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C03154C4951CB03CE7D5D7F0E872ABA /* Debug */,
-				AB7B93DF694A016B44823D4063D95500 /* Release */,
+				52F85BB8F9A57CF7BAF4423550C82E8D /* Debug */,
+				070DBA57ABFFB59864060CC99509B40D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3978,8 +4040,8 @@
 		0BDE321778746EE5F92233E0C5EFA2D0 /* Build configuration list for PBXNativeTarget "EFCountingLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2282CD859991038B60F8649DD8B68262 /* Debug */,
-				1B172402C1CAC2E5A26C7B0562632BD7 /* Release */,
+				B4C832E24A2C1678D5BC67C9F3F6A4B1 /* Debug */,
+				41F235432861D0DA20141DAF5D88F874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3987,8 +4049,8 @@
 		0FCBE14C886CB682F51C034EAFB986DF /* Build configuration list for PBXNativeTarget "Cely" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8AE83B5598BF867E8ED7CD29B114A8B /* Debug */,
-				97FA2C5CA8C1E4426759C69C9B0B0C81 /* Release */,
+				A04B0082E194E9CAE9A26070060ADBDC /* Debug */,
+				CFD60ADF690E7301C593342CA2BDD44F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3996,8 +4058,8 @@
 		146D38BDB43EC87B778D61104959D8FD /* Build configuration list for PBXNativeTarget "Whisper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF4D2C6DC8574E2C7CE8A3A6CBF6825 /* Debug */,
-				4F97767CCD8EBA4D34C50AE8E9853219 /* Release */,
+				B4BF2806E338F326BAC4245FADF7B822 /* Debug */,
+				944B00B3ABC9437469C9953EB7B7F0FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4005,8 +4067,8 @@
 		1FF7ADD158EE979EB96C0FC969FCC821 /* Build configuration list for PBXNativeTarget "PieCharts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D7758A0E7D38390DA91B010D016DCA4 /* Debug */,
-				634E4BD50F37649B7D6BE051D76E1F68 /* Release */,
+				DDCA4975609AEC5AF4F9B258FC92C18E /* Debug */,
+				694AA3BFBF6135D409B6228B58FF985C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4014,8 +4076,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
-				673254EEAF0B5BF4596080C749645884 /* Release */,
+				166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */,
+				AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4023,8 +4085,8 @@
 		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F383079BFBF927813EA3613CFB679FDE /* Debug */,
-				0A29B6F510198AF64EFD762EF6FA97A5 /* Release */,
+				C9660A42FEDD040185578ADA021EC8E0 /* Debug */,
+				7D072D0D174F12EAACC1862DA756E67A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4032,8 +4094,8 @@
 		57FCCB1A65144AC56A27D713D01D2991 /* Build configuration list for PBXNativeTarget "SwipeCellKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E572A9DE968E183EFB787F94E51A86A /* Debug */,
-				43D6036ADF4990B5E4D87E2FF0C6C652 /* Release */,
+				D6781B929786CFE34FFF49DEA5B2CDD9 /* Debug */,
+				847DBDEC9A0EA4DE41398FB2FC9B9692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4041,8 +4103,8 @@
 		8189FC0930942D0DB6FBA2307D637D2E /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0E9AA79113A50A83BA66ACC0FD150365 /* Debug */,
-				4DC27FAA3C1F9B1AC0333DD67FBFD84C /* Release */,
+				DBFDAAE6C26AA7E066950565BCAEC557 /* Debug */,
+				E339CACF220EB938A2949F7C7674D64D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4050,8 +4112,8 @@
 		91117D97FEDFB207B0276B440443E586 /* Build configuration list for PBXNativeTarget "IBAnimatable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D15BE980190267B2F4CDC8CA7FC827A /* Debug */,
-				F43D160A619F4CEF29B73D5B05FBA3E9 /* Release */,
+				1497133651507A68EA47FC1C2BA09D89 /* Debug */,
+				07B3F6A1CBA8F004625B4E5AFE114355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4059,8 +4121,8 @@
 		B04F332D89CE8EDB704E17F3E0348361 /* Build configuration list for PBXNativeTarget "Pods-TwoPenceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19947C94BAABB27A26B3A2591FBFAD39 /* Debug */,
-				70C8855F60B6E2CDB93EA8A8DA9A093C /* Release */,
+				9050BCD95747042B47008A8AFB82A2F1 /* Debug */,
+				9C125555387E6C864008D5592CB02F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4068,8 +4130,8 @@
 		D120553BF2E65C81EAABF49C1696CA6D /* Build configuration list for PBXNativeTarget "PopupDialog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93A04FD9BA02531590C753D441323910 /* Debug */,
-				3A3DC56B5D0CDEF2FC67EAF6B21DC76E /* Release */,
+				D8F9FE4CAE183488B05C5E4D65CF4B0E /* Debug */,
+				67B48B4C772A4AC5E4AC7F28371A5E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4077,8 +4139,8 @@
 		D5592EE8E13A0D7A50019FD46CC9828D /* Build configuration list for PBXNativeTarget "Pods-TwoPence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B6E284BB491DC6CA481CB69C4266123 /* Debug */,
-				513E64C3A41E4AE350D74264500BBF49 /* Release */,
+				843F54CD8CA06F34140D51C2368E9DC3 /* Debug */,
+				CE75395D8F04B06C1EF804E212712818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4086,8 +4148,8 @@
 		D6DED4535F841BD78B49E046B4C3A36B /* Build configuration list for PBXNativeTarget "Hero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				986196D8366196F30A3BCB3F98F8493B /* Debug */,
-				EF83A67AAB503FB6DFD8122376F5DF2C /* Release */,
+				1A8E2C890A9F1DF5C35388C7AFE67855 /* Debug */,
+				D49A5B494CC96A7F9B22105565EFFBD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,17 +11,55 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
     var userProfile: UserProfile?
     
     let menuOptions = [
         [["name":"Profile"]],
         [["name":"Accounts"]],
-        [["name":"Settings"], ["name":"Linked User"],  ["name": "FAQ"], ["name":"Invite a friend"]],
+        [["name":"Settings"], ["name":"Sponsors"],  ["name": "FAQ"], ["name":"Invite a friend"]],
         [["name" : "Sign out"]]
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
+        loadUserProfile()
+        setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+        if let selectionIndexPath = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: selectionIndexPath, animated: animated)
+        }
+    }
+    
+    func setupNavigationBar() {
+        if let navigationBar = navigationController?.navigationBar {
+            navigationItem.title = "More"
+            navigationBar.tintColor = AppColor.Charcoal.color
+            navigationBar.backIndicatorImage = UIImage(named: "left_chevron")
+            navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left_chevron")
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+            navigationBar.barTintColor = UIColor.clear
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.isTranslucent = true
+        }
+    }
+    
+    func loadUserProfile() {
+        TwoPenceAPI.sharedClient.getProfile(success: { (profile: UserProfile) in
+            self.userProfile = profile
+            self.tableView.reloadData()
+        }) { (error: Error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
@@ -29,31 +67,7 @@ class SettingsViewController: UIViewController {
         tableView.register(UINib(nibName: "SignoutCell", bundle: nil), forCellReuseIdentifier: "SignoutCell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 45
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
-        
-        TwoPenceAPI.sharedClient.getProfile(success: { (profile) in
-            self.userProfile = profile
-            self.tableView.reloadData()
-        }) { (error) in
-            
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let selectionIndexPath = self.tableView.indexPathForSelectedRow {
-            self.tableView.deselectRow(at: selectionIndexPath, animated: animated)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        self.tableView.tableFooterView = UIView()
     }
 }
 
@@ -75,13 +89,13 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.imageView?.image = #imageLiteral(resourceName: "accounts")
             } else {
                 if indexPath.row == 0 {
-                    cell.imageView?.image = #imageLiteral(resourceName: "shape")
+                    cell.imageView?.image = #imageLiteral(resourceName: "settings")
                 } else if indexPath.row == 1 {
-                    cell.imageView?.image = #imageLiteral(resourceName: "linkedUserOption1")
+                    cell.imageView?.image = #imageLiteral(resourceName: "sponsorIconGreen")
                 } else if indexPath.row == 2 {
                     cell.imageView?.image = #imageLiteral(resourceName: "faq")
                 } else if indexPath.row == 3 {
-                    cell.imageView?.image = #imageLiteral(resourceName: "inviteAndEarn")
+                    cell.imageView?.image = #imageLiteral(resourceName: "invite")
                 }
             }
             return cell
@@ -110,7 +124,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.section == 2 && indexPath.row == 0 {
             // self.performSegue(withIdentifier: "showFaqSegue", sender: self) // Settings view
         } else if indexPath.section == 2 && indexPath.row == 1 {
-            // self.performSegue(withIdentifier: "showFaqSegue", sender: self) // Linked User view
+            self.performSegue(withIdentifier: "showSponsorsSegue", sender: self)
         } else if indexPath.section == 2 && indexPath.row == 2 {
             self.performSegue(withIdentifier: "showFaqSegue", sender: self)
         } else if indexPath.section == 2 && indexPath.row == 3 {

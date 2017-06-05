@@ -50,11 +50,8 @@ class DebtView: UIView {
             }
         }
     }
-    var withTPAmount: Int = 0
-    var withoutTPAmount: Int = 0
-    var withTPRatio: Float = 0
-    var withoutTPRatio: Float = 0
-    let withDuration: CFTimeInterval = 1.0
+    var withTPDays: Int = 0
+    var withoutTPDays: Int = 0
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -116,43 +113,58 @@ class DebtView: UIView {
     }
     
     func setupJoltButton() {
+        let jolt = #imageLiteral(resourceName: "lightningboltcream")
+        let joltResized = jolt.af_imageAspectScaled(toFit: CGSize(width: 10, height: 20))
+        joltButton.tintColor = AppColor.Cream.color
+        joltButton.setImage(joltResized, for: .normal)
+        joltButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 40, bottom: 5, right: 5)
+        joltButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: -10, bottom: 5, right: 15)
         joltButton.backgroundColor = AppColor.LightGreen.color
         joltButton.layer.cornerRadius = 5
         joltButton.layer.borderWidth = 1
-        joltButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         joltButton.layer.borderColor = UIColor.white.cgColor
+        joltButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 15)
+        joltButton.titleLabel?.textColor = UIColor.white
     }
 
     func fillProgress() {
         if let userFinMetrics = userFinMetrics {
-            // Only perform the counting once.
-            if withTPAmount == 0 {
-                withTPAmountLabel.countFromZeroTo(CGFloat(userFinMetrics.loanTermInDaysWithTp), withDuration: withDuration)
-                withTPAmount = userFinMetrics.loanTermInDaysWithTp
-            }
-            withTPRatio = Float(userFinMetrics.loanTermInDaysWithTp) / Float(userFinMetrics.loanTermInDaysAtEnrollment)
             
-            if withoutTPAmount == 0 {
-                withoutTPAmountLabel.countFromZeroTo(CGFloat(userFinMetrics.loanTermInDaysWithoutTp), withDuration: withDuration)
-                withoutTPAmount = userFinMetrics.loanTermInDaysWithoutTp
+            if isFirstScroll() {
+                withTPDays = userFinMetrics.loanTermInDaysWithTp
+                withoutTPDays = userFinMetrics.loanTermInDaysWithoutTp
+                let daysAtEnrollment = userFinMetrics.loanTermInDaysAtEnrollment
+                let withTPRatio = 1.0 - Float(withTPDays) / Float(daysAtEnrollment)
+                let withoutTPRatio = 1.0 - Float(withoutTPDays) / Float(daysAtEnrollment)
+                let withFillDuration = 1.5
+                let withoutFillDuration = CFTimeInterval(Float(withFillDuration) / (withTPRatio / withoutTPRatio))
+                
+                let withProgress = Double(withTPRatio) * Double(withTPBarContainer.bounds.width)
+                let withoutProgress = Double(withoutTPRatio) * Double(withoutTPBarContainer.bounds.width)
+                
+                withTPAmountLabel.countFrom(CGFloat(daysAtEnrollment), to: CGFloat(withTPDays), withDuration: withFillDuration)
+                withoutTPAmountLabel.countFrom(CGFloat(daysAtEnrollment), to: CGFloat(withoutTPDays), withDuration: withoutFillDuration)
+            
+                withTPProgressBar.progress(incremented: CGFloat(withProgress), withDuration: withFillDuration)
+                withoutTPProgressBar.progress(incremented: CGFloat(withoutProgress), withDuration: withoutFillDuration)
+        
+                let fillDurationDiff = CFTimeInterval(Float(withFillDuration) - Float(withoutFillDuration))
+                let timeRecovered = userFinMetrics.daysOffLoanTerm.toLCD()
+                debtHeaderView.setTimeDisplay(timeRecovered: timeRecovered, withDuration: fillDurationDiff, withDelay: withoutFillDuration)
             }
-            withoutTPRatio = Float(userFinMetrics.loanTermInDaysWithoutTp) / Float(userFinMetrics.loanTermInDaysAtEnrollment)
         }
-        
-        let withInc = Double(withTPRatio) * Double(withTPBarContainer.bounds.width)
-        withTPProgressBar.progress(incremented: CGFloat(withInc), withDuration: withDuration)
-        
-        let withoutInc = Double(withoutTPRatio) * Double(withoutTPBarContainer.bounds.width)
-        withoutTPProgressBar.progress(incremented: CGFloat(withoutInc), withDuration: withDuration)
     }
     
+    func isFirstScroll() -> Bool {
+        return (withTPDays == 0 && withoutTPDays == 0)
+    }
     
     func setupProgressBars() {
-        withTPProgressBar = CustomProgressBar(width: withTPBarContainer.bounds.width, height: withTPBarContainer.bounds.height)
+        withTPProgressBar = CustomProgressBar(width: withTPBarContainer.bounds.width, height: withTPBarContainer.bounds.height, color: nil, progressColor: nil, cornerRadius: nil, fillDirection: .left)
         withTPBarContainer.addSubview(withTPProgressBar)
         withTPProgressBar.configure()
         
-        withoutTPProgressBar = CustomProgressBar(width: withoutTPBarContainer.bounds.width, height: withoutTPBarContainer.bounds.height)
+        withoutTPProgressBar = CustomProgressBar(width: withoutTPBarContainer.bounds.width, height: withoutTPBarContainer.bounds.height, color: nil, progressColor: AppColor.PaleGreen.color.cgColor, cornerRadius: nil, fillDirection: .left)
         withoutTPBarContainer.addSubview(withoutTPProgressBar)
         withoutTPProgressBar.configure()
     }

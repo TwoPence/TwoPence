@@ -17,42 +17,85 @@ class ReferralViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var contacts = [CNContact]()
-    var filteredContacts = [CNContact]()
+    var filteredContacts = [CNContact]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     var selectedContacts = Set<CNContact>()
+    var selectedCells = [Int : Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableViewAndCell()
         
+        setupNavigationBar()
+        loadContacts()
+        setupTableView()
+        setupSearchBar()
+        setupDisplay()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
+    func setupNavigationBar() {
+        if let navigationBar = navigationController?.navigationBar {
+            let closeBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "close"), style: .plain, target: self, action: #selector(cancel))
+            closeBtn.tintColor = UIColor.black
+            navigationItem.rightBarButtonItem = closeBtn
+            navigationBar.tintColor = AppColor.Charcoal.color
+            navigationBar.backIndicatorImage = UIImage(named: "left_chevron")
+            navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left_chevron")
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+            navigationBar.barTintColor = UIColor.white
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.isTranslucent = true
+        }
+    }
+    
+    func loadContacts() {
+        ContactsAPI.sharedClient.findAllContacts { (contacts: [CNContact]) in
+            self.contacts = contacts
+            self.filteredContacts = contacts
+        }
+    }
+    
+    func setupTableView() {
+        let cell = UINib(nibName: "ContactCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "ContactCell")
+        tableView.rowHeight = 72.0
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+    }
+    
+    func setupSearchBar() {
+        searchBar.delegate = self
+        searchBar.backgroundColor = UIColor.white
+        searchBar.barTintColor = UIColor.white
+        searchBar.tintColor = AppColor.DarkSeaGreen.color
+        searchBar.placeholder = "Search Contacts"
+        // Get rid of gray x next to cancel button.
+    }
+    
+    func setupDisplay() {
         referralLabel.textColor = AppColor.Charcoal.color
         
         shareButton.backgroundColor = UIColor.white
         shareButton.layer.cornerRadius = 4
         shareButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         shareButton.setTitleColor(AppColor.DarkSeaGreen.color, for: .normal)
-
+        
         shareButton.titleLabel?.font = UIFont(name: AppFontName.regular, size: 17)
         shareButton.layer.borderColor = AppColor.DarkSeaGreen.color.cgColor
         shareButton.layer.borderWidth = 1
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIApplication.shared.statusBarStyle = .default
-    }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        UIApplication.shared.statusBarStyle = .lightContent
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func onClose(_ sender: Any) {
+    func cancel() {
         dismiss(animated: true, completion: nil)
     }
     
@@ -63,56 +106,54 @@ class ReferralViewController: UIViewController {
     }
 }
 
-extension ReferralViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+extension ReferralViewController: UISearchBarDelegate {
     
-    func setupTableViewAndCell(){
-        let cell = UINib(nibName: "ReferralContactCell", bundle: nil)
-        tableView.register(cell, forCellReuseIdentifier: "ReferralContactCell")
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView(frame: .zero)
-        
-        tableView.tableHeaderView = searchBar
-        searchBar.delegate = self
-        searchBar.backgroundColor = UIColor.white
-        searchBar.barTintColor = UIColor.white
-        searchBar.tintColor = AppColor.DarkSeaGreen.color
-
-        ContactsAPI.sharedClient.findAllContacts { (contacts) in
-            self.contacts = contacts
-            self.filteredContacts = contacts
-            self.tableView.reloadData()
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty == false {
+            ContactsAPI.sharedClient.findContactsWithName(searchText, { (contacts: [CNContact]) in
+                self.filteredContacts = contacts
+            })
+        } else {
+            self.filteredContacts = self.contacts
         }
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        filteredContacts = contacts
+        searchBar.resignFirstResponder()
+    }
+}
+
+extension ReferralViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredContacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReferralContactCell") as! ReferralContactCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell") as! ContactCell
         cell.contact = filteredContacts[indexPath.row]
-        cell.accessoryType = UITableViewCellAccessoryType.none
+        cell.isContactSelected = selectedCells[indexPath.row] ?? false
         cell.selectionStyle = .none
-        
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 72.0
-    }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = tableView.cellForRow(at: indexPath) as! ReferralContactCell
-        
-        if selectedCell.selectedButton.tag == 0 {
-            selectedCell.selectedButton.tag = 1
-            selectedCell.selectedButton.backgroundColor = AppColor.DarkSeaGreen.color
-            selectedContacts.insert(selectedCell.contact)
+        let cell = tableView.cellForRow(at: indexPath) as! ContactCell
+        if cell.isContactSelected == false {
+            cell.isContactSelected = true
+            selectedCells[indexPath.row] = true
+            selectedContacts.insert(cell.contact)
         } else {
-            selectedCell.selectedButton.tag = 0
-            selectedCell.selectedButton.backgroundColor = UIColor.clear
-            selectedContacts.remove(selectedCell.contact)
+            cell.isContactSelected = false
+            selectedCells[indexPath.row] = false
+            selectedContacts.remove(cell.contact)
         }
         
         if selectedContacts.count > 0 {
@@ -120,30 +161,5 @@ extension ReferralViewController: UITableViewDataSource, UITableViewDelegate, UI
         } else {
             shareButton.setTitle("Share a link!", for: .normal)
         }
-    }
-    
-    // MARK: Search
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let input = searchText
-        if input == "" {
-            self.filteredContacts = contacts
-            self.tableView.reloadData()
-            return
-        }
-        
-        ContactsAPI.sharedClient.findContactsWithName(input) { (contacts) in
-            self.filteredContacts = contacts
-            self.tableView.reloadData()
-        }
-    }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
     }
 }

@@ -15,7 +15,7 @@ target 'TwoPence' do
   pod 'AlamofireImage', '~> 3.1'
   pod 'EFCountingLabel', '~> 1.0'
   pod 'SwipeCellKit'
-  pod 'PieCharts'
+  pod 'PieCharts', :git => 'https://github.com/i-schuetz/PieCharts.git'
   pod 'IBAnimatable'
   pod 'lottie-ios'
 
