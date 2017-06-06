@@ -14,6 +14,8 @@ class TransfersViewController: UIViewController {
     
     var transfers: [Transfer]?
     var transferType: TransferType?
+    var groupedTransactions: [(date: Date, transactions: [Transaction])]?
+    var isPending: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,16 +57,18 @@ class TransfersViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TransactionsDetailViewController {
             let transactionsDetailViewController = segue.destination as! TransactionsDetailViewController
-            let groupedTransactions = sender as! [(date: Date, transactions: [Transaction])]
-            transactionsDetailViewController.groupedTransactions = groupedTransactions
+            transactionsDetailViewController.groupedTransactions = self.groupedTransactions
+            transactionsDetailViewController.isPending = self.isPending
         }
     }
 }
 
 extension TransfersViewController: TransfersViewDelegate {
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])]) {
-        self.performSegue(withIdentifier: "TransactionsSegue", sender: selectedTransactions)
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], isPending: Bool) {
+        self.groupedTransactions = selectedTransactions
+        self.isPending = isPending
+        self.performSegue(withIdentifier: "TransactionsSegue", sender: nil)
     }
     
     func initiateTransferType(transferType: TransferType) {

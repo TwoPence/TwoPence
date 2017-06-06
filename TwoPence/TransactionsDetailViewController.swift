@@ -15,6 +15,7 @@ class TransactionsDetailViewController: UIViewController {
     
     var transactions: [Transaction]?
     var groupedTransactions: [(date: Date, transactions: [Transaction])]?
+    var isPending: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class TransactionsDetailViewController: UIViewController {
     }
     
     func updateNavigationBar() {
-        navigationItem.title = "Transactions"
+        navigationItem.title = isPending ? "Pending" : "Cleared"
         self.navigationController?.navigationBar.tintColor = AppColor.Charcoal.color
         if let navigationBar = navigationController?.navigationBar {
             let pageControl = navigationBar.viewWithTag(1) as! UIPageControl

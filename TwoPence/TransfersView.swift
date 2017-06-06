@@ -10,7 +10,7 @@ import UIKit
 
 protocol TransfersViewDelegate {
     
-    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])])
+    func navigateToTransactionsDetailViewController(selectedTransactions: [(date: Date, transactions: [Transaction])], isPending: Bool)
     
     func initiateTransferType(transferType: TransferType)
 }
@@ -205,9 +205,10 @@ extension TransfersView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let pending = groupedTransfers[indexPath.section].transfers[indexPath.row].pending
         let transactions = groupedTransfers[indexPath.section].transfers[indexPath.row].transactions
         let groupedTrans = Transaction.groupByDate(transactions: transactions)
-        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: groupedTrans)
+        delegate?.navigateToTransactionsDetailViewController(selectedTransactions: groupedTrans, isPending: pending)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
