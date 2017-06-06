@@ -9,6 +9,7 @@ PODS:
   - Hero (0.3.6)
   - IBAnimatable (4.0.0)
   - lottie-ios (1.5.1)
+  - NVActivityIndicatorView (3.6.1)
   - PieCharts (0.0.5)
   - PopupDialog (0.5.4)
   - SwipeCellKit (1.8.0)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Hero
   - IBAnimatable
   - lottie-ios
+  - NVActivityIndicatorView
   - PieCharts (from `https://github.com/i-schuetz/PieCharts.git`)
   - PopupDialog (~> 0.5)
   - SwipeCellKit
@@ -46,12 +48,13 @@ SPEC CHECKSUMS:
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   IBAnimatable: 63997e8a6cdb233249a3b57cfff2feb535fb01ff
   lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   PieCharts: 4935d6672fae20706f05aa5f7d854bfa1925e40f
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   SwipeCellKit: 01a58bf7e63d5df09aedd161828833944c4c333c
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: 8d3165e29ed0cd3b7e8ac35c2b48c38a78c43516
+PODFILE CHECKSUM: 600d69450b31cf10d6407de0bcdca458fb1b270f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

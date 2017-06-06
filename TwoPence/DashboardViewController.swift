@@ -67,10 +67,13 @@ class DashboardViewController: UIViewController {
     }
 
     func loadTransfers() {
+        contentView.savingsView.loadingStart()
         TwoPenceAPI.sharedClient.getTransfers(success: { (transfers: [Transfer]) in
             self.contentView.transfers = transfers
+            self.contentView.savingsView.loadingEnd()
         }) { (error: Error) in
             print(error.localizedDescription)
+            self.contentView.savingsView.loadingEnd()
         }
     }
     

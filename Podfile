@@ -18,6 +18,7 @@ target 'TwoPence' do
   pod 'PieCharts', :git => 'https://github.com/i-schuetz/PieCharts.git'
   pod 'IBAnimatable'
   pod 'lottie-ios'
+  pod 'NVActivityIndicatorView'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
