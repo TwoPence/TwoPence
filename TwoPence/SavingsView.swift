@@ -9,6 +9,7 @@
 import UIKit
 import EFCountingLabel
 import PieCharts
+import NVActivityIndicatorView
 
 protocol SavingsViewDelegate {
     
@@ -23,6 +24,7 @@ class SavingsView: UIView {
     @IBOutlet weak var amountSavedLabel: EFCountingLabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartView: PieChart!
+    @IBOutlet weak var loading: NVActivityIndicatorView!
     
     var delegate: SavingsViewDelegate?
     var transfers = [Transfer]() {
@@ -62,6 +64,7 @@ class SavingsView: UIView {
         contentView.frame = bounds
         addSubview(contentView)
         
+        loading.type = .ballPulse
         amountSavedLabel.formatBlock = { (value) in return Double(value).money(round: true) }
         amountSavedLabel.method = .easeOut
         Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: backgroundView)
@@ -109,6 +112,20 @@ class SavingsView: UIView {
             chartView.insertSlice(index: index, model: slice)
             index += 1
         }
+    }
+    
+    func loadingStart(){
+        amountSavedLabel.isHidden = true
+        savedLabel.isHidden = true
+        loading.isHidden = false
+        loading.startAnimating()
+    }
+    
+    func loadingEnd(){
+        amountSavedLabel.isHidden = false
+        savedLabel.isHidden = false
+        loading.isHidden = true
+        loading.stopAnimating()
     }
 }
 

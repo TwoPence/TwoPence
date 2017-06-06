@@ -32,6 +32,11 @@ class DashboardViewController: UIViewController {
         formatNavigationBar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     func setupNavigationBar() {
         if let navigationBar = navigationController?.navigationBar {
             // Add Page Control
@@ -67,10 +72,13 @@ class DashboardViewController: UIViewController {
     }
 
     func loadTransfers() {
+        contentView.savingsView.loadingStart()
         TwoPenceAPI.sharedClient.getTransfers(success: { (transfers: [Transfer]) in
             self.contentView.transfers = transfers
+            self.contentView.savingsView.loadingEnd()
         }) { (error: Error) in
             print(error.localizedDescription)
+            self.contentView.savingsView.loadingEnd()
         }
     }
     

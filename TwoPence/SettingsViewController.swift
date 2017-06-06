@@ -37,6 +37,11 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     func setupNavigationBar() {
         if let navigationBar = navigationController?.navigationBar {
             navigationItem.title = "More"

@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-ns-TAX">
-                                <rect key="frame" x="171" y="60" width="32" height="28"/>
+                                <rect key="frame" x="171.5" y="60" width="32" height="28"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilN-X6-RPA">
                                 <rect key="frame" x="20" y="141" width="335" height="44"/>
@@ -1067,11 +1067,11 @@
         <image name="settings_selected" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Nw-kD-6FE"/>
-        <segue reference="fel-Ki-3dl"/>
-        <segue reference="0Jm-Fa-eBa"/>
-        <segue reference="4av-4V-h7c"/>
+        <segue reference="nYt-xH-5EY"/>
         <segue reference="pmX-9Q-8BE"/>
+        <segue reference="fel-Ki-3dl"/>
+        <segue reference="FSX-Y8-wR9"/>
         <segue reference="WGS-9C-F6l"/>
+        <segue reference="6Nw-kD-6FE"/>
     </inferredMetricsTieBreakers>
 </document>
