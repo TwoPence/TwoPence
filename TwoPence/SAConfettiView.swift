@@ -42,6 +42,7 @@ open class SAConfettiView: UIView {
         intensity = 0.5
         type = .confetti
         active = false
+        isUserInteractionEnabled = false
     }
     
     open func startConfetti() {
