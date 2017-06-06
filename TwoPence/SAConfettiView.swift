@@ -38,7 +38,6 @@ open class SAConfettiView: UIView {
         colors = [AppColor.DarkSeaGreen.color,
                   AppColor.MediumGreen.color,
                   AppColor.Cream.color,
-                  AppColor.Red.color,
                   AppColor.Blue.color]
         intensity = 0.5
         type = .confetti
