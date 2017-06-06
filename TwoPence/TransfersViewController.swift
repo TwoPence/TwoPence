@@ -25,7 +25,7 @@ class TransfersViewController: UIViewController {
         
         if let xfers = transfers { contentView.transfers = xfers }
         if let type = transferType { contentView.transferType = type }
-        updateNavigationBar(title: transferType?.rawValue ?? "Transfers")
+        updateNavigationBar(title: transferType?.text ?? "Transfers")
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -27,7 +27,7 @@ class TransfersView: UIView {
         didSet {
             groupedTransfers = Transfer.groupByEomDate(transfers: transfers)
             let totalSaved = transfers.map({$0.amount}).reduce(0, +)
-            amountLabel.text = totalSaved.money(round: true)
+            amountLabel.text = "Total: " + totalSaved.money(round: true)
         }
     }
     var groupedTransfers = [(eomDate: Date, transfers: [Transfer])]() {

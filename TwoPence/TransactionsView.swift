@@ -37,7 +37,7 @@ class TransactionsView: UIView {
     var previousScrollOffset: CGFloat = 0
     var totalSaved: Double = 0 {
         didSet {
-            amountLabel.text = totalSaved.money()
+            amountLabel.text = "Savings: " + totalSaved.money()
         }
     }
     

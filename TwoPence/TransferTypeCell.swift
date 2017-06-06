@@ -17,7 +17,7 @@ class TransferTypeCell: UITableViewCell {
     
     var typeTotal: (type: TransferType, total: Double)! {
         didSet {
-            typeLabel.text = typeTotal.type.rawValue
+            typeLabel.text = typeTotal.type.label
             amountLabel.text = typeTotal.total.money(round: true)
             colorView.backgroundColor = typeTotal.type.color
             iconImageView.image = typeTotal.type.icon
