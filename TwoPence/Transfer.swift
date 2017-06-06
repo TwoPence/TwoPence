@@ -56,7 +56,7 @@ enum TransferType: String, UnboxableEnum {
     var text: String {
         switch self.rawValue {
         case "Spending":
-            return "TwoPence Withdrawals"
+            return "TwoPence"
         case "Jolt":
             return "Jolts"
         case "Sponsor":
