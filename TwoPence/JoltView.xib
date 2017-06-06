@@ -48,31 +48,20 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-5I-SP3">
-                            <rect key="frame" x="20" y="63.5" width="335" height="79.5"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYT-FN-UVC" userLabel="Decrease Button">
-                                    <rect key="frame" x="0.0" y="0.0" width="75" height="79.5"/>
-                                    <state key="normal" image="subtract"/>
-                                    <connections>
-                                        <action selector="onDecreaseTap:" destination="-1" eventType="touchUpInside" id="zYA-uw-pbl"/>
-                                    </connections>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Psa-0m-whg">
-                                    <rect key="frame" x="75" y="0.0" width="185" height="79.5"/>
-                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="48"/>
-                                    <color key="textColor" red="0.086274509803921567" green="0.60784313725490191" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrY-Da-QJz" userLabel="Increase Button">
-                                    <rect key="frame" x="260" y="0.0" width="75" height="79.5"/>
-                                    <state key="normal" image="add"/>
-                                    <connections>
-                                        <action selector="onIncreaseTap:" destination="-1" eventType="touchUpInside" id="0Em-63-mEh"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYT-FN-UVC" userLabel="Decrease Button">
+                            <rect key="frame" x="32" y="75.5" width="34" height="34"/>
+                            <state key="normal" image="subtract"/>
+                            <connections>
+                                <action selector="onDecreaseTap:" destination="-1" eventType="touchUpInside" id="zYA-uw-pbl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrY-Da-QJz" userLabel="Increase Button">
+                            <rect key="frame" x="309" y="75.5" width="34" height="34"/>
+                            <state key="normal" image="add"/>
+                            <connections>
+                                <action selector="onIncreaseTap:" destination="-1" eventType="touchUpInside" id="0Em-63-mEh"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-ka-fvL">
                             <rect key="frame" x="20" y="203" width="335" height="44"/>
                             <constraints>
@@ -86,19 +75,27 @@
                                 <action selector="onJoltTap:" destination="-1" eventType="touchUpInside" id="1EU-lY-5aI"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Psa-0m-whg">
+                            <rect key="frame" x="145" y="63.5" width="84" height="58"/>
+                            <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="48"/>
+                            <color key="textColor" red="0.086274509803921567" green="0.60784313725490191" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="cis-e1-nXR" firstAttribute="top" secondItem="tFd-Pk-HIQ" secondAttribute="top" constant="16" id="AMX-Wy-CWU"/>
+                        <constraint firstAttribute="trailing" secondItem="KrY-Da-QJz" secondAttribute="trailing" constant="32" id="Jm1-jY-zyQ"/>
                         <constraint firstAttribute="trailing" secondItem="w8O-ka-fvL" secondAttribute="trailing" constant="20" id="Spk-nw-Ugm"/>
-                        <constraint firstAttribute="trailing" secondItem="6iM-5I-SP3" secondAttribute="trailing" constant="20" id="TcU-vD-05n"/>
+                        <constraint firstItem="XYT-FN-UVC" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="32" id="Xym-a8-ASd"/>
                         <constraint firstItem="w8O-ka-fvL" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="20" id="b3T-vd-cJB"/>
                         <constraint firstAttribute="trailing" secondItem="cis-e1-nXR" secondAttribute="trailing" constant="16" id="bH2-gz-0cI"/>
-                        <constraint firstItem="6iM-5I-SP3" firstAttribute="top" secondItem="cis-e1-nXR" secondAttribute="bottom" constant="16" id="cUh-WN-kCU"/>
                         <constraint firstAttribute="bottom" secondItem="w8O-ka-fvL" secondAttribute="bottom" constant="20" id="dCx-CT-dOM"/>
+                        <constraint firstItem="Psa-0m-whg" firstAttribute="centerY" secondItem="XYT-FN-UVC" secondAttribute="centerY" id="ih0-Ud-cuO"/>
                         <constraint firstItem="cis-e1-nXR" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="16" id="kK8-Qp-lVw"/>
-                        <constraint firstItem="w8O-ka-fvL" firstAttribute="top" secondItem="6iM-5I-SP3" secondAttribute="bottom" constant="60" id="pB7-sD-aGR"/>
-                        <constraint firstItem="6iM-5I-SP3" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="20" id="z5E-fw-jgh"/>
+                        <constraint firstItem="Psa-0m-whg" firstAttribute="centerX" secondItem="tFd-Pk-HIQ" secondAttribute="centerX" id="l7Z-0i-Mfr"/>
+                        <constraint firstItem="KrY-Da-QJz" firstAttribute="centerY" secondItem="Psa-0m-whg" secondAttribute="centerY" id="ste-UJ-bLW"/>
+                        <constraint firstItem="Psa-0m-whg" firstAttribute="top" secondItem="cis-e1-nXR" secondAttribute="bottom" constant="16" id="u6b-qg-OmI"/>
                     </constraints>
                 </view>
             </subviews>
