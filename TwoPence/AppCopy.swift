@@ -20,5 +20,5 @@ struct AppCopy {
     
     static let linkSponsorMessage = "Enter a personalized message here."
     
-    static let joltDefaultMessage = "Spent a little less this month? Jolt to save your extra cash."
+    static let joltDefaultMessage = "Jolt additional one-time payments to get out of debt faster."
 }
