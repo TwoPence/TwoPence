@@ -44,7 +44,7 @@ class IntroViewController: UIViewController {
     func setAnimationView() {
         animationView = LOTAnimationView(name: "Watermelon")
         guard let animationView = self.animationView else { return }
-        animationView.frame = CGRect(x: 0, y: 110, width: self.view.frame.size.width, height: 300)
+        animationView.frame = CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 400)
         animationView.contentMode = .scaleAspectFill
         animationView.isUserInteractionEnabled = false
         view.addSubview(animationView)
