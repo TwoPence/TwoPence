@@ -19,4 +19,6 @@ struct AppCopy {
     static let onboardingScreen4 = "TwoPence makes the future attainable. \n\n Once debt-free, your savings are routed to a personalized investment portfolio."
     
     static let linkSponsorMessage = "Enter a personalized message here."
+    
+    static let joltDefaultMessage = "Spent a little less this month? Jolt to save your extra cash."
 }

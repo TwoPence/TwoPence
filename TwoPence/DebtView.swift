@@ -90,6 +90,8 @@ class DebtView: UIView {
         
         horizontalDividerView.backgroundColor = AppColor.MediumGreen.color
         joltMessageLabel.textColor = UIColor.white
+        joltMessageLabel.font = UIFont(name: AppFontName.regular, size: 13)
+        joltMessageLabel.text = AppCopy.joltDefaultMessage
         footerLabel.textColor = AppColor.MediumGray.color
         withTPLabel.textColor = AppColor.DarkGray.color
         withTPAmountLabel.textColor = AppColor.DarkGray.color
