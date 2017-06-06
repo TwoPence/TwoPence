@@ -95,9 +95,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pK-Ig-ZVo">
-                            <rect key="frame" x="30" y="106.5" width="315" height="20"/>
+                            <rect key="frame" x="30" y="106.5" width="315" height="12"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="AhP-ND-NIe"/>
+                                <constraint firstAttribute="height" constant="12" id="AhP-ND-NIe"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of $300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcI-Rn-acg">
@@ -107,7 +107,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are $25 away from your next milestone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oO-hh-K5S" customClass="EFCountingLabel" customModule="EFCountingLabel">
-                            <rect key="frame" x="30" y="150.5" width="315" height="41"/>
+                            <rect key="frame" x="30" y="142.5" width="315" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
