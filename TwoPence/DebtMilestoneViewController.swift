@@ -21,17 +21,8 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
         contentView.heroModifiers = [.fade, .translate(x:0, y:-250)]
         self.automaticallyAdjustsScrollViewInsets = false
         
-        TwoPenceAPI.sharedClient.getMilestones(success: { (milestones) in
-            self.contentView.milestones = milestones
-            self.contentView.scrollToCurrentMilestone()
-        }) { (error) in
-            print(error)
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setupNavigationBar()
+        loadMilestones()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +33,25 @@ class DebtMilestoneViewController: UIViewController, DebtMilestoneViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    func setupNavigationBar() {
+        if let navigationBar = navigationController?.navigationBar {
+            navigationItem.title = "Milestones"
+            navigationItem.rightBarButtonItem?.tintColor = AppColor.Charcoal.color
+            navigationBar.tintColor = AppColor.Charcoal.color
+            navigationBar.barTintColor = UIColor.white
+            navigationBar.isTranslucent = false
+        }
+    }
+    
+    func loadMilestones() {
+        TwoPenceAPI.sharedClient.getMilestones(success: { (milestones) in
+            self.contentView.milestones = milestones
+            self.contentView.scrollToCurrentMilestone()
+        }) { (error) in
+            print(error)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
