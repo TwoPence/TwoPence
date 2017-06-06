@@ -119,8 +119,8 @@ class DebtView: UIView {
         let joltResized = jolt.af_imageAspectScaled(toFit: CGSize(width: 10, height: 20))
         joltButton.tintColor = AppColor.Cream.color
         joltButton.setImage(joltResized, for: .normal)
-        joltButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 40, bottom: 5, right: 5)
-        joltButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: -10, bottom: 5, right: 15)
+        joltButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 44, bottom: 5, right: 5)
+        joltButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: -12, bottom: 5, right: 15)
         joltButton.backgroundColor = AppColor.LightGreen.color
         joltButton.layer.cornerRadius = 5
         joltButton.layer.borderWidth = 1
