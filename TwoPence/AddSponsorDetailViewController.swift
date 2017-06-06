@@ -174,12 +174,23 @@ class AddSponsorDetailViewController: UIViewController {
         return messageTextViewTopConstraint.constant == messageExpandedConstraint
     }
     
-    func collapseMessageTextView () {
-        messageTextViewTopConstraint.constant = messageCollapsedConstraint
-        if messageTextView.text.isEmpty {
-            messageTextView.text = AppCopy.linkSponsorMessage
-        }
-        messageTextView.resignFirstResponder()
+    func expandMessageTextView() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.messageTextViewTopConstraint.constant = self.messageExpandedConstraint
+            self.view.bringSubview(toFront: self.messageTextView)
+        })
+    }
+    
+    func collapseMessageTextView() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.messageTextViewTopConstraint.constant = self.messageCollapsedConstraint
+            if self.messageTextView.text.isEmpty {
+                self.messageTextView.text = AppCopy.linkSponsorMessage
+            }
+            self.messageTextView.resignFirstResponder()
+        })
     }
     
     func cancel() {
@@ -250,11 +261,10 @@ extension AddSponsorDetailViewController: UITextFieldDelegate {
 extension AddSponsorDetailViewController: UITextViewDelegate {
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        messageTextViewTopConstraint.constant = messageExpandedConstraint
+        expandMessageTextView()
         if textView.text == AppCopy.linkSponsorMessage {
             messageTextView.text = ""
         }
-        view.bringSubview(toFront: messageTextView)
         return true
     }
     
