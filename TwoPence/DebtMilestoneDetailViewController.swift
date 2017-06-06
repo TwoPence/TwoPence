@@ -61,6 +61,7 @@ class DebtMilestoneDetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         futureView?.animateProgress = true
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     func shareMilestone(shareText: String){

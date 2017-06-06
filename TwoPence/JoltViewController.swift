@@ -44,6 +44,8 @@ class JoltViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         // This is a hack to force the display to update after the view loads.
         contentView.joltAmount = 20
     }
