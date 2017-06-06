@@ -23,6 +23,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
         setupNavigationBar()
         loadUserProfile()
         setupTableView()
@@ -43,10 +44,10 @@ class SettingsViewController: UIViewController {
             navigationBar.backIndicatorImage = UIImage(named: "left_chevron")
             navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left_chevron")
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-            navigationBar.barTintColor = UIColor.clear
+            navigationBar.barTintColor = UIColor.white
             navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationBar.shadowImage = UIImage()
-            navigationBar.isTranslucent = true
+            navigationBar.isTranslucent = false
         }
     }
     
