@@ -28,7 +28,7 @@ class TransferTypeCell: UITableViewCell {
         super.awakeFromNib()
         
         self.accessoryType = .disclosureIndicator
-        self.typeLabel.textColor = AppColor.MediumGray.color
+        self.typeLabel.textColor = AppColor.Charcoal.color
         self.typeLabel.font = UIFont(name: AppFontName.regular, size: 17)
         self.amountLabel.textColor = AppColor.Charcoal.color
         self.amountLabel.font = UIFont(name: AppFontName.regular, size: 17)
