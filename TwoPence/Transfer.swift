@@ -39,6 +39,32 @@ enum TransferType: String, UnboxableEnum {
             return UIImage()
         }
     }
+    
+    var label: String {
+        switch self.rawValue {
+        case "Spending":
+            return "TwoPence"
+        case "Jolt":
+            return "Jolts"
+        case "Sponsor":
+            return "Sponsors"
+        default:
+            return "No Label"
+        }
+    }
+    
+    var text: String {
+        switch self.rawValue {
+        case "Spending":
+            return "TwoPence Transfers"
+        case "Jolt":
+            return "Jolts"
+        case "Sponsor":
+            return "Sponsor Contributions"
+        default:
+            return "No Text"
+        }
+    }
 }
 
 class Transfer: Unboxable {
