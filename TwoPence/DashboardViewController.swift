@@ -32,6 +32,11 @@ class DashboardViewController: UIViewController {
         formatNavigationBar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     func setupNavigationBar() {
         if let navigationBar = navigationController?.navigationBar {
             // Add Page Control
