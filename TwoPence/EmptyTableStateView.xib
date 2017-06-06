@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqW-UT-cYf">
-                    <rect key="frame" x="16" y="599" width="343" height="44"/>
+                    <rect key="frame" x="20" y="603" width="335" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="2DD-gw-wNf"/>
                     </constraints>
@@ -55,13 +55,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="xqW-UT-cYf" secondAttribute="trailing" constant="16" id="MxK-5N-7VN"/>
+                <constraint firstAttribute="trailing" secondItem="xqW-UT-cYf" secondAttribute="trailing" constant="20" id="MxK-5N-7VN"/>
                 <constraint firstItem="R1V-lX-qd2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PuB-CO-kpd"/>
                 <constraint firstItem="0tg-Fs-m5f" firstAttribute="top" secondItem="R1V-lX-qd2" secondAttribute="bottom" constant="32" id="TSs-oK-ZXg"/>
                 <constraint firstItem="R1V-lX-qd2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-150" id="c3e-w3-PMf"/>
-                <constraint firstItem="xqW-UT-cYf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="eGm-nn-oGK"/>
+                <constraint firstItem="xqW-UT-cYf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="eGm-nn-oGK"/>
                 <constraint firstItem="0tg-Fs-m5f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="pWC-7I-Fip"/>
-                <constraint firstAttribute="bottom" secondItem="xqW-UT-cYf" secondAttribute="bottom" constant="24" id="qHL-CW-zSK"/>
+                <constraint firstAttribute="bottom" secondItem="xqW-UT-cYf" secondAttribute="bottom" constant="20" id="qHL-CW-zSK"/>
                 <constraint firstAttribute="trailing" secondItem="0tg-Fs-m5f" secondAttribute="trailing" constant="40" id="uho-vN-l9o"/>
             </constraints>
         </view>

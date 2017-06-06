@@ -43,29 +43,29 @@
                     <rect key="frame" x="0.0" y="400" width="375" height="267"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jolt makes a one-time withdrawal from your account and pays it to your debt." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cis-e1-nXR">
-                            <rect key="frame" x="16" y="16" width="343" height="32"/>
+                            <rect key="frame" x="16" y="16" width="343" height="31.5"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-5I-SP3">
-                            <rect key="frame" x="20" y="64" width="335" height="75"/>
+                            <rect key="frame" x="20" y="63.5" width="335" height="79.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYT-FN-UVC" userLabel="Decrease Button">
-                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="79.5"/>
                                     <state key="normal" image="subtract"/>
                                     <connections>
                                         <action selector="onDecreaseTap:" destination="-1" eventType="touchUpInside" id="zYA-uw-pbl"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Psa-0m-whg">
-                                    <rect key="frame" x="75" y="0.0" width="185" height="75"/>
+                                    <rect key="frame" x="75" y="0.0" width="185" height="79.5"/>
                                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="48"/>
                                     <color key="textColor" red="0.086274509803921567" green="0.60784313725490191" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrY-Da-QJz" userLabel="Increase Button">
-                                    <rect key="frame" x="260" y="0.0" width="75" height="75"/>
+                                    <rect key="frame" x="260" y="0.0" width="75" height="79.5"/>
                                     <state key="normal" image="add"/>
                                     <connections>
                                         <action selector="onIncreaseTap:" destination="-1" eventType="touchUpInside" id="0Em-63-mEh"/>
@@ -74,7 +74,7 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-ka-fvL">
-                            <rect key="frame" x="16" y="199" width="343" height="44"/>
+                            <rect key="frame" x="20" y="203" width="335" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="QsA-K0-xc5"/>
                             </constraints>
@@ -90,12 +90,12 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="cis-e1-nXR" firstAttribute="top" secondItem="tFd-Pk-HIQ" secondAttribute="top" constant="16" id="AMX-Wy-CWU"/>
-                        <constraint firstAttribute="trailing" secondItem="w8O-ka-fvL" secondAttribute="trailing" constant="16" id="Spk-nw-Ugm"/>
+                        <constraint firstAttribute="trailing" secondItem="w8O-ka-fvL" secondAttribute="trailing" constant="20" id="Spk-nw-Ugm"/>
                         <constraint firstAttribute="trailing" secondItem="6iM-5I-SP3" secondAttribute="trailing" constant="20" id="TcU-vD-05n"/>
-                        <constraint firstItem="w8O-ka-fvL" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="16" id="b3T-vd-cJB"/>
+                        <constraint firstItem="w8O-ka-fvL" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="20" id="b3T-vd-cJB"/>
                         <constraint firstAttribute="trailing" secondItem="cis-e1-nXR" secondAttribute="trailing" constant="16" id="bH2-gz-0cI"/>
                         <constraint firstItem="6iM-5I-SP3" firstAttribute="top" secondItem="cis-e1-nXR" secondAttribute="bottom" constant="16" id="cUh-WN-kCU"/>
-                        <constraint firstAttribute="bottom" secondItem="w8O-ka-fvL" secondAttribute="bottom" constant="24" id="dCx-CT-dOM"/>
+                        <constraint firstAttribute="bottom" secondItem="w8O-ka-fvL" secondAttribute="bottom" constant="20" id="dCx-CT-dOM"/>
                         <constraint firstItem="cis-e1-nXR" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="16" id="kK8-Qp-lVw"/>
                         <constraint firstItem="w8O-ka-fvL" firstAttribute="top" secondItem="6iM-5I-SP3" secondAttribute="bottom" constant="60" id="pB7-sD-aGR"/>
                         <constraint firstItem="6iM-5I-SP3" firstAttribute="leading" secondItem="tFd-Pk-HIQ" secondAttribute="leading" constant="20" id="z5E-fw-jgh"/>
