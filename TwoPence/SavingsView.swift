@@ -87,6 +87,7 @@ class SavingsView: UIView {
         chartView.animDuration = 0.0
         chartView.innerRadius = width / 2 - chartInset - chartThickness
         chartView.outerRadius = width / 2 - chartInset
+        chartView.referenceAngle = 270
         chartView.delegate = self
         chartView.models = createModels()
         Timer.schedule(delay: startDelay) { (_) in
