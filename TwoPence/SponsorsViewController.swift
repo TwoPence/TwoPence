@@ -11,6 +11,7 @@ import UIKit
 class SponsorsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var colorView: UIView!
     
     var sponsors = [Sponsor]() {
         didSet {
@@ -22,7 +23,9 @@ class SponsorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "Sponsors"
+        colorView.backgroundColor = AppColor.Blue.color
         loadSponsors()
         setupTableView()
         setupEmptyState()
