@@ -46,7 +46,7 @@ class SavingsView: UIView {
     var chartThickness: CGFloat = 30
     var chartInset: CGFloat = 68
     var withDuration: CFTimeInterval = 1.0
-    var startDelay: CFTimeInterval = 0.5
+    var startDelay: CFTimeInterval = 0.75
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
