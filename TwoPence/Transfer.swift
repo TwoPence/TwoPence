@@ -14,6 +14,13 @@ enum TransferType: String, UnboxableEnum {
     case Jolt
     case Sponsor
     
+    case USLargeCap
+    case USSmallCap
+    case DevelopedMarkets
+    case EmergingMarkets
+    case USTreasuries
+    case USCorporateDebt
+    
     var color: UIColor {
         switch self.rawValue {
         case "Spending":
@@ -22,6 +29,20 @@ enum TransferType: String, UnboxableEnum {
             return AppColor.Cream.color
         case "Sponsor":
             return AppColor.Blue.color
+            
+        case "USLargeCap":
+            return AppColor.Blue.color
+        case "USSmallCap":
+            return AppColor.PaleGreen.color
+        case "DevelopedMarkets":
+            return AppColor.LightGreen.color
+        case "EmergingMarkets":
+            return AppColor.Cream.color
+        case "USTreasuries":
+            return AppColor.LightBlueGray.color
+        case "USCorporateDebt":
+            return AppColor.PaleGreen.color
+
         default:
             return UIColor.white
         }
@@ -48,6 +69,19 @@ enum TransferType: String, UnboxableEnum {
             return "Jolts"
         case "Sponsor":
             return "Sponsors"
+
+        case "USLargeCap":
+            return "US Large Cap"
+        case "USSmallCap":
+            return "US Small Cap"
+        case "DevelopedMarkets":
+            return "Developed Markets"
+        case "EmergingMarkets":
+            return "Emerging Markets"
+        case "USTreasuries":
+            return "US Treasuries"
+        case "USCorporateDebt":
+            return "US Corporate Debt"
         default:
             return "No Label"
         }
@@ -61,6 +95,19 @@ enum TransferType: String, UnboxableEnum {
             return "Jolts"
         case "Sponsor":
             return "Sponsor Contributions"
+
+        case "USLargeCap":
+            return "US Large Cap"
+        case "USSmallCap":
+            return "US Small Cap"
+        case "DevelopedMarkets":
+            return "Developed Markets"
+        case "EmergingMarkets":
+            return "Emerging Markets"
+        case "USTreasuries":
+            return "US Treasuries"
+        case "USCorporateDebt":
+            return "US Corporate Debt"
         default:
             return "No Text"
         }
@@ -104,6 +151,26 @@ class Transfer: Unboxable {
         types.append(.Spending)
         types.append(.Jolt)
         types.append(.Sponsor)
+        for type in types {
+            let amounts = transfers.filter({$0.type == type}).map({$0.amount}) as [Double]
+            let total = amounts.reduce(0, +)
+            typeTotals.append((type: type, total: total))
+        }
+        
+        return typeTotals
+    }
+    
+    class func assetClasses(transfers: [Transfer]) -> [(type: TransferType, total: Double)] {
+
+        var typeTotals = [(type: TransferType, total: Double)]()
+        var types = [TransferType]()
+        types.append(.USLargeCap)
+        types.append(.USSmallCap)
+        types.append(.DevelopedMarkets)
+        types.append(.EmergingMarkets)
+        types.append(.USTreasuries)
+        types.append(.USCorporateDebt)
+
         for type in types {
             let amounts = transfers.filter({$0.type == type}).map({$0.amount}) as [Double]
             let total = amounts.reduce(0, +)

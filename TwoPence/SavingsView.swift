@@ -29,7 +29,14 @@ class SavingsView: UIView {
     var delegate: SavingsViewDelegate?
     var transfers = [Transfer]() {
         didSet {
-            typeTotals = Transfer.typeTotals(transfers: transfers)
+            if transfers.isEmpty {
+                self.savedLabel.text = "Total Asset"
+                typeTotals = Transfer.assetClasses(transfers: transfers)
+                Utils.setupGradientBackground(topColor: AppColor.MediumGray.color.cgColor, bottomColor: AppColor.PaleGray.color.cgColor, view: backgroundView)
+                setNeedsDisplay()
+            } else {
+                typeTotals = Transfer.typeTotals(transfers: transfers)
+            }
         }
     }
     var typeTotals = [(type: TransferType, total: Double)]() {
@@ -47,7 +54,7 @@ class SavingsView: UIView {
     var chartInset: CGFloat = 68
     var withDuration: CFTimeInterval = 1.0
     var startDelay: CFTimeInterval = 0.5
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         initSubviews()
@@ -67,7 +74,9 @@ class SavingsView: UIView {
         loading.type = .ballPulse
         amountSavedLabel.formatBlock = { (value) in return Double(value).money(round: true) }
         amountSavedLabel.method = .easeOut
+        
         Utils.setupGradientBackground(topColor: AppColor.DarkSeaGreen.color.cgColor, bottomColor: AppColor.MediumGreen.color.cgColor, view: backgroundView)
+        
         setupTableView()
     }
     

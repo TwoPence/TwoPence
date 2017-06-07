@@ -24,7 +24,7 @@ class DashboardView: UIView {
     
     var savingsView: SavingsView!
     var debtView: DebtView!
-    var assetView: AssetView!
+    var assetView: SavingsView!
     var pageControl: UIPageControl!
     
     var delegate: DashboardViewDelegate?
@@ -33,6 +33,7 @@ class DashboardView: UIView {
         didSet {
             if let xfers = transfers {
                 savingsView.transfers = xfers
+                assetView.transfers = []
             }
         }
     }
@@ -60,7 +61,8 @@ class DashboardView: UIView {
         
         savingsView = SavingsView()
         debtView = DebtView()
-        assetView = AssetView()
+        assetView = SavingsView()
+        
         pageControl = UIPageControl()
                 
         scrollView.addSubview(savingsView)
@@ -69,6 +71,7 @@ class DashboardView: UIView {
         
         savingsView.delegate = self
         debtView.delegate = self
+        assetView.delegate = self
     }
     
     override func layoutSubviews() {

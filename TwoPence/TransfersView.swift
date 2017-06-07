@@ -101,6 +101,7 @@ class TransfersView: UIView {
                 emptyTableStateView.text = AppCopy.linkFirstSponsor
                 emptyTableStateView.action = "Link a Sponsor"
                 emptyTableStateView.actionButton.isHidden = false
+            default: break
             }
         }
     }
