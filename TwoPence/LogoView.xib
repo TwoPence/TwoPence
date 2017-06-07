@@ -38,13 +38,13 @@
                     <rect key="frame" x="17" y="160" width="203" height="51.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-Wt-qjL" customClass="AnimatableLabel" customModule="IBAnimatable">
-                            <rect key="frame" x="0.0" y="0.0" width="81" height="51.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="79" height="51.5"/>
                             <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="44"/>
                             <color key="textColor" red="0.08235294118" green="0.54901960780000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Pence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihr-yc-mnV" customClass="AnimatableLabel" customModule="IBAnimatable">
-                            <rect key="frame" x="81" y="0.0" width="122" height="51.5"/>
+                            <rect key="frame" x="79" y="0.0" width="124" height="51.5"/>
                             <fontDescription key="fontDescription" name="ArcherPro-Bold" family="ArcherPro" pointSize="44"/>
                             <color key="textColor" red="0.63529411759999999" green="0.89019607840000003" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -73,6 +73,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="119" height="134"/>
+        <image name="logo" width="120" height="136"/>
     </resources>
 </document>

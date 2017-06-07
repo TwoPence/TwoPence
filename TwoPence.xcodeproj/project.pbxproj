@@ -29,6 +29,9 @@
 		BE8D3E111EB1858B00BE92C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E101EB1858B00BE92C9 /* DashboardViewController.swift */; };
 		BE8D3E131EB185BF00BE92C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E121EB185BF00BE92C9 /* SettingsViewController.swift */; };
 		BE8D3E151EB1862400BE92C9 /* DebtMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */; };
+		BEA837261EE79C77003D3C8D /* segment1.json in Resources */ = {isa = PBXBuildFile; fileRef = BEA837231EE79C77003D3C8D /* segment1.json */; };
+		BEA837271EE79C77003D3C8D /* segment2.json in Resources */ = {isa = PBXBuildFile; fileRef = BEA837241EE79C77003D3C8D /* segment2.json */; };
+		BEA837281EE79C77003D3C8D /* segment3.json in Resources */ = {isa = PBXBuildFile; fileRef = BEA837251EE79C77003D3C8D /* segment3.json */; };
 		BEC79A731ED624AF00DD6227 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A721ED624AF00DD6227 /* TransfersViewController.swift */; };
 		BEC79A751ED625B800DD6227 /* TransfersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC79A741ED625B800DD6227 /* TransfersView.swift */; };
 		BEC79A771ED625D400DD6227 /* TransfersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC79A761ED625D400DD6227 /* TransfersView.xib */; };
@@ -168,6 +171,9 @@
 		BE8D3E141EB1862400BE92C9 /* DebtMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtMilestoneViewController.swift; sourceTree = "<group>"; };
 		BE8D3E181EB1868200BE92C9 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		BE8D3E1A1EB186F400BE92C9 /* FaqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
+		BEA837231EE79C77003D3C8D /* segment1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = segment1.json; sourceTree = "<group>"; };
+		BEA837241EE79C77003D3C8D /* segment2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = segment2.json; sourceTree = "<group>"; };
+		BEA837251EE79C77003D3C8D /* segment3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = segment3.json; sourceTree = "<group>"; };
 		BEC79A721ED624AF00DD6227 /* TransfersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
 		BEC79A741ED625B800DD6227 /* TransfersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersView.swift; sourceTree = "<group>"; };
 		BEC79A761ED625D400DD6227 /* TransfersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransfersView.xib; sourceTree = "<group>"; };
@@ -479,6 +485,9 @@
 		BF46ED671EDB8A020042B8EE /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BEA837231EE79C77003D3C8D /* segment1.json */,
+				BEA837241EE79C77003D3C8D /* segment2.json */,
+				BEA837251EE79C77003D3C8D /* segment3.json */,
 				BF46ED681EDB8A320042B8EE /* Watermelon.json */,
 			);
 			name = "Supporting files";
@@ -686,6 +695,7 @@
 				BE088F211EDF71DF00F1B8C2 /* TransferTypeCell.xib in Resources */,
 				BEEF58031EB64C68001EE950 /* InstitutionCell.xib in Resources */,
 				BEEF57FF1EB6497F001EE950 /* AccountDetailView.xib in Resources */,
+				BEA837261EE79C77003D3C8D /* segment1.json in Resources */,
 				BEC79A931EDDC65C00DD6227 /* SponsorCell.xib in Resources */,
 				BFB423151ECBCB790035E398 /* JoltSuccessView.xib in Resources */,
 				BEEF57D31EB3FAF3001EE950 /* DebtView.xib in Resources */,
@@ -697,7 +707,9 @@
 				BF395B791EC98445004E5D64 /* SignoutCell.xib in Resources */,
 				BE3F8D811EC5006400CA6F34 /* Lato-Regular.ttf in Resources */,
 				BE3F8D871EC9784900CA6F34 /* JoltCell.xib in Resources */,
+				BEA837271EE79C77003D3C8D /* segment2.json in Resources */,
 				BEEF57DB1EB52DCE001EE950 /* DebtMilestoneView.xib in Resources */,
+				BEA837281EE79C77003D3C8D /* segment3.json in Resources */,
 				BE3F8D6B1EC3995500CA6F34 /* DebtHeaderView.xib in Resources */,
 				BEEF57D71EB3FB27001EE950 /* AssetView.xib in Resources */,
 				BEC79A771ED625D400DD6227 /* TransfersView.xib in Resources */,
