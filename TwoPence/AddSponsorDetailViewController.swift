@@ -214,7 +214,7 @@ class AddSponsorDetailViewController: UIViewController {
         let customView = UIView(frame: rect)
         
         let label = UILabel(frame: CGRect(x: customView.center.x, y: customView.center.y, width: customView.frame.width, height: customView.frame.height/3))
-        label.text = "TwoPence will send an sponsor invitation to \(emailTextField.text!)"
+        label.text = "TwoPence will send an invitation to \(firstNameTextField.text!)"
         label.center = customView.center
         label.center.x = customView.center.x
         label.center.y = customView.center.y
