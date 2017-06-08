@@ -109,7 +109,7 @@ class SavingsView: UIView {
     func updateChart() {
         var index = 0
         for typeTotal in typeTotals {
-            let slice = PieSliceModel(value: typeTotal.total, color: typeTotal.type.color, obj: typeTotal.type.rawValue as String)
+            let slice = PieSliceModel(value: typeTotal.total, color: typeTotal.type.color, obj: typeTotal.type.label as String)
             chartView.insertSlice(index: index, model: slice)
             index += 1
         }
