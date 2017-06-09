@@ -19,6 +19,7 @@ target 'TwoPence' do
   pod 'IBAnimatable'
   pod 'lottie-ios'
   pod 'NVActivityIndicatorView'
+  pod 'TextFieldEffects'
 
   target 'TwoPenceTests' do
     inherit! :search_paths
